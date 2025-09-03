@@ -43,8 +43,7 @@ entity register_file is
            Bbus : out STD_LOGIC_VECTOR (XLen-1 downto 0);
            Dbus : in STD_LOGIC_VECTOR (XLen-1 downto 0);
            clk : in STD_LOGIC;
-           res : in STD_LOGIC;
-           en: in STD_LOGIC);
+           res : in STD_LOGIC);
 end register_file;
 
 architecture Behavioral of register_file is
@@ -55,10 +54,10 @@ architecture Behavioral of register_file is
     signal regOut: registerOutput;
 begin
     decodeDsel <= decode(Dsel, Dlen);
-    decodeAsel <= decode(Asel, en);
-    decodeBsel <= decode(Bsel, en);
     
-    regGen : For I in 31 downto 0 generate
+    regOut(0) <= (others => '0');
+    
+    regGen : For I in XLen - 1 downto 1 generate
         regI: entity work.generic_register (behavioral)
             generic map (N => XLen )
             port map ( din => Dbus, dout => regOut (I), clk => clk, res => res, en => decodeDsel(I));

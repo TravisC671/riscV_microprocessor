@@ -38,7 +38,7 @@ entity alu is
     Port ( Abus : in STD_LOGIC_VECTOR (31 downto 0);
            Bbus : in STD_LOGIC_VECTOR (31 downto 0);
            ALUfunc : in STD_LOGIC_VECTOR (3 downto 0); --bit 6 of func 7 and func 3 for now
-           Dbus : out STD_LOGIC_VECTOR (31 downto 0));
+           Dout : out STD_LOGIC_VECTOR (31 downto 0));
 end alu;
 
 architecture Behavioral of alu is
@@ -74,7 +74,7 @@ begin
         port map ( din => Abus, shamt => "00001", func => ALUfunc, dout => ShiftOut);
 
     with ALUfunc select
-        Dbus <= AddOut when "0000",
+        Dout <= AddOut when "0000",
                 SubOut when "1000",
                 XOROut when "0100",
                 OROut  when "0110",

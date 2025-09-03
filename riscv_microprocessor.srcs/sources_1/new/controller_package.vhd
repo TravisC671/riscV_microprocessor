@@ -32,6 +32,7 @@ package controller_package is
         IMMBsel : std_logic;
         PCDsel : std_logic;
         PCie : std_logic;
+        PCle : std_logic;
         isBR : std_logic;
         BRcond : std_logic_vector(2 downto 0);
         ALUFunc : std_logic_vector(3 downto 0);
