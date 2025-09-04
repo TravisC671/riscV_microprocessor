@@ -1,5 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 entity register_file_testbench is
 --  Port ( );
@@ -17,6 +18,19 @@ architecture Behavioral of register_file_testbench is
     signal clk : STD_LOGIC;
     signal res : STD_LOGIC;
 begin
-    
-
+   
+   process 
+   begin
+      --toggle reset
+      
+      for i in 0 to 31 loop
+         Dbus <= std_logic_vector(to_unsigned(i, 32));
+         Dsel <= std_logic_vector(to_unsigned(i, 5));
+         Dlen <= '1';
+         --wait for clock
+         Dlen <= '0';
+      end loop;
+      
+    end process;
+         
 end Behavioral;
