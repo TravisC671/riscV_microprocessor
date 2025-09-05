@@ -54,8 +54,8 @@ architecture Behavioral of alu is
      signal OROut: std_logic_vector(XLen - 1 downto 0);
      signal ANDOut: std_logic_vector(XLen - 1 downto 0);
 begin
-    AddOut <= std_logic_vector(signed(Abus) + signed(Bbus));
-    SubOut <= std_logic_vector(signed(Abus) - signed(Bbus));
+    AddOut <= std_logic_vector(unsigned(Abus) + unsigned(Bbus));
+    SubOut <= std_logic_vector(unsigned(Abus) - unsigned(Bbus));
     
     XOROut <= std_logic_vector(unsigned(Abus) xor unsigned(Bbus));
     OROut <= std_logic_vector(unsigned(Abus) or unsigned(Bbus));
