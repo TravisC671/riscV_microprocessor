@@ -5,7 +5,7 @@ use work.controller_package.all;
 entity datapath is
     Generic (XLen : integer := 32);
     Port ( Controller : in control_word;
-           clk, res, en : in STD_LOGIC);
+           clk, res : in STD_LOGIC);
 end datapath;
 
 architecture Behavioral of datapath is
