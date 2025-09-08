@@ -1,2 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sim_1/new/btu_testbench.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'btu_testbench'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sim_1/new/program_counter_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'program_counter_testbench'

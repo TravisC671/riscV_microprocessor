@@ -2,3 +2,6 @@ Running: xsim.dir/btu_testbench_behav/xsimk -simmode gui -wdb btu_testbench_beha
 Design successfully loaded
 Design Loading Memory Usage: 178992 KB (Peak: 179044 KB)
 Design Loading CPU Usage: 670 ms
+Simulation completed
+Simulation Memory Usage: 264828 KB (Peak: 318260 KB)
+Simulation CPU Usage: 690 ms
