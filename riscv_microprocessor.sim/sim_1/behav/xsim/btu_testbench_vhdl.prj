@@ -10,6 +10,8 @@ vhdl xil_defaultlib  \
 "../../../../riscv_microprocessor.srcs/sources_1/new/program_counter.vhd" \
 "../../../../riscv_microprocessor.srcs/sources_1/new/datapath.vhd" \
 "../../../../riscv_microprocessor.srcs/sim_1/new/register_file_testbench.vhd" \
+"../../../../riscv_microprocessor.srcs/sim_1/new/program_counter_testbench.vhd" \
+"../../../../riscv_microprocessor.srcs/sim_1/new/btu_testbench.vhd" \
 
 # Do not sort compile order
 nosort

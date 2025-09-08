@@ -2,13 +2,15 @@
 2020.2
 May 21 2025
 22:59:56
+/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sim_1/new/btu_testbench.vhd,1757360081,vhdl,,,,btu_testbench,,,,,,,,
+/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sim_1/new/program_counter_testbench.vhd,1757102917,vhdl,,,,program_counter_testbench,,,,,,,,
 /home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sim_1/new/register_file_testbench.vhd,1757101723,vhdl,,,,register_file_testbench,,,,,,,,
 /home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/imports/new/decoder_pkg.vhd,1728408687,vhdl,/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/register_file.vhd,,,decoder_pkg,,,,,,,,
 /home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/imports/new/generic_register.vhd,1728971870,vhdl,/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/register_file.vhd,,,generic_register,,,,,,,,
 /home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/imports/new/generic_shifter.vhdl,1756925680,vhdl,/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/alu.vhd,,,generic_shifter,,,,,,,,
-/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/alu.vhd,1756928361,vhdl,/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/datapath.vhd,,,alu,,,,,,,,
-/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/branch_test_unit.vhd,1756926968,vhdl,/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/datapath.vhd,,,branch_test_unit,,,,,,,,
+/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/alu.vhd,1757103480,vhdl,/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/datapath.vhd,,,alu,,,,,,,,
+/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/branch_test_unit.vhd,1756926968,vhdl,/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sim_1/new/btu_testbench.vhd,,,branch_test_unit,,,,,,,,
 /home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/controller_package.vhd,1756928259,vhdl,/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/datapath.vhd,,,controller_package,,,,,,,,
 /home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/datapath.vhd,1757098441,vhdl,,,,datapath,,,,,,,,
 /home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/program_counter.vhd,1757099544,vhdl,/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/datapath.vhd,,,program_counter,,,,,,,,
-/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/register_file.vhd,1757098393,vhdl,/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sim_1/new/register_file_testbench.vhd;/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/datapath.vhd,,,register_file,,,,,,,,
+/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/register_file.vhd,1757098393,vhdl,/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/datapath.vhd,,,register_file,,,,,,,,
