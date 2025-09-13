@@ -12,6 +12,8 @@ vhdl xil_defaultlib  \
 "../../../../riscv_microprocessor.srcs/sim_1/new/register_file_testbench.vhd" \
 "../../../../riscv_microprocessor.srcs/sim_1/new/program_counter_testbench.vhd" \
 "../../../../riscv_microprocessor.srcs/sim_1/new/btu_testbench.vhd" \
+"../../../../riscv_microprocessor.srcs/sim_1/new/alu_testbench.vhd" \
+"../../../../riscv_microprocessor.srcs/sim_1/imports/ceng-442-test-benches/fullish_test.vhdl" \
 
 # Do not sort compile order
 nosort

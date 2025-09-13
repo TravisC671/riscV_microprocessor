@@ -71,7 +71,7 @@ begin
 
     shifter: entity work.generic_shifter (Behavioral)
         generic map (shift_bits => natural(integer(log2(real(XLen)))))
-        port map ( din => Abus, shamt => "00001", func => ALUfunc, dout => ShiftOut);
+        port map ( din => Abus, shamt => Bbus(4 downto 0), func => ALUfunc, dout => ShiftOut);
 
     with ALUfunc select
         Dout <= AddOut when "0000",
@@ -82,7 +82,7 @@ begin
                 SLTOut when "0010",
                 SLTUOut when "0011",
                 ShiftOut when "0101",
-                ShiftOut when "1001",
+                ShiftOut when "0001",
                 ShiftOut when "1101",
                 (others => '0') when others;
                 

@@ -1,6 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
+use ieee.std_logic_misc.all;
 
 entity alu_testbench is
 end alu_testbench;
@@ -21,6 +22,7 @@ begin
     
     test_process: process 
         variable dout_int :integer;
+        variable expected_dout : STD_LOGIC_VECTOR(XLen - 1 downto 0);
     begin
         -- Test Case 1: Addition (1 + 2 = 3)
         Abus <= (0 => '1', others => '0'); -- Abus = 1
@@ -115,8 +117,37 @@ begin
         dout_int := to_integer(unsigned(Dout)); 
         assert dout_int = 0 report "9: Dout is true when should be false" severity error;
         ----------------------------------------------------------------------------------------------------------------
-        --Test Case 9: Shift Left Logical
+        --Test Case 10: Shift Left Logical
+        ALUfunc <= "0001";        
+
         Abus <= (others => '1'); 
+        Bbus <= std_logic_vector(to_unsigned(5, XLen)); 
         
+        wait for 10ns;
+        
+        expected_dout := (XLen-1 downto 5 => '1', others => '0');
+        assert Dout = expected_dout report "10: SLL amount is incorrect" severity error;
+        ----------------------------------------------------------------------------------------------------------------
+        --Test Case 11: Shift Right Logical
+        ALUfunc <= "0101";
+        
+        Abus <= (others => '1'); 
+        Bbus <= std_logic_vector(to_unsigned(5, XLen)); 
+        
+        wait for 10ns;
+        
+        expected_dout := (XLen-1 downto XLen-5 => '0', others => '1');        
+        assert Dout = expected_dout report "11: SRL amount is incorrect" severity error;
+        ----------------------------------------------------------------------------------------------------------------
+        --Test Case 12: Shift Right Arithmetic
+        ALUfunc <= "1101";
+        Abus <= (XLen-1 => '1', others => '0'); 
+        Bbus <= std_logic_vector(to_unsigned(5, XLen)); 
+        
+        wait for 10ns;
+        
+        expected_dout := (XLen-1 downto XLen-6 => '1', others => '0');
+        assert Dout = expected_dout report "12: SRA is incorrect" severity error;
+
     end process test_process;
 end Behavioral;

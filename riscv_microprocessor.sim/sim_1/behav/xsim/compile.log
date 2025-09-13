@@ -1,2 +1,0 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sim_1/new/register_file_testbench.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'register_file_testbench'
