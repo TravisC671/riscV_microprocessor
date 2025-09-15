@@ -1,6 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use work.controller_package.all;
+use work.RISCV_package.all;
 
 entity datapath is
     Generic (XLen : integer := 32);

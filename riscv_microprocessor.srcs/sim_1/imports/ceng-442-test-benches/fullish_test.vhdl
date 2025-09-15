@@ -1,7 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
-use work.controller_package.all;
+use work.RISCV_package.all;
 
 
 entity datapath_tb is
