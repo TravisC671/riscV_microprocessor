@@ -31,6 +31,16 @@ package body RISCV_package is
         variable decoded_op_type : op_type;
         begin
         
-        op_type <= r_type when ""
+        with input select
+            decoded_op_type := 
+                       u_type when "0110111" | "0010111",
+                       j_type when "1101111",
+                       i_type when "1100111" | "0000011" | "0010011",
+                       b_type when "1100011",
+                       s_type when "0100011",
+                       r_type when "0110011",
+                       illegal when others; --ignores fence & ecall functions
         
+        return decoded_op_type;        
     end function;
+end RISCV_package;
