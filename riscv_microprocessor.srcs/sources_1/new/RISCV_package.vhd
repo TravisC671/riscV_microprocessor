@@ -21,26 +21,181 @@ package RISCV_package is
     
     type op_type is (r_type, i_type, s_type, b_type, u_type, j_type, illegal);
     
-    function get_op_type(input: std_logic_vector)
-        return op_type;
+    function get_op_type(opcode: in std_logic_vector (6 downto 0)) return op_type;
+    function handle_r_type(instruction: in std_logic_vector (31 downto 0)) return control_word;
+    function handle_i_type(instruction: in std_logic_vector (31 downto 0)) return control_word;
+    function handle_s_type(instruction: in std_logic_vector (31 downto 0)) return control_word;
+    function handle_b_type(instruction: in std_logic_vector (31 downto 0)) return control_word;
+    function handle_u_type(instruction: in std_logic_vector (31 downto 0)) return control_word;
+    function handle_j_type(instruction: in std_logic_vector (31 downto 0)) return control_word;
 end package RISCV_package;
 
 package body RISCV_package is
-    function get_op_type(input: std_logic_vector)
-        return op_type is
-        variable decoded_op_type : op_type;
+    function get_op_type(opcode: in std_logic_vector (6 downto 0)) return op_type is
         begin
         
-        with input select
-            decoded_op_type := 
-                       u_type when "0110111" | "0010111",
-                       j_type when "1101111",
-                       i_type when "1100111" | "0000011" | "0010011",
-                       b_type when "1100011",
-                       s_type when "0100011",
-                       r_type when "0110011",
-                       illegal when others; --ignores fence & ecall functions
+        case opcode is
+            when "1100111" | "0000011" | "0010011" =>
+                return i_type;
+            when "0110111" | "0010111" =>
+                return u_type;
+            when "1101111" => 
+                return j_type;
+            when "1100011" => 
+                return s_type;
+            when "0110011" =>
+                return r_type;
+            when others =>
+                return illegal;
+        end case;
         
-        return decoded_op_type;        
-    end function;
+    end get_op_type;
+    
+    function handle_r_type(instruction: in std_logic_vector (31 downto 0)) return control_word is
+        begin
+        
+        return (
+            Asel => instruction(19 downto 15),
+            Bsel => instruction(24 downto 20),
+            Dsel => instruction(11 downto 7),
+            Dlen => '1',
+            PCAsel => '0',
+            IMMBsel => '0',
+            PCDsel => '0',
+            PCie => '1',
+            PCle => '0',
+            isBR => '0',
+            BRcond => "000",
+            ALUFunc => instruction(30) & instruction(14 downto 12),
+            IMM => (others => '0')
+        );
+        
+    end handle_r_type;
+
+    function handle_i_type(instruction: in std_logic_vector (31 downto 0)) return control_word is
+            variable imm_value : std_logic_vector(XLen-1 downto 0) := (others => '0');
+        begin
+        
+        imm_value(11 downto 0) := instruction(31 downto 20);
+        
+        return (
+            Asel => instruction(19 downto 15),
+            Bsel => "00000",
+            Dsel => instruction(11 downto 7),
+            Dlen => '1',
+            PCAsel => '0',
+            IMMBsel => '1',
+            PCDsel => '0',
+            PCie => '1',
+            PCle => '0',
+            isBR => '0',
+            BRcond => "000",
+            ALUFunc => '0' & instruction(14 downto 12),
+            IMM => imm_value
+        );
+    
+    end handle_i_type;
+
+    function handle_s_type(instruction: in std_logic_vector (31 downto 0)) return control_word is
+            variable imm_value : std_logic_vector(XLen-1 downto 0) := (others => '0');
+        begin
+        
+        imm_value(11 downto 5) := instruction(31 downto 25);
+        imm_value(4 downto 0) := instruction(11 downto 7);
+        
+        return (
+            Asel => instruction(19 downto 15),
+            Bsel => instruction(24 downto 20),
+            Dsel => "00000",
+            Dlen => '0',
+            PCAsel => '0',
+            IMMBsel => '1',
+            PCDsel => '0',
+            PCie => '1',
+            PCle => '0',
+            isBR => '0',
+            BRcond => "000",
+            ALUFunc => "0000",
+            IMM => imm_value
+        );
+    
+    end handle_s_type;
+    
+     function handle_b_type(instruction: in std_logic_vector (31 downto 0)) return control_word is
+            variable imm_value : std_logic_vector(XLen-1 downto 0) := (others => '0');
+        begin
+        
+        imm_value(12) := instruction(31);
+        imm_value(11) := instruction(7);
+        imm_value(10 downto 5) := instruction(30 downto 25);
+        imm_value(4 downto 1) := instruction(11 downto 6);
+        
+        return (
+            Asel => instruction(19 downto 15),
+            Bsel => instruction(24 downto 20),
+            Dsel => "00000",
+            Dlen => '0',
+            PCAsel => '0',
+            IMMBsel => '0',
+            PCDsel => '0',
+            PCie => '0', --Should you increment on branch? I don't think so
+            PCle => '0',
+            isBR => '1',
+            BRcond => instruction(14 downto 12),
+            ALUFunc => "0000",
+            IMM => imm_value
+        );
+    
+    end handle_b_type;
+    
+     function handle_u_type(instruction: in std_logic_vector (31 downto 0)) return control_word is
+            variable imm_value : std_logic_vector(XLen-1 downto 0) := (others => '0');
+        begin
+
+        imm_value(31 downto 12) := instruction(31 downto 12);
+        
+        return (
+            Asel => "00000",
+            Bsel => "00000",
+            Dsel => instruction(11 downto 7),
+            Dlen => '0',
+            PCAsel => '0',
+            IMMBsel => '0',
+            PCDsel => '0',
+            PCie => '1',
+            PCle => '0',
+            isBR => '0',
+            BRcond => "000",
+            ALUFunc => "0000",
+            IMM => imm_value
+        );
+    
+    end handle_u_type;
+
+     function handle_j_type(instruction: in std_logic_vector (31 downto 0)) return control_word is
+            variable imm_value : std_logic_vector(XLen-1 downto 0) := (others => '0');
+        begin
+
+        imm_value(20) := instruction(31);
+        imm_value(19 downto 12) := instruction(19 downto 12);
+        imm_value(11) := instruction(20);
+        imm_value(10 downto 1) := instruction(30 downto 21);
+        
+        return (
+            Asel => "00000",
+            Bsel => "00000",
+            Dsel => instruction(11 downto 7),
+            Dlen => '0',
+            PCAsel => '0',
+            IMMBsel => '0',
+            PCDsel => '0',
+            PCie => '1',
+            PCle => '0',
+            isBR => '0',
+            BRcond => "000",
+            ALUFunc => "0000",
+            IMM => imm_value
+        );
+    
+    end handle_j_type;
 end RISCV_package;
