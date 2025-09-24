@@ -42,6 +42,8 @@ package body RISCV_package is
             when "1101111" => 
                 return j_type;
             when "1100011" => 
+                return b_type;
+            when "0100011" => 
                 return s_type;
             when "0110011" =>
                 return r_type;
@@ -73,10 +75,10 @@ package body RISCV_package is
     end handle_r_type;
 
     function handle_i_type(instruction: in std_logic_vector (31 downto 0)) return control_word is
-            variable imm_value : std_logic_vector(XLen-1 downto 0) := (others => '0');
+            variable imm_value : std_logic_vector(XLen-1 downto 0);
         begin
         
-        imm_value(11 downto 0) := instruction(31 downto 20);
+        imm_value := (31 downto 11 => instruction(31)) & instruction(30 downto 25) & instruction(24 downto 21) & instruction(20);
         
         return (
             Asel => instruction(19 downto 15),
@@ -90,18 +92,17 @@ package body RISCV_package is
             PCle => '0',
             isBR => '0',
             BRcond => "000",
-            ALUFunc => '0' & instruction(14 downto 12),
+            ALUFunc => "0000",
             IMM => imm_value
         );
     
     end handle_i_type;
 
     function handle_s_type(instruction: in std_logic_vector (31 downto 0)) return control_word is
-            variable imm_value : std_logic_vector(XLen-1 downto 0) := (others => '0');
+            variable imm_value : std_logic_vector(XLen-1 downto 0);
         begin
         
-        imm_value(11 downto 5) := instruction(31 downto 25);
-        imm_value(4 downto 0) := instruction(11 downto 7);
+        imm_value := (31 downto 11 => instruction(31)) & instruction(10 downto 5) & instruction(11 downto 8) & instruction(7);
         
         return (
             Asel => instruction(19 downto 15),
@@ -122,13 +123,10 @@ package body RISCV_package is
     end handle_s_type;
     
      function handle_b_type(instruction: in std_logic_vector (31 downto 0)) return control_word is
-            variable imm_value : std_logic_vector(XLen-1 downto 0) := (others => '0');
+            variable imm_value : std_logic_vector(XLen-1 downto 0);
         begin
         
-        imm_value(12) := instruction(31);
-        imm_value(11) := instruction(7);
-        imm_value(10 downto 5) := instruction(30 downto 25);
-        imm_value(4 downto 1) := instruction(11 downto 6);
+        imm_value := (31 downto 12 => instruction(31)) & instruction(7) & instruction(30 downto 25) & instruction(11 downto 8) & '0';
         
         return (
             Asel => instruction(19 downto 15),
@@ -149,10 +147,10 @@ package body RISCV_package is
     end handle_b_type;
     
      function handle_u_type(instruction: in std_logic_vector (31 downto 0)) return control_word is
-            variable imm_value : std_logic_vector(XLen-1 downto 0) := (others => '0');
+            variable imm_value : std_logic_vector(XLen-1 downto 0);
         begin
 
-        imm_value(31 downto 12) := instruction(31 downto 12);
+        imm_value := instruction(31) & instruction(30 downto 20) & instruction(19 downto 12) & (11 downto 0 => '0');
         
         return (
             Asel => "00000",
@@ -173,13 +171,10 @@ package body RISCV_package is
     end handle_u_type;
 
      function handle_j_type(instruction: in std_logic_vector (31 downto 0)) return control_word is
-            variable imm_value : std_logic_vector(XLen-1 downto 0) := (others => '0');
+            variable imm_value : std_logic_vector(XLen-1 downto 0);
         begin
 
-        imm_value(20) := instruction(31);
-        imm_value(19 downto 12) := instruction(19 downto 12);
-        imm_value(11) := instruction(20);
-        imm_value(10 downto 1) := instruction(30 downto 21);
+        imm_value := (31 downto 20 => instruction(31)) & instruction(19 downto 12) & instruction(20) & instruction(30 downto 25) & instruction(24 downto 21) & '0';
         
         return (
             Asel => "00000",
