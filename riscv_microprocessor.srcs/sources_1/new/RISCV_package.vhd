@@ -76,9 +76,16 @@ package body RISCV_package is
 
     function handle_i_type(instruction: in std_logic_vector (31 downto 0)) return control_word is
             variable imm_value : std_logic_vector(XLen-1 downto 0);
+            variable alu_var : std_logic;
         begin
         
         imm_value := (31 downto 11 => instruction(31)) & instruction(30 downto 25) & instruction(24 downto 21) & instruction(20);
+        
+        if instruction(6 downto 0) = "0010011" and instruction(14 downto 12) = "101" then
+            alu_var := instruction(30);
+        else
+            alu_var := '0';
+        end if;
         
         return (
             Asel => instruction(19 downto 15),
@@ -92,7 +99,7 @@ package body RISCV_package is
             PCle => '0',
             isBR => '0',
             BRcond => "000",
-            ALUFunc => "0000",
+            ALUFunc => alu_var & instruction(14 downto 12),
             IMM => imm_value
         );
     
@@ -102,7 +109,7 @@ package body RISCV_package is
             variable imm_value : std_logic_vector(XLen-1 downto 0);
         begin
         
-        imm_value := (31 downto 11 => instruction(31)) & instruction(10 downto 5) & instruction(11 downto 8) & instruction(7);
+        imm_value := (31 downto 11 => instruction(31)) & instruction(30 downto 25) & instruction(11 downto 8) & instruction(7);
         
         return (
             Asel => instruction(19 downto 15),

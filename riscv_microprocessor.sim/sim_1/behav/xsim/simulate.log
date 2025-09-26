@@ -1,19 +1,1 @@
 Time resolution is 1 ps
-Warning: LOAD #2 not working
-Time: 95 ns  Iteration: 0  Process: /RISCV_Inst_Dec_tb/test  File: /home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sim_1/imports/s101153258/RISCV_instruction_decoder_testbench.vhdl
-Warning: LOAD #3 not working
-Time: 100 ns  Iteration: 0  Process: /RISCV_Inst_Dec_tb/test  File: /home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sim_1/imports/s101153258/RISCV_instruction_decoder_testbench.vhdl
-Warning: LOAD #4 not working
-Time: 105 ns  Iteration: 0  Process: /RISCV_Inst_Dec_tb/test  File: /home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sim_1/imports/s101153258/RISCV_instruction_decoder_testbench.vhdl
-Warning: LOAD #5 not working
-Time: 110 ns  Iteration: 0  Process: /RISCV_Inst_Dec_tb/test  File: /home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sim_1/imports/s101153258/RISCV_instruction_decoder_testbench.vhdl
-Warning: STORE #1 not working
-Time: 115 ns  Iteration: 0  Process: /RISCV_Inst_Dec_tb/test  File: /home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sim_1/imports/s101153258/RISCV_instruction_decoder_testbench.vhdl
-Warning: STORE #2 not working
-Time: 120 ns  Iteration: 0  Process: /RISCV_Inst_Dec_tb/test  File: /home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sim_1/imports/s101153258/RISCV_instruction_decoder_testbench.vhdl
-Warning: STORE #3 not working
-Time: 125 ns  Iteration: 0  Process: /RISCV_Inst_Dec_tb/test  File: /home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sim_1/imports/s101153258/RISCV_instruction_decoder_testbench.vhdl
-Warning: SRAI #1 not working
-Time: 195 ns  Iteration: 0  Process: /RISCV_Inst_Dec_tb/test  File: /home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sim_1/imports/s101153258/RISCV_instruction_decoder_testbench.vhdl
-Warning: SRAI #2 not working
-Time: 200 ns  Iteration: 0  Process: /RISCV_Inst_Dec_tb/test  File: /home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sim_1/imports/s101153258/RISCV_instruction_decoder_testbench.vhdl

@@ -120,19 +120,19 @@ assert unsigned(my_control_word.Dsel) = 9 and unsigned(my_control_word.Asel) = 1
 
 instruction <= X"DCD61583";
 wait for 5 ns;
-assert unsigned(my_control_word.Dsel) = 11 and unsigned(my_control_word.Asel) = 12 and signed(my_control_word.IMM) = -563 and my_control_word.ALUFunc = "0000" report "LOAD #2 not working" severity warning;
+assert unsigned(my_control_word.Dsel) = 11 and unsigned(my_control_word.Asel) = 12 and signed(my_control_word.IMM) = -563 and my_control_word.ALUFunc = "0001" report "LOAD #2 not working" severity warning;
 
 instruction <= X"19372683";
 wait for 5 ns;
-assert unsigned(my_control_word.Dsel) = 13 and unsigned(my_control_word.Asel) = 14 and signed(my_control_word.IMM) = 403 and my_control_word.ALUFunc = "0000" report "LOAD #3 not working" severity warning;
+assert unsigned(my_control_word.Dsel) = 13 and unsigned(my_control_word.Asel) = 14 and signed(my_control_word.IMM) = 403 and my_control_word.ALUFunc = "0010" report "LOAD #3 not working" severity warning;
 
 instruction <= X"18284783";
 wait for 5 ns;
-assert unsigned(my_control_word.Dsel) = 15 and unsigned(my_control_word.Asel) = 16 and signed(my_control_word.IMM) = 386 and my_control_word.ALUFunc = "0000" report "LOAD #4 not working" severity warning;
+assert unsigned(my_control_word.Dsel) = 15 and unsigned(my_control_word.Asel) = 16 and signed(my_control_word.IMM) = 386 and my_control_word.ALUFunc = "0100" report "LOAD #4 not working" severity warning;
 
 instruction <= X"12F95883";
 wait for 5 ns;
-assert unsigned(my_control_word.Dsel) = 17 and unsigned(my_control_word.Asel) = 18 and signed(my_control_word.IMM) = 303 and my_control_word.ALUFunc = "0000" report "LOAD #5 not working" severity warning;
+assert unsigned(my_control_word.Dsel) = 17 and unsigned(my_control_word.Asel) = 18 and signed(my_control_word.IMM) = 303 and my_control_word.ALUFunc = "0101" report "LOAD #5 not working" severity warning;
 
 instruction <= X"153A0E23";
 wait for 5 ns;
