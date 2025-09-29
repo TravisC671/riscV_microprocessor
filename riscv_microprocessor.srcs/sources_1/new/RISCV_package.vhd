@@ -81,7 +81,7 @@ package body RISCV_package is
         
         imm_value := (31 downto 11 => instruction(31)) & instruction(30 downto 25) & instruction(24 downto 21) & instruction(20);
         
-        if instruction(6 downto 0) = "0010011" and instruction(14 downto 12) = "101" then
+        if instruction(14 downto 12) = "101" then
             alu_var := instruction(30);
         else
             alu_var := '0';
