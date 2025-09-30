@@ -1,0 +1,16 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
+| Date         : Tue Sep 30 12:55:48 2025
+| Host         : cenglab16 running 64-bit Ubuntu 24.04.3 LTS
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_rst_clk_wiz_100M_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of design_1_rst_clk_wiz_100M_0 (xilinx.com:ip:proc_sys_reset:5.0 (Rev. 17)) to current project options.
+

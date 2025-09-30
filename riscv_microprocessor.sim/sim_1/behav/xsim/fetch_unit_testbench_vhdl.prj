@@ -1,0 +1,12 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../riscv_microprocessor.srcs/sources_1/new/fetch_unit.vhd" \
+"../../../../riscv_microprocessor.ip_user_files/bd/design_1/ip/design_1_fetch_unit_0_0/sim/design_1_fetch_unit_0_0.vhd" \
+"../../../../riscv_microprocessor.ip_user_files/bd/design_1/ip/design_1_axi_bram_ctrl_0_0/sim/design_1_axi_bram_ctrl_0_0.vhd" \
+"../../../../riscv_microprocessor.ip_user_files/bd/design_1/ip/design_1_rst_clk_wiz_100M_0/sim/design_1_rst_clk_wiz_100M_0.vhd" \
+"../../../../riscv_microprocessor.ip_user_files/bd/design_1/sim/design_1.vhd" \
+"../../../../riscv_microprocessor.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd" \
+"../../../../riscv_microprocessor.srcs/sim_1/imports/packages/fetch_unit_testbench.vhdl" \
+
+# Do not sort compile order
+nosort

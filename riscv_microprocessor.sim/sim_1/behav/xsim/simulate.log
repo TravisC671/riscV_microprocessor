@@ -1,1 +1,2 @@
 Time resolution is 1 ps
+Block Memory Generator module fetch_unit_testbench.uut.design_1_i.axi_bram_ctrl_0_bram.inst.native_mem_mapped_module.blk_mem_gen_v8_4_11_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
