@@ -2,14 +2,14 @@ vlib questa_lib/work
 vlib questa_lib/msim
 
 vlib questa_lib/msim/xpm
-vlib questa_lib/msim/xil_defaultlib
 vlib questa_lib/msim/axi_bram_ctrl_v4_1_13
+vlib questa_lib/msim/xil_defaultlib
 vlib questa_lib/msim/blk_mem_gen_v8_4_11
 vlib questa_lib/msim/proc_sys_reset_v5_0_17
 
 vmap xpm questa_lib/msim/xpm
-vmap xil_defaultlib questa_lib/msim/xil_defaultlib
 vmap axi_bram_ctrl_v4_1_13 questa_lib/msim/axi_bram_ctrl_v4_1_13
+vmap xil_defaultlib questa_lib/msim/xil_defaultlib
 vmap blk_mem_gen_v8_4_11 questa_lib/msim/blk_mem_gen_v8_4_11
 vmap proc_sys_reset_v5_0_17 questa_lib/msim/proc_sys_reset_v5_0_17
 
@@ -19,9 +19,6 @@ vlog -work xpm -64 -incr -mfcu  -sv "+incdir+../../../../riscv_microprocessor.ge
 
 vcom -work xpm -64 -93  \
 "/opt/Xilinx/2025.1/data/ip/xpm/xpm_VCOMP.vhd" \
-
-vcom -work xil_defaultlib -64 -93  \
-"../../../bd/design_1/ip/design_1_fetch_unit_0_0/sim/design_1_fetch_unit_0_0.vhd" \
 
 vcom -work axi_bram_ctrl_v4_1_13 -64 -93  \
 "../../../../riscv_microprocessor.gen/sources_1/bd/design_1/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd" \
@@ -42,6 +39,7 @@ vcom -work proc_sys_reset_v5_0_17 -64 -93  \
 
 vcom -work xil_defaultlib -64 -93  \
 "../../../bd/design_1/ip/design_1_rst_clk_wiz_100M_0/sim/design_1_rst_clk_wiz_100M_0.vhd" \
+"../../../bd/design_1/ip/design_1_fetch_unit_0_1/sim/design_1_fetch_unit_0_1.vhd" \
 "../../../bd/design_1/sim/design_1.vhd" \
 
 vlog -work xil_defaultlib \

@@ -52,8 +52,9 @@ Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=10.0,...
 Compiling module unisims_ver.BUFG
 Compiling module xil_defaultlib.design_1_clk_wiz_0_0_clk_wiz
 Compiling module xil_defaultlib.design_1_clk_wiz_0_0
+Compiling architecture behavioral of entity xil_defaultlib.generic_register [\generic_register(n=32)\]
 Compiling architecture behavioral of entity xil_defaultlib.fetch_unit [\fetch_unit(0,31)\]
-Compiling architecture design_1_fetch_unit_0_0_arch of entity xil_defaultlib.design_1_fetch_unit_0_0 [design_1_fetch_unit_0_0_default]
+Compiling architecture design_1_fetch_unit_0_1_arch of entity xil_defaultlib.design_1_fetch_unit_0_1 [design_1_fetch_unit_0_1_default]
 Compiling architecture fdre_v of entity unisim.FDRE [\FDRE(init='1')\]
 Compiling architecture srl16e_v of entity unisim.SRL16E [\SRL16E(init="1111111111111111")...]
 Compiling architecture srl16_v of entity unisim.SRL16 [\SRL16(init="1111111111111111")(...]

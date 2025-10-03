@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="fetch_unit_testbench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="axi_bram_ctrl_funcs" />
+            <top_module name="fetch_unit_testbench" />
+            <top_module name="glbl" />
+            <top_module name="vcomponents" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="1,483.050 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,521.251 ns"></ZoomEndTime>
+      <Cursor1Time time="1,512.200 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="147"></NameColumnWidth>
+      <ValueColumnWidth column_width="135"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="16" />
+   <wvobject type="logic" fp_name="/fetch_unit_testbench/fetch">
+      <obj_property name="ElementShortName">fetch</obj_property>
+      <obj_property name="ObjectShortName">fetch</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/fetch_unit_testbench/reset">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/fetch_unit_testbench/sys_clock">
+      <obj_property name="ElementShortName">sys_clock</obj_property>
+      <obj_property name="ObjectShortName">sys_clock</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/fetch_unit_testbench/ready">
+      <obj_property name="ElementShortName">ready</obj_property>
+      <obj_property name="ObjectShortName">ready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/fetch_unit_testbench/PC">
+      <obj_property name="ElementShortName">PC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/fetch_unit_testbench/instruction">
+      <obj_property name="ElementShortName">instruction[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instruction[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/fetch_unit_testbench/uut/design_1_i/fetch_unit_0/U0/Start_read">
+      <obj_property name="ElementShortName">Start_read</obj_property>
+      <obj_property name="ObjectShortName">Start_read</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/fetch_unit_testbench/uut/design_1_i/fetch_unit_0/U0/M_AXI_ARREADY">
+      <obj_property name="ElementShortName">M_AXI_ARREADY</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_ARREADY</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/fetch_unit_testbench/uut/design_1_i/fetch_unit_0/U0/M_AXI_ARVALID">
+      <obj_property name="ElementShortName">M_AXI_ARVALID</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_ARVALID</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/fetch_unit_testbench/uut/design_1_i/fetch_unit_0/U0/current_state">
+      <obj_property name="ElementShortName">current_state</obj_property>
+      <obj_property name="ObjectShortName">current_state</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/fetch_unit_testbench/uut/design_1_i/fetch_unit_0/U0/next_state">
+      <obj_property name="ElementShortName">next_state</obj_property>
+      <obj_property name="ObjectShortName">next_state</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/fetch_unit_testbench/uut/design_1_i/fetch_unit_0/U0/next_state_final">
+      <obj_property name="ElementShortName">next_state_final</obj_property>
+      <obj_property name="ObjectShortName">next_state_final</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/fetch_unit_testbench/uut/design_1_i/fetch_unit_0/U0/fu_idle_next">
+      <obj_property name="ElementShortName">fu_idle_next</obj_property>
+      <obj_property name="ObjectShortName">fu_idle_next</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/fetch_unit_testbench/uut/design_1_i/fetch_unit_0/U0/fu_start_next">
+      <obj_property name="ElementShortName">fu_start_next</obj_property>
+      <obj_property name="ObjectShortName">fu_start_next</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/fetch_unit_testbench/uut/design_1_i/fetch_unit_0/U0/fu_wait_next">
+      <obj_property name="ElementShortName">fu_wait_next</obj_property>
+      <obj_property name="ObjectShortName">fu_wait_next</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/fetch_unit_testbench/uut/design_1_i/fetch_unit_0/U0/fu_accept_next">
+      <obj_property name="ElementShortName">fu_accept_next</obj_property>
+      <obj_property name="ObjectShortName">fu_accept_next</obj_property>
+   </wvobject>
+</wave_config>

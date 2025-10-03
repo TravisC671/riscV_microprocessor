@@ -14,7 +14,6 @@ begin
   uut: entity work.design_1_wrapper (STRUCTURE) 
     port map(
       Read_address => PC,
---      Read_Data => address,
       Start_read => fetch,
       Read_Data => instruction,
       Read_Done => ready,

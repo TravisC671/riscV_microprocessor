@@ -19,10 +19,9 @@ entity fetch_unit is
 		-- Users can add ports here. These are SUGGESTED user ports.
 	   Start_read	: in std_logic;  -- Initiate AXI read transaction
        Read_address : in std_logic_vector(C_M_AXI_ADDR_WIDTH-1 downto 0); -- address to read from
+       Instruction  : out std_logic_vector(C_M_AXI_DATA_WIDTH-1 downto 0); -- address to read from
  	   Read_Done	: out std_logic; -- Asserts when transaction is complete
-       Read_Data    : out std_logic_vector(0 to C_M_AXI_DATA_WIDTH*C_M_AXI_BURST_LEN - 1); -- Data that was read (modify as needed)
        PCie         : out std_logic;
-       IRLen        : out std_logic; --instruction read latch enable
 	   Error	    : out std_logic; -- Asserts when ERROR is detected
 		-- User ports ends
         -- Global AXI ports
@@ -87,11 +86,14 @@ architecture Behavioral of fetch_unit is
     signal fu_start_next    : fetch_unit_state_t;
     signal fu_wait_next     : fetch_unit_state_t;
     signal fu_accept_next   : fetch_unit_state_t;
+    signal IRLen : std_logic;
+
 begin
+    M_AXI_ARADDR <= Read_address;
     
     current_state <= next_state_final when rising_edge(M_AXI_ACLK);
     
-    next_state_final <= fu_idle when M_AXI_ARESETN = '1' else next_state; --might need to make this zero
+    next_state_final <= fu_idle when M_AXI_ARESETN = '0' else next_state; --might need to make this zero
     
     
     fu_idle_next   <= fu_start  when Start_read = '1'    else fu_idle;
@@ -108,11 +110,12 @@ begin
     
     M_AXI_ARVALID <= '1' when current_state = fu_start else '0';
     
-    PCie <= '1' when current_state = fu_accept else '0';
+    PCie         <= '1' when current_state = fu_accept else '0';
+    Read_Done    <= '1' when current_state = fu_accept else '0';
+    M_AXI_RREADY <= '1' when current_state = fu_accept else '0';
+    IRLen        <= '1' when current_state = fu_accept else '0';
     
-    Read_Done <= '1' when current_state = fu_accept else '0';
-    
-    -- where does pcie go
-    --M_AXI_RREADY 1
-    
+    IRLatch: entity work.generic_register (behavioral) 
+        generic map (N => 32)
+        port map (din => M_AXI_RDATA, dout => Instruction, clk => M_AXI_ACLK, res => M_AXI_ARESETN, en => IRLen);
 end Behavioral;

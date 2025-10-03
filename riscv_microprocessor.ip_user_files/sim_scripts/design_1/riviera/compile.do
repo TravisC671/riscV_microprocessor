@@ -5,26 +5,23 @@ transcript on
 
 vlib work
 vlib riviera/xpm
-vlib riviera/xil_defaultlib
 vlib riviera/axi_bram_ctrl_v4_1_13
+vlib riviera/xil_defaultlib
 vlib riviera/blk_mem_gen_v8_4_11
 vlib riviera/proc_sys_reset_v5_0_17
 
 vmap xpm riviera/xpm
-vmap xil_defaultlib riviera/xil_defaultlib
 vmap axi_bram_ctrl_v4_1_13 riviera/axi_bram_ctrl_v4_1_13
+vmap xil_defaultlib riviera/xil_defaultlib
 vmap blk_mem_gen_v8_4_11 riviera/blk_mem_gen_v8_4_11
 vmap proc_sys_reset_v5_0_17 riviera/proc_sys_reset_v5_0_17
 
-vlog -work xpm  -incr "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/design_1/ipshared/a9be" "+incdir+../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef" -l xpm -l xil_defaultlib -l axi_bram_ctrl_v4_1_13 -l blk_mem_gen_v8_4_11 -l proc_sys_reset_v5_0_17 \
+vlog -work xpm  -incr "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/design_1/ipshared/a9be" "+incdir+../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef" -l xpm -l axi_bram_ctrl_v4_1_13 -l xil_defaultlib -l blk_mem_gen_v8_4_11 -l proc_sys_reset_v5_0_17 \
 "/opt/Xilinx/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
 "/opt/Xilinx/2025.1/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
 
 vcom -work xpm -93  -incr \
 "/opt/Xilinx/2025.1/data/ip/xpm/xpm_VCOMP.vhd" \
-
-vcom -work xil_defaultlib -93  -incr \
-"../../../bd/design_1/ip/design_1_fetch_unit_0_0/sim/design_1_fetch_unit_0_0.vhd" \
 
 vcom -work axi_bram_ctrl_v4_1_13 -93  -incr \
 "../../../../riscv_microprocessor.gen/sources_1/bd/design_1/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd" \
@@ -32,10 +29,10 @@ vcom -work axi_bram_ctrl_v4_1_13 -93  -incr \
 vcom -work xil_defaultlib -93  -incr \
 "../../../bd/design_1/ip/design_1_axi_bram_ctrl_0_0/sim/design_1_axi_bram_ctrl_0_0.vhd" \
 
-vlog -work blk_mem_gen_v8_4_11  -incr -v2k5 "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/design_1/ipshared/a9be" "+incdir+../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef" -l xpm -l xil_defaultlib -l axi_bram_ctrl_v4_1_13 -l blk_mem_gen_v8_4_11 -l proc_sys_reset_v5_0_17 \
+vlog -work blk_mem_gen_v8_4_11  -incr -v2k5 "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/design_1/ipshared/a9be" "+incdir+../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef" -l xpm -l axi_bram_ctrl_v4_1_13 -l xil_defaultlib -l blk_mem_gen_v8_4_11 -l proc_sys_reset_v5_0_17 \
 "../../../../riscv_microprocessor.gen/sources_1/bd/design_1/ipshared/a32c/simulation/blk_mem_gen_v8_4.v" \
 
-vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/design_1/ipshared/a9be" "+incdir+../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef" -l xpm -l xil_defaultlib -l axi_bram_ctrl_v4_1_13 -l blk_mem_gen_v8_4_11 -l proc_sys_reset_v5_0_17 \
+vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/design_1/ipshared/a9be" "+incdir+../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef" -l xpm -l axi_bram_ctrl_v4_1_13 -l xil_defaultlib -l blk_mem_gen_v8_4_11 -l proc_sys_reset_v5_0_17 \
 "../../../bd/design_1/ip/design_1_axi_bram_ctrl_0_bram_0/sim/design_1_axi_bram_ctrl_0_bram_0.v" \
 "../../../bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v" \
 "../../../bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v" \
@@ -45,6 +42,7 @@ vcom -work proc_sys_reset_v5_0_17 -93  -incr \
 
 vcom -work xil_defaultlib -93  -incr \
 "../../../bd/design_1/ip/design_1_rst_clk_wiz_100M_0/sim/design_1_rst_clk_wiz_100M_0.vhd" \
+"../../../bd/design_1/ip/design_1_fetch_unit_0_1/sim/design_1_fetch_unit_0_1.vhd" \
 "../../../bd/design_1/sim/design_1.vhd" \
 
 vlog -work xil_defaultlib \

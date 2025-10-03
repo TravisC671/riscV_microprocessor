@@ -2,7 +2,7 @@
 --Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
---Date        : Tue Sep 30 13:04:16 2025
+--Date        : Fri Oct  3 13:45:32 2025
 --Host        : cenglab16 running 64-bit Ubuntu 24.04.3 LTS
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -371,75 +371,20 @@ use UNISIM.VCOMPONENTS.ALL;
 entity design_1 is
   port (
     Error : out STD_LOGIC;
-    Read_Data : out STD_LOGIC_VECTOR ( 0 to 31 );
+    Read_Data : out STD_LOGIC_VECTOR ( 31 downto 0 );
     Read_Done : out STD_LOGIC;
     Read_address : in STD_LOGIC_VECTOR ( 31 downto 0 );
     Start_read : in STD_LOGIC;
     reset : in STD_LOGIC;
     sys_clock : in STD_LOGIC
   );
-  attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=9,numReposBlks=7,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_board_cnt=7,da_bram_cntlr_cnt=1,da_clkrst_cnt=5,synth_mode=Hierarchical}";
-  attribute HW_HANDOFF : string;
-  attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
+  attribute core_generation_info : string;
+  attribute core_generation_info of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=9,numReposBlks=7,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_board_cnt=7,da_bram_cntlr_cnt=1,da_clkrst_cnt=5,synth_mode=Hierarchical}";
+  attribute hw_handoff : string;
+  attribute hw_handoff of design_1 : entity is "design_1.hwdef";
 end design_1;
 
 architecture STRUCTURE of design_1 is
-  component design_1_fetch_unit_0_0 is
-  port (
-    Start_read : in STD_LOGIC;
-    Read_address : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    Read_Done : out STD_LOGIC;
-    Read_Data : out STD_LOGIC_VECTOR ( 0 to 31 );
-    PCie : out STD_LOGIC;
-    IRLen : out STD_LOGIC;
-    Error : out STD_LOGIC;
-    M_AXI_ACLK : in STD_LOGIC;
-    M_AXI_ARESETN : in STD_LOGIC;
-    M_AXI_AWID : out STD_LOGIC_VECTOR ( 0 to 0 );
-    M_AXI_AWADDR : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    M_AXI_AWLEN : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    M_AXI_AWSIZE : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    M_AXI_AWBURST : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    M_AXI_AWLOCK : out STD_LOGIC;
-    M_AXI_AWCACHE : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    M_AXI_AWPROT : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    M_AXI_AWQOS : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    M_AXI_AWUSER : out STD_LOGIC;
-    M_AXI_AWVALID : out STD_LOGIC;
-    M_AXI_AWREADY : in STD_LOGIC;
-    M_AXI_WDATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    M_AXI_WSTRB : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    M_AXI_WLAST : out STD_LOGIC;
-    M_AXI_WUSER : out STD_LOGIC;
-    M_AXI_WVALID : out STD_LOGIC;
-    M_AXI_WREADY : in STD_LOGIC;
-    M_AXI_BID : in STD_LOGIC_VECTOR ( 0 to 0 );
-    M_AXI_BRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    M_AXI_BUSER : in STD_LOGIC;
-    M_AXI_BVALID : in STD_LOGIC;
-    M_AXI_BREADY : out STD_LOGIC;
-    M_AXI_ARID : out STD_LOGIC_VECTOR ( 0 to 0 );
-    M_AXI_ARADDR : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    M_AXI_ARLEN : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    M_AXI_ARSIZE : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    M_AXI_ARBURST : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    M_AXI_ARLOCK : out STD_LOGIC;
-    M_AXI_ARCACHE : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    M_AXI_ARPROT : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    M_AXI_ARQOS : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    M_AXI_ARUSER : out STD_LOGIC;
-    M_AXI_ARVALID : out STD_LOGIC;
-    M_AXI_ARREADY : in STD_LOGIC;
-    M_AXI_RID : in STD_LOGIC_VECTOR ( 0 to 0 );
-    M_AXI_RDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    M_AXI_RRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    M_AXI_RLAST : in STD_LOGIC;
-    M_AXI_RUSER : in STD_LOGIC;
-    M_AXI_RVALID : in STD_LOGIC;
-    M_AXI_RREADY : out STD_LOGIC
-  );
-  end component design_1_fetch_unit_0_0;
   component design_1_axi_bram_ctrl_0_0 is
   port (
     s_axi_aclk : in STD_LOGIC;
@@ -520,6 +465,60 @@ architecture STRUCTURE of design_1 is
     peripheral_aresetn : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component design_1_rst_clk_wiz_100M_0;
+  component design_1_fetch_unit_0_1 is
+  port (
+    Start_read : in STD_LOGIC;
+    Read_address : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    Instruction : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    Read_Done : out STD_LOGIC;
+    PCie : out STD_LOGIC;
+    Error : out STD_LOGIC;
+    M_AXI_ACLK : in STD_LOGIC;
+    M_AXI_ARESETN : in STD_LOGIC;
+    M_AXI_AWID : out STD_LOGIC_VECTOR ( 0 to 0 );
+    M_AXI_AWADDR : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    M_AXI_AWLEN : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    M_AXI_AWSIZE : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    M_AXI_AWBURST : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    M_AXI_AWLOCK : out STD_LOGIC;
+    M_AXI_AWCACHE : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    M_AXI_AWPROT : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    M_AXI_AWQOS : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    M_AXI_AWUSER : out STD_LOGIC;
+    M_AXI_AWVALID : out STD_LOGIC;
+    M_AXI_AWREADY : in STD_LOGIC;
+    M_AXI_WDATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    M_AXI_WSTRB : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    M_AXI_WLAST : out STD_LOGIC;
+    M_AXI_WUSER : out STD_LOGIC;
+    M_AXI_WVALID : out STD_LOGIC;
+    M_AXI_WREADY : in STD_LOGIC;
+    M_AXI_BID : in STD_LOGIC_VECTOR ( 0 to 0 );
+    M_AXI_BRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    M_AXI_BUSER : in STD_LOGIC;
+    M_AXI_BVALID : in STD_LOGIC;
+    M_AXI_BREADY : out STD_LOGIC;
+    M_AXI_ARID : out STD_LOGIC_VECTOR ( 0 to 0 );
+    M_AXI_ARADDR : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    M_AXI_ARLEN : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    M_AXI_ARSIZE : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    M_AXI_ARBURST : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    M_AXI_ARLOCK : out STD_LOGIC;
+    M_AXI_ARCACHE : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    M_AXI_ARPROT : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    M_AXI_ARQOS : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    M_AXI_ARUSER : out STD_LOGIC;
+    M_AXI_ARVALID : out STD_LOGIC;
+    M_AXI_ARREADY : in STD_LOGIC;
+    M_AXI_RID : in STD_LOGIC_VECTOR ( 0 to 0 );
+    M_AXI_RDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    M_AXI_RRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    M_AXI_RLAST : in STD_LOGIC;
+    M_AXI_RUSER : in STD_LOGIC;
+    M_AXI_RVALID : in STD_LOGIC;
+    M_AXI_RREADY : out STD_LOGIC
+  );
+  end component design_1_fetch_unit_0_1;
   signal axi_bram_ctrl_0_BRAM_PORTA_ADDR : STD_LOGIC_VECTOR ( 12 downto 0 );
   signal axi_bram_ctrl_0_BRAM_PORTA_CLK : STD_LOGIC;
   signal axi_bram_ctrl_0_BRAM_PORTA_DOUT : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -603,7 +602,6 @@ architecture STRUCTURE of design_1 is
   signal NLW_axi_bram_ctrl_0_bram_wrdata_a_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_axi_bram_ctrl_0_bram_rsta_busy_UNCONNECTED : STD_LOGIC;
   signal NLW_clk_wiz_0_locked_UNCONNECTED : STD_LOGIC;
-  signal NLW_fetch_unit_0_IRLen_UNCONNECTED : STD_LOGIC;
   signal NLW_fetch_unit_0_M_AXI_ARUSER_UNCONNECTED : STD_LOGIC;
   signal NLW_fetch_unit_0_M_AXI_AWUSER_UNCONNECTED : STD_LOGIC;
   signal NLW_fetch_unit_0_M_AXI_WUSER_UNCONNECTED : STD_LOGIC;
@@ -614,12 +612,12 @@ architecture STRUCTURE of design_1 is
   signal NLW_rst_clk_wiz_100M_bus_struct_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_clk_wiz_100M_interconnect_aresetn_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_clk_wiz_100M_peripheral_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
-  attribute X_INTERFACE_INFO : string;
-  attribute X_INTERFACE_INFO of reset : signal is "xilinx.com:signal:reset:1.0 RST.RESET RST";
-  attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of reset : signal is "XIL_INTERFACENAME RST.RESET, INSERT_VIP 0, POLARITY ACTIVE_LOW";
-  attribute X_INTERFACE_INFO of sys_clock : signal is "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK";
-  attribute X_INTERFACE_PARAMETER of sys_clock : signal is "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN design_1_sys_clock, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute x_interface_info : string;
+  attribute x_interface_info of reset : signal is "xilinx.com:signal:reset:1.0 RST.RESET RST";
+  attribute x_interface_parameter : string;
+  attribute x_interface_parameter of reset : signal is "XIL_INTERFACENAME RST.RESET, INSERT_VIP 0, POLARITY ACTIVE_LOW";
+  attribute x_interface_info of sys_clock : signal is "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK";
+  attribute x_interface_parameter of sys_clock : signal is "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN design_1_sys_clock, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
 begin
 axi_bram_ctrl_0: component design_1_axi_bram_ctrl_0_0
      port map (
@@ -764,10 +762,10 @@ clk_wiz_0: component design_1_clk_wiz_0_0
       locked => NLW_clk_wiz_0_locked_UNCONNECTED,
       resetn => reset
     );
-fetch_unit_0: component design_1_fetch_unit_0_0
+fetch_unit_0: component design_1_fetch_unit_0_1
      port map (
       Error => Error,
-      IRLen => NLW_fetch_unit_0_IRLen_UNCONNECTED,
+      Instruction(31 downto 0) => Read_Data(31 downto 0),
       M_AXI_ACLK => clk_wiz_clk_out1,
       M_AXI_ARADDR(31 downto 0) => fetch_unit_0_M_AXI_ARADDR(31 downto 0),
       M_AXI_ARBURST(1 downto 0) => fetch_unit_0_M_AXI_ARBURST(1 downto 0),
@@ -813,7 +811,6 @@ fetch_unit_0: component design_1_fetch_unit_0_0
       M_AXI_WUSER => NLW_fetch_unit_0_M_AXI_WUSER_UNCONNECTED,
       M_AXI_WVALID => fetch_unit_0_M_AXI_WVALID,
       PCie => NLW_fetch_unit_0_PCie_UNCONNECTED,
-      Read_Data(0 to 31) => Read_Data(0 to 31),
       Read_Done => Read_Done,
       Read_address(31 downto 0) => Read_address(31 downto 0),
       Start_read => Start_read
