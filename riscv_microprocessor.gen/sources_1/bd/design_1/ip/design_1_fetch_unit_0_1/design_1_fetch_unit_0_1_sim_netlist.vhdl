@@ -2,7 +2,7 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
--- Date        : Fri Oct  3 13:45:57 2025
+-- Date        : Mon Oct  6 14:04:48 2025
 -- Host        : cenglab16 running 64-bit Ubuntu 24.04.3 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/student/s101153258/riscv_microprocessor/riscv_microprocessor.gen/sources_1/bd/design_1/ip/design_1_fetch_unit_0_1/design_1_fetch_unit_0_1_sim_netlist.vhdl
@@ -19,8 +19,8 @@ entity design_1_fetch_unit_0_1_generic_register is
   port (
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
     Instruction : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    current_state : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M_AXI_ARESETN : in STD_LOGIC;
+    current_state : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M_AXI_RDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
     M_AXI_ACLK : in STD_LOGIC
   );
@@ -30,6 +30,7 @@ end design_1_fetch_unit_0_1_generic_register;
 
 architecture STRUCTURE of design_1_fetch_unit_0_1_generic_register is
   signal \^e\ : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal p_0_in : STD_LOGIC;
 begin
   E(0) <= \^e\(0);
 M_AXI_RREADY_INST_0: unisim.vcomponents.LUT2
@@ -41,13 +42,21 @@ M_AXI_RREADY_INST_0: unisim.vcomponents.LUT2
       I1 => current_state(1),
       O => \^e\(0)
     );
+\q_i[31]_i_1\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => M_AXI_ARESETN,
+      O => p_0_in
+    );
 \q_i_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => M_AXI_ACLK,
       CE => \^e\(0),
       D => M_AXI_RDATA(0),
       Q => Instruction(0),
-      R => M_AXI_ARESETN
+      R => p_0_in
     );
 \q_i_reg[10]\: unisim.vcomponents.FDRE
      port map (
@@ -55,7 +64,7 @@ M_AXI_RREADY_INST_0: unisim.vcomponents.LUT2
       CE => \^e\(0),
       D => M_AXI_RDATA(10),
       Q => Instruction(10),
-      R => M_AXI_ARESETN
+      R => p_0_in
     );
 \q_i_reg[11]\: unisim.vcomponents.FDRE
      port map (
@@ -63,7 +72,7 @@ M_AXI_RREADY_INST_0: unisim.vcomponents.LUT2
       CE => \^e\(0),
       D => M_AXI_RDATA(11),
       Q => Instruction(11),
-      R => M_AXI_ARESETN
+      R => p_0_in
     );
 \q_i_reg[12]\: unisim.vcomponents.FDRE
      port map (
@@ -71,7 +80,7 @@ M_AXI_RREADY_INST_0: unisim.vcomponents.LUT2
       CE => \^e\(0),
       D => M_AXI_RDATA(12),
       Q => Instruction(12),
-      R => M_AXI_ARESETN
+      R => p_0_in
     );
 \q_i_reg[13]\: unisim.vcomponents.FDRE
      port map (
@@ -79,7 +88,7 @@ M_AXI_RREADY_INST_0: unisim.vcomponents.LUT2
       CE => \^e\(0),
       D => M_AXI_RDATA(13),
       Q => Instruction(13),
-      R => M_AXI_ARESETN
+      R => p_0_in
     );
 \q_i_reg[14]\: unisim.vcomponents.FDRE
      port map (
@@ -87,7 +96,7 @@ M_AXI_RREADY_INST_0: unisim.vcomponents.LUT2
       CE => \^e\(0),
       D => M_AXI_RDATA(14),
       Q => Instruction(14),
-      R => M_AXI_ARESETN
+      R => p_0_in
     );
 \q_i_reg[15]\: unisim.vcomponents.FDRE
      port map (
@@ -95,7 +104,7 @@ M_AXI_RREADY_INST_0: unisim.vcomponents.LUT2
       CE => \^e\(0),
       D => M_AXI_RDATA(15),
       Q => Instruction(15),
-      R => M_AXI_ARESETN
+      R => p_0_in
     );
 \q_i_reg[16]\: unisim.vcomponents.FDRE
      port map (
@@ -103,7 +112,7 @@ M_AXI_RREADY_INST_0: unisim.vcomponents.LUT2
       CE => \^e\(0),
       D => M_AXI_RDATA(16),
       Q => Instruction(16),
-      R => M_AXI_ARESETN
+      R => p_0_in
     );
 \q_i_reg[17]\: unisim.vcomponents.FDRE
      port map (
@@ -111,7 +120,7 @@ M_AXI_RREADY_INST_0: unisim.vcomponents.LUT2
       CE => \^e\(0),
       D => M_AXI_RDATA(17),
       Q => Instruction(17),
-      R => M_AXI_ARESETN
+      R => p_0_in
     );
 \q_i_reg[18]\: unisim.vcomponents.FDRE
      port map (
@@ -119,7 +128,7 @@ M_AXI_RREADY_INST_0: unisim.vcomponents.LUT2
       CE => \^e\(0),
       D => M_AXI_RDATA(18),
       Q => Instruction(18),
-      R => M_AXI_ARESETN
+      R => p_0_in
     );
 \q_i_reg[19]\: unisim.vcomponents.FDRE
      port map (
@@ -127,7 +136,7 @@ M_AXI_RREADY_INST_0: unisim.vcomponents.LUT2
       CE => \^e\(0),
       D => M_AXI_RDATA(19),
       Q => Instruction(19),
-      R => M_AXI_ARESETN
+      R => p_0_in
     );
 \q_i_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -135,7 +144,7 @@ M_AXI_RREADY_INST_0: unisim.vcomponents.LUT2
       CE => \^e\(0),
       D => M_AXI_RDATA(1),
       Q => Instruction(1),
-      R => M_AXI_ARESETN
+      R => p_0_in
     );
 \q_i_reg[20]\: unisim.vcomponents.FDRE
      port map (
@@ -143,7 +152,7 @@ M_AXI_RREADY_INST_0: unisim.vcomponents.LUT2
       CE => \^e\(0),
       D => M_AXI_RDATA(20),
       Q => Instruction(20),
-      R => M_AXI_ARESETN
+      R => p_0_in
     );
 \q_i_reg[21]\: unisim.vcomponents.FDRE
      port map (
@@ -151,7 +160,7 @@ M_AXI_RREADY_INST_0: unisim.vcomponents.LUT2
       CE => \^e\(0),
       D => M_AXI_RDATA(21),
       Q => Instruction(21),
-      R => M_AXI_ARESETN
+      R => p_0_in
     );
 \q_i_reg[22]\: unisim.vcomponents.FDRE
      port map (
@@ -159,7 +168,7 @@ M_AXI_RREADY_INST_0: unisim.vcomponents.LUT2
       CE => \^e\(0),
       D => M_AXI_RDATA(22),
       Q => Instruction(22),
-      R => M_AXI_ARESETN
+      R => p_0_in
     );
 \q_i_reg[23]\: unisim.vcomponents.FDRE
      port map (
@@ -167,7 +176,7 @@ M_AXI_RREADY_INST_0: unisim.vcomponents.LUT2
       CE => \^e\(0),
       D => M_AXI_RDATA(23),
       Q => Instruction(23),
-      R => M_AXI_ARESETN
+      R => p_0_in
     );
 \q_i_reg[24]\: unisim.vcomponents.FDRE
      port map (
@@ -175,7 +184,7 @@ M_AXI_RREADY_INST_0: unisim.vcomponents.LUT2
       CE => \^e\(0),
       D => M_AXI_RDATA(24),
       Q => Instruction(24),
-      R => M_AXI_ARESETN
+      R => p_0_in
     );
 \q_i_reg[25]\: unisim.vcomponents.FDRE
      port map (
@@ -183,7 +192,7 @@ M_AXI_RREADY_INST_0: unisim.vcomponents.LUT2
       CE => \^e\(0),
       D => M_AXI_RDATA(25),
       Q => Instruction(25),
-      R => M_AXI_ARESETN
+      R => p_0_in
     );
 \q_i_reg[26]\: unisim.vcomponents.FDRE
      port map (
@@ -191,7 +200,7 @@ M_AXI_RREADY_INST_0: unisim.vcomponents.LUT2
       CE => \^e\(0),
       D => M_AXI_RDATA(26),
       Q => Instruction(26),
-      R => M_AXI_ARESETN
+      R => p_0_in
     );
 \q_i_reg[27]\: unisim.vcomponents.FDRE
      port map (
@@ -199,7 +208,7 @@ M_AXI_RREADY_INST_0: unisim.vcomponents.LUT2
       CE => \^e\(0),
       D => M_AXI_RDATA(27),
       Q => Instruction(27),
-      R => M_AXI_ARESETN
+      R => p_0_in
     );
 \q_i_reg[28]\: unisim.vcomponents.FDRE
      port map (
@@ -207,7 +216,7 @@ M_AXI_RREADY_INST_0: unisim.vcomponents.LUT2
       CE => \^e\(0),
       D => M_AXI_RDATA(28),
       Q => Instruction(28),
-      R => M_AXI_ARESETN
+      R => p_0_in
     );
 \q_i_reg[29]\: unisim.vcomponents.FDRE
      port map (
@@ -215,7 +224,7 @@ M_AXI_RREADY_INST_0: unisim.vcomponents.LUT2
       CE => \^e\(0),
       D => M_AXI_RDATA(29),
       Q => Instruction(29),
-      R => M_AXI_ARESETN
+      R => p_0_in
     );
 \q_i_reg[2]\: unisim.vcomponents.FDRE
      port map (
@@ -223,7 +232,7 @@ M_AXI_RREADY_INST_0: unisim.vcomponents.LUT2
       CE => \^e\(0),
       D => M_AXI_RDATA(2),
       Q => Instruction(2),
-      R => M_AXI_ARESETN
+      R => p_0_in
     );
 \q_i_reg[30]\: unisim.vcomponents.FDRE
      port map (
@@ -231,7 +240,7 @@ M_AXI_RREADY_INST_0: unisim.vcomponents.LUT2
       CE => \^e\(0),
       D => M_AXI_RDATA(30),
       Q => Instruction(30),
-      R => M_AXI_ARESETN
+      R => p_0_in
     );
 \q_i_reg[31]\: unisim.vcomponents.FDRE
      port map (
@@ -239,7 +248,7 @@ M_AXI_RREADY_INST_0: unisim.vcomponents.LUT2
       CE => \^e\(0),
       D => M_AXI_RDATA(31),
       Q => Instruction(31),
-      R => M_AXI_ARESETN
+      R => p_0_in
     );
 \q_i_reg[3]\: unisim.vcomponents.FDRE
      port map (
@@ -247,7 +256,7 @@ M_AXI_RREADY_INST_0: unisim.vcomponents.LUT2
       CE => \^e\(0),
       D => M_AXI_RDATA(3),
       Q => Instruction(3),
-      R => M_AXI_ARESETN
+      R => p_0_in
     );
 \q_i_reg[4]\: unisim.vcomponents.FDRE
      port map (
@@ -255,7 +264,7 @@ M_AXI_RREADY_INST_0: unisim.vcomponents.LUT2
       CE => \^e\(0),
       D => M_AXI_RDATA(4),
       Q => Instruction(4),
-      R => M_AXI_ARESETN
+      R => p_0_in
     );
 \q_i_reg[5]\: unisim.vcomponents.FDRE
      port map (
@@ -263,7 +272,7 @@ M_AXI_RREADY_INST_0: unisim.vcomponents.LUT2
       CE => \^e\(0),
       D => M_AXI_RDATA(5),
       Q => Instruction(5),
-      R => M_AXI_ARESETN
+      R => p_0_in
     );
 \q_i_reg[6]\: unisim.vcomponents.FDRE
      port map (
@@ -271,7 +280,7 @@ M_AXI_RREADY_INST_0: unisim.vcomponents.LUT2
       CE => \^e\(0),
       D => M_AXI_RDATA(6),
       Q => Instruction(6),
-      R => M_AXI_ARESETN
+      R => p_0_in
     );
 \q_i_reg[7]\: unisim.vcomponents.FDRE
      port map (
@@ -279,7 +288,7 @@ M_AXI_RREADY_INST_0: unisim.vcomponents.LUT2
       CE => \^e\(0),
       D => M_AXI_RDATA(7),
       Q => Instruction(7),
-      R => M_AXI_ARESETN
+      R => p_0_in
     );
 \q_i_reg[8]\: unisim.vcomponents.FDRE
      port map (
@@ -287,7 +296,7 @@ M_AXI_RREADY_INST_0: unisim.vcomponents.LUT2
       CE => \^e\(0),
       D => M_AXI_RDATA(8),
       Q => Instruction(8),
-      R => M_AXI_ARESETN
+      R => p_0_in
     );
 \q_i_reg[9]\: unisim.vcomponents.FDRE
      port map (
@@ -295,7 +304,7 @@ M_AXI_RREADY_INST_0: unisim.vcomponents.LUT2
       CE => \^e\(0),
       D => M_AXI_RDATA(9),
       Q => Instruction(9),
-      R => M_AXI_ARESETN
+      R => p_0_in
     );
 end STRUCTURE;
 library IEEE;
@@ -307,12 +316,12 @@ entity design_1_fetch_unit_0_1_fetch_unit is
     M_AXI_ARVALID : out STD_LOGIC;
     Instruction : out STD_LOGIC_VECTOR ( 31 downto 0 );
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
-    M_AXI_ARESETN : in STD_LOGIC;
     M_AXI_RDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
     M_AXI_ACLK : in STD_LOGIC;
     Start_read : in STD_LOGIC;
     M_AXI_RVALID : in STD_LOGIC;
-    M_AXI_ARREADY : in STD_LOGIC
+    M_AXI_ARREADY : in STD_LOGIC;
+    M_AXI_ARESETN : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of design_1_fetch_unit_0_1_fetch_unit : entity is "fetch_unit";
@@ -463,7 +472,6 @@ end design_1_fetch_unit_0_1;
 architecture STRUCTURE of design_1_fetch_unit_0_1 is
   signal \<const0>\ : STD_LOGIC;
   signal \^read_done\ : STD_LOGIC;
-  signal \^read_address\ : STD_LOGIC_VECTOR ( 31 downto 0 );
   attribute x_interface_info : string;
   attribute x_interface_info of M_AXI_ACLK : signal is "xilinx.com:signal:clock:1.0 M_AXI_ACLK CLK";
   attribute x_interface_mode : string;
@@ -518,8 +526,71 @@ architecture STRUCTURE of design_1_fetch_unit_0_1 is
   attribute x_interface_info of M_AXI_WDATA : signal is "xilinx.com:interface:aximm:1.0 M_AXI WDATA";
   attribute x_interface_info of M_AXI_WSTRB : signal is "xilinx.com:interface:aximm:1.0 M_AXI WSTRB";
 begin
+  \<const0>\ <= Read_address(3);
+  \<const0>\ <= Read_address(25);
+  \<const0>\ <= Read_address(26);
+  \<const0>\ <= Read_address(27);
+  \<const0>\ <= Read_address(28);
+  \<const0>\ <= Read_address(29);
+  \<const0>\ <= Read_address(2);
+  \<const0>\ <= Read_address(30);
+  \<const0>\ <= Read_address(31);
+  \<const0>\ <= Read_address(10);
+  \<const0>\ <= Read_address(4);
+  \<const0>\ <= Read_address(5);
+  \<const0>\ <= Read_address(6);
+  \<const0>\ <= Read_address(7);
+  \<const0>\ <= Read_address(8);
+  \<const0>\ <= Read_address(9);
+  \<const0>\ <= Read_address(0);
+  \<const0>\ <= Read_address(17);
+  \<const0>\ <= Read_address(24);
+  \<const0>\ <= Read_address(11);
+  \<const0>\ <= Read_address(12);
+  \<const0>\ <= Read_address(13);
+  \<const0>\ <= Read_address(14);
+  \<const0>\ <= Read_address(15);
+  \<const0>\ <= Read_address(16);
+  \<const0>\ <= Read_address(18);
+  \<const0>\ <= Read_address(19);
+  \<const0>\ <= Read_address(1);
+  \<const0>\ <= Read_address(20);
+  \<const0>\ <= Read_address(21);
+  \<const0>\ <= Read_address(22);
+  \<const0>\ <= Read_address(23);
   Error <= \<const0>\;
-  M_AXI_ARADDR(31 downto 0) <= \^read_address\(31 downto 0);
+  M_AXI_ARADDR(31) <= \<const0>\;
+  M_AXI_ARADDR(30) <= \<const0>\;
+  M_AXI_ARADDR(29) <= \<const0>\;
+  M_AXI_ARADDR(28) <= \<const0>\;
+  M_AXI_ARADDR(27) <= \<const0>\;
+  M_AXI_ARADDR(26) <= \<const0>\;
+  M_AXI_ARADDR(25) <= \<const0>\;
+  M_AXI_ARADDR(24) <= \<const0>\;
+  M_AXI_ARADDR(23) <= \<const0>\;
+  M_AXI_ARADDR(22) <= \<const0>\;
+  M_AXI_ARADDR(21) <= \<const0>\;
+  M_AXI_ARADDR(20) <= \<const0>\;
+  M_AXI_ARADDR(19) <= \<const0>\;
+  M_AXI_ARADDR(18) <= \<const0>\;
+  M_AXI_ARADDR(17) <= \<const0>\;
+  M_AXI_ARADDR(16) <= \<const0>\;
+  M_AXI_ARADDR(15) <= \<const0>\;
+  M_AXI_ARADDR(14) <= \<const0>\;
+  M_AXI_ARADDR(13) <= \<const0>\;
+  M_AXI_ARADDR(12) <= \<const0>\;
+  M_AXI_ARADDR(11) <= \<const0>\;
+  M_AXI_ARADDR(10) <= \<const0>\;
+  M_AXI_ARADDR(9) <= \<const0>\;
+  M_AXI_ARADDR(8) <= \<const0>\;
+  M_AXI_ARADDR(7) <= \<const0>\;
+  M_AXI_ARADDR(6) <= \<const0>\;
+  M_AXI_ARADDR(5) <= \<const0>\;
+  M_AXI_ARADDR(4) <= \<const0>\;
+  M_AXI_ARADDR(3) <= \<const0>\;
+  M_AXI_ARADDR(2) <= \<const0>\;
+  M_AXI_ARADDR(1) <= \<const0>\;
+  M_AXI_ARADDR(0) <= \<const0>\;
   M_AXI_ARBURST(1) <= \<const0>\;
   M_AXI_ARBURST(0) <= \<const0>\;
   M_AXI_ARCACHE(3) <= \<const0>\;
@@ -650,11 +721,6 @@ begin
   M_AXI_WVALID <= \<const0>\;
   PCie <= \^read_done\;
   Read_Done <= \^read_done\;
-  \^read_address\(31 downto 0) <= Read_address(31 downto 0);
-GND: unisim.vcomponents.GND
-     port map (
-      G => \<const0>\
-    );
 U0: entity work.design_1_fetch_unit_0_1_fetch_unit
      port map (
       E(0) => \^read_done\,

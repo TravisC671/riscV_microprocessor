@@ -2,7 +2,7 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-// Date        : Fri Oct  3 13:45:57 2025
+// Date        : Mon Oct  6 14:04:47 2025
 // Host        : cenglab16 running 64-bit Ubuntu 24.04.3 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/student/s101153258/riscv_microprocessor/riscv_microprocessor.gen/sources_1/bd/design_1/ip/design_1_fetch_unit_0_1/design_1_fetch_unit_0_1_sim_netlist.v
@@ -127,11 +127,73 @@ module design_1_fetch_unit_0_1
   wire [31:0]M_AXI_RDATA;
   wire M_AXI_RVALID;
   wire Read_Done;
-  wire [31:0]Read_address;
   wire Start_read;
 
+  assign \<const0>  = Read_address[3];
+  assign \<const0>  = Read_address[25];
+  assign \<const0>  = Read_address[26];
+  assign \<const0>  = Read_address[27];
+  assign \<const0>  = Read_address[28];
+  assign \<const0>  = Read_address[29];
+  assign \<const0>  = Read_address[2];
+  assign \<const0>  = Read_address[30];
+  assign \<const0>  = Read_address[31];
+  assign \<const0>  = Read_address[10];
+  assign \<const0>  = Read_address[4];
+  assign \<const0>  = Read_address[5];
+  assign \<const0>  = Read_address[6];
+  assign \<const0>  = Read_address[7];
+  assign \<const0>  = Read_address[8];
+  assign \<const0>  = Read_address[9];
+  assign \<const0>  = Read_address[0];
+  assign \<const0>  = Read_address[17];
+  assign \<const0>  = Read_address[24];
+  assign \<const0>  = Read_address[11];
+  assign \<const0>  = Read_address[12];
+  assign \<const0>  = Read_address[13];
+  assign \<const0>  = Read_address[14];
+  assign \<const0>  = Read_address[15];
+  assign \<const0>  = Read_address[16];
+  assign \<const0>  = Read_address[18];
+  assign \<const0>  = Read_address[19];
+  assign \<const0>  = Read_address[1];
+  assign \<const0>  = Read_address[20];
+  assign \<const0>  = Read_address[21];
+  assign \<const0>  = Read_address[22];
+  assign \<const0>  = Read_address[23];
   assign Error = \<const0> ;
-  assign M_AXI_ARADDR[31:0] = Read_address;
+  assign M_AXI_ARADDR[31] = \<const0> ;
+  assign M_AXI_ARADDR[30] = \<const0> ;
+  assign M_AXI_ARADDR[29] = \<const0> ;
+  assign M_AXI_ARADDR[28] = \<const0> ;
+  assign M_AXI_ARADDR[27] = \<const0> ;
+  assign M_AXI_ARADDR[26] = \<const0> ;
+  assign M_AXI_ARADDR[25] = \<const0> ;
+  assign M_AXI_ARADDR[24] = \<const0> ;
+  assign M_AXI_ARADDR[23] = \<const0> ;
+  assign M_AXI_ARADDR[22] = \<const0> ;
+  assign M_AXI_ARADDR[21] = \<const0> ;
+  assign M_AXI_ARADDR[20] = \<const0> ;
+  assign M_AXI_ARADDR[19] = \<const0> ;
+  assign M_AXI_ARADDR[18] = \<const0> ;
+  assign M_AXI_ARADDR[17] = \<const0> ;
+  assign M_AXI_ARADDR[16] = \<const0> ;
+  assign M_AXI_ARADDR[15] = \<const0> ;
+  assign M_AXI_ARADDR[14] = \<const0> ;
+  assign M_AXI_ARADDR[13] = \<const0> ;
+  assign M_AXI_ARADDR[12] = \<const0> ;
+  assign M_AXI_ARADDR[11] = \<const0> ;
+  assign M_AXI_ARADDR[10] = \<const0> ;
+  assign M_AXI_ARADDR[9] = \<const0> ;
+  assign M_AXI_ARADDR[8] = \<const0> ;
+  assign M_AXI_ARADDR[7] = \<const0> ;
+  assign M_AXI_ARADDR[6] = \<const0> ;
+  assign M_AXI_ARADDR[5] = \<const0> ;
+  assign M_AXI_ARADDR[4] = \<const0> ;
+  assign M_AXI_ARADDR[3] = \<const0> ;
+  assign M_AXI_ARADDR[2] = \<const0> ;
+  assign M_AXI_ARADDR[1] = \<const0> ;
+  assign M_AXI_ARADDR[0] = \<const0> ;
   assign M_AXI_ARBURST[1] = \<const0> ;
   assign M_AXI_ARBURST[0] = \<const0> ;
   assign M_AXI_ARCACHE[3] = \<const0> ;
@@ -261,8 +323,6 @@ module design_1_fetch_unit_0_1
   assign M_AXI_WUSER = \<const0> ;
   assign M_AXI_WVALID = \<const0> ;
   assign PCie = Read_Done;
-  GND GND
-       (.G(\<const0> ));
   design_1_fetch_unit_0_1_fetch_unit U0
        (.E(Read_Done),
         .Instruction(Instruction),
@@ -280,21 +340,21 @@ module design_1_fetch_unit_0_1_fetch_unit
    (M_AXI_ARVALID,
     Instruction,
     E,
-    M_AXI_ARESETN,
     M_AXI_RDATA,
     M_AXI_ACLK,
     Start_read,
     M_AXI_RVALID,
-    M_AXI_ARREADY);
+    M_AXI_ARREADY,
+    M_AXI_ARESETN);
   output M_AXI_ARVALID;
   output [31:0]Instruction;
   output [0:0]E;
-  input M_AXI_ARESETN;
   input [31:0]M_AXI_RDATA;
   input M_AXI_ACLK;
   input Start_read;
   input M_AXI_RVALID;
   input M_AXI_ARREADY;
+  input M_AXI_ARESETN;
 
   wire [0:0]E;
   wire [31:0]Instruction;
@@ -364,14 +424,14 @@ endmodule
 module design_1_fetch_unit_0_1_generic_register
    (E,
     Instruction,
-    current_state,
     M_AXI_ARESETN,
+    current_state,
     M_AXI_RDATA,
     M_AXI_ACLK);
   output [0:0]E;
   output [31:0]Instruction;
-  input [1:0]current_state;
   input M_AXI_ARESETN;
+  input [1:0]current_state;
   input [31:0]M_AXI_RDATA;
   input M_AXI_ACLK;
 
@@ -381,6 +441,7 @@ module design_1_fetch_unit_0_1_generic_register
   wire M_AXI_ARESETN;
   wire [31:0]M_AXI_RDATA;
   wire [1:0]current_state;
+  wire p_0_in;
 
   LUT2 #(
     .INIT(4'h8)) 
@@ -388,198 +449,203 @@ module design_1_fetch_unit_0_1_generic_register
        (.I0(current_state[0]),
         .I1(current_state[1]),
         .O(E));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \q_i[31]_i_1 
+       (.I0(M_AXI_ARESETN),
+        .O(p_0_in));
   FDRE \q_i_reg[0] 
        (.C(M_AXI_ACLK),
         .CE(E),
         .D(M_AXI_RDATA[0]),
         .Q(Instruction[0]),
-        .R(M_AXI_ARESETN));
+        .R(p_0_in));
   FDRE \q_i_reg[10] 
        (.C(M_AXI_ACLK),
         .CE(E),
         .D(M_AXI_RDATA[10]),
         .Q(Instruction[10]),
-        .R(M_AXI_ARESETN));
+        .R(p_0_in));
   FDRE \q_i_reg[11] 
        (.C(M_AXI_ACLK),
         .CE(E),
         .D(M_AXI_RDATA[11]),
         .Q(Instruction[11]),
-        .R(M_AXI_ARESETN));
+        .R(p_0_in));
   FDRE \q_i_reg[12] 
        (.C(M_AXI_ACLK),
         .CE(E),
         .D(M_AXI_RDATA[12]),
         .Q(Instruction[12]),
-        .R(M_AXI_ARESETN));
+        .R(p_0_in));
   FDRE \q_i_reg[13] 
        (.C(M_AXI_ACLK),
         .CE(E),
         .D(M_AXI_RDATA[13]),
         .Q(Instruction[13]),
-        .R(M_AXI_ARESETN));
+        .R(p_0_in));
   FDRE \q_i_reg[14] 
        (.C(M_AXI_ACLK),
         .CE(E),
         .D(M_AXI_RDATA[14]),
         .Q(Instruction[14]),
-        .R(M_AXI_ARESETN));
+        .R(p_0_in));
   FDRE \q_i_reg[15] 
        (.C(M_AXI_ACLK),
         .CE(E),
         .D(M_AXI_RDATA[15]),
         .Q(Instruction[15]),
-        .R(M_AXI_ARESETN));
+        .R(p_0_in));
   FDRE \q_i_reg[16] 
        (.C(M_AXI_ACLK),
         .CE(E),
         .D(M_AXI_RDATA[16]),
         .Q(Instruction[16]),
-        .R(M_AXI_ARESETN));
+        .R(p_0_in));
   FDRE \q_i_reg[17] 
        (.C(M_AXI_ACLK),
         .CE(E),
         .D(M_AXI_RDATA[17]),
         .Q(Instruction[17]),
-        .R(M_AXI_ARESETN));
+        .R(p_0_in));
   FDRE \q_i_reg[18] 
        (.C(M_AXI_ACLK),
         .CE(E),
         .D(M_AXI_RDATA[18]),
         .Q(Instruction[18]),
-        .R(M_AXI_ARESETN));
+        .R(p_0_in));
   FDRE \q_i_reg[19] 
        (.C(M_AXI_ACLK),
         .CE(E),
         .D(M_AXI_RDATA[19]),
         .Q(Instruction[19]),
-        .R(M_AXI_ARESETN));
+        .R(p_0_in));
   FDRE \q_i_reg[1] 
        (.C(M_AXI_ACLK),
         .CE(E),
         .D(M_AXI_RDATA[1]),
         .Q(Instruction[1]),
-        .R(M_AXI_ARESETN));
+        .R(p_0_in));
   FDRE \q_i_reg[20] 
        (.C(M_AXI_ACLK),
         .CE(E),
         .D(M_AXI_RDATA[20]),
         .Q(Instruction[20]),
-        .R(M_AXI_ARESETN));
+        .R(p_0_in));
   FDRE \q_i_reg[21] 
        (.C(M_AXI_ACLK),
         .CE(E),
         .D(M_AXI_RDATA[21]),
         .Q(Instruction[21]),
-        .R(M_AXI_ARESETN));
+        .R(p_0_in));
   FDRE \q_i_reg[22] 
        (.C(M_AXI_ACLK),
         .CE(E),
         .D(M_AXI_RDATA[22]),
         .Q(Instruction[22]),
-        .R(M_AXI_ARESETN));
+        .R(p_0_in));
   FDRE \q_i_reg[23] 
        (.C(M_AXI_ACLK),
         .CE(E),
         .D(M_AXI_RDATA[23]),
         .Q(Instruction[23]),
-        .R(M_AXI_ARESETN));
+        .R(p_0_in));
   FDRE \q_i_reg[24] 
        (.C(M_AXI_ACLK),
         .CE(E),
         .D(M_AXI_RDATA[24]),
         .Q(Instruction[24]),
-        .R(M_AXI_ARESETN));
+        .R(p_0_in));
   FDRE \q_i_reg[25] 
        (.C(M_AXI_ACLK),
         .CE(E),
         .D(M_AXI_RDATA[25]),
         .Q(Instruction[25]),
-        .R(M_AXI_ARESETN));
+        .R(p_0_in));
   FDRE \q_i_reg[26] 
        (.C(M_AXI_ACLK),
         .CE(E),
         .D(M_AXI_RDATA[26]),
         .Q(Instruction[26]),
-        .R(M_AXI_ARESETN));
+        .R(p_0_in));
   FDRE \q_i_reg[27] 
        (.C(M_AXI_ACLK),
         .CE(E),
         .D(M_AXI_RDATA[27]),
         .Q(Instruction[27]),
-        .R(M_AXI_ARESETN));
+        .R(p_0_in));
   FDRE \q_i_reg[28] 
        (.C(M_AXI_ACLK),
         .CE(E),
         .D(M_AXI_RDATA[28]),
         .Q(Instruction[28]),
-        .R(M_AXI_ARESETN));
+        .R(p_0_in));
   FDRE \q_i_reg[29] 
        (.C(M_AXI_ACLK),
         .CE(E),
         .D(M_AXI_RDATA[29]),
         .Q(Instruction[29]),
-        .R(M_AXI_ARESETN));
+        .R(p_0_in));
   FDRE \q_i_reg[2] 
        (.C(M_AXI_ACLK),
         .CE(E),
         .D(M_AXI_RDATA[2]),
         .Q(Instruction[2]),
-        .R(M_AXI_ARESETN));
+        .R(p_0_in));
   FDRE \q_i_reg[30] 
        (.C(M_AXI_ACLK),
         .CE(E),
         .D(M_AXI_RDATA[30]),
         .Q(Instruction[30]),
-        .R(M_AXI_ARESETN));
+        .R(p_0_in));
   FDRE \q_i_reg[31] 
        (.C(M_AXI_ACLK),
         .CE(E),
         .D(M_AXI_RDATA[31]),
         .Q(Instruction[31]),
-        .R(M_AXI_ARESETN));
+        .R(p_0_in));
   FDRE \q_i_reg[3] 
        (.C(M_AXI_ACLK),
         .CE(E),
         .D(M_AXI_RDATA[3]),
         .Q(Instruction[3]),
-        .R(M_AXI_ARESETN));
+        .R(p_0_in));
   FDRE \q_i_reg[4] 
        (.C(M_AXI_ACLK),
         .CE(E),
         .D(M_AXI_RDATA[4]),
         .Q(Instruction[4]),
-        .R(M_AXI_ARESETN));
+        .R(p_0_in));
   FDRE \q_i_reg[5] 
        (.C(M_AXI_ACLK),
         .CE(E),
         .D(M_AXI_RDATA[5]),
         .Q(Instruction[5]),
-        .R(M_AXI_ARESETN));
+        .R(p_0_in));
   FDRE \q_i_reg[6] 
        (.C(M_AXI_ACLK),
         .CE(E),
         .D(M_AXI_RDATA[6]),
         .Q(Instruction[6]),
-        .R(M_AXI_ARESETN));
+        .R(p_0_in));
   FDRE \q_i_reg[7] 
        (.C(M_AXI_ACLK),
         .CE(E),
         .D(M_AXI_RDATA[7]),
         .Q(Instruction[7]),
-        .R(M_AXI_ARESETN));
+        .R(p_0_in));
   FDRE \q_i_reg[8] 
        (.C(M_AXI_ACLK),
         .CE(E),
         .D(M_AXI_RDATA[8]),
         .Q(Instruction[8]),
-        .R(M_AXI_ARESETN));
+        .R(p_0_in));
   FDRE \q_i_reg[9] 
        (.C(M_AXI_ACLK),
         .CE(E),
         .D(M_AXI_RDATA[9]),
         .Q(Instruction[9]),
-        .R(M_AXI_ARESETN));
+        .R(p_0_in));
 endmodule
 `ifndef GLBL
 `define GLBL

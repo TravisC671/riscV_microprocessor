@@ -109,13 +109,42 @@ begin
                       fu_idle        when others;
     
     M_AXI_ARVALID <= '1' when current_state = fu_start else '0';
+    M_AXI_RREADY <= '1' when current_state = fu_accept else '0';
     
     PCie         <= '1' when current_state = fu_accept else '0';
     Read_Done    <= '1' when current_state = fu_accept else '0';
-    M_AXI_RREADY <= '1' when current_state = fu_accept else '0';
     IRLen        <= '1' when current_state = fu_accept else '0';
     
     IRLatch: entity work.generic_register (behavioral) 
         generic map (N => 32)
-        port map (din => M_AXI_RDATA, dout => Instruction, clk => M_AXI_ACLK, res => M_AXI_ARESETN, en => IRLen);
+        port map (din => M_AXI_RDATA, dout => Instruction, clk => M_AXI_ACLK, res => not M_AXI_ARESETN, en => IRLen);
+        
+     M_AXI_AWID	     <= (others => '0');         
+     M_AXI_AWADDR    <= (others => '0');       
+     M_AXI_AWLEN	 <= (others => '0');        
+     M_AXI_AWSIZE    <= (others => '0');       
+     M_AXI_AWBURST   <= (others => '0');        
+     M_AXI_AWLOCK    <= '0';                   
+     M_AXI_AWCACHE   <= (others => '0');        
+     M_AXI_AWPROT    <= (others => '0');       
+     M_AXI_AWQOS     <= (others => '0');        
+     M_AXI_AWUSER    <= '0';                   
+     M_AXI_AWVALID   <= '0';                    
+     M_AXI_WDATA     <= (others => '0');         
+     M_AXI_WSTRB     <= (others => '0');         
+     M_AXI_WLAST     <= '0';                     
+     M_AXI_WUSER     <= '0';                     
+     M_AXI_WVALID    <= '0';                     
+     M_AXI_ARID      <= (others => '0');
+     M_AXI_ARADDR    <= (others => '0');
+     M_AXI_ARLEN     <= (others => '0');
+     M_AXI_ARSIZE    <= (others => '0');
+     M_AXI_ARBURST   <= (others => '0');
+     M_AXI_ARLOCK    <= '0'; 
+     M_AXI_ARCACHE   <= (others => '0');
+     M_AXI_ARPROT    <= (others => '0');
+     M_AXI_ARQOS     <= (others => '0');
+     M_AXI_ARUSER    <= '0';
+     Error <= '0';
+     M_AXI_BREADY <= '0';
 end Behavioral;
