@@ -37,20 +37,20 @@ begin
     wait until ready = '1';   
 
     wait for 50 ns;
---    PC <= x"00000004";
---    fetch <= '1';
---    wait for 10 ns;
---    fetch <= '0';
---    wait for 15 ns;
---    wait until ready = '1';   
+    PC <= x"00000004";
+    fetch <= '1';
+    wait for 10 ns;
+    fetch <= '0';
+    wait for 15 ns;
+    wait until ready = '1';   
     
---    wait for 50 ns;
---    PC <= x"00000008";
---    fetch <= '1';
---    wait for 10 ns;
---    fetch <= '0';
---    wait for 15 ns;
---    wait until ready = '1';   
+    wait for 50 ns;
+    PC <= x"00000008";
+    fetch <= '1';
+    wait for 10 ns;
+    fetch <= '0';
+    wait for 15 ns;
+    wait until ready = '1';   
   end process;
 
 end Behavioral;

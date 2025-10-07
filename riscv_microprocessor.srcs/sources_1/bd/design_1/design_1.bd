@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x16E480F09998D508",
+      "boundary_crc": "0x9218B4391D64E1C1",
       "device": "xc7a100tcsg324-1",
       "gen_directory": "../../../../riscv_microprocessor.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -36,8 +36,8 @@
       },
       "Read_Data": {
         "direction": "O",
-        "left": "31",
-        "right": "0"
+        "left": "0",
+        "right": "31"
       },
       "Error": {
         "direction": "O"
@@ -352,8 +352,8 @@
       "fetch_unit_0": {
         "vlnv": "xilinx.com:module_ref:fetch_unit:1.0",
         "ip_revision": "1",
-        "xci_name": "design_1_fetch_unit_0_1",
-        "xci_path": "ip/design_1_fetch_unit_0_1/design_1_fetch_unit_0_1.xci",
+        "xci_name": "design_1_fetch_unit_0_2",
+        "xci_path": "ip/design_1_fetch_unit_0_2/design_1_fetch_unit_0_2.xci",
         "inst_hier_path": "fetch_unit_0",
         "has_run_ip_tcl": "true",
         "reference_info": {
@@ -385,23 +385,23 @@
               },
               "AWUSER_WIDTH": {
                 "value": "1",
-                "value_src": "constant"
+                "value_src": "auto"
               },
               "ARUSER_WIDTH": {
                 "value": "1",
-                "value_src": "constant"
+                "value_src": "auto"
               },
               "WUSER_WIDTH": {
                 "value": "1",
-                "value_src": "constant"
+                "value_src": "auto"
               },
               "RUSER_WIDTH": {
                 "value": "1",
-                "value_src": "constant"
+                "value_src": "auto"
               },
               "BUSER_WIDTH": {
                 "value": "1",
-                "value_src": "constant"
+                "value_src": "auto"
               },
               "READ_WRITE_MODE": {
                 "value": "READ_WRITE",
@@ -527,7 +527,9 @@
               },
               "AWUSER": {
                 "physical_name": "M_AXI_AWUSER",
-                "direction": "O"
+                "direction": "O",
+                "left": "0",
+                "right": "0"
               },
               "AWVALID": {
                 "physical_name": "M_AXI_AWVALID",
@@ -555,7 +557,9 @@
               },
               "WUSER": {
                 "physical_name": "M_AXI_WUSER",
-                "direction": "O"
+                "direction": "O",
+                "left": "0",
+                "right": "0"
               },
               "WVALID": {
                 "physical_name": "M_AXI_WVALID",
@@ -579,7 +583,9 @@
               },
               "BUSER": {
                 "physical_name": "M_AXI_BUSER",
-                "direction": "I"
+                "direction": "I",
+                "left": "0",
+                "right": "0"
               },
               "BVALID": {
                 "physical_name": "M_AXI_BVALID",
@@ -643,7 +649,9 @@
               },
               "ARUSER": {
                 "physical_name": "M_AXI_ARUSER",
-                "direction": "O"
+                "direction": "O",
+                "left": "0",
+                "right": "0"
               },
               "ARVALID": {
                 "physical_name": "M_AXI_ARVALID",
@@ -677,7 +685,9 @@
               },
               "RUSER": {
                 "physical_name": "M_AXI_RUSER",
-                "direction": "I"
+                "direction": "I",
+                "left": "0",
+                "right": "0"
               },
               "RVALID": {
                 "physical_name": "M_AXI_RVALID",
@@ -699,18 +709,18 @@
             "left": "31",
             "right": "0"
           },
-          "Instruction": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
           "Read_Done": {
             "direction": "O"
           },
-          "PCie": {
-            "direction": "O"
+          "Read_Data": {
+            "direction": "O",
+            "left": "0",
+            "right": "31"
           },
           "Error": {
+            "direction": "O"
+          },
+          "PCle": {
             "direction": "O"
           },
           "M_AXI_ACLK": {
@@ -798,9 +808,9 @@
           "Error"
         ]
       },
-      "fetch_unit_0_Instruction": {
+      "fetch_unit_0_Read_Data": {
         "ports": [
-          "fetch_unit_0/Instruction",
+          "fetch_unit_0/Read_Data",
           "Read_Data"
         ]
       },

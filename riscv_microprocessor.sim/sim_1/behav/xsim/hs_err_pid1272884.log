@@ -1,8 +1,0 @@
-#
-# An unexpected error has occurred (11)
-#
-Stack:
-/opt/Xilinx/2025.1/Vivado/tps/lnx64/jre21.0.1_12/lib//server/libjvm.so(+0xe4f55c) [0x7ee553e4f55c]
-/opt/Xilinx/2025.1/Vivado/tps/lnx64/jre21.0.1_12/lib//server/libjvm.so(JVM_handle_linux_signal+0x23e) [0x7ee553e5002e]
-/lib/x86_64-linux-gnu/libc.so.6(+0x45330) [0x7ee592045330]
-[0x64b13ee0]

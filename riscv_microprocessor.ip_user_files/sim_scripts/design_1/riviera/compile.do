@@ -42,7 +42,7 @@ vcom -work proc_sys_reset_v5_0_17 -93  -incr \
 
 vcom -work xil_defaultlib -93  -incr \
 "../../../bd/design_1/ip/design_1_rst_clk_wiz_100M_0/sim/design_1_rst_clk_wiz_100M_0.vhd" \
-"../../../bd/design_1/ip/design_1_fetch_unit_0_1/sim/design_1_fetch_unit_0_1.vhd" \
+"../../../bd/design_1/ip/design_1_fetch_unit_0_2/sim/design_1_fetch_unit_0_2.vhd" \
 "../../../bd/design_1/sim/design_1.vhd" \
 
 vlog -work xil_defaultlib \
