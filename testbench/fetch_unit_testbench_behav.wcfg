@@ -3,79 +3,48 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="fetch_unit_testbench_behav.wdb" id="1">
+      <db_ref path="RISCV_sequencer_tb_behav.wdb" id="1">
          <top_modules>
-            <top_module name="axi_bram_ctrl_funcs" />
-            <top_module name="fetch_unit_testbench" />
-            <top_module name="glbl" />
-            <top_module name="vcomponents" />
+            <top_module name="RISCV_sequencer_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1,572.960 ns"></ZoomStartTime>
-      <ZoomEndTime time="1,712.761 ns"></ZoomEndTime>
-      <Cursor1Time time="1,626.160 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,000.001 ns"></ZoomEndTime>
+      <Cursor1Time time="1,000.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="147"></NameColumnWidth>
-      <ValueColumnWidth column_width="123"></ValueColumnWidth>
+      <ValueColumnWidth column_width="119"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="14" />
-   <wvobject type="logic" fp_name="/fetch_unit_testbench/fetch">
-      <obj_property name="ElementShortName">fetch</obj_property>
-      <obj_property name="ObjectShortName">fetch</obj_property>
+   <WVObjectSize size="7" />
+   <wvobject type="logic" fp_name="/RISCV_sequencer_tb/rst">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/fetch_unit_testbench/reset">
-      <obj_property name="ElementShortName">reset</obj_property>
-      <obj_property name="ObjectShortName">reset</obj_property>
+   <wvobject type="logic" fp_name="/RISCV_sequencer_tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/fetch_unit_testbench/sys_clock">
-      <obj_property name="ElementShortName">sys_clock</obj_property>
-      <obj_property name="ObjectShortName">sys_clock</obj_property>
+   <wvobject type="logic" fp_name="/RISCV_sequencer_tb/instruction_ready">
+      <obj_property name="ElementShortName">instruction_ready</obj_property>
+      <obj_property name="ObjectShortName">instruction_ready</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/fetch_unit_testbench/ready">
-      <obj_property name="ElementShortName">ready</obj_property>
-      <obj_property name="ObjectShortName">ready</obj_property>
+   <wvobject type="logic" fp_name="/RISCV_sequencer_tb/exec">
+      <obj_property name="ElementShortName">exec</obj_property>
+      <obj_property name="ObjectShortName">exec</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/fetch_unit_testbench/PC">
-      <obj_property name="ElementShortName">PC[31:0]</obj_property>
-      <obj_property name="ObjectShortName">PC[31:0]</obj_property>
+   <wvobject type="logic" fp_name="/RISCV_sequencer_tb/start_fetch">
+      <obj_property name="ElementShortName">start_fetch</obj_property>
+      <obj_property name="ObjectShortName">start_fetch</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/fetch_unit_testbench/instruction">
-      <obj_property name="ElementShortName">instruction[31:0]</obj_property>
-      <obj_property name="ObjectShortName">instruction[31:0]</obj_property>
+   <wvobject type="logic" fp_name="/RISCV_sequencer_tb/PCie">
+      <obj_property name="ElementShortName">PCie</obj_property>
+      <obj_property name="ObjectShortName">PCie</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/fetch_unit_testbench/uut/design_1_i/fetch_unit_0/U0/Start_read">
-      <obj_property name="ElementShortName">Start_read</obj_property>
-      <obj_property name="ObjectShortName">Start_read</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/fetch_unit_testbench/uut/design_1_i/fetch_unit_0/U0/M_AXI_ARREADY">
-      <obj_property name="ElementShortName">M_AXI_ARREADY</obj_property>
-      <obj_property name="ObjectShortName">M_AXI_ARREADY</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/fetch_unit_testbench/uut/design_1_i/fetch_unit_0/U0/M_AXI_ARVALID">
-      <obj_property name="ElementShortName">M_AXI_ARVALID</obj_property>
-      <obj_property name="ObjectShortName">M_AXI_ARVALID</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/fetch_unit_testbench/uut/design_1_i/fetch_unit_0/M_AXI_RVALID">
-      <obj_property name="ElementShortName">M_AXI_RVALID</obj_property>
-      <obj_property name="ObjectShortName">M_AXI_RVALID</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/fetch_unit_testbench/uut/design_1_i/fetch_unit_0/U0/current_state">
+   <wvobject type="other" fp_name="/RISCV_sequencer_tb/uut/current_state">
       <obj_property name="ElementShortName">current_state</obj_property>
       <obj_property name="ObjectShortName">current_state</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/fetch_unit_testbench/uut/design_1_i/fetch_unit_0/M_AXI_RDATA">
-      <obj_property name="ElementShortName">M_AXI_RDATA[31:0]</obj_property>
-      <obj_property name="ObjectShortName">M_AXI_RDATA[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/fetch_unit_testbench/uut/design_1_i/fetch_unit_0/M_AXI_RREADY">
-      <obj_property name="ElementShortName">M_AXI_RREADY</obj_property>
-      <obj_property name="ObjectShortName">M_AXI_RREADY</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/fetch_unit_testbench/uut/design_1_i/fetch_unit_0/M_AXI_ARADDR">
-      <obj_property name="ElementShortName">M_AXI_ARADDR[31:0]</obj_property>
-      <obj_property name="ObjectShortName">M_AXI_ARADDR[31:0]</obj_property>
    </wvobject>
 </wave_config>

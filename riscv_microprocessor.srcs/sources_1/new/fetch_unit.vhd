@@ -94,7 +94,7 @@ begin
     
     current_state <= next_state_final when rising_edge(M_AXI_ACLK);
     
-    next_state_final <= fu_idle when M_AXI_ARESETN = '0' else next_state; --might need to make this zero
+    next_state_final <= fu_idle when M_AXI_ARESETN = '0' else next_state;
     
     
     fu_idle_next   <= fu_start  when Start_read = '1'    else fu_idle;

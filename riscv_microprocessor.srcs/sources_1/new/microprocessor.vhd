@@ -124,7 +124,9 @@ entity microprocessor is
 end microprocessor;
 
 architecture Behavioral of microprocessor is
+    signal CW_Decoded : control_word;
     signal CW : control_word;
+    signal CW_Zero : control_word;
     signal res : std_logic;
     
     signal Start_read : std_logic;
@@ -133,6 +135,8 @@ architecture Behavioral of microprocessor is
     signal Read_Data: std_logic_vector(0 to C_M_AXI_DATA_WIDTH*C_M_AXI_BURST_LEN - 1);
     signal Error: std_logic;
     signal PCle: std_logic;
+    signal exec : std_logic;
+    signal PCie : std_logic;
 begin
 
     fetch_unit : entity work.fetch_unit (Behavioral)
@@ -189,11 +193,28 @@ begin
             M_AXI_RREADY => I_M_AXI_RREADY);
 
     decoder: entity work.decoder (Behavioral)
-        port map (instruction => Read_Data, CW => CW);
+        port map (instruction => Read_Data, CW => CW_Decoded);
     
+    CW <= (
+        Asel => CW_decoded.Asel,
+        Bsel => CW_decoded.Bsel,
+        Dsel => CW_decoded.Dsel,
+        DLen => exec and CW_decoded.DLen,
+        PCAsel => CW_decoded.PCAsel,
+        IMMBsel => CW_decoded.IMMBsel,
+        PCDsel => CW_decoded.PCDsel,
+        PCie => CW_decoded.PCie,
+        PCle => exec and CW_decoded.PCle,
+        isBR => CW_decoded.isBR,
+        BRcond => CW_decoded.BRcond,
+        ALUFunc => CW_decoded.ALUFunc,
+        IMM => CW_decoded.IMM
+        );
     
     datapath: entity work.datapath (Behavioral)
         port map (Controller => CW, clk => CLK, res => RESET);
     
+    sequencer: entity work.sequencer (Behavioral)
+        port map (clk => CLK, res => RESET, start => Start_read, done => Read_Done, PCie => PCie, exec => exec);
 
 end Behavioral;
