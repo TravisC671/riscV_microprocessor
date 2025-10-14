@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="microprocessor_testbench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="axi_bram_ctrl_funcs" />
+            <top_module name="decoder_pkg" />
+            <top_module name="glbl" />
+            <top_module name="microprocessor_testbench" />
+            <top_module name="riscv_package" />
+            <top_module name="vcomponents" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,414.001 ns"></ZoomEndTime>
+      <Cursor1Time time="5.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="147"></NameColumnWidth>
+      <ValueColumnWidth column_width="107"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="7" />
+   <wvobject type="logic" fp_name="/microprocessor_testbench/reset">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/microprocessor_testbench/sys_clock">
+      <obj_property name="ElementShortName">sys_clock</obj_property>
+      <obj_property name="ObjectShortName">sys_clock</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/RESET">
+      <obj_property name="ElementShortName">RESET</obj_property>
+      <obj_property name="ObjectShortName">RESET</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/datapath/res">
+      <obj_property name="ElementShortName">res</obj_property>
+      <obj_property name="ObjectShortName">res</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/fetch_unit/Read_Data">
+      <obj_property name="ElementShortName">Read_Data[0:31]</obj_property>
+      <obj_property name="ObjectShortName">Read_Data[0:31]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/decoder/CW">
+      <obj_property name="ElementShortName">CW</obj_property>
+      <obj_property name="ObjectShortName">CW</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/datapath/register_file/regOut">
+      <obj_property name="ElementShortName">regOut[31:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">regOut[31:0][31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+</wave_config>

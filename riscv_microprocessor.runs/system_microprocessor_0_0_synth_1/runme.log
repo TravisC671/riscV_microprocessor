@@ -1,0 +1,495 @@
+
+*** Running vivado
+    with args -log system_microprocessor_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_microprocessor_0_0.tcl
+
+
+****** Vivado v2025.1 (64-bit)
+  **** SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+  **** IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+  **** SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+  **** Start of session at: Tue Oct 14 12:16:34 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source system_microprocessor_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/2025.1/Vivado/data/ip'.
+Command: synth_design -top system_microprocessor_0_0 -part xc7a100tcsg324-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 3996071
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2235.133 ; gain = 439.656 ; free physical = 12673 ; free virtual = 38844
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-9112] actual for formal port 'm_axi_aresetn' is neither a static name nor a globally static expression [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd:151]
+INFO: [Synth 8-638] synthesizing module 'system_microprocessor_0_0' [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.gen/sources_1/bd/system/ip/system_microprocessor_0_0/synth/system_microprocessor_0_0.vhd:147]
+	Parameter C_M_TARGET_SLAVE_BASE_ADDR bound to: 32'b00000000000000000000000000000000 
+	Parameter C_M_AXI_BURST_LEN bound to: 1 - type: integer 
+	Parameter C_M_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'microprocessor' declared at '/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd:5' bound to instance 'U0' of component 'microprocessor' [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.gen/sources_1/bd/system/ip/system_microprocessor_0_0/synth/system_microprocessor_0_0.vhd:360]
+INFO: [Synth 8-638] synthesizing module 'microprocessor' [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd:126]
+INFO: [Synth 8-638] synthesizing module 'fetch_unit' [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/fetch_unit.vhd:80]
+INFO: [Synth 8-226] default block is never used [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/fetch_unit.vhd:105]
+INFO: [Synth 8-638] synthesizing module 'generic_register' [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/imports/new/generic_register.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'generic_register' (0#1) [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/imports/new/generic_register.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'fetch_unit' (0#1) [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/fetch_unit.vhd:80]
+INFO: [Synth 8-638] synthesizing module 'decoder' [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/decoder.vhd:10]
+INFO: [Synth 8-256] done synthesizing module 'decoder' (0#1) [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/decoder.vhd:10]
+INFO: [Synth 8-638] synthesizing module 'datapath' [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/datapath.vhd:11]
+INFO: [Synth 8-638] synthesizing module 'register_file' [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/register_file.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'register_file' (0#1) [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/register_file.vhd:19]
+INFO: [Synth 8-638] synthesizing module 'alu' [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/alu.vhd:14]
+INFO: [Synth 8-638] synthesizing module 'generic_shifter' [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/imports/new/generic_shifter.vhdl:17]
+INFO: [Synth 8-256] done synthesizing module 'generic_shifter' (0#1) [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/imports/new/generic_shifter.vhdl:17]
+INFO: [Synth 8-256] done synthesizing module 'alu' (0#1) [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/alu.vhd:14]
+INFO: [Synth 8-638] synthesizing module 'branch_test_unit' [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/branch_test_unit.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'branch_test_unit' (0#1) [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/branch_test_unit.vhd:15]
+INFO: [Synth 8-638] synthesizing module 'program_counter' [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/program_counter.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'program_counter' (0#1) [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/program_counter.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'datapath' (0#1) [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/datapath.vhd:11]
+INFO: [Synth 8-638] synthesizing module 'sequencer' [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/sequencer.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'sequencer' (0#1) [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/sequencer.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'microprocessor' (0#1) [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd:126]
+INFO: [Synth 8-256] done synthesizing module 'system_microprocessor_0_0' (0#1) [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.gen/sources_1/bd/system/ip/system_microprocessor_0_0/synth/system_microprocessor_0_0.vhd:147]
+WARNING: [Synth 8-3848] Net D_M_AXI_AWID in module/entity microprocessor does not have driver. [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd:77]
+WARNING: [Synth 8-3848] Net D_M_AXI_AWADDR in module/entity microprocessor does not have driver. [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd:78]
+WARNING: [Synth 8-3848] Net D_M_AXI_AWLEN in module/entity microprocessor does not have driver. [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd:79]
+WARNING: [Synth 8-3848] Net D_M_AXI_AWSIZE in module/entity microprocessor does not have driver. [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd:80]
+WARNING: [Synth 8-3848] Net D_M_AXI_AWBURST in module/entity microprocessor does not have driver. [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd:81]
+WARNING: [Synth 8-3848] Net D_M_AXI_AWLOCK in module/entity microprocessor does not have driver. [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd:82]
+WARNING: [Synth 8-3848] Net D_M_AXI_AWCACHE in module/entity microprocessor does not have driver. [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd:83]
+WARNING: [Synth 8-3848] Net D_M_AXI_AWPROT in module/entity microprocessor does not have driver. [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd:84]
+WARNING: [Synth 8-3848] Net D_M_AXI_AWQOS in module/entity microprocessor does not have driver. [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd:85]
+WARNING: [Synth 8-3848] Net D_M_AXI_AWUSER in module/entity microprocessor does not have driver. [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd:86]
+WARNING: [Synth 8-3848] Net D_M_AXI_AWVALID in module/entity microprocessor does not have driver. [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd:87]
+WARNING: [Synth 8-3848] Net D_M_AXI_WDATA in module/entity microprocessor does not have driver. [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd:90]
+WARNING: [Synth 8-3848] Net D_M_AXI_WSTRB in module/entity microprocessor does not have driver. [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd:91]
+WARNING: [Synth 8-3848] Net D_M_AXI_WLAST in module/entity microprocessor does not have driver. [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd:92]
+WARNING: [Synth 8-3848] Net D_M_AXI_WUSER in module/entity microprocessor does not have driver. [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd:93]
+WARNING: [Synth 8-3848] Net D_M_AXI_WVALID in module/entity microprocessor does not have driver. [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd:94]
+WARNING: [Synth 8-3848] Net D_M_AXI_BREADY in module/entity microprocessor does not have driver. [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd:101]
+WARNING: [Synth 8-3848] Net D_M_AXI_ARID in module/entity microprocessor does not have driver. [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd:103]
+WARNING: [Synth 8-3848] Net D_M_AXI_ARADDR in module/entity microprocessor does not have driver. [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd:104]
+WARNING: [Synth 8-3848] Net D_M_AXI_ARLEN in module/entity microprocessor does not have driver. [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd:105]
+WARNING: [Synth 8-3848] Net D_M_AXI_ARSIZE in module/entity microprocessor does not have driver. [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd:106]
+WARNING: [Synth 8-3848] Net D_M_AXI_ARBURST in module/entity microprocessor does not have driver. [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd:107]
+WARNING: [Synth 8-3848] Net D_M_AXI_ARLOCK in module/entity microprocessor does not have driver. [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd:108]
+WARNING: [Synth 8-3848] Net D_M_AXI_ARCACHE in module/entity microprocessor does not have driver. [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd:109]
+WARNING: [Synth 8-3848] Net D_M_AXI_ARPROT in module/entity microprocessor does not have driver. [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd:110]
+WARNING: [Synth 8-3848] Net D_M_AXI_ARQOS in module/entity microprocessor does not have driver. [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd:111]
+WARNING: [Synth 8-3848] Net D_M_AXI_ARUSER in module/entity microprocessor does not have driver. [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd:112]
+WARNING: [Synth 8-3848] Net D_M_AXI_ARVALID in module/entity microprocessor does not have driver. [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd:113]
+WARNING: [Synth 8-3848] Net D_M_AXI_RREADY in module/entity microprocessor does not have driver. [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd:122]
+WARNING: [Synth 8-3848] Net Read_address in module/entity microprocessor does not have driver. [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd:133]
+WARNING: [Synth 8-7129] Port M_AXI_AWREADY in module fetch_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_WREADY in module fetch_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BID[0] in module fetch_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BRESP[1] in module fetch_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BRESP[0] in module fetch_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BUSER[0] in module fetch_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BVALID in module fetch_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RID[0] in module fetch_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RRESP[1] in module fetch_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RRESP[0] in module fetch_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RLAST in module fetch_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RUSER[0] in module fetch_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWID[0] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWADDR[31] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWADDR[30] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWADDR[29] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWADDR[28] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWADDR[27] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWADDR[26] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWADDR[25] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWADDR[24] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWADDR[23] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWADDR[22] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWADDR[21] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWADDR[20] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWADDR[19] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWADDR[18] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWADDR[17] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWADDR[16] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWADDR[15] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWADDR[14] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWADDR[13] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWADDR[12] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWADDR[11] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWADDR[10] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWADDR[9] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWADDR[8] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWADDR[7] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWADDR[6] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWADDR[5] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWADDR[4] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWADDR[3] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWADDR[2] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWADDR[1] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWADDR[0] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWLEN[7] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWLEN[6] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWLEN[5] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWLEN[4] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWLEN[3] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWLEN[2] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWLEN[1] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWLEN[0] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWSIZE[2] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWSIZE[1] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWSIZE[0] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWBURST[1] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWBURST[0] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWLOCK in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWCACHE[3] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWCACHE[2] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWCACHE[1] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWCACHE[0] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWPROT[2] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWPROT[1] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWPROT[0] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWQOS[3] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWQOS[2] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWQOS[1] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWQOS[0] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWUSER[0] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_AWVALID in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_WDATA[31] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_WDATA[30] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_WDATA[29] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_WDATA[28] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_WDATA[27] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_WDATA[26] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_WDATA[25] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_WDATA[24] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_WDATA[23] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_WDATA[22] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_WDATA[21] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_WDATA[20] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_WDATA[19] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_WDATA[18] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_WDATA[17] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_WDATA[16] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_WDATA[15] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_WDATA[14] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_WDATA[13] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_WDATA[12] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_WDATA[11] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_WDATA[10] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_WDATA[9] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_WDATA[8] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_WDATA[7] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_WDATA[6] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_WDATA[5] in module microprocessor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_M_AXI_WDATA[4] in module microprocessor is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2315.102 ; gain = 519.625 ; free physical = 12585 ; free virtual = 38757
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2332.914 ; gain = 537.438 ; free physical = 12585 ; free virtual = 38757
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2332.914 ; gain = 537.438 ; free physical = 12585 ; free virtual = 38757
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2332.914 ; gain = 0.000 ; free physical = 12585 ; free virtual = 38757
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2461.652 ; gain = 0.000 ; free physical = 12587 ; free virtual = 38759
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2461.688 ; gain = 0.000 ; free physical = 12586 ; free virtual = 38758
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2461.688 ; gain = 666.211 ; free physical = 12654 ; free virtual = 38819
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2469.656 ; gain = 674.180 ; free physical = 12654 ; free virtual = 38819
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2469.656 ; gain = 674.180 ; free physical = 12673 ; free virtual = 38839
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2469.656 ; gain = 674.180 ; free physical = 12688 ; free virtual = 38855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 2     
+	   3 Input   32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 33    
+	                2 Bit    Registers := 2     
++---Muxes : 
+	   2 Input   33 Bit        Muxes := 5     
+	   2 Input   32 Bit        Muxes := 4     
+	   7 Input    5 Bit        Muxes := 3     
+	   7 Input    4 Bit        Muxes := 1     
+	   7 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 5     
+	   7 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWID[0] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWADDR[31] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWADDR[30] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWADDR[29] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWADDR[28] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWADDR[27] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWADDR[26] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWADDR[25] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWADDR[24] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWADDR[23] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWADDR[22] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWADDR[21] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWADDR[20] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWADDR[19] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWADDR[18] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWADDR[17] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWADDR[16] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWADDR[15] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWADDR[14] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWADDR[13] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWADDR[12] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWADDR[11] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWADDR[10] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWADDR[9] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWADDR[8] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWADDR[7] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWADDR[6] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWADDR[5] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWADDR[4] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWADDR[3] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWADDR[2] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWADDR[1] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWADDR[0] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWLEN[7] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWLEN[6] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWLEN[5] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWLEN[4] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWLEN[3] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWLEN[2] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWLEN[1] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWLEN[0] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWSIZE[2] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWSIZE[1] driven by constant 1
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWSIZE[0] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWBURST[1] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWBURST[0] driven by constant 1
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWLOCK driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWCACHE[3] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWCACHE[2] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWCACHE[1] driven by constant 1
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWCACHE[0] driven by constant 1
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWPROT[2] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWPROT[1] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWPROT[0] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWQOS[3] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWQOS[2] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWQOS[1] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWQOS[0] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWUSER[0] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_AWVALID driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WDATA[31] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WDATA[30] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WDATA[29] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WDATA[28] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WDATA[27] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WDATA[26] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WDATA[25] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WDATA[24] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WDATA[23] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WDATA[22] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WDATA[21] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WDATA[20] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WDATA[19] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WDATA[18] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WDATA[17] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WDATA[16] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WDATA[15] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WDATA[14] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WDATA[13] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WDATA[12] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WDATA[11] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WDATA[10] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WDATA[9] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WDATA[8] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WDATA[7] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WDATA[6] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WDATA[5] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WDATA[4] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WDATA[3] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WDATA[2] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WDATA[1] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WDATA[0] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WSTRB[3] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WSTRB[2] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WSTRB[1] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WSTRB[0] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WLAST driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WUSER[0] driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_WVALID driven by constant 0
+INFO: [Synth 8-3917] design system_microprocessor_0_0 has port I_M_AXI_BREADY driven by constant 1
+INFO: [Common 17-14] Message 'Synth 8-3917' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2469.656 ; gain = 674.180 ; free physical = 12694 ; free virtual = 38861
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2492.656 ; gain = 697.180 ; free physical = 12636 ; free virtual = 38803
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2492.656 ; gain = 697.180 ; free physical = 12636 ; free virtual = 38803
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2502.672 ; gain = 707.195 ; free physical = 12620 ; free virtual = 38787
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2677.484 ; gain = 882.008 ; free physical = 12480 ; free virtual = 38647
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2677.484 ; gain = 882.008 ; free physical = 12480 ; free virtual = 38647
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2677.484 ; gain = 882.008 ; free physical = 12480 ; free virtual = 38647
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2677.484 ; gain = 882.008 ; free physical = 12480 ; free virtual = 38647
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2677.484 ; gain = 882.008 ; free physical = 12480 ; free virtual = 38647
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2677.484 ; gain = 882.008 ; free physical = 12480 ; free virtual = 38647
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT2 |     2|
+|2     |LUT3 |     1|
+|3     |LUT4 |     2|
+|4     |LUT6 |     1|
+|5     |FDRE |     4|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2677.484 ; gain = 882.008 ; free physical = 12480 ; free virtual = 38647
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 252 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2677.484 ; gain = 753.234 ; free physical = 12480 ; free virtual = 38647
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2677.492 ; gain = 882.008 ; free physical = 12480 ; free virtual = 38647
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2677.492 ; gain = 0.000 ; free physical = 12503 ; free virtual = 38670
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2733.512 ; gain = 0.000 ; free physical = 12507 ; free virtual = 38673
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 55b4e509
+INFO: [Common 17-83] Releasing license: Synthesis
+144 Infos, 132 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 2733.547 ; gain = 1098.125 ; free physical = 12507 ; free virtual = 38674
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1853.425; main = 1853.425; forked = 272.026
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3441.582; main = 2733.516; forked = 963.922
+INFO: [Coretcl 2-1174] Renamed 3 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2757.523 ; gain = 0.000 ; free physical = 12507 ; free virtual = 38674
+INFO: [Common 17-1381] The checkpoint '/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.runs/system_microprocessor_0_0_synth_1/system_microprocessor_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file system_microprocessor_0_0_utilization_synth.rpt -pb system_microprocessor_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 14 12:16:56 2025...

@@ -23,7 +23,7 @@ entity microprocessor is
     port (
         -- Global AXI ports
 		CLK	: in std_logic;    -- Global Clock Signal.
-		RESET	: in std_logic;  -- Global Reset Singal. This Signal is Active Low
+		RESET : in std_logic;  -- Global Reset Singal. This Signal is Active High
 		
         -- AXI Write Address Channel
 		I_M_AXI_AWID	: out std_logic_vector(C_M_AXI_ID_WIDTH-1 downto 0); -- Master Interface Write Address ID
@@ -191,7 +191,7 @@ begin
             M_AXI_RUSER => I_M_AXI_RUSER,
             M_AXI_RVALID => I_M_AXI_RVALID,
             M_AXI_RREADY => I_M_AXI_RREADY);
-
+    
     decoder: entity work.decoder (Behavioral)
         port map (instruction => Read_Data, CW => CW_Decoded);
     

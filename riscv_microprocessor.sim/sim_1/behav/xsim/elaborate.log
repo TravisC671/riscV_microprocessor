@@ -1,9 +1,11 @@
 Vivado Simulator v2025.1.0
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /opt/Xilinx/2025.1/Vivado/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip -L xpm --snapshot RISCV_sequencer_tb_behav xil_defaultlib.RISCV_sequencer_tb -log elaborate.log 
+Running: /opt/Xilinx/2025.1/Vivado/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L generic_baseblocks_v2_1_2 -L axi_infrastructure_v1_1_0 -L axi_register_slice_v2_1_35 -L fifo_generator_v13_2_13 -L axi_data_fifo_v2_1_35 -L axi_crossbar_v2_1_37 -L proc_sys_reset_v5_0_17 -L axi_bram_ctrl_v4_1_13 -L blk_mem_gen_v8_4_11 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot microprocessor_testbench_behav xil_defaultlib.microprocessor_testbench xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by AMD, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
 Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-5021] port 'aclk2x' is not connected on this instance [/wrk/ci/prod/2025.1/sw/continuous/3882/output/customer/vivado/data/ip/xilinx/axi_crossbar_v2_1/hdl/axi_crossbar_v2_1_vl_rfs.v:3097]
 Completed static elaboration
 INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
