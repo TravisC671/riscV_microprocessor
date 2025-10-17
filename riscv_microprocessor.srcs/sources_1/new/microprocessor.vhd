@@ -138,6 +138,7 @@ architecture Behavioral of microprocessor is
     signal exec : std_logic;
     signal PCie : std_logic;
 begin
+    res <= not Reset;
 
     fetch_unit : entity work.fetch_unit (Behavioral)
         port map (
@@ -148,7 +149,7 @@ begin
             Error => Error,
             PCle => PCle,
             M_AXI_ACLK => CLK,
-            M_AXI_ARESETN => (not RESET),
+            M_AXI_ARESETN => res,
             M_AXI_AWID => I_M_AXI_AWID,
             M_AXI_AWADDR => I_M_AXI_AWADDR,
             M_AXI_AWLEN => I_M_AXI_AWLEN,

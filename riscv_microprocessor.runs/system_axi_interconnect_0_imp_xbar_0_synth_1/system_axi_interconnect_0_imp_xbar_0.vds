@@ -3,8 +3,8 @@
 # SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Tue Oct 14 12:00:17 2025
-# Process ID         : 3970829
+# Start of session at: Fri Oct 17 13:41:48 2025
+# Process ID         : 4012534
 # Current directory  : /home/student/s101153258/riscv_microprocessor/riscv_microprocessor.runs/system_axi_interconnect_0_imp_xbar_0_synth_1
 # Command line       : vivado -log system_axi_interconnect_0_imp_xbar_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_axi_interconnect_0_imp_xbar_0.tcl
 # Log file           : /home/student/s101153258/riscv_microprocessor/riscv_microprocessor.runs/system_axi_interconnect_0_imp_xbar_0_synth_1/system_axi_interconnect_0_imp_xbar_0.vds
@@ -13,13 +13,13 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 24.04.3 LTS
 # Processor Detail   : 12th Gen Intel(R) Core(TM) i7-12700H
-# CPU Frequency      : 2893.129 MHz
+# CPU Frequency      : 1248.885 MHz
 # CPU Physical cores : 14
 # CPU Logical cores  : 20
 # Host memory        : 33378 MB
 # Swap memory        : 17179 MB
 # Total Virtual      : 50558 MB
-# Available Virtual  : 42719 MB
+# Available Virtual  : 39644 MB
 #-----------------------------------------------------------
 source system_axi_interconnect_0_imp_xbar_0.tcl -notrace
 Command: synth_design -top system_axi_interconnect_0_imp_xbar_0 -part xc7a100tcsg324-1 -incremental_mode off -mode out_of_context
@@ -29,14 +29,12 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 3971380
+INFO: [Synth 8-7075] Helper process launched with PID 4012696
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2242.746 ; gain = 437.797 ; free physical = 8821 ; free virtual = 34915
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2242.082 ; gain = 438.797 ; free physical = 10517 ; free virtual = 36405
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_xbar_0/synth/system_axi_interconnect_0_imp_xbar_0.v:162]
 WARNING: [Synth 8-10507] attribute 'X_INTERFACE_PARAMETER' is already specified; last one will take precedence [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_xbar_0/synth/system_axi_interconnect_0_imp_xbar_0.v:164]
-WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_xbar_0/synth/system_axi_interconnect_0_imp_xbar_0.v:252]
-WARNING: [Synth 8-10507] attribute 'X_INTERFACE_PARAMETER' is already specified; last one will take precedence [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_xbar_0/synth/system_axi_interconnect_0_imp_xbar_0.v:254]
 INFO: [Synth 8-6157] synthesizing module 'system_axi_interconnect_0_imp_xbar_0' [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_xbar_0/synth/system_axi_interconnect_0_imp_xbar_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_37_axi_crossbar' [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.gen/sources_1/bd/system/ipshared/a1a7/hdl/axi_crossbar_v2_1_vl_rfs.v:4871]
 INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_37_crossbar' [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.gen/sources_1/bd/system/ipshared/a1a7/hdl/axi_crossbar_v2_1_vl_rfs.v:2232]
@@ -100,8 +98,6 @@ INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_35_axic_r
 INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_35_axi_register_slice' (0#1) [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.gen/sources_1/bd/system/ipshared/c5b7/hdl/axi_register_slice_v2_1_vl_rfs.v:3721]
 WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_35_axi_register_slice' is unconnected for instance 'reg_slice_mi' [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.gen/sources_1/bd/system/ipshared/a1a7/hdl/axi_crossbar_v2_1_vl_rfs.v:3116]
 WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_35_axi_register_slice' has 93 connections declared, but only 92 given [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.gen/sources_1/bd/system/ipshared/a1a7/hdl/axi_crossbar_v2_1_vl_rfs.v:3116]
-WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_35_axi_register_slice' is unconnected for instance 'reg_slice_mi' [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.gen/sources_1/bd/system/ipshared/a1a7/hdl/axi_crossbar_v2_1_vl_rfs.v:3116]
-WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_35_axi_register_slice' has 93 connections declared, but only 92 given [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.gen/sources_1/bd/system/ipshared/a1a7/hdl/axi_crossbar_v2_1_vl_rfs.v:3116]
 INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_35_axic_srl_fifo__parameterized1' [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.gen/sources_1/bd/system/ipshared/4846/hdl/axi_data_fifo_v2_1_vl_rfs.v:694]
 INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_35_axic_srl_fifo__parameterized1' (0#1) [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.gen/sources_1/bd/system/ipshared/4846/hdl/axi_data_fifo_v2_1_vl_rfs.v:694]
 INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_37_wdata_mux__parameterized0' [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.gen/sources_1/bd/system/ipshared/a1a7/hdl/axi_crossbar_v2_1_vl_rfs.v:4550]
@@ -132,7 +128,6 @@ WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_lo
 WARNING: [Synth 8-6014] Unused sequential element s_ready_i_reg was removed.  [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.gen/sources_1/bd/system/ipshared/4846/hdl/axi_data_fifo_v2_1_vl_rfs.v:1034]
 WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[0].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.gen/sources_1/bd/system/ipshared/a1a7/hdl/axi_crossbar_v2_1_vl_rfs.v:2991]
 WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[1].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.gen/sources_1/bd/system/ipshared/a1a7/hdl/axi_crossbar_v2_1_vl_rfs.v:2991]
-WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[2].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.gen/sources_1/bd/system/ipshared/a1a7/hdl/axi_crossbar_v2_1_vl_rfs.v:2991]
 WARNING: [Synth 8-7129] Port ACLK in module axi_register_slice_v2_1_35_axic_register_slice is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ARESET in module axi_register_slice_v2_1_35_axic_register_slice is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ACLK in module axi_register_slice_v2_1_35_axic_register_slice__parameterized0 is either unconnected or has no load
@@ -155,18 +150,18 @@ WARNING: [Synth 8-7129] Port s_axi_wid[2] in module axi_crossbar_v2_1_37_axi_cro
 WARNING: [Synth 8-7129] Port s_axi_wid[1] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axi_wid[0] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2446.684 ; gain = 641.734 ; free physical = 8269 ; free virtual = 34378
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2445.020 ; gain = 641.734 ; free physical = 10339 ; free virtual = 36228
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2446.684 ; gain = 641.734 ; free physical = 8270 ; free virtual = 34378
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2445.020 ; gain = 641.734 ; free physical = 10339 ; free virtual = 36228
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2446.684 ; gain = 641.734 ; free physical = 8270 ; free virtual = 34378
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2445.020 ; gain = 641.734 ; free physical = 10339 ; free virtual = 36228
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2446.684 ; gain = 0.000 ; free physical = 8270 ; free virtual = 34368
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2445.020 ; gain = 0.000 ; free physical = 10339 ; free virtual = 36228
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -177,27 +172,27 @@ Parsing XDC File [/home/student/s101153258/riscv_microprocessor/riscv_microproce
 Finished Parsing XDC File [/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.runs/system_axi_interconnect_0_imp_xbar_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2519.148 ; gain = 0.000 ; free physical = 8275 ; free virtual = 34378
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2526.484 ; gain = 0.000 ; free physical = 10363 ; free virtual = 36252
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2519.184 ; gain = 0.000 ; free physical = 8283 ; free virtual = 34381
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2526.520 ; gain = 0.000 ; free physical = 10363 ; free virtual = 36252
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2519.184 ; gain = 714.234 ; free physical = 8372 ; free virtual = 34479
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2526.520 ; gain = 723.234 ; free physical = 10384 ; free virtual = 36272
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2527.152 ; gain = 722.203 ; free physical = 8372 ; free virtual = 34479
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2534.488 ; gain = 731.203 ; free physical = 10384 ; free virtual = 36273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2527.152 ; gain = 722.203 ; free physical = 8370 ; free virtual = 34481
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2534.488 ; gain = 731.203 ; free physical = 10384 ; free virtual = 36272
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_data_fifo_v2_1_35_axic_reg_srl_fifo'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_data_fifo_v2_1_35_axic_reg_srl_fifo__parameterized0'
@@ -227,7 +222,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'gen_axi.write_cs_reg' using encoding 'one-hot' in module 'axi_crossbar_v2_1_37_decerr_slave'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2527.152 ; gain = 722.203 ; free physical = 8393 ; free virtual = 34495
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2534.488 ; gain = 731.203 ; free physical = 10376 ; free virtual = 36266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -235,27 +230,26 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input    8 Bit       Adders := 3     
-	   2 Input    2 Bit       Adders := 45    
+	   2 Input    2 Bit       Adders := 40    
 	   2 Input    1 Bit       Adders := 2     
 +---XORs : 
-	   2 Input      1 Bit         XORs := 16    
+	   2 Input      1 Bit         XORs := 14    
 +---Registers : 
 	               65 Bit    Registers := 2     
-	               38 Bit    Registers := 6     
-	                8 Bit    Registers := 33    
-	                5 Bit    Registers := 3     
-	                3 Bit    Registers := 10    
-	                2 Bit    Registers := 49    
-	                1 Bit    Registers := 51    
+	               38 Bit    Registers := 4     
+	                8 Bit    Registers := 31    
+	                5 Bit    Registers := 2     
+	                2 Bit    Registers := 53    
+	                1 Bit    Registers := 45    
 +---Muxes : 
-	   2 Input   38 Bit        Muxes := 6     
+	   2 Input   38 Bit        Muxes := 4     
 	   2 Input    8 Bit        Muxes := 1     
-	   2 Input    3 Bit        Muxes := 19    
-	   3 Input    3 Bit        Muxes := 5     
-	   2 Input    2 Bit        Muxes := 50    
+	   3 Input    3 Bit        Muxes := 4     
+	   2 Input    3 Bit        Muxes := 12    
+	   2 Input    2 Bit        Muxes := 40    
 	   3 Input    2 Bit        Muxes := 8     
-	   2 Input    1 Bit        Muxes := 84    
-	   3 Input    1 Bit        Muxes := 23    
+	   2 Input    1 Bit        Muxes := 70    
+	   3 Input    1 Bit        Muxes := 20    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -295,29 +289,26 @@ WARNING: [Synth 8-7129] Port s_axi_wid[1] in module axi_crossbar_v2_1_37_axi_cro
 WARNING: [Synth 8-7129] Port s_axi_wid[0] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axi_arid[3] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axi_arid[1] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-INFO: [Synth 8-3332] Sequential element (gen_samd.crossbar_samd/gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[2]) is unused and will be removed from module axi_crossbar_v2_1_37_axi_crossbar.
-INFO: [Synth 8-3332] Sequential element (gen_samd.crossbar_samd/gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[1]) is unused and will be removed from module axi_crossbar_v2_1_37_axi_crossbar.
-INFO: [Synth 8-3332] Sequential element (gen_samd.crossbar_samd/gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[0]) is unused and will be removed from module axi_crossbar_v2_1_37_axi_crossbar.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2527.152 ; gain = 722.203 ; free physical = 8374 ; free virtual = 34475
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2534.488 ; gain = 731.203 ; free physical = 10382 ; free virtual = 36272
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2527.152 ; gain = 722.203 ; free physical = 7999 ; free virtual = 34101
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2534.488 ; gain = 731.203 ; free physical = 10387 ; free virtual = 36277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2600.191 ; gain = 795.242 ; free physical = 8372 ; free virtual = 34476
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2584.215 ; gain = 780.930 ; free physical = 10333 ; free virtual = 36224
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2608.199 ; gain = 803.250 ; free physical = 8364 ; free virtual = 34467
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2595.238 ; gain = 791.953 ; free physical = 10326 ; free virtual = 36216
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -335,37 +326,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2740.012 ; gain = 935.062 ; free physical = 8285 ; free virtual = 34384
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2736.051 ; gain = 932.766 ; free physical = 10219 ; free virtual = 36109
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2740.012 ; gain = 935.062 ; free physical = 8285 ; free virtual = 34384
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2736.051 ; gain = 932.766 ; free physical = 10219 ; free virtual = 36109
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2740.012 ; gain = 935.062 ; free physical = 8285 ; free virtual = 34384
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2736.051 ; gain = 932.766 ; free physical = 10219 ; free virtual = 36109
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2740.012 ; gain = 935.062 ; free physical = 8285 ; free virtual = 34384
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2736.051 ; gain = 932.766 ; free physical = 10219 ; free virtual = 36109
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2740.012 ; gain = 935.062 ; free physical = 8281 ; free virtual = 34381
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2736.051 ; gain = 932.766 ; free physical = 10219 ; free virtual = 36109
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2740.012 ; gain = 935.062 ; free physical = 8281 ; free virtual = 34381
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2736.051 ; gain = 932.766 ; free physical = 10219 ; free virtual = 36109
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -383,40 +374,40 @@ Report Cell Usage:
 +------+--------+------+
 |1     |LUT1    |     5|
 |2     |LUT2    |    38|
-|3     |LUT3    |   309|
-|4     |LUT4    |   104|
-|5     |LUT5    |    90|
-|6     |LUT6    |   141|
-|7     |SRLC32E |     6|
-|8     |FDRE    |   438|
-|9     |FDSE    |    23|
+|3     |LUT3    |   251|
+|4     |LUT4    |   147|
+|5     |LUT5    |    48|
+|6     |LUT6    |   135|
+|7     |SRLC32E |     4|
+|8     |FDRE    |   344|
+|9     |FDSE    |    22|
 +------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2740.012 ; gain = 935.062 ; free physical = 8281 ; free virtual = 34381
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2736.051 ; gain = 932.766 ; free physical = 10219 ; free virtual = 36109
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 24 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2740.012 ; gain = 862.562 ; free physical = 8281 ; free virtual = 34381
-Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2740.020 ; gain = 935.062 ; free physical = 8281 ; free virtual = 34381
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2736.051 ; gain = 851.266 ; free physical = 10219 ; free virtual = 36109
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2736.059 ; gain = 932.766 ; free physical = 10219 ; free virtual = 36109
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2740.020 ; gain = 0.000 ; free physical = 8391 ; free virtual = 34491
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2736.059 ; gain = 0.000 ; free physical = 10349 ; free virtual = 36239
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2796.039 ; gain = 0.000 ; free physical = 8437 ; free virtual = 34536
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2792.078 ; gain = 0.000 ; free physical = 10357 ; free virtual = 36247
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: bda3e5a7
+Synth Design complete | Checksum: 17a90ed9
 INFO: [Common 17-83] Releasing license: Synthesis
-102 Infos, 65 Warnings, 0 Critical Warnings and 0 Errors encountered.
+99 Infos, 60 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:25 . Memory (MB): peak = 2796.074 ; gain = 1159.211 ; free physical = 8435 ; free virtual = 34534
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1830.603; main = 1751.872; forked = 218.729
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3564.117; main = 2796.043; forked = 963.922
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2820.051 ; gain = 0.000 ; free physical = 8431 ; free virtual = 34534
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:20 . Memory (MB): peak = 2792.113 ; gain = 1151.883 ; free physical = 10357 ; free virtual = 36247
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1787.775; main = 1787.775; forked = 229.452
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3498.414; main = 2792.082; forked = 963.922
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2816.090 ; gain = 0.000 ; free physical = 10357 ; free virtual = 36247
 INFO: [Common 17-1381] The checkpoint '/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.runs/system_axi_interconnect_0_imp_xbar_0_synth_1/system_axi_interconnect_0_imp_xbar_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP system_axi_interconnect_0_imp_xbar_0, cache-ID = 0d090fe96bb8c502
-INFO: [Coretcl 2-1174] Renamed 39 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2820.051 ; gain = 0.000 ; free physical = 8368 ; free virtual = 34472
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP system_axi_interconnect_0_imp_xbar_0, cache-ID = ea14831a820e862f
+INFO: [Coretcl 2-1174] Renamed 34 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2816.090 ; gain = 0.000 ; free physical = 10372 ; free virtual = 36264
 INFO: [Common 17-1381] The checkpoint '/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.runs/system_axi_interconnect_0_imp_xbar_0_synth_1/system_axi_interconnect_0_imp_xbar_0.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file system_axi_interconnect_0_imp_xbar_0_utilization_synth.rpt -pb system_axi_interconnect_0_imp_xbar_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Oct 14 12:00:50 2025...
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 17 13:42:13 2025...

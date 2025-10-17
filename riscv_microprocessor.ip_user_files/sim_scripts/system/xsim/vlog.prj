@@ -3,7 +3,6 @@ verilog xil_defaultlib -i "../../../../../../../../opt/Xilinx/2025.1/data/rsb/bu
 "../../../bd/system/ip/system_clk_wiz_0/system_clk_wiz_0_clk_wiz.v" \
 "../../../bd/system/ip/system_clk_wiz_0/system_clk_wiz_0.v" \
 "../../../bd/system/ip/system_axi_bram_ctrl_0_bram_1/sim/system_axi_bram_ctrl_0_bram_1.v" \
-"../../../bd/system/ip/system_blk_mem_gen_0_0/sim/system_blk_mem_gen_0_0.v" \
 
 verilog xil_defaultlib "glbl.v"
 

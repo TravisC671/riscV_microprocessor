@@ -84,7 +84,6 @@ vlog -work blk_mem_gen_v8_4_11  -incr -v2k5 "+incdir+../../../../riscv_microproc
 
 vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a9be" "+incdir+../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef" -l xpm -l xil_defaultlib -l generic_baseblocks_v2_1_2 -l axi_infrastructure_v1_1_0 -l axi_register_slice_v2_1_35 -l fifo_generator_v13_2_13 -l axi_data_fifo_v2_1_35 -l axi_crossbar_v2_1_37 -l proc_sys_reset_v5_0_17 -l axi_bram_ctrl_v4_1_13 -l blk_mem_gen_v8_4_11 \
 "../../../bd/system/ip/system_axi_bram_ctrl_0_bram_1/sim/system_axi_bram_ctrl_0_bram_1.v" \
-"../../../bd/system/ip/system_blk_mem_gen_0_0/sim/system_blk_mem_gen_0_0.v" \
 
 vcom -work xil_defaultlib -93  -incr \
 "../../../bd/system/sim/system.vhd" \

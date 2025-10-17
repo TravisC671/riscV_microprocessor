@@ -67,7 +67,7 @@ system_axi_bram_ctrl_0_0_sc::system_axi_bram_ctrl_0_0_sc(const sc_core::sc_modul
     model_param_props.addLong("C_S_AXI_DATA_WIDTH", "32");
     model_param_props.addLong("C_S_AXI_ID_WIDTH", "2");
     model_param_props.addLong("C_S_AXI_SUPPORTS_NARROW_BURST", "1");
-    model_param_props.addLong("C_SINGLE_PORT_BRAM", "0");
+    model_param_props.addLong("C_SINGLE_PORT_BRAM", "1");
     model_param_props.addLong("C_READ_LATENCY", "1");
     model_param_props.addLong("C_RD_CMD_OPTIMIZATION", "0");
     model_param_props.addLong("C_S_AXI_CTRL_ADDR_WIDTH", "32");

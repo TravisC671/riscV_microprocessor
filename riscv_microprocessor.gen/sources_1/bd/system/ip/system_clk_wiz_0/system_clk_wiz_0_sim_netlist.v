@@ -2,7 +2,7 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-// Date        : Tue Oct 14 11:25:15 2025
+// Date        : Fri Oct 17 13:26:16 2025
 // Host        : cenglab16 running 64-bit Ubuntu 24.04.3 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/student/s101153258/riscv_microprocessor/riscv_microprocessor.gen/sources_1/bd/system/ip/system_clk_wiz_0/system_clk_wiz_0_sim_netlist.v
@@ -16,33 +16,33 @@
 (* NotValidForBitStream *)
 module system_clk_wiz_0
    (clk_out1,
-    reset,
+    resetn,
     locked,
     clk_in1);
   output clk_out1;
-  input reset;
+  input resetn;
   output locked;
   input clk_in1;
 
   (* IBUF_LOW_PWR *) (* RTL_KEEP = "yes" *) wire clk_in1;
   wire clk_out1;
   wire locked;
-  (* RTL_KEEP = "yes" *) wire reset;
+  (* RTL_KEEP = "yes" *) wire resetn;
 
   system_clk_wiz_0_clk_wiz inst
        (.clk_in1(clk_in1),
         .clk_out1(clk_out1),
         .locked(locked),
-        .reset(reset));
+        .resetn(resetn));
 endmodule
 
 module system_clk_wiz_0_clk_wiz
    (clk_out1,
-    reset,
+    resetn,
     locked,
     clk_in1);
   output clk_out1;
-  input reset;
+  input resetn;
   output locked;
   input clk_in1;
 
@@ -53,7 +53,8 @@ module system_clk_wiz_0_clk_wiz
   wire clkfbout_buf_system_clk_wiz_0;
   wire clkfbout_system_clk_wiz_0;
   wire locked;
-  wire reset;
+  wire reset_high;
+  wire resetn;
   wire NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED;
@@ -171,7 +172,12 @@ module system_clk_wiz_0_clk_wiz
         .PSEN(1'b0),
         .PSINCDEC(1'b0),
         .PWRDWN(1'b0),
-        .RST(reset));
+        .RST(reset_high));
+  LUT1 #(
+    .INIT(2'h1)) 
+    mmcm_adv_inst_i_1
+       (.I0(resetn),
+        .O(reset_high));
 endmodule
 `ifndef GLBL
 `define GLBL

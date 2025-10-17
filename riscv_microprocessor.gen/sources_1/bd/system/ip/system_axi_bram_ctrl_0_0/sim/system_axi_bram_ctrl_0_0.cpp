@@ -61,7 +61,7 @@
 
 
 #ifdef XILINX_SIMULATOR
-system_axi_bram_ctrl_0_0::system_axi_bram_ctrl_0_0(const sc_core::sc_module_name& nm) : system_axi_bram_ctrl_0_0_sc(nm), s_axi_aclk("s_axi_aclk"), s_axi_aresetn("s_axi_aresetn"), s_axi_awid("s_axi_awid"), s_axi_awaddr("s_axi_awaddr"), s_axi_awlen("s_axi_awlen"), s_axi_awsize("s_axi_awsize"), s_axi_awburst("s_axi_awburst"), s_axi_awlock("s_axi_awlock"), s_axi_awcache("s_axi_awcache"), s_axi_awprot("s_axi_awprot"), s_axi_awvalid("s_axi_awvalid"), s_axi_awready("s_axi_awready"), s_axi_wdata("s_axi_wdata"), s_axi_wstrb("s_axi_wstrb"), s_axi_wlast("s_axi_wlast"), s_axi_wvalid("s_axi_wvalid"), s_axi_wready("s_axi_wready"), s_axi_bid("s_axi_bid"), s_axi_bresp("s_axi_bresp"), s_axi_bvalid("s_axi_bvalid"), s_axi_bready("s_axi_bready"), s_axi_arid("s_axi_arid"), s_axi_araddr("s_axi_araddr"), s_axi_arlen("s_axi_arlen"), s_axi_arsize("s_axi_arsize"), s_axi_arburst("s_axi_arburst"), s_axi_arlock("s_axi_arlock"), s_axi_arcache("s_axi_arcache"), s_axi_arprot("s_axi_arprot"), s_axi_arvalid("s_axi_arvalid"), s_axi_arready("s_axi_arready"), s_axi_rid("s_axi_rid"), s_axi_rdata("s_axi_rdata"), s_axi_rresp("s_axi_rresp"), s_axi_rlast("s_axi_rlast"), s_axi_rvalid("s_axi_rvalid"), s_axi_rready("s_axi_rready"), bram_rst_a("bram_rst_a"), bram_clk_a("bram_clk_a"), bram_en_a("bram_en_a"), bram_we_a("bram_we_a"), bram_addr_a("bram_addr_a"), bram_wrdata_a("bram_wrdata_a"), bram_rddata_a("bram_rddata_a"), bram_rst_b("bram_rst_b"), bram_clk_b("bram_clk_b"), bram_en_b("bram_en_b"), bram_we_b("bram_we_b"), bram_addr_b("bram_addr_b"), bram_wrdata_b("bram_wrdata_b"), bram_rddata_b("bram_rddata_b")
+system_axi_bram_ctrl_0_0::system_axi_bram_ctrl_0_0(const sc_core::sc_module_name& nm) : system_axi_bram_ctrl_0_0_sc(nm), s_axi_aclk("s_axi_aclk"), s_axi_aresetn("s_axi_aresetn"), s_axi_awid("s_axi_awid"), s_axi_awaddr("s_axi_awaddr"), s_axi_awlen("s_axi_awlen"), s_axi_awsize("s_axi_awsize"), s_axi_awburst("s_axi_awburst"), s_axi_awlock("s_axi_awlock"), s_axi_awcache("s_axi_awcache"), s_axi_awprot("s_axi_awprot"), s_axi_awvalid("s_axi_awvalid"), s_axi_awready("s_axi_awready"), s_axi_wdata("s_axi_wdata"), s_axi_wstrb("s_axi_wstrb"), s_axi_wlast("s_axi_wlast"), s_axi_wvalid("s_axi_wvalid"), s_axi_wready("s_axi_wready"), s_axi_bid("s_axi_bid"), s_axi_bresp("s_axi_bresp"), s_axi_bvalid("s_axi_bvalid"), s_axi_bready("s_axi_bready"), s_axi_arid("s_axi_arid"), s_axi_araddr("s_axi_araddr"), s_axi_arlen("s_axi_arlen"), s_axi_arsize("s_axi_arsize"), s_axi_arburst("s_axi_arburst"), s_axi_arlock("s_axi_arlock"), s_axi_arcache("s_axi_arcache"), s_axi_arprot("s_axi_arprot"), s_axi_arvalid("s_axi_arvalid"), s_axi_arready("s_axi_arready"), s_axi_rid("s_axi_rid"), s_axi_rdata("s_axi_rdata"), s_axi_rresp("s_axi_rresp"), s_axi_rlast("s_axi_rlast"), s_axi_rvalid("s_axi_rvalid"), s_axi_rready("s_axi_rready"), bram_rst_a("bram_rst_a"), bram_clk_a("bram_clk_a"), bram_en_a("bram_en_a"), bram_we_a("bram_we_a"), bram_addr_a("bram_addr_a"), bram_wrdata_a("bram_wrdata_a"), bram_rddata_a("bram_rddata_a")
 {
 
   // initialize pins
@@ -74,13 +74,6 @@ system_axi_bram_ctrl_0_0::system_axi_bram_ctrl_0_0(const sc_core::sc_module_name
   mp_impl->bram_addr_a(bram_addr_a);
   mp_impl->bram_wrdata_a(bram_wrdata_a);
   mp_impl->bram_rddata_a(bram_rddata_a);
-  mp_impl->bram_rst_b(bram_rst_b);
-  mp_impl->bram_clk_b(bram_clk_b);
-  mp_impl->bram_en_b(bram_en_b);
-  mp_impl->bram_we_b(bram_we_b);
-  mp_impl->bram_addr_b(bram_addr_b);
-  mp_impl->bram_wrdata_b(bram_wrdata_b);
-  mp_impl->bram_rddata_b(bram_rddata_b);
 
   // initialize transactors
   mp_S_AXI_transactor = NULL;
@@ -191,7 +184,7 @@ void system_axi_bram_ctrl_0_0::before_end_of_elaboration()
 
 
 #ifdef XM_SYSTEMC
-system_axi_bram_ctrl_0_0::system_axi_bram_ctrl_0_0(const sc_core::sc_module_name& nm) : system_axi_bram_ctrl_0_0_sc(nm), s_axi_aclk("s_axi_aclk"), s_axi_aresetn("s_axi_aresetn"), s_axi_awid("s_axi_awid"), s_axi_awaddr("s_axi_awaddr"), s_axi_awlen("s_axi_awlen"), s_axi_awsize("s_axi_awsize"), s_axi_awburst("s_axi_awburst"), s_axi_awlock("s_axi_awlock"), s_axi_awcache("s_axi_awcache"), s_axi_awprot("s_axi_awprot"), s_axi_awvalid("s_axi_awvalid"), s_axi_awready("s_axi_awready"), s_axi_wdata("s_axi_wdata"), s_axi_wstrb("s_axi_wstrb"), s_axi_wlast("s_axi_wlast"), s_axi_wvalid("s_axi_wvalid"), s_axi_wready("s_axi_wready"), s_axi_bid("s_axi_bid"), s_axi_bresp("s_axi_bresp"), s_axi_bvalid("s_axi_bvalid"), s_axi_bready("s_axi_bready"), s_axi_arid("s_axi_arid"), s_axi_araddr("s_axi_araddr"), s_axi_arlen("s_axi_arlen"), s_axi_arsize("s_axi_arsize"), s_axi_arburst("s_axi_arburst"), s_axi_arlock("s_axi_arlock"), s_axi_arcache("s_axi_arcache"), s_axi_arprot("s_axi_arprot"), s_axi_arvalid("s_axi_arvalid"), s_axi_arready("s_axi_arready"), s_axi_rid("s_axi_rid"), s_axi_rdata("s_axi_rdata"), s_axi_rresp("s_axi_rresp"), s_axi_rlast("s_axi_rlast"), s_axi_rvalid("s_axi_rvalid"), s_axi_rready("s_axi_rready"), bram_rst_a("bram_rst_a"), bram_clk_a("bram_clk_a"), bram_en_a("bram_en_a"), bram_we_a("bram_we_a"), bram_addr_a("bram_addr_a"), bram_wrdata_a("bram_wrdata_a"), bram_rddata_a("bram_rddata_a"), bram_rst_b("bram_rst_b"), bram_clk_b("bram_clk_b"), bram_en_b("bram_en_b"), bram_we_b("bram_we_b"), bram_addr_b("bram_addr_b"), bram_wrdata_b("bram_wrdata_b"), bram_rddata_b("bram_rddata_b")
+system_axi_bram_ctrl_0_0::system_axi_bram_ctrl_0_0(const sc_core::sc_module_name& nm) : system_axi_bram_ctrl_0_0_sc(nm), s_axi_aclk("s_axi_aclk"), s_axi_aresetn("s_axi_aresetn"), s_axi_awid("s_axi_awid"), s_axi_awaddr("s_axi_awaddr"), s_axi_awlen("s_axi_awlen"), s_axi_awsize("s_axi_awsize"), s_axi_awburst("s_axi_awburst"), s_axi_awlock("s_axi_awlock"), s_axi_awcache("s_axi_awcache"), s_axi_awprot("s_axi_awprot"), s_axi_awvalid("s_axi_awvalid"), s_axi_awready("s_axi_awready"), s_axi_wdata("s_axi_wdata"), s_axi_wstrb("s_axi_wstrb"), s_axi_wlast("s_axi_wlast"), s_axi_wvalid("s_axi_wvalid"), s_axi_wready("s_axi_wready"), s_axi_bid("s_axi_bid"), s_axi_bresp("s_axi_bresp"), s_axi_bvalid("s_axi_bvalid"), s_axi_bready("s_axi_bready"), s_axi_arid("s_axi_arid"), s_axi_araddr("s_axi_araddr"), s_axi_arlen("s_axi_arlen"), s_axi_arsize("s_axi_arsize"), s_axi_arburst("s_axi_arburst"), s_axi_arlock("s_axi_arlock"), s_axi_arcache("s_axi_arcache"), s_axi_arprot("s_axi_arprot"), s_axi_arvalid("s_axi_arvalid"), s_axi_arready("s_axi_arready"), s_axi_rid("s_axi_rid"), s_axi_rdata("s_axi_rdata"), s_axi_rresp("s_axi_rresp"), s_axi_rlast("s_axi_rlast"), s_axi_rvalid("s_axi_rvalid"), s_axi_rready("s_axi_rready"), bram_rst_a("bram_rst_a"), bram_clk_a("bram_clk_a"), bram_en_a("bram_en_a"), bram_we_a("bram_we_a"), bram_addr_a("bram_addr_a"), bram_wrdata_a("bram_wrdata_a"), bram_rddata_a("bram_rddata_a")
 {
 
   // initialize pins
@@ -204,13 +197,6 @@ system_axi_bram_ctrl_0_0::system_axi_bram_ctrl_0_0(const sc_core::sc_module_name
   mp_impl->bram_addr_a(bram_addr_a);
   mp_impl->bram_wrdata_a(bram_wrdata_a);
   mp_impl->bram_rddata_a(bram_rddata_a);
-  mp_impl->bram_rst_b(bram_rst_b);
-  mp_impl->bram_clk_b(bram_clk_b);
-  mp_impl->bram_en_b(bram_en_b);
-  mp_impl->bram_we_b(bram_we_b);
-  mp_impl->bram_addr_b(bram_addr_b);
-  mp_impl->bram_wrdata_b(bram_wrdata_b);
-  mp_impl->bram_rddata_b(bram_rddata_b);
 
   // initialize transactors
   mp_S_AXI_transactor = NULL;
@@ -321,7 +307,7 @@ void system_axi_bram_ctrl_0_0::before_end_of_elaboration()
 
 
 #ifdef RIVIERA
-system_axi_bram_ctrl_0_0::system_axi_bram_ctrl_0_0(const sc_core::sc_module_name& nm) : system_axi_bram_ctrl_0_0_sc(nm), s_axi_aclk("s_axi_aclk"), s_axi_aresetn("s_axi_aresetn"), s_axi_awid("s_axi_awid"), s_axi_awaddr("s_axi_awaddr"), s_axi_awlen("s_axi_awlen"), s_axi_awsize("s_axi_awsize"), s_axi_awburst("s_axi_awburst"), s_axi_awlock("s_axi_awlock"), s_axi_awcache("s_axi_awcache"), s_axi_awprot("s_axi_awprot"), s_axi_awvalid("s_axi_awvalid"), s_axi_awready("s_axi_awready"), s_axi_wdata("s_axi_wdata"), s_axi_wstrb("s_axi_wstrb"), s_axi_wlast("s_axi_wlast"), s_axi_wvalid("s_axi_wvalid"), s_axi_wready("s_axi_wready"), s_axi_bid("s_axi_bid"), s_axi_bresp("s_axi_bresp"), s_axi_bvalid("s_axi_bvalid"), s_axi_bready("s_axi_bready"), s_axi_arid("s_axi_arid"), s_axi_araddr("s_axi_araddr"), s_axi_arlen("s_axi_arlen"), s_axi_arsize("s_axi_arsize"), s_axi_arburst("s_axi_arburst"), s_axi_arlock("s_axi_arlock"), s_axi_arcache("s_axi_arcache"), s_axi_arprot("s_axi_arprot"), s_axi_arvalid("s_axi_arvalid"), s_axi_arready("s_axi_arready"), s_axi_rid("s_axi_rid"), s_axi_rdata("s_axi_rdata"), s_axi_rresp("s_axi_rresp"), s_axi_rlast("s_axi_rlast"), s_axi_rvalid("s_axi_rvalid"), s_axi_rready("s_axi_rready"), bram_rst_a("bram_rst_a"), bram_clk_a("bram_clk_a"), bram_en_a("bram_en_a"), bram_we_a("bram_we_a"), bram_addr_a("bram_addr_a"), bram_wrdata_a("bram_wrdata_a"), bram_rddata_a("bram_rddata_a"), bram_rst_b("bram_rst_b"), bram_clk_b("bram_clk_b"), bram_en_b("bram_en_b"), bram_we_b("bram_we_b"), bram_addr_b("bram_addr_b"), bram_wrdata_b("bram_wrdata_b"), bram_rddata_b("bram_rddata_b")
+system_axi_bram_ctrl_0_0::system_axi_bram_ctrl_0_0(const sc_core::sc_module_name& nm) : system_axi_bram_ctrl_0_0_sc(nm), s_axi_aclk("s_axi_aclk"), s_axi_aresetn("s_axi_aresetn"), s_axi_awid("s_axi_awid"), s_axi_awaddr("s_axi_awaddr"), s_axi_awlen("s_axi_awlen"), s_axi_awsize("s_axi_awsize"), s_axi_awburst("s_axi_awburst"), s_axi_awlock("s_axi_awlock"), s_axi_awcache("s_axi_awcache"), s_axi_awprot("s_axi_awprot"), s_axi_awvalid("s_axi_awvalid"), s_axi_awready("s_axi_awready"), s_axi_wdata("s_axi_wdata"), s_axi_wstrb("s_axi_wstrb"), s_axi_wlast("s_axi_wlast"), s_axi_wvalid("s_axi_wvalid"), s_axi_wready("s_axi_wready"), s_axi_bid("s_axi_bid"), s_axi_bresp("s_axi_bresp"), s_axi_bvalid("s_axi_bvalid"), s_axi_bready("s_axi_bready"), s_axi_arid("s_axi_arid"), s_axi_araddr("s_axi_araddr"), s_axi_arlen("s_axi_arlen"), s_axi_arsize("s_axi_arsize"), s_axi_arburst("s_axi_arburst"), s_axi_arlock("s_axi_arlock"), s_axi_arcache("s_axi_arcache"), s_axi_arprot("s_axi_arprot"), s_axi_arvalid("s_axi_arvalid"), s_axi_arready("s_axi_arready"), s_axi_rid("s_axi_rid"), s_axi_rdata("s_axi_rdata"), s_axi_rresp("s_axi_rresp"), s_axi_rlast("s_axi_rlast"), s_axi_rvalid("s_axi_rvalid"), s_axi_rready("s_axi_rready"), bram_rst_a("bram_rst_a"), bram_clk_a("bram_clk_a"), bram_en_a("bram_en_a"), bram_we_a("bram_we_a"), bram_addr_a("bram_addr_a"), bram_wrdata_a("bram_wrdata_a"), bram_rddata_a("bram_rddata_a")
 {
 
   // initialize pins
@@ -334,13 +320,6 @@ system_axi_bram_ctrl_0_0::system_axi_bram_ctrl_0_0(const sc_core::sc_module_name
   mp_impl->bram_addr_a(bram_addr_a);
   mp_impl->bram_wrdata_a(bram_wrdata_a);
   mp_impl->bram_rddata_a(bram_rddata_a);
-  mp_impl->bram_rst_b(bram_rst_b);
-  mp_impl->bram_clk_b(bram_clk_b);
-  mp_impl->bram_en_b(bram_en_b);
-  mp_impl->bram_we_b(bram_we_b);
-  mp_impl->bram_addr_b(bram_addr_b);
-  mp_impl->bram_wrdata_b(bram_wrdata_b);
-  mp_impl->bram_rddata_b(bram_rddata_b);
 
   // initialize transactors
   mp_S_AXI_transactor = NULL;
@@ -451,7 +430,7 @@ void system_axi_bram_ctrl_0_0::before_end_of_elaboration()
 
 
 #ifdef VCSSYSTEMC
-system_axi_bram_ctrl_0_0::system_axi_bram_ctrl_0_0(const sc_core::sc_module_name& nm) : system_axi_bram_ctrl_0_0_sc(nm),  s_axi_aclk("s_axi_aclk"), s_axi_aresetn("s_axi_aresetn"), s_axi_awid("s_axi_awid"), s_axi_awaddr("s_axi_awaddr"), s_axi_awlen("s_axi_awlen"), s_axi_awsize("s_axi_awsize"), s_axi_awburst("s_axi_awburst"), s_axi_awlock("s_axi_awlock"), s_axi_awcache("s_axi_awcache"), s_axi_awprot("s_axi_awprot"), s_axi_awvalid("s_axi_awvalid"), s_axi_awready("s_axi_awready"), s_axi_wdata("s_axi_wdata"), s_axi_wstrb("s_axi_wstrb"), s_axi_wlast("s_axi_wlast"), s_axi_wvalid("s_axi_wvalid"), s_axi_wready("s_axi_wready"), s_axi_bid("s_axi_bid"), s_axi_bresp("s_axi_bresp"), s_axi_bvalid("s_axi_bvalid"), s_axi_bready("s_axi_bready"), s_axi_arid("s_axi_arid"), s_axi_araddr("s_axi_araddr"), s_axi_arlen("s_axi_arlen"), s_axi_arsize("s_axi_arsize"), s_axi_arburst("s_axi_arburst"), s_axi_arlock("s_axi_arlock"), s_axi_arcache("s_axi_arcache"), s_axi_arprot("s_axi_arprot"), s_axi_arvalid("s_axi_arvalid"), s_axi_arready("s_axi_arready"), s_axi_rid("s_axi_rid"), s_axi_rdata("s_axi_rdata"), s_axi_rresp("s_axi_rresp"), s_axi_rlast("s_axi_rlast"), s_axi_rvalid("s_axi_rvalid"), s_axi_rready("s_axi_rready"), bram_rst_a("bram_rst_a"), bram_clk_a("bram_clk_a"), bram_en_a("bram_en_a"), bram_we_a("bram_we_a"), bram_addr_a("bram_addr_a"), bram_wrdata_a("bram_wrdata_a"), bram_rddata_a("bram_rddata_a"), bram_rst_b("bram_rst_b"), bram_clk_b("bram_clk_b"), bram_en_b("bram_en_b"), bram_we_b("bram_we_b"), bram_addr_b("bram_addr_b"), bram_wrdata_b("bram_wrdata_b"), bram_rddata_b("bram_rddata_b")
+system_axi_bram_ctrl_0_0::system_axi_bram_ctrl_0_0(const sc_core::sc_module_name& nm) : system_axi_bram_ctrl_0_0_sc(nm),  s_axi_aclk("s_axi_aclk"), s_axi_aresetn("s_axi_aresetn"), s_axi_awid("s_axi_awid"), s_axi_awaddr("s_axi_awaddr"), s_axi_awlen("s_axi_awlen"), s_axi_awsize("s_axi_awsize"), s_axi_awburst("s_axi_awburst"), s_axi_awlock("s_axi_awlock"), s_axi_awcache("s_axi_awcache"), s_axi_awprot("s_axi_awprot"), s_axi_awvalid("s_axi_awvalid"), s_axi_awready("s_axi_awready"), s_axi_wdata("s_axi_wdata"), s_axi_wstrb("s_axi_wstrb"), s_axi_wlast("s_axi_wlast"), s_axi_wvalid("s_axi_wvalid"), s_axi_wready("s_axi_wready"), s_axi_bid("s_axi_bid"), s_axi_bresp("s_axi_bresp"), s_axi_bvalid("s_axi_bvalid"), s_axi_bready("s_axi_bready"), s_axi_arid("s_axi_arid"), s_axi_araddr("s_axi_araddr"), s_axi_arlen("s_axi_arlen"), s_axi_arsize("s_axi_arsize"), s_axi_arburst("s_axi_arburst"), s_axi_arlock("s_axi_arlock"), s_axi_arcache("s_axi_arcache"), s_axi_arprot("s_axi_arprot"), s_axi_arvalid("s_axi_arvalid"), s_axi_arready("s_axi_arready"), s_axi_rid("s_axi_rid"), s_axi_rdata("s_axi_rdata"), s_axi_rresp("s_axi_rresp"), s_axi_rlast("s_axi_rlast"), s_axi_rvalid("s_axi_rvalid"), s_axi_rready("s_axi_rready"), bram_rst_a("bram_rst_a"), bram_clk_a("bram_clk_a"), bram_en_a("bram_en_a"), bram_we_a("bram_we_a"), bram_addr_a("bram_addr_a"), bram_wrdata_a("bram_wrdata_a"), bram_rddata_a("bram_rddata_a")
 {
   // initialize pins
   mp_impl->s_axi_aclk(s_axi_aclk);
@@ -463,13 +442,6 @@ system_axi_bram_ctrl_0_0::system_axi_bram_ctrl_0_0(const sc_core::sc_module_name
   mp_impl->bram_addr_a(bram_addr_a);
   mp_impl->bram_wrdata_a(bram_wrdata_a);
   mp_impl->bram_rddata_a(bram_rddata_a);
-  mp_impl->bram_rst_b(bram_rst_b);
-  mp_impl->bram_clk_b(bram_clk_b);
-  mp_impl->bram_en_b(bram_en_b);
-  mp_impl->bram_we_b(bram_we_b);
-  mp_impl->bram_addr_b(bram_addr_b);
-  mp_impl->bram_wrdata_b(bram_wrdata_b);
-  mp_impl->bram_rddata_b(bram_rddata_b);
 
   // initialize transactors
   mp_S_AXI_transactor = NULL;
@@ -582,7 +554,7 @@ void system_axi_bram_ctrl_0_0::before_end_of_elaboration()
 
 
 #ifdef MTI_SYSTEMC
-system_axi_bram_ctrl_0_0::system_axi_bram_ctrl_0_0(const sc_core::sc_module_name& nm) : system_axi_bram_ctrl_0_0_sc(nm),  s_axi_aclk("s_axi_aclk"), s_axi_aresetn("s_axi_aresetn"), s_axi_awid("s_axi_awid"), s_axi_awaddr("s_axi_awaddr"), s_axi_awlen("s_axi_awlen"), s_axi_awsize("s_axi_awsize"), s_axi_awburst("s_axi_awburst"), s_axi_awlock("s_axi_awlock"), s_axi_awcache("s_axi_awcache"), s_axi_awprot("s_axi_awprot"), s_axi_awvalid("s_axi_awvalid"), s_axi_awready("s_axi_awready"), s_axi_wdata("s_axi_wdata"), s_axi_wstrb("s_axi_wstrb"), s_axi_wlast("s_axi_wlast"), s_axi_wvalid("s_axi_wvalid"), s_axi_wready("s_axi_wready"), s_axi_bid("s_axi_bid"), s_axi_bresp("s_axi_bresp"), s_axi_bvalid("s_axi_bvalid"), s_axi_bready("s_axi_bready"), s_axi_arid("s_axi_arid"), s_axi_araddr("s_axi_araddr"), s_axi_arlen("s_axi_arlen"), s_axi_arsize("s_axi_arsize"), s_axi_arburst("s_axi_arburst"), s_axi_arlock("s_axi_arlock"), s_axi_arcache("s_axi_arcache"), s_axi_arprot("s_axi_arprot"), s_axi_arvalid("s_axi_arvalid"), s_axi_arready("s_axi_arready"), s_axi_rid("s_axi_rid"), s_axi_rdata("s_axi_rdata"), s_axi_rresp("s_axi_rresp"), s_axi_rlast("s_axi_rlast"), s_axi_rvalid("s_axi_rvalid"), s_axi_rready("s_axi_rready"), bram_rst_a("bram_rst_a"), bram_clk_a("bram_clk_a"), bram_en_a("bram_en_a"), bram_we_a("bram_we_a"), bram_addr_a("bram_addr_a"), bram_wrdata_a("bram_wrdata_a"), bram_rddata_a("bram_rddata_a"), bram_rst_b("bram_rst_b"), bram_clk_b("bram_clk_b"), bram_en_b("bram_en_b"), bram_we_b("bram_we_b"), bram_addr_b("bram_addr_b"), bram_wrdata_b("bram_wrdata_b"), bram_rddata_b("bram_rddata_b")
+system_axi_bram_ctrl_0_0::system_axi_bram_ctrl_0_0(const sc_core::sc_module_name& nm) : system_axi_bram_ctrl_0_0_sc(nm),  s_axi_aclk("s_axi_aclk"), s_axi_aresetn("s_axi_aresetn"), s_axi_awid("s_axi_awid"), s_axi_awaddr("s_axi_awaddr"), s_axi_awlen("s_axi_awlen"), s_axi_awsize("s_axi_awsize"), s_axi_awburst("s_axi_awburst"), s_axi_awlock("s_axi_awlock"), s_axi_awcache("s_axi_awcache"), s_axi_awprot("s_axi_awprot"), s_axi_awvalid("s_axi_awvalid"), s_axi_awready("s_axi_awready"), s_axi_wdata("s_axi_wdata"), s_axi_wstrb("s_axi_wstrb"), s_axi_wlast("s_axi_wlast"), s_axi_wvalid("s_axi_wvalid"), s_axi_wready("s_axi_wready"), s_axi_bid("s_axi_bid"), s_axi_bresp("s_axi_bresp"), s_axi_bvalid("s_axi_bvalid"), s_axi_bready("s_axi_bready"), s_axi_arid("s_axi_arid"), s_axi_araddr("s_axi_araddr"), s_axi_arlen("s_axi_arlen"), s_axi_arsize("s_axi_arsize"), s_axi_arburst("s_axi_arburst"), s_axi_arlock("s_axi_arlock"), s_axi_arcache("s_axi_arcache"), s_axi_arprot("s_axi_arprot"), s_axi_arvalid("s_axi_arvalid"), s_axi_arready("s_axi_arready"), s_axi_rid("s_axi_rid"), s_axi_rdata("s_axi_rdata"), s_axi_rresp("s_axi_rresp"), s_axi_rlast("s_axi_rlast"), s_axi_rvalid("s_axi_rvalid"), s_axi_rready("s_axi_rready"), bram_rst_a("bram_rst_a"), bram_clk_a("bram_clk_a"), bram_en_a("bram_en_a"), bram_we_a("bram_we_a"), bram_addr_a("bram_addr_a"), bram_wrdata_a("bram_wrdata_a"), bram_rddata_a("bram_rddata_a")
 {
   // initialize pins
   mp_impl->s_axi_aclk(s_axi_aclk);
@@ -594,13 +566,6 @@ system_axi_bram_ctrl_0_0::system_axi_bram_ctrl_0_0(const sc_core::sc_module_name
   mp_impl->bram_addr_a(bram_addr_a);
   mp_impl->bram_wrdata_a(bram_wrdata_a);
   mp_impl->bram_rddata_a(bram_rddata_a);
-  mp_impl->bram_rst_b(bram_rst_b);
-  mp_impl->bram_clk_b(bram_clk_b);
-  mp_impl->bram_en_b(bram_en_b);
-  mp_impl->bram_we_b(bram_we_b);
-  mp_impl->bram_addr_b(bram_addr_b);
-  mp_impl->bram_wrdata_b(bram_wrdata_b);
-  mp_impl->bram_rddata_b(bram_rddata_b);
 
   // initialize transactors
   mp_S_AXI_transactor = NULL;

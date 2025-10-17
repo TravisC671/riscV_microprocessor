@@ -101,14 +101,7 @@ ENTITY system_axi_bram_ctrl_0_0 IS
     bram_we_a : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
     bram_addr_a : OUT STD_LOGIC_VECTOR(12 DOWNTO 0);
     bram_wrdata_a : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    bram_rddata_a : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    bram_rst_b : OUT STD_LOGIC;
-    bram_clk_b : OUT STD_LOGIC;
-    bram_en_b : OUT STD_LOGIC;
-    bram_we_b : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-    bram_addr_b : OUT STD_LOGIC_VECTOR(12 DOWNTO 0);
-    bram_wrdata_b : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    bram_rddata_b : IN STD_LOGIC_VECTOR(31 DOWNTO 0)
+    bram_rddata_a : IN STD_LOGIC_VECTOR(31 DOWNTO 0)
   );
 END system_axi_bram_ctrl_0_0;
 
@@ -213,29 +206,20 @@ ARCHITECTURE system_axi_bram_ctrl_0_0_arch OF system_axi_bram_ctrl_0_0 IS
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF system_axi_bram_ctrl_0_0_arch : ARCHITECTURE IS "system_axi_bram_ctrl_0_0,axi_bram_ctrl,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF system_axi_bram_ctrl_0_0_arch: ARCHITECTURE IS "system_axi_bram_ctrl_0_0,axi_bram_ctrl,{x_ipProduct=Vivado 2025.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_bram_ctrl,x_ipVersion=4.1,x_ipCoreRevision=13,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_BRAM_INST_MODE=EXTERNAL,C_MEMORY_DEPTH=2048,C_BRAM_ADDR_WIDTH=11,C_S_AXI_ADDR_WIDTH=13,C_S_AXI_DATA_WIDTH=32,C_S_AXI_ID_WIDTH=2,C_S_AXI_PROTOCOL=AXI4,C_S_AXI_SUPPORTS_NARROW_BURST=1,C_SINGLE_PORT_BRAM=0,C_FAMILY=artix7,C_READ_LATENCY=1,C_RD_CMD_OPTIMIZATION=0,C_S_AXI_CTRL_ADDR_WIDTH=32,C_S_AXI_C" & 
+  ATTRIBUTE CORE_GENERATION_INFO OF system_axi_bram_ctrl_0_0_arch: ARCHITECTURE IS "system_axi_bram_ctrl_0_0,axi_bram_ctrl,{x_ipProduct=Vivado 2025.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_bram_ctrl,x_ipVersion=4.1,x_ipCoreRevision=13,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_BRAM_INST_MODE=EXTERNAL,C_MEMORY_DEPTH=2048,C_BRAM_ADDR_WIDTH=11,C_S_AXI_ADDR_WIDTH=13,C_S_AXI_DATA_WIDTH=32,C_S_AXI_ID_WIDTH=2,C_S_AXI_PROTOCOL=AXI4,C_S_AXI_SUPPORTS_NARROW_BURST=1,C_SINGLE_PORT_BRAM=1,C_FAMILY=artix7,C_READ_LATENCY=1,C_RD_CMD_OPTIMIZATION=0,C_S_AXI_CTRL_ADDR_WIDTH=32,C_S_AXI_C" & 
 "TRL_DATA_WIDTH=32,C_ECC=0,C_ECC_TYPE=0,C_FAULT_INJECT=0,C_ECC_ONOFF_RESET_VALUE=0}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_MODE : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
   ATTRIBUTE X_INTERFACE_INFO OF bram_addr_a: SIGNAL IS "xilinx.com:interface:bram:1.0 BRAM_PORTA ADDR";
-  ATTRIBUTE X_INTERFACE_INFO OF bram_addr_b: SIGNAL IS "xilinx.com:interface:bram:1.0 BRAM_PORTB ADDR";
   ATTRIBUTE X_INTERFACE_INFO OF bram_clk_a: SIGNAL IS "xilinx.com:interface:bram:1.0 BRAM_PORTA CLK";
-  ATTRIBUTE X_INTERFACE_INFO OF bram_clk_b: SIGNAL IS "xilinx.com:interface:bram:1.0 BRAM_PORTB CLK";
   ATTRIBUTE X_INTERFACE_INFO OF bram_en_a: SIGNAL IS "xilinx.com:interface:bram:1.0 BRAM_PORTA EN";
-  ATTRIBUTE X_INTERFACE_INFO OF bram_en_b: SIGNAL IS "xilinx.com:interface:bram:1.0 BRAM_PORTB EN";
   ATTRIBUTE X_INTERFACE_INFO OF bram_rddata_a: SIGNAL IS "xilinx.com:interface:bram:1.0 BRAM_PORTA DOUT";
-  ATTRIBUTE X_INTERFACE_INFO OF bram_rddata_b: SIGNAL IS "xilinx.com:interface:bram:1.0 BRAM_PORTB DOUT";
   ATTRIBUTE X_INTERFACE_INFO OF bram_rst_a: SIGNAL IS "xilinx.com:interface:bram:1.0 BRAM_PORTA RST";
   ATTRIBUTE X_INTERFACE_MODE OF bram_rst_a: SIGNAL IS "master BRAM_PORTA";
   ATTRIBUTE X_INTERFACE_PARAMETER OF bram_rst_a: SIGNAL IS "XIL_INTERFACENAME BRAM_PORTA, MASTER_TYPE BRAM_CTRL, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, READ_WRITE_MODE READ_ONLY, READ_LATENCY 1";
-  ATTRIBUTE X_INTERFACE_INFO OF bram_rst_b: SIGNAL IS "xilinx.com:interface:bram:1.0 BRAM_PORTB RST";
-  ATTRIBUTE X_INTERFACE_MODE OF bram_rst_b: SIGNAL IS "master BRAM_PORTB";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF bram_rst_b: SIGNAL IS "XIL_INTERFACENAME BRAM_PORTB, MASTER_TYPE BRAM_CTRL, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, READ_WRITE_MODE READ_ONLY, READ_LATENCY 1";
   ATTRIBUTE X_INTERFACE_INFO OF bram_we_a: SIGNAL IS "xilinx.com:interface:bram:1.0 BRAM_PORTA WE";
-  ATTRIBUTE X_INTERFACE_INFO OF bram_we_b: SIGNAL IS "xilinx.com:interface:bram:1.0 BRAM_PORTB WE";
   ATTRIBUTE X_INTERFACE_INFO OF bram_wrdata_a: SIGNAL IS "xilinx.com:interface:bram:1.0 BRAM_PORTA DIN";
-  ATTRIBUTE X_INTERFACE_INFO OF bram_wrdata_b: SIGNAL IS "xilinx.com:interface:bram:1.0 BRAM_PORTB DIN";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_aclk: SIGNAL IS "xilinx.com:signal:clock:1.0 CLKIF CLK";
   ATTRIBUTE X_INTERFACE_MODE OF s_axi_aclk: SIGNAL IS "slave CLKIF";
   ATTRIBUTE X_INTERFACE_PARAMETER OF s_axi_aclk: SIGNAL IS "XIL_INTERFACENAME CLKIF, ASSOCIATED_BUSIF S_AXI:S_AXI_CTRL, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_clk_out1, INSERT_VIP 0";
@@ -291,7 +275,7 @@ BEGIN
       C_S_AXI_ID_WIDTH => 2,
       C_S_AXI_PROTOCOL => "AXI4",
       C_S_AXI_SUPPORTS_NARROW_BURST => 1,
-      C_SINGLE_PORT_BRAM => 0,
+      C_SINGLE_PORT_BRAM => 1,
       C_FAMILY => "artix7",
       C_READ_LATENCY => 1,
       C_RD_CMD_OPTIMIZATION => 0,
@@ -355,12 +339,6 @@ BEGIN
       bram_addr_a => bram_addr_a,
       bram_wrdata_a => bram_wrdata_a,
       bram_rddata_a => bram_rddata_a,
-      bram_rst_b => bram_rst_b,
-      bram_clk_b => bram_clk_b,
-      bram_en_b => bram_en_b,
-      bram_we_b => bram_we_b,
-      bram_addr_b => bram_addr_b,
-      bram_wrdata_b => bram_wrdata_b,
-      bram_rddata_b => bram_rddata_b
+      bram_rddata_b => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 32))
     );
 END system_axi_bram_ctrl_0_0_arch;

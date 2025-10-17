@@ -124,13 +124,6 @@ public:
   sc_core::sc_out< sc_dt::sc_bv<13> > bram_addr_a;
   sc_core::sc_out< sc_dt::sc_bv<32> > bram_wrdata_a;
   sc_core::sc_in< sc_dt::sc_bv<32> > bram_rddata_a;
-  sc_core::sc_out< bool > bram_rst_b;
-  sc_core::sc_out< bool > bram_clk_b;
-  sc_core::sc_out< bool > bram_en_b;
-  sc_core::sc_out< sc_dt::sc_bv<4> > bram_we_b;
-  sc_core::sc_out< sc_dt::sc_bv<13> > bram_addr_b;
-  sc_core::sc_out< sc_dt::sc_bv<32> > bram_wrdata_b;
-  sc_core::sc_in< sc_dt::sc_bv<32> > bram_rddata_b;
 
   // Dummy Signals for IP Ports
 
@@ -203,13 +196,6 @@ public:
   sc_core::sc_out< sc_dt::sc_bv<13> > bram_addr_a;
   sc_core::sc_out< sc_dt::sc_bv<32> > bram_wrdata_a;
   sc_core::sc_in< sc_dt::sc_bv<32> > bram_rddata_a;
-  sc_core::sc_out< bool > bram_rst_b;
-  sc_core::sc_out< bool > bram_clk_b;
-  sc_core::sc_out< bool > bram_en_b;
-  sc_core::sc_out< sc_dt::sc_bv<4> > bram_we_b;
-  sc_core::sc_out< sc_dt::sc_bv<13> > bram_addr_b;
-  sc_core::sc_out< sc_dt::sc_bv<32> > bram_wrdata_b;
-  sc_core::sc_in< sc_dt::sc_bv<32> > bram_rddata_b;
 
   // Dummy Signals for IP Ports
 
@@ -282,13 +268,6 @@ public:
   sc_core::sc_out< sc_dt::sc_bv<13> > bram_addr_a;
   sc_core::sc_out< sc_dt::sc_bv<32> > bram_wrdata_a;
   sc_core::sc_in< sc_dt::sc_bv<32> > bram_rddata_a;
-  sc_core::sc_out< bool > bram_rst_b;
-  sc_core::sc_out< bool > bram_clk_b;
-  sc_core::sc_out< bool > bram_en_b;
-  sc_core::sc_out< sc_dt::sc_bv<4> > bram_we_b;
-  sc_core::sc_out< sc_dt::sc_bv<13> > bram_addr_b;
-  sc_core::sc_out< sc_dt::sc_bv<32> > bram_wrdata_b;
-  sc_core::sc_in< sc_dt::sc_bv<32> > bram_rddata_b;
 
   // Dummy Signals for IP Ports
 
@@ -363,13 +342,6 @@ public:
   sc_core::sc_out< sc_dt::sc_bv<13> > bram_addr_a;
   sc_core::sc_out< sc_dt::sc_bv<32> > bram_wrdata_a;
   sc_core::sc_in< sc_dt::sc_bv<32> > bram_rddata_a;
-  sc_core::sc_out< bool > bram_rst_b;
-  sc_core::sc_out< bool > bram_clk_b;
-  sc_core::sc_out< bool > bram_en_b;
-  sc_core::sc_out< sc_dt::sc_bv<4> > bram_we_b;
-  sc_core::sc_out< sc_dt::sc_bv<13> > bram_addr_b;
-  sc_core::sc_out< sc_dt::sc_bv<32> > bram_wrdata_b;
-  sc_core::sc_in< sc_dt::sc_bv<32> > bram_rddata_b;
 
   // Dummy Signals for IP Ports
 
@@ -450,13 +422,6 @@ public:
   sc_core::sc_out< sc_dt::sc_bv<13> > bram_addr_a;
   sc_core::sc_out< sc_dt::sc_bv<32> > bram_wrdata_a;
   sc_core::sc_in< sc_dt::sc_bv<32> > bram_rddata_a;
-  sc_core::sc_out< bool > bram_rst_b;
-  sc_core::sc_out< bool > bram_clk_b;
-  sc_core::sc_out< bool > bram_en_b;
-  sc_core::sc_out< sc_dt::sc_bv<4> > bram_we_b;
-  sc_core::sc_out< sc_dt::sc_bv<13> > bram_addr_b;
-  sc_core::sc_out< sc_dt::sc_bv<32> > bram_wrdata_b;
-  sc_core::sc_in< sc_dt::sc_bv<32> > bram_rddata_b;
 
   // Dummy Signals for IP Ports
 

@@ -58,7 +58,7 @@ if {$::dispatch::connected} {
 OPTRACE "system_clk_wiz_0_synth_1" START { ROLLUP_AUTO }
 set_param checkpoint.writeSynthRtdsInDcp 1
 set_param general.usePosixSpawnForFork 1
-set_param synth.incrementalSynthesisCache ./.Xil/Vivado-3910096-cenglab16/incrSyn
+set_param synth.incrementalSynthesisCache ./.Xil/Vivado-3957614-cenglab16/incrSyn
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 set_param project.vivado.isBlockSynthRun true
@@ -72,6 +72,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir /home/student/s101153258/riscv_microprocessor/riscv_microprocessor.cache/wt [current_project]
 set_property parent.project_path /home/student/s101153258/riscv_microprocessor/riscv_microprocessor.xpr [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part_repo_paths {/home/student/s101153258/.Xilinx/Vivado/2025.1/xhub/board_store/xilinx_board_store} [current_project]

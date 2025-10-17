@@ -2,7 +2,7 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
--- Date        : Tue Oct 14 11:25:15 2025
+-- Date        : Fri Oct 17 13:26:16 2025
 -- Host        : cenglab16 running 64-bit Ubuntu 24.04.3 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/student/s101153258/riscv_microprocessor/riscv_microprocessor.gen/sources_1/bd/system/ip/system_clk_wiz_0/system_clk_wiz_0_sim_netlist.vhdl
@@ -18,7 +18,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity system_clk_wiz_0_clk_wiz is
   port (
     clk_out1 : out STD_LOGIC;
-    reset : in STD_LOGIC;
+    resetn : in STD_LOGIC;
     locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
@@ -29,6 +29,7 @@ architecture STRUCTURE of system_clk_wiz_0_clk_wiz is
   signal clk_out1_system_clk_wiz_0 : STD_LOGIC;
   signal clkfbout_buf_system_clk_wiz_0 : STD_LOGIC;
   signal clkfbout_system_clk_wiz_0 : STD_LOGIC;
+  signal reset_high : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED : STD_LOGIC;
@@ -159,7 +160,15 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       PSEN => '0',
       PSINCDEC => '0',
       PWRDWN => '0',
-      RST => reset
+      RST => reset_high
+    );
+mmcm_adv_inst_i_1: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => resetn,
+      O => reset_high
     );
 end STRUCTURE;
 library IEEE;
@@ -169,7 +178,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity system_clk_wiz_0 is
   port (
     clk_out1 : out STD_LOGIC;
-    reset : in STD_LOGIC;
+    resetn : in STD_LOGIC;
     locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
@@ -184,6 +193,6 @@ inst: entity work.system_clk_wiz_0_clk_wiz
       clk_in1 => clk_in1,
       clk_out1 => clk_out1,
       locked => locked,
-      reset => reset
+      resetn => resetn
     );
 end STRUCTURE;
