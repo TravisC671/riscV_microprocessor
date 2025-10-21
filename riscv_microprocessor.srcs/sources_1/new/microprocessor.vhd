@@ -148,6 +148,7 @@ begin
             Read_Data => Read_Data,
             Error => Error,
             PCle => PCle,
+            PCie => PCie,
             M_AXI_ACLK => CLK,
             M_AXI_ARESETN => res,
             M_AXI_AWID => I_M_AXI_AWID,
@@ -200,12 +201,12 @@ begin
         Asel => CW_decoded.Asel,
         Bsel => CW_decoded.Bsel,
         Dsel => CW_decoded.Dsel,
-        DLen => exec and CW_decoded.DLen,
+        DLen => CW_decoded.DLen and exec,
         PCAsel => CW_decoded.PCAsel,
         IMMBsel => CW_decoded.IMMBsel,
         PCDsel => CW_decoded.PCDsel,
-        PCie => CW_decoded.PCie,
-        PCle => exec and CW_decoded.PCle,
+        PCie => CW_decoded.PCie and exec,
+        PCle => CW_decoded.PCle,
         isBR => CW_decoded.isBR,
         BRcond => CW_decoded.BRcond,
         ALUFunc => CW_decoded.ALUFunc,
@@ -213,9 +214,10 @@ begin
         );
     
     datapath: entity work.datapath (Behavioral)
-        port map (Controller => CW, clk => CLK, res => RESET);
+        port map (Controller => CW, clk => CLK, res => Reset, pc_addr => Read_address);
+    
     
     sequencer: entity work.sequencer (Behavioral)
-        port map (clk => CLK, res => RESET, start => Start_read, done => Read_Done, PCie => PCie, exec => exec);
+        port map (clk => CLK, res => RESET, start => Start_read, done => Read_Done, exec => exec);
 
 end Behavioral;

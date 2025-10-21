@@ -6,7 +6,7 @@
       "gen_directory": "../../../../riscv_microprocessor.gen/sources_1/bd/system",
       "name": "system",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
-      "synth_flow_mode": "Hierarchical",
+      "synth_flow_mode": "None",
       "tool_version": "2025.1",
       "validated": "true"
     },
@@ -901,6 +901,10 @@
             "interface_ports": {
               "S00_AXI": {
                 "bd_attributes": {
+                  "BRIDGES": {
+                    "value": "M00_AXI",
+                    "value_src": "auto"
+                  },
                   "TYPE": {
                     "value": "interior",
                     "value_src": "default"
@@ -922,6 +926,10 @@
               },
               "S01_AXI": {
                 "bd_attributes": {
+                  "BRIDGES": {
+                    "value": "M00_AXI",
+                    "value_src": "auto"
+                  },
                   "TYPE": {
                     "value": "interior",
                     "value_src": "default"
@@ -1245,7 +1253,7 @@
         "has_run_ip_tcl": "true",
         "parameters": {
           "Coe_File": {
-            "value": "microprocessor_test.coe"
+            "value": "/opt/packages/op_branch_test.coe"
           },
           "Load_Init_File": {
             "value": "true"

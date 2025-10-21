@@ -5,12 +5,12 @@ use work.RISCV_package.all;
 entity datapath is
     Generic (XLen : integer := 32);
     Port ( Controller : in control_word;
-           clk, res : in STD_LOGIC);
+           clk, res : in STD_LOGIC;
+           pc_addr : out STD_LOGIC_VECTOR (XLen-1 downto 0));
 end datapath;
 
 architecture Behavioral of datapath is
     type registerOutput is array (XLen downto 0) of std_logic_vector(XLen - 1 downto 0);
-    signal regOut: registerOutput;
     signal Dbus : STD_LOGIC_VECTOR (XLen-1 downto 0);
     signal Dout : STD_LOGIC_VECTOR (XLen-1 downto 0);
     signal PCout : STD_LOGIC_VECTOR (XLen-1 downto 0);
@@ -49,6 +49,8 @@ begin
         generic map (XLen => XLen)
         port map (BRen => BRen, PCie => Controller.PCie, clk => clk, res => res, Din => Dout, PCout => PCout);
      
+     pc_addr <= PCout;
+      
      Dbus <= PCout when Controller.PCDsel = '1' else Dout;
         
     

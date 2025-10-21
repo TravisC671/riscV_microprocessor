@@ -6,8 +6,9 @@
       "gen_directory": "../../../../riscv_microprocessor.gen/sources_1/bd/design_1",
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
-      "synth_flow_mode": "Hierarchical",
-      "tool_version": "2025.1"
+      "synth_flow_mode": "None",
+      "tool_version": "2025.1",
+      "validated": "true"
     },
     "design_tree": {
       "axi_interconnect_0": {
@@ -45,8 +46,20 @@
         "type": "clk",
         "direction": "I",
         "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_sys_clock",
+            "value_src": "default"
+          },
           "FREQ_HZ": {
             "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
           },
           "PHASE": {
             "value": "0.0"
@@ -57,6 +70,10 @@
         "type": "rst",
         "direction": "I",
         "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
           "POLARITY": {
             "value": "ACTIVE_LOW"
           }
@@ -706,6 +723,9 @@
           "PCle": {
             "direction": "O"
           },
+          "PCie": {
+            "direction": "O"
+          },
           "M_AXI_ACLK": {
             "type": "clk",
             "direction": "I",
@@ -837,6 +857,21 @@
           "sys_clock",
           "clk_wiz_0/clk_in1"
         ]
+      }
+    },
+    "addressing": {
+      "/fetch_unit_0": {
+        "address_spaces": {
+          "M_AXI": {
+            "segments": {
+              "SEG_axi_bram_ctrl_0_Mem0": {
+                "address_block": "/axi_bram_ctrl_0/S_AXI/Mem0",
+                "offset": "0x00000000",
+                "range": "8K"
+              }
+            }
+          }
+        }
       }
     }
   }

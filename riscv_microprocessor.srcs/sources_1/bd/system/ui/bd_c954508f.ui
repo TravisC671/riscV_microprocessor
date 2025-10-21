@@ -1,33 +1,33 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"-161,-225",
+   "Default View_TopLeft":"-161,-211",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
-preplace port port-id_sys_clock -pg 1 -lvl 0 -x 0 -y 350 -defaultsOSRD
-preplace port port-id_reset -pg 1 -lvl 0 -x 0 -y 70 -defaultsOSRD
-preplace inst microprocessor_0 -pg 1 -lvl 3 -x 680 -y 80 -defaultsOSRD
-preplace inst axi_interconnect_0 -pg 1 -lvl 4 -x 960 -y 140 -defaultsOSRD
+preplace port port-id_sys_clock -pg 1 -lvl 0 -x -10 -y 350 -defaultsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x -10 -y 70 -defaultsOSRD
+preplace inst microprocessor_0 -pg 1 -lvl 3 -x 690 -y 80 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 4 -x 970 -y 140 -defaultsOSRD
 preplace inst clk_wiz -pg 1 -lvl 1 -x 110 -y 340 -defaultsOSRD
-preplace inst rst_clk_wiz_100M -pg 1 -lvl 2 -x 390 -y 130 -defaultsOSRD
-preplace inst axi_bram_ctrl_0 -pg 1 -lvl 5 -x 1260 -y 160 -defaultsOSRD
-preplace inst axi_bram_ctrl_0_bram -pg 1 -lvl 6 -x 1530 -y 160 -defaultsOSRD
+preplace inst rst_clk_wiz_100M -pg 1 -lvl 2 -x 400 -y 130 -defaultsOSRD
+preplace inst axi_bram_ctrl_0 -pg 1 -lvl 5 -x 1270 -y 160 -defaultsOSRD
+preplace inst axi_bram_ctrl_0_bram -pg 1 -lvl 6 -x 1540 -y 160 -defaultsOSRD
 preplace inst ilconstant_0 -pg 1 -lvl 1 -x 110 -y 230 -defaultsOSRD
 preplace inst ilconstant_1 -pg 1 -lvl 1 -x 110 -y 130 -defaultsOSRD
-preplace netloc clk_wiz_clk_out1 1 1 4 210 30 560 10 810 290 1110J
-preplace netloc ilconstant_0_dout 1 1 1 220J 150n
+preplace netloc clk_wiz_clk_out1 1 1 4 220 30 570 10 820 290 1120J
+preplace netloc ilconstant_0_dout 1 1 1 230J 150n
 preplace netloc ilconstant_1_dout 1 1 1 NJ 130
 preplace netloc reset_1 1 0 2 20 70 200J
 preplace netloc rst_clk_wiz_100M_mb_reset 1 2 1 N 90
+preplace netloc rst_clk_wiz_100M_peripheral_aresetn 1 2 3 NJ 170 810 300 1130J
 preplace netloc sys_clock_1 1 0 1 NJ 350
-preplace netloc rst_clk_wiz_100M_peripheral_aresetn 1 2 3 NJ 170 800 300 1120J
 preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 5 1 N 160
 preplace netloc axi_interconnect_0_M00_AXI 1 4 1 N 140
-preplace netloc microprocessor_0_I_M_AXI 1 3 1 800 50n
 preplace netloc microprocessor_0_D_M_AXI 1 3 1 N 70
-levelinfo -pg 1 0 110 390 680 960 1260 1530 1660
-pagesize -pg 1 -db -bbox -sgen -120 0 1660 400
+preplace netloc microprocessor_0_I_M_AXI 1 3 1 810 50n
+levelinfo -pg 1 -10 110 400 690 970 1270 1540 1670
+pagesize -pg 1 -db -bbox -sgen -130 0 1670 400
 "
 }
 {

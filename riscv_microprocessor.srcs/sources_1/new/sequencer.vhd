@@ -5,8 +5,7 @@ entity sequencer is
     Port ( clk, res : in STD_LOGIC;
            done : in std_logic;
            start : out std_logic;
-           exec : out std_logic;
-           PCie : out std_logic
+           exec : out std_logic
     );
 end sequencer;
 
@@ -32,9 +31,6 @@ begin
                       seq_execute_next when seq_execute,
                       seq_fetch_next when others;
     
-    start <= '1' when current_state /= seq_execute else '0';
-    exec <= '1' when current_state /= seq_fetch2 else '0';
-    
-    PCie <= '1' when current_state = seq_execute else '0';
-
+    start <= '1' when current_state = seq_fetch else '0';
+    exec <= '1' when current_state = seq_execute else '0';
 end Behavioral;

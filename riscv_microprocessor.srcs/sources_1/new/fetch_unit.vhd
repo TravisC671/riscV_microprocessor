@@ -23,6 +23,7 @@ entity fetch_unit is
         Read_Data : out std_logic_vector(0 to C_M_AXI_DATA_WIDTH*C_M_AXI_BURST_LEN - 1); -- Data that was read (modify as needed)
 		Error	: out std_logic; -- Asserts when ERROR is detected
 		PCle : out std_logic;
+        PCie : out std_logic;
 		-- User ports ends
     -- Global AXI ports
 		M_AXI_ACLK	: in std_logic;    -- Global Clock Signal.
@@ -115,7 +116,8 @@ begin
     PCle         <= '1' when current_state = fu_accept else '0';
     Read_Done    <= '1' when current_state = fu_accept else '0';
     IRLen        <= '1' when current_state = fu_accept else '0';
-    
+    PCie         <= '1' when current_state = fu_accept else '0';
+
     res <= not M_AXI_ARESETN;
     
     IRLatch: entity work.generic_register (behavioral) 
