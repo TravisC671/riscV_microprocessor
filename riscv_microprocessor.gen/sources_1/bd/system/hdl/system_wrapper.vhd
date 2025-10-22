@@ -2,7 +2,7 @@
 --Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
---Date        : Tue Oct 21 13:02:08 2025
+--Date        : Wed Oct 22 16:16:06 2025
 --Host        : cenglab16 running 64-bit Ubuntu 24.04.3 LTS
 --Command     : generate_target system_wrapper.bd
 --Design      : system_wrapper
@@ -14,6 +14,8 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity system_wrapper is
   port (
+    pc_asserted : out STD_LOGIC;
+    pc_status : out STD_LOGIC_VECTOR ( 159 downto 0 );
     reset : in STD_LOGIC;
     sys_clock : in STD_LOGIC
   );
@@ -23,12 +25,16 @@ architecture STRUCTURE of system_wrapper is
   component system is
   port (
     sys_clock : in STD_LOGIC;
-    reset : in STD_LOGIC
+    reset : in STD_LOGIC;
+    pc_status : out STD_LOGIC_VECTOR ( 159 downto 0 );
+    pc_asserted : out STD_LOGIC
   );
   end component system;
 begin
 system_i: component system
      port map (
+      pc_asserted => pc_asserted,
+      pc_status(159 downto 0) => pc_status(159 downto 0),
       reset => reset,
       sys_clock => sys_clock
     );

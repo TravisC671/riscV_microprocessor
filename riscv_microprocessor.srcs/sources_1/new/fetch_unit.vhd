@@ -130,7 +130,7 @@ begin
      M_AXI_AWSIZE    <= "010";       
      M_AXI_AWBURST   <= "01";        
      M_AXI_AWLOCK    <= '0';                   
-     M_AXI_AWCACHE   <= "0011";        
+     M_AXI_AWCACHE   <= "0000";        
      M_AXI_AWPROT    <= "000";       
      M_AXI_AWQOS     <= (others => '0');        
      M_AXI_AWUSER    <= (others => '0');                   
@@ -145,7 +145,7 @@ begin
      M_AXI_ARSIZE    <= "010";
      M_AXI_ARBURST   <= "01";
      M_AXI_ARLOCK    <= '0'; 
-     M_AXI_ARCACHE   <= "0011";
+     M_AXI_ARCACHE   <= "0000";
      M_AXI_ARPROT    <= "000";
      M_AXI_ARQOS     <= (others => '0');
      M_AXI_ARUSER    <= (others => '0');

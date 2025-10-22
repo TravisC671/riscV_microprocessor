@@ -1,9 +1,19 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Oct 21 13:02:08 2025" VIVADOVERSION="2025.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Oct 22 16:16:06 2025" VIVADOVERSION="2025.1">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:nexys-a7-100t:part0:1.3" DEVICE="7a100t" NAME="system" PACKAGE="csg324" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
+    <PORT DIR="O" NAME="pc_asserted" SIGIS="undef" SIGNAME="axi_protocol_checker_0_pc_asserted">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_protocol_checker_0" PORT="pc_asserted"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="159" NAME="pc_status" RIGHT="0" SIGIS="undef" SIGNAME="axi_protocol_checker_0_pc_status">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_protocol_checker_0" PORT="pc_status"/>
+      </CONNECTIONS>
+    </PORT>
     <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset">
       <CONNECTIONS>
         <CONNECTION INSTANCE="rst_clk_wiz_100M" PORT="ext_reset_in"/>
@@ -876,8 +886,8 @@
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="system_axi_interconnect_0_0"/>
-        <PARAMETER NAME="ENABLE_ADVANCED_OPTIONS" VALUE="0"/>
-        <PARAMETER NAME="ENABLE_PROTOCOL_CHECKERS" VALUE="0"/>
+        <PARAMETER NAME="ENABLE_ADVANCED_OPTIONS" VALUE="1"/>
+        <PARAMETER NAME="ENABLE_PROTOCOL_CHECKERS" VALUE="1"/>
         <PARAMETER NAME="M00_HAS_DATA_FIFO" VALUE="0"/>
         <PARAMETER NAME="M00_HAS_REGSLICE" VALUE="0"/>
         <PARAMETER NAME="M00_ISSUANCE" VALUE="0"/>
@@ -1963,6 +1973,226 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
+    <MODULE COREREVISION="21" FULLNAME="/axi_protocol_checker_0" HWVERSION="2.0" INSTANCE="axi_protocol_checker_0" IPTYPE="MONITOR" IS_ENABLE="1" MODCLASS="MONITOR" MODTYPE="axi_protocol_checker" VLNV="xilinx.com:ip:axi_protocol_checker:2.0">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axi_protocol_checker;v=v2_0;d=pg101-axi-protocol-checker.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_AXI_ADDR_WIDTH" VALUE="13"/>
+        <PARAMETER NAME="C_AXI_ARUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_AXI_AWUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_AXI_BUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_AXI_DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_AXI_ID_WIDTH" VALUE="2"/>
+        <PARAMETER NAME="C_AXI_PROTOCOL" VALUE="0"/>
+        <PARAMETER NAME="C_AXI_RUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_AXI_WUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_CHK_ERR_RESP" VALUE="0"/>
+        <PARAMETER NAME="C_ENABLE_CONTROL" VALUE="0"/>
+        <PARAMETER NAME="C_ENABLE_MARK_DEBUG" VALUE="1"/>
+        <PARAMETER NAME="C_HAS_WSTRB" VALUE="1"/>
+        <PARAMETER NAME="C_PC_AR_MAXWAITS" VALUE="0"/>
+        <PARAMETER NAME="C_PC_AW_MAXWAITS" VALUE="0"/>
+        <PARAMETER NAME="C_PC_B_MAXWAITS" VALUE="0"/>
+        <PARAMETER NAME="C_PC_EXMON_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="C_PC_HAS_SYSTEM_RESET" VALUE="0"/>
+        <PARAMETER NAME="C_PC_LIGHT_WEIGHT" VALUE="0"/>
+        <PARAMETER NAME="C_PC_MASTER_SIDE" VALUE="0"/>
+        <PARAMETER NAME="C_PC_MAXRBURSTS" VALUE="2"/>
+        <PARAMETER NAME="C_PC_MAXWBURSTS" VALUE="2"/>
+        <PARAMETER NAME="C_PC_MAX_BURST_LENGTH" VALUE="256"/>
+        <PARAMETER NAME="C_PC_MAX_CONTINUOUS_RTRANSFERS_WAITS" VALUE="0"/>
+        <PARAMETER NAME="C_PC_MAX_CONTINUOUS_WTRANSFERS_WAITS" VALUE="0"/>
+        <PARAMETER NAME="C_PC_MAX_WLAST_TO_AWVALID_WAITS" VALUE="0"/>
+        <PARAMETER NAME="C_PC_MAX_WRITE_TO_BVALID_WAITS" VALUE="0"/>
+        <PARAMETER NAME="C_PC_MESSAGE_LEVEL" VALUE="2"/>
+        <PARAMETER NAME="C_PC_R_MAXWAITS" VALUE="0"/>
+        <PARAMETER NAME="C_PC_STATUS_WIDTH" VALUE="160"/>
+        <PARAMETER NAME="C_PC_SUPPORTS_NARROW_BURST" VALUE="1"/>
+        <PARAMETER NAME="C_PC_W_MAXWAITS" VALUE="0"/>
+        <PARAMETER NAME="ADDR_WIDTH" VALUE="13"/>
+        <PARAMETER NAME="ARUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="AWUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="BUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="CHK_ERR_RESP" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="system_axi_protocol_checker_0_1"/>
+        <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="ENABLE_CONTROL" VALUE="0"/>
+        <PARAMETER NAME="ENABLE_MARK_DEBUG" VALUE="1"/>
+        <PARAMETER NAME="HAS_SYSTEM_RESET" VALUE="0"/>
+        <PARAMETER NAME="HAS_WSTRB" VALUE="1"/>
+        <PARAMETER NAME="ID_WIDTH" VALUE="2"/>
+        <PARAMETER NAME="LIGHT_WEIGHT" VALUE="0"/>
+        <PARAMETER NAME="MAX_AR_WAITS" VALUE="0"/>
+        <PARAMETER NAME="MAX_AW_WAITS" VALUE="0"/>
+        <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
+        <PARAMETER NAME="MAX_B_WAITS" VALUE="0"/>
+        <PARAMETER NAME="MAX_CONTINUOUS_RTRANSFERS_WAITS" VALUE="0"/>
+        <PARAMETER NAME="MAX_CONTINUOUS_WTRANSFERS_WAITS" VALUE="0"/>
+        <PARAMETER NAME="MAX_RD_BURSTS" VALUE="2"/>
+        <PARAMETER NAME="MAX_R_WAITS" VALUE="0"/>
+        <PARAMETER NAME="MAX_WLAST_TO_AWVALID_WAITS" VALUE="0"/>
+        <PARAMETER NAME="MAX_WRITE_TO_BVALID_WAITS" VALUE="0"/>
+        <PARAMETER NAME="MAX_WR_BURSTS" VALUE="2"/>
+        <PARAMETER NAME="MAX_W_WAITS" VALUE="0"/>
+        <PARAMETER NAME="MESSAGE_LEVEL" VALUE="2"/>
+        <PARAMETER NAME="PC_MASTER_SIDE" VALUE="0"/>
+        <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
+        <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+        <PARAMETER NAME="RUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="1"/>
+        <PARAMETER NAME="WUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="MONITOR"/>
+        <PARAMETER NAME="EDK_SPECIAL" VALUE="MONITOR"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="clk_wiz_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="pc_asserted" SIGIS="undef" SIGNAME="axi_protocol_checker_0_pc_asserted">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pc_asserted"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="12" NAME="pc_axi_araddr" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="pc_axi_arburst" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="pc_axi_arcache" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="pc_axi_arid" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="7" NAME="pc_axi_arlen" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="0" NAME="pc_axi_arlock" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="2" NAME="pc_axi_arprot" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="pc_axi_arqos" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="pc_axi_arready" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="pc_axi_arregion" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="2" NAME="pc_axi_arsize" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="0" NAME="pc_axi_aruser" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="pc_axi_arvalid" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="12" NAME="pc_axi_awaddr" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="pc_axi_awburst" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="pc_axi_awcache" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="pc_axi_awid" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="7" NAME="pc_axi_awlen" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="0" NAME="pc_axi_awlock" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="2" NAME="pc_axi_awprot" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="pc_axi_awqos" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="pc_axi_awready" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="pc_axi_awregion" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="2" NAME="pc_axi_awsize" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="0" NAME="pc_axi_awuser" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="pc_axi_awvalid" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="pc_axi_bid" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="pc_axi_bready" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="pc_axi_bresp" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="0" NAME="pc_axi_buser" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="pc_axi_bvalid" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="pc_axi_rdata" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="pc_axi_rid" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="pc_axi_rlast" SIGIS="undef"/>
+        <PORT DIR="I" NAME="pc_axi_rready" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="pc_axi_rresp" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="0" NAME="pc_axi_ruser" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="pc_axi_rvalid" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="pc_axi_wdata" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="pc_axi_wlast" SIGIS="undef"/>
+        <PORT DIR="I" NAME="pc_axi_wready" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="pc_axi_wstrb" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="0" NAME="pc_axi_wuser" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="pc_axi_wvalid" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="159" NAME="pc_status" RIGHT="0" SIGIS="undef" SIGNAME="axi_protocol_checker_0_pc_status">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pc_status"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="axi_interconnect_0_M00_AXI" DATAWIDTH="32" NAME="PC_AXI" TYPE="MONITOR" VLNV="xilinx.com:interface:aximm:1.0">
+          <PARAMETER NAME="ADDR_WIDTH" VALUE="13"/>
+          <PARAMETER NAME="ARUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="AWUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="BUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="/clk_wiz_clk_out1"/>
+          <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
+          <PARAMETER NAME="HAS_BURST" VALUE="1"/>
+          <PARAMETER NAME="HAS_CACHE" VALUE="1"/>
+          <PARAMETER NAME="HAS_LOCK" VALUE="1"/>
+          <PARAMETER NAME="HAS_PROT" VALUE="1"/>
+          <PARAMETER NAME="HAS_QOS" VALUE="1"/>
+          <PARAMETER NAME="HAS_REGION" VALUE="1"/>
+          <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
+          <PARAMETER NAME="HAS_WSTRB" VALUE="1"/>
+          <PARAMETER NAME="ID_WIDTH" VALUE="2"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
+          <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="2"/>
+          <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
+          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
+          <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
+          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+          <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PARAMETER NAME="RUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="1"/>
+          <PARAMETER NAME="WUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PARAMETER NAME="WUSER_WIDTH" VALUE="1"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="pc_axi_araddr"/>
+            <PORTMAP LOGICAL="ARBURST" PHYSICAL="pc_axi_arburst"/>
+            <PORTMAP LOGICAL="ARCACHE" PHYSICAL="pc_axi_arcache"/>
+            <PORTMAP LOGICAL="ARID" PHYSICAL="pc_axi_arid"/>
+            <PORTMAP LOGICAL="ARLEN" PHYSICAL="pc_axi_arlen"/>
+            <PORTMAP LOGICAL="ARLOCK" PHYSICAL="pc_axi_arlock"/>
+            <PORTMAP LOGICAL="ARPROT" PHYSICAL="pc_axi_arprot"/>
+            <PORTMAP LOGICAL="ARQOS" PHYSICAL="pc_axi_arqos"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="pc_axi_arready"/>
+            <PORTMAP LOGICAL="ARREGION" PHYSICAL="pc_axi_arregion"/>
+            <PORTMAP LOGICAL="ARSIZE" PHYSICAL="pc_axi_arsize"/>
+            <PORTMAP LOGICAL="ARUSER" PHYSICAL="pc_axi_aruser"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="pc_axi_arvalid"/>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="pc_axi_awaddr"/>
+            <PORTMAP LOGICAL="AWBURST" PHYSICAL="pc_axi_awburst"/>
+            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="pc_axi_awcache"/>
+            <PORTMAP LOGICAL="AWID" PHYSICAL="pc_axi_awid"/>
+            <PORTMAP LOGICAL="AWLEN" PHYSICAL="pc_axi_awlen"/>
+            <PORTMAP LOGICAL="AWLOCK" PHYSICAL="pc_axi_awlock"/>
+            <PORTMAP LOGICAL="AWPROT" PHYSICAL="pc_axi_awprot"/>
+            <PORTMAP LOGICAL="AWQOS" PHYSICAL="pc_axi_awqos"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="pc_axi_awready"/>
+            <PORTMAP LOGICAL="AWREGION" PHYSICAL="pc_axi_awregion"/>
+            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="pc_axi_awsize"/>
+            <PORTMAP LOGICAL="AWUSER" PHYSICAL="pc_axi_awuser"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="pc_axi_awvalid"/>
+            <PORTMAP LOGICAL="BID" PHYSICAL="pc_axi_bid"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="pc_axi_bready"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="pc_axi_bresp"/>
+            <PORTMAP LOGICAL="BUSER" PHYSICAL="pc_axi_buser"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="pc_axi_bvalid"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="pc_axi_rdata"/>
+            <PORTMAP LOGICAL="RID" PHYSICAL="pc_axi_rid"/>
+            <PORTMAP LOGICAL="RLAST" PHYSICAL="pc_axi_rlast"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="pc_axi_rready"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="pc_axi_rresp"/>
+            <PORTMAP LOGICAL="RUSER" PHYSICAL="pc_axi_ruser"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="pc_axi_rvalid"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="pc_axi_wdata"/>
+            <PORTMAP LOGICAL="WLAST" PHYSICAL="pc_axi_wlast"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="pc_axi_wready"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="pc_axi_wstrb"/>
+            <PORTMAP LOGICAL="WUSER" PHYSICAL="pc_axi_wuser"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="pc_axi_wvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
     <MODULE COREREVISION="16" FULLNAME="/clk_wiz" HWVERSION="6.0" INSTANCE="clk_wiz" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clk_wiz" VLNV="xilinx.com:ip:clk_wiz:6.0">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=clk_wiz;v=v6_0;d=pg065-clk-wiz.pdf"/>
@@ -2556,6 +2786,7 @@
             <CONNECTION INSTANCE="axi_bram_ctrl_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="M00_ACLK"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_ACLK"/>
+            <CONNECTION INSTANCE="axi_protocol_checker_0" PORT="aclk"/>
             <CONNECTION INSTANCE="microprocessor_0" PORT="CLK"/>
           </CONNECTIONS>
         </PORT>
@@ -3264,6 +3495,7 @@
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="M00_ARESETN"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="ARESETN"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S00_ARESETN"/>
+            <CONNECTION INSTANCE="axi_protocol_checker_0" PORT="aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>

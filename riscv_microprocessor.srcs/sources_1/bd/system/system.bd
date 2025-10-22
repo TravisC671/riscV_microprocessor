@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x40BFD57A5D6C4ED0",
+      "boundary_crc": "0xAFDEFF0F48AB7B08",
       "device": "xc7a100tcsg324-1",
       "gen_directory": "../../../../riscv_microprocessor.gen/sources_1/bd/system",
       "name": "system",
@@ -16,14 +16,18 @@
         "xbar": "",
         "s00_couplers": {},
         "s01_couplers": {},
-        "m00_couplers": {}
+        "m00_couplers": {},
+        "s00_pchk": "",
+        "s01_pchk": "",
+        "m00_pchk": ""
       },
       "clk_wiz": "",
       "rst_clk_wiz_100M": "",
       "axi_bram_ctrl_0": "",
       "axi_bram_ctrl_0_bram": "",
       "ilconstant_0": "",
-      "ilconstant_1": ""
+      "ilconstant_1": "",
+      "axi_protocol_checker_0": ""
     },
     "ports": {
       "sys_clock": {
@@ -62,6 +66,14 @@
             "value": "ACTIVE_LOW"
           }
         }
+      },
+      "pc_status": {
+        "direction": "O",
+        "left": "159",
+        "right": "0"
+      },
+      "pc_asserted": {
+        "direction": "O"
       }
     },
     "components": {
@@ -792,6 +804,12 @@
         "inst_hier_path": "axi_interconnect_0",
         "xci_name": "system_axi_interconnect_0_0",
         "parameters": {
+          "ENABLE_ADVANCED_OPTIONS": {
+            "value": "1"
+          },
+          "ENABLE_PROTOCOL_CHECKERS": {
+            "value": "1"
+          },
           "NUM_MI": {
             "value": "1"
           },
@@ -893,6 +911,12 @@
               },
               "NUM_SI": {
                 "value": "2"
+              },
+              "S00_ARB_PRIORITY": {
+                "value": "0"
+              },
+              "S01_ARB_PRIORITY": {
+                "value": "0"
               },
               "STRATEGY": {
                 "value": "0"
@@ -1110,26 +1134,137 @@
                 ]
               }
             }
+          },
+          "s00_pchk": {
+            "vlnv": "xilinx.com:ip:axi_protocol_checker:2.0",
+            "ip_revision": "21",
+            "xci_name": "system_axi_interconnect_0_imp_s00_pchk_0",
+            "xci_path": "ip/system_axi_interconnect_0_imp_s00_pchk_0/system_axi_interconnect_0_imp_s00_pchk_0.xci",
+            "inst_hier_path": "axi_interconnect_0/s00_pchk",
+            "has_run_ip_tcl": "true",
+            "parameters": {
+              "MAX_AR_WAITS": {
+                "value": "0"
+              },
+              "MAX_AW_WAITS": {
+                "value": "0"
+              },
+              "MAX_B_WAITS": {
+                "value": "0"
+              },
+              "MAX_RD_BURSTS": {
+                "value": "2"
+              },
+              "MAX_R_WAITS": {
+                "value": "0"
+              },
+              "MAX_WR_BURSTS": {
+                "value": "2"
+              },
+              "MAX_W_WAITS": {
+                "value": "0"
+              }
+            }
+          },
+          "s01_pchk": {
+            "vlnv": "xilinx.com:ip:axi_protocol_checker:2.0",
+            "ip_revision": "21",
+            "xci_name": "system_axi_interconnect_0_imp_s01_pchk_0",
+            "xci_path": "ip/system_axi_interconnect_0_imp_s01_pchk_0/system_axi_interconnect_0_imp_s01_pchk_0.xci",
+            "inst_hier_path": "axi_interconnect_0/s01_pchk",
+            "has_run_ip_tcl": "true",
+            "parameters": {
+              "MAX_AR_WAITS": {
+                "value": "0"
+              },
+              "MAX_AW_WAITS": {
+                "value": "0"
+              },
+              "MAX_B_WAITS": {
+                "value": "0"
+              },
+              "MAX_RD_BURSTS": {
+                "value": "2"
+              },
+              "MAX_R_WAITS": {
+                "value": "0"
+              },
+              "MAX_WR_BURSTS": {
+                "value": "2"
+              },
+              "MAX_W_WAITS": {
+                "value": "0"
+              }
+            }
+          },
+          "m00_pchk": {
+            "vlnv": "xilinx.com:ip:axi_protocol_checker:2.0",
+            "ip_revision": "21",
+            "xci_name": "system_axi_interconnect_0_imp_m00_pchk_0",
+            "xci_path": "ip/system_axi_interconnect_0_imp_m00_pchk_0/system_axi_interconnect_0_imp_m00_pchk_0.xci",
+            "inst_hier_path": "axi_interconnect_0/m00_pchk",
+            "has_run_ip_tcl": "true",
+            "parameters": {
+              "MAX_AR_WAITS": {
+                "value": "0"
+              },
+              "MAX_AW_WAITS": {
+                "value": "0"
+              },
+              "MAX_B_WAITS": {
+                "value": "0"
+              },
+              "MAX_RD_BURSTS": {
+                "value": "2"
+              },
+              "MAX_R_WAITS": {
+                "value": "0"
+              },
+              "MAX_WR_BURSTS": {
+                "value": "2"
+              },
+              "MAX_W_WAITS": {
+                "value": "0"
+              }
+            }
           }
         },
         "interface_nets": {
           "axi_interconnect_0_to_s00_couplers": {
             "interface_ports": [
               "S00_AXI",
-              "s00_couplers/S_AXI"
-            ]
+              "s00_couplers/S_AXI",
+              "s00_pchk/PC_AXI"
+            ],
+            "hdl_attributes": {
+              "MARK_DEBUG": {
+                "value": "true"
+              }
+            }
           },
           "axi_interconnect_0_to_s01_couplers": {
             "interface_ports": [
               "S01_AXI",
-              "s01_couplers/S_AXI"
-            ]
+              "s01_couplers/S_AXI",
+              "s01_pchk/PC_AXI"
+            ],
+            "hdl_attributes": {
+              "MARK_DEBUG": {
+                "value": "true"
+              }
+            }
           },
           "m00_couplers_to_axi_interconnect_0": {
             "interface_ports": [
               "m00_couplers/M_AXI",
-              "M00_AXI"
-            ]
+              "M00_AXI",
+              "m00_pchk/PC_AXI"
+            ],
+            "hdl_attributes": {
+              "MARK_DEBUG": {
+                "value": "true"
+              }
+            }
           },
           "s00_couplers_to_xbar": {
             "interface_ports": [
@@ -1160,7 +1295,10 @@
               "s00_couplers/M_ACLK",
               "s01_couplers/M_ACLK",
               "m00_couplers/M_ACLK",
-              "m00_couplers/S_ACLK"
+              "m00_couplers/S_ACLK",
+              "s00_pchk/aclk",
+              "s01_pchk/aclk",
+              "m00_pchk/aclk"
             ]
           },
           "axi_interconnect_0_ARESETN_net": {
@@ -1172,8 +1310,16 @@
               "s00_couplers/M_ARESETN",
               "s01_couplers/M_ARESETN",
               "m00_couplers/M_ARESETN",
-              "m00_couplers/S_ARESETN"
-            ]
+              "m00_couplers/S_ARESETN",
+              "s00_pchk/aresetn",
+              "s01_pchk/aresetn",
+              "m00_pchk/aresetn"
+            ],
+            "hdl_attributes": {
+              "MARK_DEBUG": {
+                "value": "true"
+              }
+            }
           }
         }
       },
@@ -1273,6 +1419,14 @@
       },
       "ilconstant_1": {
         "vlnv": "xilinx.com:inline_hdl:ilconstant:1.0"
+      },
+      "axi_protocol_checker_0": {
+        "vlnv": "xilinx.com:ip:axi_protocol_checker:2.0",
+        "ip_revision": "21",
+        "xci_name": "system_axi_protocol_checker_0_1",
+        "xci_path": "ip/system_axi_protocol_checker_0_1/system_axi_protocol_checker_0_1.xci",
+        "inst_hier_path": "axi_protocol_checker_0",
+        "has_run_ip_tcl": "true"
       }
     },
     "interface_nets": {
@@ -1285,7 +1439,8 @@
       "axi_interconnect_0_M00_AXI": {
         "interface_ports": [
           "axi_interconnect_0/M00_AXI",
-          "axi_bram_ctrl_0/S_AXI"
+          "axi_bram_ctrl_0/S_AXI",
+          "axi_protocol_checker_0/PC_AXI"
         ]
       },
       "microprocessor_0_D_M_AXI": {
@@ -1302,6 +1457,18 @@
       }
     },
     "nets": {
+      "axi_protocol_checker_0_pc_asserted": {
+        "ports": [
+          "axi_protocol_checker_0/pc_asserted",
+          "pc_asserted"
+        ]
+      },
+      "axi_protocol_checker_0_pc_status": {
+        "ports": [
+          "axi_protocol_checker_0/pc_status",
+          "pc_status"
+        ]
+      },
       "clk_wiz_clk_out1": {
         "ports": [
           "clk_wiz/clk_out1",
@@ -1311,6 +1478,7 @@
           "axi_bram_ctrl_0/s_axi_aclk",
           "axi_interconnect_0/M00_ACLK",
           "axi_interconnect_0/S01_ACLK",
+          "axi_protocol_checker_0/aclk",
           "microprocessor_0/CLK"
         ]
       },
@@ -1346,7 +1514,8 @@
           "axi_bram_ctrl_0/s_axi_aresetn",
           "axi_interconnect_0/M00_ARESETN",
           "axi_interconnect_0/ARESETN",
-          "axi_interconnect_0/S00_ARESETN"
+          "axi_interconnect_0/S00_ARESETN",
+          "axi_protocol_checker_0/aresetn"
         ]
       },
       "sys_clock_1": {

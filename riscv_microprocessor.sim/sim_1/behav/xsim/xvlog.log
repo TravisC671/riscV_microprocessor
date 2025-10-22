@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.ip_user_files/bd/system/ip/system_axi_protocol_checker_0_1/sim/system_axi_protocol_checker_0_1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module system_axi_protocol_checker_0_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.ip_user_files/bd/system/ip/system_axi_interconnect_0_imp_s00_pchk_0/sim/system_axi_interconnect_0_imp_s00_pchk_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module system_axi_interconnect_0_imp_s00_pchk_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.ip_user_files/bd/system/ip/system_axi_interconnect_0_imp_s01_pchk_0/sim/system_axi_interconnect_0_imp_s01_pchk_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module system_axi_interconnect_0_imp_s01_pchk_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.ip_user_files/bd/system/ip/system_axi_interconnect_0_imp_m00_pchk_0/sim/system_axi_interconnect_0_imp_m00_pchk_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module system_axi_interconnect_0_imp_m00_pchk_0
