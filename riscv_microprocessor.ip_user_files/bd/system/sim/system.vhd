@@ -2,7 +2,7 @@
 --Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
---Date        : Wed Oct 22 16:16:06 2025
+--Date        : Fri Oct 24 13:34:47 2025
 --Host        : cenglab16 running 64-bit Ubuntu 24.04.3 LTS
 --Command     : generate_target system.bd
 --Design      : system
@@ -2163,13 +2163,11 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity system is
   port (
-    pc_asserted : out STD_LOGIC;
-    pc_status : out STD_LOGIC_VECTOR ( 159 downto 0 );
     reset : in STD_LOGIC;
     sys_clock : in STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of system : entity is "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=16,numReposBlks=12,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=4,da_board_cnt=8,da_bram_cntlr_cnt=3,da_clkrst_cnt=6,synth_mode=None}";
+  attribute CORE_GENERATION_INFO of system : entity is "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=15,numReposBlks=11,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=4,da_board_cnt=8,da_bram_cntlr_cnt=3,da_clkrst_cnt=6,synth_mode=None}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of system : entity is "system.hwdef";
 end system;
@@ -2345,58 +2343,6 @@ architecture STRUCTURE of system is
     rsta_busy : out STD_LOGIC
   );
   end component system_axi_bram_ctrl_0_bram_1;
-  component system_axi_protocol_checker_0_1 is
-  port (
-    pc_status : out STD_LOGIC_VECTOR ( 159 downto 0 );
-    pc_asserted : out STD_LOGIC;
-    aclk : in STD_LOGIC;
-    aresetn : in STD_LOGIC;
-    pc_axi_awid : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    pc_axi_awaddr : in STD_LOGIC_VECTOR ( 12 downto 0 );
-    pc_axi_awlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    pc_axi_awsize : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    pc_axi_awburst : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    pc_axi_awlock : in STD_LOGIC_VECTOR ( 0 to 0 );
-    pc_axi_awcache : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    pc_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    pc_axi_awqos : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    pc_axi_awregion : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    pc_axi_awuser : in STD_LOGIC_VECTOR ( 0 to 0 );
-    pc_axi_awvalid : in STD_LOGIC;
-    pc_axi_awready : in STD_LOGIC;
-    pc_axi_wlast : in STD_LOGIC;
-    pc_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    pc_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    pc_axi_wuser : in STD_LOGIC_VECTOR ( 0 to 0 );
-    pc_axi_wvalid : in STD_LOGIC;
-    pc_axi_wready : in STD_LOGIC;
-    pc_axi_bid : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    pc_axi_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    pc_axi_buser : in STD_LOGIC_VECTOR ( 0 to 0 );
-    pc_axi_bvalid : in STD_LOGIC;
-    pc_axi_bready : in STD_LOGIC;
-    pc_axi_arid : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    pc_axi_araddr : in STD_LOGIC_VECTOR ( 12 downto 0 );
-    pc_axi_arlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    pc_axi_arsize : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    pc_axi_arburst : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    pc_axi_arlock : in STD_LOGIC_VECTOR ( 0 to 0 );
-    pc_axi_arcache : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    pc_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    pc_axi_arqos : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    pc_axi_arregion : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    pc_axi_aruser : in STD_LOGIC_VECTOR ( 0 to 0 );
-    pc_axi_arvalid : in STD_LOGIC;
-    pc_axi_arready : in STD_LOGIC;
-    pc_axi_rid : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    pc_axi_rlast : in STD_LOGIC;
-    pc_axi_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    pc_axi_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    pc_axi_ruser : in STD_LOGIC_VECTOR ( 0 to 0 );
-    pc_axi_rvalid : in STD_LOGIC;
-    pc_axi_rready : in STD_LOGIC
-  );
-  end component system_axi_protocol_checker_0_1;
   signal axi_bram_ctrl_0_BRAM_PORTA_ADDR : STD_LOGIC_VECTOR ( 12 downto 0 );
   signal axi_bram_ctrl_0_BRAM_PORTA_CLK : STD_LOGIC;
   signal axi_bram_ctrl_0_BRAM_PORTA_DOUT : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -2409,11 +2355,8 @@ architecture STRUCTURE of system is
   signal axi_interconnect_0_M00_AXI_ARLEN : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal axi_interconnect_0_M00_AXI_ARLOCK : STD_LOGIC;
   signal axi_interconnect_0_M00_AXI_ARPROT : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal axi_interconnect_0_M00_AXI_ARQOS : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal axi_interconnect_0_M00_AXI_ARREADY : STD_LOGIC;
-  signal axi_interconnect_0_M00_AXI_ARREGION : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal axi_interconnect_0_M00_AXI_ARSIZE : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal axi_interconnect_0_M00_AXI_ARUSER : STD_LOGIC_VECTOR ( 0 to 0 );
   signal axi_interconnect_0_M00_AXI_ARVALID : STD_LOGIC;
   signal axi_interconnect_0_M00_AXI_AWADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal axi_interconnect_0_M00_AXI_AWBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -2422,11 +2365,8 @@ architecture STRUCTURE of system is
   signal axi_interconnect_0_M00_AXI_AWLEN : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal axi_interconnect_0_M00_AXI_AWLOCK : STD_LOGIC;
   signal axi_interconnect_0_M00_AXI_AWPROT : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal axi_interconnect_0_M00_AXI_AWQOS : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal axi_interconnect_0_M00_AXI_AWREADY : STD_LOGIC;
-  signal axi_interconnect_0_M00_AXI_AWREGION : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal axi_interconnect_0_M00_AXI_AWSIZE : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal axi_interconnect_0_M00_AXI_AWUSER : STD_LOGIC_VECTOR ( 0 to 0 );
   signal axi_interconnect_0_M00_AXI_AWVALID : STD_LOGIC;
   signal axi_interconnect_0_M00_AXI_BID : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal axi_interconnect_0_M00_AXI_BREADY : STD_LOGIC;
@@ -2442,7 +2382,6 @@ architecture STRUCTURE of system is
   signal axi_interconnect_0_M00_AXI_WLAST : STD_LOGIC;
   signal axi_interconnect_0_M00_AXI_WREADY : STD_LOGIC;
   signal axi_interconnect_0_M00_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal axi_interconnect_0_M00_AXI_WUSER : STD_LOGIC_VECTOR ( 0 to 0 );
   signal axi_interconnect_0_M00_AXI_WVALID : STD_LOGIC;
   signal clk_wiz_clk_out1 : STD_LOGIC;
   signal ilconstant_0_dout : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -2536,6 +2475,13 @@ architecture STRUCTURE of system is
   signal NLW_axi_bram_ctrl_0_bram_we_a_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_axi_bram_ctrl_0_bram_wrdata_a_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_axi_bram_ctrl_0_bram_rsta_busy_UNCONNECTED : STD_LOGIC;
+  signal NLW_axi_interconnect_0_M00_AXI_arqos_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_axi_interconnect_0_M00_AXI_arregion_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_axi_interconnect_0_M00_AXI_aruser_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal NLW_axi_interconnect_0_M00_AXI_awqos_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_axi_interconnect_0_M00_AXI_awregion_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_axi_interconnect_0_M00_AXI_awuser_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal NLW_axi_interconnect_0_M00_AXI_wuser_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_clk_wiz_locked_UNCONNECTED : STD_LOGIC;
   signal NLW_rst_clk_wiz_100M_bus_struct_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_clk_wiz_100M_interconnect_aresetn_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -2617,11 +2563,11 @@ axi_interconnect_0: entity work.system_axi_interconnect_0_0
       M00_AXI_arlen(7 downto 0) => axi_interconnect_0_M00_AXI_ARLEN(7 downto 0),
       M00_AXI_arlock => axi_interconnect_0_M00_AXI_ARLOCK,
       M00_AXI_arprot(2 downto 0) => axi_interconnect_0_M00_AXI_ARPROT(2 downto 0),
-      M00_AXI_arqos(3 downto 0) => axi_interconnect_0_M00_AXI_ARQOS(3 downto 0),
+      M00_AXI_arqos(3 downto 0) => NLW_axi_interconnect_0_M00_AXI_arqos_UNCONNECTED(3 downto 0),
       M00_AXI_arready => axi_interconnect_0_M00_AXI_ARREADY,
-      M00_AXI_arregion(3 downto 0) => axi_interconnect_0_M00_AXI_ARREGION(3 downto 0),
+      M00_AXI_arregion(3 downto 0) => NLW_axi_interconnect_0_M00_AXI_arregion_UNCONNECTED(3 downto 0),
       M00_AXI_arsize(2 downto 0) => axi_interconnect_0_M00_AXI_ARSIZE(2 downto 0),
-      M00_AXI_aruser(0) => axi_interconnect_0_M00_AXI_ARUSER(0),
+      M00_AXI_aruser(0) => NLW_axi_interconnect_0_M00_AXI_aruser_UNCONNECTED(0),
       M00_AXI_arvalid => axi_interconnect_0_M00_AXI_ARVALID,
       M00_AXI_awaddr(31 downto 0) => axi_interconnect_0_M00_AXI_AWADDR(31 downto 0),
       M00_AXI_awburst(1 downto 0) => axi_interconnect_0_M00_AXI_AWBURST(1 downto 0),
@@ -2630,11 +2576,11 @@ axi_interconnect_0: entity work.system_axi_interconnect_0_0
       M00_AXI_awlen(7 downto 0) => axi_interconnect_0_M00_AXI_AWLEN(7 downto 0),
       M00_AXI_awlock => axi_interconnect_0_M00_AXI_AWLOCK,
       M00_AXI_awprot(2 downto 0) => axi_interconnect_0_M00_AXI_AWPROT(2 downto 0),
-      M00_AXI_awqos(3 downto 0) => axi_interconnect_0_M00_AXI_AWQOS(3 downto 0),
+      M00_AXI_awqos(3 downto 0) => NLW_axi_interconnect_0_M00_AXI_awqos_UNCONNECTED(3 downto 0),
       M00_AXI_awready => axi_interconnect_0_M00_AXI_AWREADY,
-      M00_AXI_awregion(3 downto 0) => axi_interconnect_0_M00_AXI_AWREGION(3 downto 0),
+      M00_AXI_awregion(3 downto 0) => NLW_axi_interconnect_0_M00_AXI_awregion_UNCONNECTED(3 downto 0),
       M00_AXI_awsize(2 downto 0) => axi_interconnect_0_M00_AXI_AWSIZE(2 downto 0),
-      M00_AXI_awuser(0) => axi_interconnect_0_M00_AXI_AWUSER(0),
+      M00_AXI_awuser(0) => NLW_axi_interconnect_0_M00_AXI_awuser_UNCONNECTED(0),
       M00_AXI_awvalid => axi_interconnect_0_M00_AXI_AWVALID,
       M00_AXI_bid(1 downto 0) => axi_interconnect_0_M00_AXI_BID(1 downto 0),
       M00_AXI_bready => axi_interconnect_0_M00_AXI_BREADY,
@@ -2650,7 +2596,7 @@ axi_interconnect_0: entity work.system_axi_interconnect_0_0
       M00_AXI_wlast => axi_interconnect_0_M00_AXI_WLAST,
       M00_AXI_wready => axi_interconnect_0_M00_AXI_WREADY,
       M00_AXI_wstrb(3 downto 0) => axi_interconnect_0_M00_AXI_WSTRB(3 downto 0),
-      M00_AXI_wuser(0) => axi_interconnect_0_M00_AXI_WUSER(0),
+      M00_AXI_wuser(0) => NLW_axi_interconnect_0_M00_AXI_wuser_UNCONNECTED(0),
       M00_AXI_wvalid => axi_interconnect_0_M00_AXI_WVALID,
       S00_ACLK => clk_wiz_clk_out1,
       S00_ARESETN => rst_clk_wiz_100M_peripheral_aresetn(0),
@@ -2740,57 +2686,6 @@ axi_interconnect_0: entity work.system_axi_interconnect_0_0
       S01_AXI_wstrb(3 downto 0) => microprocessor_0_D_M_AXI_WSTRB(3 downto 0),
       S01_AXI_wuser(0) => microprocessor_0_D_M_AXI_WUSER(0),
       S01_AXI_wvalid(0) => microprocessor_0_D_M_AXI_WVALID
-    );
-axi_protocol_checker_0: component system_axi_protocol_checker_0_1
-     port map (
-      aclk => clk_wiz_clk_out1,
-      aresetn => rst_clk_wiz_100M_peripheral_aresetn(0),
-      pc_asserted => pc_asserted,
-      pc_axi_araddr(12 downto 0) => axi_interconnect_0_M00_AXI_ARADDR(12 downto 0),
-      pc_axi_arburst(1 downto 0) => axi_interconnect_0_M00_AXI_ARBURST(1 downto 0),
-      pc_axi_arcache(3 downto 0) => axi_interconnect_0_M00_AXI_ARCACHE(3 downto 0),
-      pc_axi_arid(1 downto 0) => axi_interconnect_0_M00_AXI_ARID(1 downto 0),
-      pc_axi_arlen(7 downto 0) => axi_interconnect_0_M00_AXI_ARLEN(7 downto 0),
-      pc_axi_arlock(0) => axi_interconnect_0_M00_AXI_ARLOCK,
-      pc_axi_arprot(2 downto 0) => axi_interconnect_0_M00_AXI_ARPROT(2 downto 0),
-      pc_axi_arqos(3 downto 0) => axi_interconnect_0_M00_AXI_ARQOS(3 downto 0),
-      pc_axi_arready => axi_interconnect_0_M00_AXI_ARREADY,
-      pc_axi_arregion(3 downto 0) => axi_interconnect_0_M00_AXI_ARREGION(3 downto 0),
-      pc_axi_arsize(2 downto 0) => axi_interconnect_0_M00_AXI_ARSIZE(2 downto 0),
-      pc_axi_aruser(0) => axi_interconnect_0_M00_AXI_ARUSER(0),
-      pc_axi_arvalid => axi_interconnect_0_M00_AXI_ARVALID,
-      pc_axi_awaddr(12 downto 0) => axi_interconnect_0_M00_AXI_AWADDR(12 downto 0),
-      pc_axi_awburst(1 downto 0) => axi_interconnect_0_M00_AXI_AWBURST(1 downto 0),
-      pc_axi_awcache(3 downto 0) => axi_interconnect_0_M00_AXI_AWCACHE(3 downto 0),
-      pc_axi_awid(1 downto 0) => axi_interconnect_0_M00_AXI_AWID(1 downto 0),
-      pc_axi_awlen(7 downto 0) => axi_interconnect_0_M00_AXI_AWLEN(7 downto 0),
-      pc_axi_awlock(0) => axi_interconnect_0_M00_AXI_AWLOCK,
-      pc_axi_awprot(2 downto 0) => axi_interconnect_0_M00_AXI_AWPROT(2 downto 0),
-      pc_axi_awqos(3 downto 0) => axi_interconnect_0_M00_AXI_AWQOS(3 downto 0),
-      pc_axi_awready => axi_interconnect_0_M00_AXI_AWREADY,
-      pc_axi_awregion(3 downto 0) => axi_interconnect_0_M00_AXI_AWREGION(3 downto 0),
-      pc_axi_awsize(2 downto 0) => axi_interconnect_0_M00_AXI_AWSIZE(2 downto 0),
-      pc_axi_awuser(0) => axi_interconnect_0_M00_AXI_AWUSER(0),
-      pc_axi_awvalid => axi_interconnect_0_M00_AXI_AWVALID,
-      pc_axi_bid(1 downto 0) => axi_interconnect_0_M00_AXI_BID(1 downto 0),
-      pc_axi_bready => axi_interconnect_0_M00_AXI_BREADY,
-      pc_axi_bresp(1 downto 0) => axi_interconnect_0_M00_AXI_BRESP(1 downto 0),
-      pc_axi_buser(0) => '0',
-      pc_axi_bvalid => axi_interconnect_0_M00_AXI_BVALID,
-      pc_axi_rdata(31 downto 0) => axi_interconnect_0_M00_AXI_RDATA(31 downto 0),
-      pc_axi_rid(1 downto 0) => axi_interconnect_0_M00_AXI_RID(1 downto 0),
-      pc_axi_rlast => axi_interconnect_0_M00_AXI_RLAST,
-      pc_axi_rready => axi_interconnect_0_M00_AXI_RREADY,
-      pc_axi_rresp(1 downto 0) => axi_interconnect_0_M00_AXI_RRESP(1 downto 0),
-      pc_axi_ruser(0) => '0',
-      pc_axi_rvalid => axi_interconnect_0_M00_AXI_RVALID,
-      pc_axi_wdata(31 downto 0) => axi_interconnect_0_M00_AXI_WDATA(31 downto 0),
-      pc_axi_wlast => axi_interconnect_0_M00_AXI_WLAST,
-      pc_axi_wready => axi_interconnect_0_M00_AXI_WREADY,
-      pc_axi_wstrb(3 downto 0) => axi_interconnect_0_M00_AXI_WSTRB(3 downto 0),
-      pc_axi_wuser(0) => axi_interconnect_0_M00_AXI_WUSER(0),
-      pc_axi_wvalid => axi_interconnect_0_M00_AXI_WVALID,
-      pc_status(159 downto 0) => pc_status(159 downto 0)
     );
 clk_wiz: component system_clk_wiz_0
      port map (
