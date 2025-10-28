@@ -14,6 +14,8 @@ package RISCV_package is
         PCie : std_logic;
         PCle : std_logic;
         isBR : std_logic;
+        isLoad : std_logic;
+        isStore : std_logic;
         BRcond : std_logic_vector(2 downto 0);
         ALUFunc : std_logic_vector(3 downto 0);
         IMM : std_logic_vector(XLen-1 downto 0);
@@ -67,6 +69,8 @@ package body RISCV_package is
             PCie => '1',
             PCle => '0',
             isBR => '0',
+            isLoad => '0',
+            isStore => '0',
             BRcond => "000",
             ALUFunc => instruction(30) & instruction(14 downto 12),
             IMM => (others => '0')
@@ -77,6 +81,7 @@ package body RISCV_package is
     function handle_i_type(instruction: in std_logic_vector (31 downto 0)) return control_word is
             variable imm_value : std_logic_vector(XLen-1 downto 0);
             variable alu_var : std_logic;
+            variable is_load, is_store, pca_sel : std_logic := '0';
         begin
         
         imm_value := (31 downto 11 => instruction(31)) & instruction(30 downto 25) & instruction(24 downto 21) & instruction(20);
@@ -87,17 +92,28 @@ package body RISCV_package is
             alu_var := '0';
         end if;
         
+        if instruction(6 downto 0) = "0000011" then
+            is_load := '1';
+            pca_sel := '1';
+        end if;
+        
+        if instruction(6 downto 0) = "0100011" then 
+            is_store := '1';
+        end if;
+        
         return (
             Asel => instruction(19 downto 15),
             Bsel => "00000",
             Dsel => instruction(11 downto 7),
             Dlen => '1',
-            PCAsel => '0',
+            PCAsel => pca_sel,
             IMMBsel => '1',
             PCDsel => '0',
             PCie => '1',
             PCle => '0',
             isBR => '0',
+            isLoad => is_load,
+            isStore => is_store,
             BRcond => "000",
             ALUFunc => alu_var & instruction(14 downto 12),
             IMM => imm_value
@@ -122,6 +138,8 @@ package body RISCV_package is
             PCie => '1',
             PCle => '0',
             isBR => '0',
+            isLoad => '0',
+            isStore => '0',
             BRcond => "000",
             ALUFunc => "0000",
             IMM => imm_value
@@ -146,6 +164,8 @@ package body RISCV_package is
             PCie => '0', --Should you increment on branch? I don't think so
             PCle => '0',
             isBR => '1',
+            isLoad => '0',
+            isStore => '0',
             BRcond => instruction(14 downto 12),
             ALUFunc => "0000",
             IMM => imm_value
@@ -156,7 +176,7 @@ package body RISCV_package is
      function handle_u_type(instruction: in std_logic_vector (31 downto 0)) return control_word is
             variable imm_value : std_logic_vector(XLen-1 downto 0);
         begin
-
+        
         imm_value := instruction(31) & instruction(30 downto 20) & instruction(19 downto 12) & (11 downto 0 => '0');
         
         return (
@@ -170,6 +190,8 @@ package body RISCV_package is
             PCie => '1',
             PCle => '0',
             isBR => '0',
+            isLoad => '1',
+            isStore => '0',
             BRcond => "000",
             ALUFunc => "0000",
             IMM => imm_value
@@ -194,6 +216,8 @@ package body RISCV_package is
             PCie => '1',
             PCle => '0',
             isBR => '0',
+            isLoad => '0',
+            isStore => '0',
             BRcond => "000",
             ALUFunc => "0000",
             IMM => imm_value

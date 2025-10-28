@@ -40,6 +40,8 @@ begin
         PCie    => '0',
         PCle    => '0',
         isBR    => '0',
+        isLoad => '0',
+        isStore => '0',
         BRcond  => (others => '0'),
         ALUFunc => (others => '0'),
         IMM     => (others => '0')

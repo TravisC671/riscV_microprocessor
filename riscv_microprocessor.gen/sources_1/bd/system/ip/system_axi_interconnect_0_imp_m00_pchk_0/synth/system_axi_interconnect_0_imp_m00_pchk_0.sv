@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "axi_protocol_checker_v2_0_21_top,Vivado 2025.1" *)
 (* CHECK_LICENSE_TYPE = "system_axi_interconnect_0_imp_m00_pchk_0,axi_protocol_checker_v2_0_21_top,{}" *)
-(* CORE_GENERATION_INFO = "system_axi_interconnect_0_imp_m00_pchk_0,axi_protocol_checker_v2_0_21_top,{x_ipProduct=Vivado 2025.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_protocol_checker,x_ipVersion=2.0,x_ipCoreRevision=21,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_AXI_PROTOCOL=0,C_AXI_ID_WIDTH=2,C_AXI_DATA_WIDTH=32,C_AXI_ADDR_WIDTH=13,C_AXI_AWUSER_WIDTH=1,C_AXI_ARUSER_WIDTH=1,C_AXI_WUSER_WIDTH=1,C_AXI_RUSER_WIDTH=1,C_AXI_BUSER_WIDTH=1,C_HAS_WSTRB=1,C_PC_MAXRBURSTS=2,C_PC_MAXWBURSTS=2,C_PC_EXMON_WIDTH=0,C_PC_AW_MAX\
+(* CORE_GENERATION_INFO = "system_axi_interconnect_0_imp_m00_pchk_0,axi_protocol_checker_v2_0_21_top,{x_ipProduct=Vivado 2025.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_protocol_checker,x_ipVersion=2.0,x_ipCoreRevision=21,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_AXI_PROTOCOL=0,C_AXI_ID_WIDTH=2,C_AXI_DATA_WIDTH=32,C_AXI_ADDR_WIDTH=14,C_AXI_AWUSER_WIDTH=1,C_AXI_ARUSER_WIDTH=1,C_AXI_WUSER_WIDTH=1,C_AXI_RUSER_WIDTH=1,C_AXI_BUSER_WIDTH=1,C_HAS_WSTRB=1,C_PC_MAXRBURSTS=2,C_PC_MAXWBURSTS=2,C_PC_EXMON_WIDTH=0,C_PC_AW_MAX\
 WAITS=0,C_PC_AR_MAXWAITS=0,C_PC_W_MAXWAITS=0,C_PC_R_MAXWAITS=0,C_PC_B_MAXWAITS=0,C_PC_MAX_CONTINUOUS_RTRANSFERS_WAITS=0,C_PC_MAX_CONTINUOUS_WTRANSFERS_WAITS=0,C_PC_MAX_WLAST_TO_AWVALID_WAITS=0,C_PC_MAX_WRITE_TO_BVALID_WAITS=0,C_PC_LIGHT_WEIGHT=0,C_PC_MASTER_SIDE=0,C_PC_MESSAGE_LEVEL=2,C_PC_SUPPORTS_NARROW_BURST=1,C_PC_MAX_BURST_LENGTH=256,C_PC_HAS_SYSTEM_RESET=0,C_ENABLE_CONTROL=0,C_PC_STATUS_WIDTH=160,C_CHK_ERR_RESP=0,C_ENABLE_MARK_DEBUG=1}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module system_axi_interconnect_0_imp_m00_pchk_0 (
@@ -118,11 +118,11 @@ input wire aclk;
 input wire aresetn;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 PC_AXI AWID" *)
 (* X_INTERFACE_MODE = "monitor mirroredSlave" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME PC_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 2, ADDR_WIDTH 13, AWUSER_WIDTH 1, ARUSER_WIDTH 1, WUSER_WIDTH 1, RUSER_WIDTH 1, BUSER_WIDTH 1, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 1, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN /clk_wiz_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, R\
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME PC_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 2, ADDR_WIDTH 14, AWUSER_WIDTH 1, ARUSER_WIDTH 1, WUSER_WIDTH 1, RUSER_WIDTH 1, BUSER_WIDTH 1, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 1, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN /clk_wiz_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, R\
 USER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 input wire [1 : 0] pc_axi_awid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 PC_AXI AWADDR" *)
-input wire [12 : 0] pc_axi_awaddr;
+input wire [13 : 0] pc_axi_awaddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 PC_AXI AWLEN" *)
 input wire [7 : 0] pc_axi_awlen;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 PC_AXI AWSIZE" *)
@@ -170,7 +170,7 @@ input wire pc_axi_bready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 PC_AXI ARID" *)
 input wire [1 : 0] pc_axi_arid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 PC_AXI ARADDR" *)
-input wire [12 : 0] pc_axi_araddr;
+input wire [13 : 0] pc_axi_araddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 PC_AXI ARLEN" *)
 input wire [7 : 0] pc_axi_arlen;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 PC_AXI ARSIZE" *)
@@ -212,7 +212,7 @@ input wire pc_axi_rready;
     .C_AXI_PROTOCOL(0),
     .C_AXI_ID_WIDTH(2),
     .C_AXI_DATA_WIDTH(32),
-    .C_AXI_ADDR_WIDTH(13),
+    .C_AXI_ADDR_WIDTH(14),
     .C_AXI_AWUSER_WIDTH(1),
     .C_AXI_ARUSER_WIDTH(1),
     .C_AXI_WUSER_WIDTH(1),

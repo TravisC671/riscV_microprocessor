@@ -15,6 +15,7 @@ vlib modelsim_lib/msim/axi_bram_ctrl_v4_1_13
 vlib modelsim_lib/msim/blk_mem_gen_v8_4_11
 vlib modelsim_lib/msim/smartconnect_v1_0
 vlib modelsim_lib/msim/axi_protocol_checker_v2_0_21
+vlib modelsim_lib/msim/axi_mmu_v2_1_33
 
 vmap xilinx_vip modelsim_lib/msim/xilinx_vip
 vmap xpm modelsim_lib/msim/xpm
@@ -30,6 +31,7 @@ vmap axi_bram_ctrl_v4_1_13 modelsim_lib/msim/axi_bram_ctrl_v4_1_13
 vmap blk_mem_gen_v8_4_11 modelsim_lib/msim/blk_mem_gen_v8_4_11
 vmap smartconnect_v1_0 modelsim_lib/msim/smartconnect_v1_0
 vmap axi_protocol_checker_v2_0_21 modelsim_lib/msim/axi_protocol_checker_v2_0_21
+vmap axi_mmu_v2_1_33 modelsim_lib/msim/axi_mmu_v2_1_33
 
 vlog -work xilinx_vip -64 -incr -mfcu  -sv -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_21 "+incdir+/opt/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
 "/opt/Xilinx/2025.1/Vivado/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" \
@@ -99,9 +101,10 @@ vlog -work blk_mem_gen_v8_4_11 -64 -incr -mfcu  "+incdir+../../../../riscv_micro
 
 vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a9be" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
 "../../../bd/system/ip/system_axi_bram_ctrl_0_bram_1/sim/system_axi_bram_ctrl_0_bram_1.v" \
+"../../../bd/system/ip/system_blk_mem_gen_0_0/sim/system_blk_mem_gen_0_0.v" \
 
 vcom -work xil_defaultlib -64 -93  \
-"../../../bd/system/sim/system.vhd" \
+"../../../bd/system/ip/system_axi_bram_ctrl_1_1/sim/system_axi_bram_ctrl_1_1.vhd" \
 
 vlog -work smartconnect_v1_0 -64 -incr -mfcu  -sv -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_21 "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a9be" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
 "../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/f0b6/hdl/sc_util_v1_0_vl_rfs.sv" \
@@ -113,6 +116,17 @@ vlog -work xil_defaultlib -64 -incr -mfcu  -sv -L smartconnect_v1_0 -L axi_proto
 "../../../bd/system/ip/system_axi_interconnect_0_imp_s00_pchk_0/sim/system_axi_interconnect_0_imp_s00_pchk_0.sv" \
 "../../../bd/system/ip/system_axi_interconnect_0_imp_s01_pchk_0/sim/system_axi_interconnect_0_imp_s01_pchk_0.sv" \
 "../../../bd/system/ip/system_axi_interconnect_0_imp_m00_pchk_0/sim/system_axi_interconnect_0_imp_m00_pchk_0.sv" \
+"../../../bd/system/ip/system_axi_interconnect_0_imp_m01_pchk_0/sim/system_axi_interconnect_0_imp_m01_pchk_0.sv" \
+
+vlog -work axi_mmu_v2_1_33 -64 -incr -mfcu  "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a9be" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
+"../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a27c/hdl/axi_mmu_v2_1_vl_rfs.v" \
+
+vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a9be" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
+"../../../bd/system/ip/system_axi_interconnect_0_imp_s00_mmu_0/sim/system_axi_interconnect_0_imp_s00_mmu_0.v" \
+"../../../bd/system/ip/system_axi_interconnect_0_imp_s01_mmu_0/sim/system_axi_interconnect_0_imp_s01_mmu_0.v" \
+
+vcom -work xil_defaultlib -64 -93  \
+"../../../bd/system/sim/system.vhd" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

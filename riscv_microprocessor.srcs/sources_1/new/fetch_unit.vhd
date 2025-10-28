@@ -19,11 +19,11 @@ entity fetch_unit is
 		-- Users can add ports here. These are SUGGESTED user ports.
 		Start_read	 : in std_logic;  -- Initiate AXI read transaction
         Read_address : in std_logic_vector(C_M_AXI_ADDR_WIDTH-1 downto 0); -- address to read from
- 		Read_Done	: out std_logic; -- Asserts when transaction is complete
-        Read_Data : out std_logic_vector(0 to C_M_AXI_DATA_WIDTH*C_M_AXI_BURST_LEN - 1); -- Data that was read (modify as needed)
-		Error	: out std_logic; -- Asserts when ERROR is detected
-		PCle : out std_logic;
-        PCie : out std_logic;
+ 		Read_Done	 : out std_logic; -- Asserts when transaction is complete
+        Read_Data    : out std_logic_vector(0 to C_M_AXI_DATA_WIDTH*C_M_AXI_BURST_LEN - 1); -- Data that was read (modify as needed)
+		Error	     : out std_logic; -- Asserts when ERROR is detected
+		PCle         : out std_logic;
+        PCie         : out std_logic;
 		-- User ports ends
     -- Global AXI ports
 		M_AXI_ACLK	: in std_logic;    -- Global Clock Signal.

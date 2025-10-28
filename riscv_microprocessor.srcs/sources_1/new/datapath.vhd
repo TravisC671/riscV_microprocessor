@@ -6,7 +6,14 @@ entity datapath is
     Generic (XLen : integer := 32);
     Port ( Controller : in control_word;
            clk, res : in STD_LOGIC;
-           pc_addr : out STD_LOGIC_VECTOR (XLen-1 downto 0));
+           pc_addr : out STD_LOGIC_VECTOR (XLen-1 downto 0);
+           fetch_done: out STD_LOGIC;
+           is_load: out STD_LOGIC;
+           is_store: out STD_LOGIC;
+           store_data: out STD_LOGIC_VECTOR (XLen-1 downto 0);
+           load_data: in STD_LOGIC_VECTOR (XLen-1 downto 0);
+           data_len: in STD_LOGIC
+           );
 end datapath;
 
 architecture Behavioral of datapath is
