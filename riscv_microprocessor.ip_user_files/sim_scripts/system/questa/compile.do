@@ -13,9 +13,12 @@ vlib questa_lib/msim/axi_crossbar_v2_1_37
 vlib questa_lib/msim/proc_sys_reset_v5_0_17
 vlib questa_lib/msim/axi_bram_ctrl_v4_1_13
 vlib questa_lib/msim/blk_mem_gen_v8_4_11
+vlib questa_lib/msim/axi_lite_ipif_v3_0_4
+vlib questa_lib/msim/interrupt_control_v3_1_5
+vlib questa_lib/msim/axi_gpio_v2_0_37
+vlib questa_lib/msim/axi_protocol_converter_v2_1_36
 vlib questa_lib/msim/smartconnect_v1_0
 vlib questa_lib/msim/axi_protocol_checker_v2_0_21
-vlib questa_lib/msim/axi_mmu_v2_1_33
 
 vmap xilinx_vip questa_lib/msim/xilinx_vip
 vmap xpm questa_lib/msim/xpm
@@ -29,9 +32,12 @@ vmap axi_crossbar_v2_1_37 questa_lib/msim/axi_crossbar_v2_1_37
 vmap proc_sys_reset_v5_0_17 questa_lib/msim/proc_sys_reset_v5_0_17
 vmap axi_bram_ctrl_v4_1_13 questa_lib/msim/axi_bram_ctrl_v4_1_13
 vmap blk_mem_gen_v8_4_11 questa_lib/msim/blk_mem_gen_v8_4_11
+vmap axi_lite_ipif_v3_0_4 questa_lib/msim/axi_lite_ipif_v3_0_4
+vmap interrupt_control_v3_1_5 questa_lib/msim/interrupt_control_v3_1_5
+vmap axi_gpio_v2_0_37 questa_lib/msim/axi_gpio_v2_0_37
+vmap axi_protocol_converter_v2_1_36 questa_lib/msim/axi_protocol_converter_v2_1_36
 vmap smartconnect_v1_0 questa_lib/msim/smartconnect_v1_0
 vmap axi_protocol_checker_v2_0_21 questa_lib/msim/axi_protocol_checker_v2_0_21
-vmap axi_mmu_v2_1_33 questa_lib/msim/axi_mmu_v2_1_33
 
 vlog -work xilinx_vip -64 -incr -mfcu  -sv -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_21 "+incdir+/opt/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
 "/opt/Xilinx/2025.1/Vivado/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" \
@@ -106,6 +112,26 @@ vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../riscv_microproce
 vcom -work xil_defaultlib -64 -93  \
 "../../../bd/system/ip/system_axi_bram_ctrl_1_1/sim/system_axi_bram_ctrl_1_1.vhd" \
 
+vcom -work axi_lite_ipif_v3_0_4 -64 -93  \
+"../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd" \
+
+vcom -work interrupt_control_v3_1_5 -64 -93  \
+"../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/d8cc/hdl/interrupt_control_v3_1_vh_rfs.vhd" \
+
+vcom -work axi_gpio_v2_0_37 -64 -93  \
+"../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd" \
+
+vcom -work xil_defaultlib -64 -93  \
+"../../../bd/system/ip/system_axi_gpio_0_0/sim/system_axi_gpio_0_0.vhd" \
+"../../../bd/system/ip/system_axi_gpio_1_0/sim/system_axi_gpio_1_0.vhd" \
+
+vlog -work axi_protocol_converter_v2_1_36 -64 -incr -mfcu  "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a9be" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
+"../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/f0b6/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
+
+vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a9be" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
+"../../../bd/system/ip/system_axi_interconnect_0_imp_auto_pc_0/sim/system_axi_interconnect_0_imp_auto_pc_0.v" \
+"../../../bd/system/ip/system_axi_interconnect_0_imp_auto_pc_1/sim/system_axi_interconnect_0_imp_auto_pc_1.v" \
+
 vlog -work smartconnect_v1_0 -64 -incr -mfcu  -sv -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_21 "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a9be" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
 "../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/f0b6/hdl/sc_util_v1_0_vl_rfs.sv" \
 
@@ -117,13 +143,8 @@ vlog -work xil_defaultlib -64 -incr -mfcu  -sv -L smartconnect_v1_0 -L axi_proto
 "../../../bd/system/ip/system_axi_interconnect_0_imp_s01_pchk_0/sim/system_axi_interconnect_0_imp_s01_pchk_0.sv" \
 "../../../bd/system/ip/system_axi_interconnect_0_imp_m00_pchk_0/sim/system_axi_interconnect_0_imp_m00_pchk_0.sv" \
 "../../../bd/system/ip/system_axi_interconnect_0_imp_m01_pchk_0/sim/system_axi_interconnect_0_imp_m01_pchk_0.sv" \
-
-vlog -work axi_mmu_v2_1_33 -64 -incr -mfcu  "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a9be" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
-"../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a27c/hdl/axi_mmu_v2_1_vl_rfs.v" \
-
-vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a9be" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
-"../../../bd/system/ip/system_axi_interconnect_0_imp_s00_mmu_0/sim/system_axi_interconnect_0_imp_s00_mmu_0.v" \
-"../../../bd/system/ip/system_axi_interconnect_0_imp_s01_mmu_0/sim/system_axi_interconnect_0_imp_s01_mmu_0.v" \
+"../../../bd/system/ip/system_axi_interconnect_0_imp_m02_pchk_0/sim/system_axi_interconnect_0_imp_m02_pchk_0.sv" \
+"../../../bd/system/ip/system_axi_interconnect_0_imp_m03_pchk_0/sim/system_axi_interconnect_0_imp_m03_pchk_0.sv" \
 
 vcom -work xil_defaultlib -64 -93  \
 "../../../bd/system/sim/system.vhd" \

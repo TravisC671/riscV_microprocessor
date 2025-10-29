@@ -30,9 +30,9 @@ begin
     next_state_final <= seq_fetch when res = '1' else next_state;
     
     seq_fetch_next <= seq_fetch2;
-    seq_fetch2_next <= seq_load  when Is_load = '1'  else
-                       seq_store when Is_store = '1' else
-                       seq_execute;
+    seq_fetch2_next <= seq_load    when Is_load = '1'  else
+                       seq_store   when Is_store = '1' else
+                       seq_execute when done = '1' else seq_fetch2;
     seq_load_next  <= seq_execute when LS_busy = '0' else seq_load;
     seq_store_next <= seq_execute when LS_busy = '0' else seq_store;
     seq_execute_next <= seq_fetch;

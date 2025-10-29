@@ -4,11 +4,17 @@ verilog xil_defaultlib  --include "../../../../../../../../opt/Xilinx/2025.1/dat
 "../../../../riscv_microprocessor.ip_user_files/bd/system/ip/system_clk_wiz_0/system_clk_wiz_0_clk_wiz.v" \
 "../../../../riscv_microprocessor.ip_user_files/bd/system/ip/system_clk_wiz_0/system_clk_wiz_0.v" \
 "../../../../riscv_microprocessor.ip_user_files/bd/system/ip/system_axi_bram_ctrl_0_bram_1/sim/system_axi_bram_ctrl_0_bram_1.v" \
+"../../../../riscv_microprocessor.ip_user_files/bd/system/ip/system_blk_mem_gen_0_0/sim/system_blk_mem_gen_0_0.v" \
+"../../../../riscv_microprocessor.ip_user_files/bd/system/ip/system_axi_interconnect_0_imp_auto_pc_0/sim/system_axi_interconnect_0_imp_auto_pc_0.v" \
+"../../../../riscv_microprocessor.ip_user_files/bd/system/ip/system_axi_interconnect_0_imp_auto_pc_1/sim/system_axi_interconnect_0_imp_auto_pc_1.v" \
 
 sv xil_defaultlib  --include "../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef" --include "../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/ec67/hdl" --include "../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a9be" --include "../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" --include "../../../../riscv_microprocessor.gen/sources_1/bd/design_1/ipshared/a9be" --include "/opt/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
 "../../../../riscv_microprocessor.ip_user_files/bd/system/ip/system_axi_interconnect_0_imp_s00_pchk_0/sim/system_axi_interconnect_0_imp_s00_pchk_0.sv" \
 "../../../../riscv_microprocessor.ip_user_files/bd/system/ip/system_axi_interconnect_0_imp_s01_pchk_0/sim/system_axi_interconnect_0_imp_s01_pchk_0.sv" \
 "../../../../riscv_microprocessor.ip_user_files/bd/system/ip/system_axi_interconnect_0_imp_m00_pchk_0/sim/system_axi_interconnect_0_imp_m00_pchk_0.sv" \
+"../../../../riscv_microprocessor.ip_user_files/bd/system/ip/system_axi_interconnect_0_imp_m01_pchk_0/sim/system_axi_interconnect_0_imp_m01_pchk_0.sv" \
+"../../../../riscv_microprocessor.ip_user_files/bd/system/ip/system_axi_interconnect_0_imp_m02_pchk_0/sim/system_axi_interconnect_0_imp_m02_pchk_0.sv" \
+"../../../../riscv_microprocessor.ip_user_files/bd/system/ip/system_axi_interconnect_0_imp_m03_pchk_0/sim/system_axi_interconnect_0_imp_m03_pchk_0.sv" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

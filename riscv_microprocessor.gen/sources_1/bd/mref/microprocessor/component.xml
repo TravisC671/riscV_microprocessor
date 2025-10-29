@@ -765,7 +765,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>4fb0e0e5</spirit:value>
+            <spirit:value>d7eeff9a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -778,7 +778,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>4fb0e0e5</spirit:value>
+            <spirit:value>d7eeff9a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1530,9 +1530,6 @@
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
-          </spirit:driver>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
@@ -1550,9 +1547,6 @@
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
-          </spirit:driver>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
@@ -1570,9 +1564,6 @@
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
-          </spirit:driver>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
@@ -1590,9 +1581,6 @@
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
-          </spirit:driver>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
@@ -1610,9 +1598,6 @@
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
-          </spirit:driver>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
@@ -1643,9 +1628,6 @@
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
-          </spirit:driver>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
@@ -1663,9 +1645,6 @@
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
-          </spirit:driver>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
@@ -1683,9 +1662,6 @@
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
-          </spirit:driver>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
@@ -1703,9 +1679,6 @@
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
-          </spirit:driver>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
@@ -1719,9 +1692,6 @@
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
-          </spirit:driver>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
@@ -1755,9 +1725,6 @@
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
-          </spirit:driver>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
@@ -1775,9 +1742,6 @@
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
-          </spirit:driver>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
@@ -1791,9 +1755,6 @@
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
-          </spirit:driver>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
@@ -1811,9 +1772,6 @@
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
-          </spirit:driver>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
@@ -1827,9 +1785,6 @@
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
-          </spirit:driver>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
@@ -1935,9 +1890,6 @@
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
-          </spirit:driver>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
@@ -1955,9 +1907,6 @@
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
-          </spirit:driver>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
@@ -1975,9 +1924,6 @@
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
-          </spirit:driver>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
@@ -1995,9 +1941,6 @@
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
-          </spirit:driver>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
@@ -2015,9 +1958,6 @@
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
-          </spirit:driver>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
@@ -2035,9 +1975,6 @@
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
-          </spirit:driver>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
@@ -2051,9 +1988,6 @@
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
-          </spirit:driver>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
@@ -2071,9 +2005,6 @@
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
-          </spirit:driver>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
@@ -2091,9 +2022,6 @@
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
-          </spirit:driver>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
@@ -2111,9 +2039,6 @@
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
-          </spirit:driver>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
@@ -2131,9 +2056,6 @@
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
-          </spirit:driver>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
@@ -2147,9 +2069,6 @@
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
-          </spirit:driver>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
@@ -2291,9 +2210,6 @@
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
-          </spirit:driver>
         </spirit:wire>
       </spirit:port>
     </spirit:ports>
@@ -2433,7 +2349,7 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-10-28T18:50:29Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2025-10-29T20:08:54Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2025.1</xilinx:xilinxVersion>

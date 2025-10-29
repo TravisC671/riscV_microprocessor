@@ -116,11 +116,11 @@ input wire aclk;
 input wire aresetn;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 PC_AXI AWID" *)
 (* X_INTERFACE_MODE = "monitor mirroredSlave" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME PC_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 2, ADDR_WIDTH 14, AWUSER_WIDTH 1, ARUSER_WIDTH 1, WUSER_WIDTH 1, RUSER_WIDTH 1, BUSER_WIDTH 1, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 1, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN /clk_wiz_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, R\
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME PC_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 2, ADDR_WIDTH 15, AWUSER_WIDTH 1, ARUSER_WIDTH 1, WUSER_WIDTH 1, RUSER_WIDTH 1, BUSER_WIDTH 1, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 1, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN /clk_wiz_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, R\
 USER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 input wire [1 : 0] pc_axi_awid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 PC_AXI AWADDR" *)
-input wire [13 : 0] pc_axi_awaddr;
+input wire [14 : 0] pc_axi_awaddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 PC_AXI AWLEN" *)
 input wire [7 : 0] pc_axi_awlen;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 PC_AXI AWSIZE" *)
@@ -168,7 +168,7 @@ input wire pc_axi_bready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 PC_AXI ARID" *)
 input wire [1 : 0] pc_axi_arid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 PC_AXI ARADDR" *)
-input wire [13 : 0] pc_axi_araddr;
+input wire [14 : 0] pc_axi_araddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 PC_AXI ARLEN" *)
 input wire [7 : 0] pc_axi_arlen;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 PC_AXI ARSIZE" *)
@@ -210,7 +210,7 @@ input wire pc_axi_rready;
     .C_AXI_PROTOCOL(0),
     .C_AXI_ID_WIDTH(2),
     .C_AXI_DATA_WIDTH(32),
-    .C_AXI_ADDR_WIDTH(14),
+    .C_AXI_ADDR_WIDTH(15),
     .C_AXI_AWUSER_WIDTH(1),
     .C_AXI_ARUSER_WIDTH(1),
     .C_AXI_WUSER_WIDTH(1),

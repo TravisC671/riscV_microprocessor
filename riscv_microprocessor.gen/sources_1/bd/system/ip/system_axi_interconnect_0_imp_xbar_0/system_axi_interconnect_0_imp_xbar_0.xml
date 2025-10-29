@@ -4820,7 +4820,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>ID_WIDTH</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M02_AXI.ID_WIDTH">0</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M02_AXI.ID_WIDTH">2</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>simulation.tlm</xilinx:parameterUsage>
@@ -4838,7 +4838,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>AWUSER_WIDTH</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M02_AXI.AWUSER_WIDTH">0</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M02_AXI.AWUSER_WIDTH">1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>simulation.tlm</xilinx:parameterUsage>
@@ -4847,7 +4847,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>ARUSER_WIDTH</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M02_AXI.ARUSER_WIDTH">0</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M02_AXI.ARUSER_WIDTH">1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>simulation.tlm</xilinx:parameterUsage>
@@ -4856,7 +4856,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>WUSER_WIDTH</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M02_AXI.WUSER_WIDTH">0</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M02_AXI.WUSER_WIDTH">1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>simulation.tlm</xilinx:parameterUsage>
@@ -4865,7 +4865,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>RUSER_WIDTH</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M02_AXI.RUSER_WIDTH">0</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M02_AXI.RUSER_WIDTH">1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>simulation.tlm</xilinx:parameterUsage>
@@ -4874,7 +4874,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>BUSER_WIDTH</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M02_AXI.BUSER_WIDTH">0</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M02_AXI.BUSER_WIDTH">1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>simulation.tlm</xilinx:parameterUsage>
@@ -4937,7 +4937,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>HAS_REGION</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M02_AXI.HAS_REGION">1</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M02_AXI.HAS_REGION">0</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>simulation.tlm</xilinx:parameterUsage>
@@ -4982,7 +4982,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>NUM_READ_OUTSTANDING</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M02_AXI.NUM_READ_OUTSTANDING">1</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M02_AXI.NUM_READ_OUTSTANDING">2</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>simulation.tlm</xilinx:parameterUsage>
@@ -4991,7 +4991,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>NUM_WRITE_OUTSTANDING</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M02_AXI.NUM_WRITE_OUTSTANDING">1</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M02_AXI.NUM_WRITE_OUTSTANDING">2</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>simulation.tlm</xilinx:parameterUsage>
@@ -5018,7 +5018,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>CLK_DOMAIN</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M02_AXI.CLK_DOMAIN"/>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M02_AXI.CLK_DOMAIN">/clk_wiz_clk_out1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>simulation.tlm</xilinx:parameterUsage>
@@ -5074,7 +5074,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.M02_AXI" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) > 2)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.M02_AXI" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) > 2)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -6470,7 +6470,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>ID_WIDTH</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M03_AXI.ID_WIDTH">0</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M03_AXI.ID_WIDTH">2</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>simulation.tlm</xilinx:parameterUsage>
@@ -6488,7 +6488,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>AWUSER_WIDTH</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M03_AXI.AWUSER_WIDTH">0</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M03_AXI.AWUSER_WIDTH">1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>simulation.tlm</xilinx:parameterUsage>
@@ -6497,7 +6497,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>ARUSER_WIDTH</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M03_AXI.ARUSER_WIDTH">0</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M03_AXI.ARUSER_WIDTH">1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>simulation.tlm</xilinx:parameterUsage>
@@ -6506,7 +6506,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>WUSER_WIDTH</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M03_AXI.WUSER_WIDTH">0</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M03_AXI.WUSER_WIDTH">1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>simulation.tlm</xilinx:parameterUsage>
@@ -6515,7 +6515,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>RUSER_WIDTH</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M03_AXI.RUSER_WIDTH">0</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M03_AXI.RUSER_WIDTH">1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>simulation.tlm</xilinx:parameterUsage>
@@ -6524,7 +6524,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>BUSER_WIDTH</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M03_AXI.BUSER_WIDTH">0</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M03_AXI.BUSER_WIDTH">1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>simulation.tlm</xilinx:parameterUsage>
@@ -6587,7 +6587,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>HAS_REGION</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M03_AXI.HAS_REGION">1</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M03_AXI.HAS_REGION">0</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>simulation.tlm</xilinx:parameterUsage>
@@ -6632,7 +6632,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>NUM_READ_OUTSTANDING</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M03_AXI.NUM_READ_OUTSTANDING">1</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M03_AXI.NUM_READ_OUTSTANDING">2</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>simulation.tlm</xilinx:parameterUsage>
@@ -6641,7 +6641,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>NUM_WRITE_OUTSTANDING</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M03_AXI.NUM_WRITE_OUTSTANDING">1</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M03_AXI.NUM_WRITE_OUTSTANDING">2</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>simulation.tlm</xilinx:parameterUsage>
@@ -6668,7 +6668,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>CLK_DOMAIN</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M03_AXI.CLK_DOMAIN"/>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M03_AXI.CLK_DOMAIN">/clk_wiz_clk_out1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>simulation.tlm</xilinx:parameterUsage>
@@ -6724,7 +6724,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.M03_AXI" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) > 3)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.M03_AXI" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) > 3)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -27307,7 +27307,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:c1df79d0</spirit:value>
+            <spirit:value>9:c49b65d4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -27318,7 +27318,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:c1df79d0</spirit:value>
+            <spirit:value>9:c49b65d4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -27334,11 +27334,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Oct 27 19:58:20 UTC 2025</spirit:value>
+            <spirit:value>Wed Oct 29 19:32:28 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8c7747f0</spirit:value>
+            <spirit:value>9:db6c2658</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>sim_type</spirit:name>
@@ -27362,11 +27362,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Oct 27 19:58:20 UTC 2025</spirit:value>
+            <spirit:value>Wed Oct 29 19:32:28 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8c7747f0</spirit:value>
+            <spirit:value>9:db6c2658</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>sim_type</spirit:name>
@@ -27405,7 +27405,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7d040683</spirit:value>
+            <spirit:value>9:dd99a5f6</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -27421,11 +27421,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Oct 27 19:58:20 UTC 2025</spirit:value>
+            <spirit:value>Wed Oct 29 19:32:28 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7d040683</spirit:value>
+            <spirit:value>9:dd99a5f6</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -27463,7 +27463,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:c1df79d0</spirit:value>
+            <spirit:value>9:c49b65d4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -27479,11 +27479,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Oct 27 19:58:20 UTC 2025</spirit:value>
+            <spirit:value>Wed Oct 29 19:32:28 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:c1df79d0</spirit:value>
+            <spirit:value>9:c49b65d4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -28544,7 +28544,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;))) - 1)">3</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;))) - 1)">7</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -28568,7 +28568,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ADDR_WIDTH&apos;))) - 1)">63</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ADDR_WIDTH&apos;))) - 1)">127</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -28585,7 +28585,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_PROTOCOL&apos;)) = 1) ? 4 : 8)) - 1)">15</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_PROTOCOL&apos;)) = 1) ? 4 : 8)) - 1)">31</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -28609,7 +28609,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * 3) - 1)">5</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * 3) - 1)">11</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -28633,7 +28633,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * 2) - 1)">3</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * 2) - 1)">7</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -28657,7 +28657,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_PROTOCOL&apos;)) = 1) ? 2 : 1)) - 1)">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_PROTOCOL&apos;)) = 1) ? 2 : 1)) - 1)">3</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -28681,7 +28681,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * 4) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * 4) - 1)">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -28705,7 +28705,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * 3) - 1)">5</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * 3) - 1)">11</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -28722,7 +28722,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * 4) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * 4) - 1)">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -28746,7 +28746,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * 4) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * 4) - 1)">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -28770,7 +28770,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_AWUSER_WIDTH&apos;))) - 1)">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_AWUSER_WIDTH&apos;))) - 1)">3</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -28794,7 +28794,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) - 1)">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) - 1)">3</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -28818,7 +28818,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) - 1)">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) - 1)">3</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -28838,7 +28838,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;))) - 1)">3</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;))) - 1)">7</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -28862,7 +28862,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_DATA_WIDTH&apos;))) - 1)">63</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_DATA_WIDTH&apos;))) - 1)">127</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -28879,7 +28879,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_DATA_WIDTH&apos;))) / 8) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_DATA_WIDTH&apos;))) / 8) - 1)">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -28896,7 +28896,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) - 1)">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) - 1)">3</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -28920,7 +28920,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_WUSER_WIDTH&apos;))) - 1)">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_WUSER_WIDTH&apos;))) - 1)">3</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -28944,7 +28944,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) - 1)">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) - 1)">3</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -28968,7 +28968,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) - 1)">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) - 1)">3</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -28988,7 +28988,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;))) - 1)">3</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;))) - 1)">7</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -28999,7 +28999,7 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="{((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;)))){0}}" spirit:bitStringLength="2">0x0</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="{((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;)))){0}}" spirit:bitStringLength="2">0x00</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
@@ -29015,7 +29015,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * 2) - 1)">3</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * 2) - 1)">7</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -29026,7 +29026,7 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="{((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * 2)){0}}" spirit:bitStringLength="4">0x0</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="{((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * 2)){0}}" spirit:bitStringLength="4">0x00</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
       </spirit:port>
@@ -29035,7 +29035,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_BUSER_WIDTH&apos;))) - 1)">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_BUSER_WIDTH&apos;))) - 1)">3</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -29062,7 +29062,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) - 1)">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) - 1)">3</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -29089,7 +29089,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) - 1)">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) - 1)">3</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -29106,7 +29106,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;))) - 1)">3</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;))) - 1)">7</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -29130,7 +29130,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ADDR_WIDTH&apos;))) - 1)">63</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ADDR_WIDTH&apos;))) - 1)">127</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -29147,7 +29147,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_PROTOCOL&apos;)) = 1) ? 4 : 8)) - 1)">15</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_PROTOCOL&apos;)) = 1) ? 4 : 8)) - 1)">31</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -29171,7 +29171,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * 3) - 1)">5</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * 3) - 1)">11</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -29195,7 +29195,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * 2) - 1)">3</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * 2) - 1)">7</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -29219,7 +29219,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_PROTOCOL&apos;)) = 1) ? 2 : 1)) - 1)">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_PROTOCOL&apos;)) = 1) ? 2 : 1)) - 1)">3</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -29243,7 +29243,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * 4) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * 4) - 1)">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -29267,7 +29267,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * 3) - 1)">5</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * 3) - 1)">11</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -29284,7 +29284,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * 4) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * 4) - 1)">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -29308,7 +29308,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * 4) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * 4) - 1)">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -29332,7 +29332,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ARUSER_WIDTH&apos;))) - 1)">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ARUSER_WIDTH&apos;))) - 1)">3</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -29356,7 +29356,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) - 1)">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) - 1)">3</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -29380,7 +29380,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) - 1)">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) - 1)">3</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -29400,7 +29400,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;))) - 1)">3</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;))) - 1)">7</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -29411,7 +29411,7 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="{((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;)))){0}}" spirit:bitStringLength="2">0x0</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="{((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;)))){0}}" spirit:bitStringLength="2">0x00</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
@@ -29427,7 +29427,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_DATA_WIDTH&apos;))) - 1)">63</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_DATA_WIDTH&apos;))) - 1)">127</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -29438,7 +29438,7 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="{((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_DATA_WIDTH&apos;)))){0}}" spirit:bitStringLength="64">0x0000000000000000</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="{((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_DATA_WIDTH&apos;)))){0}}" spirit:bitStringLength="64">0x00000000000000000000000000000000</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
       </spirit:port>
@@ -29447,7 +29447,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * 2) - 1)">3</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * 2) - 1)">7</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -29458,7 +29458,7 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="{((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * 2)){0}}" spirit:bitStringLength="4">0x0</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="{((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * 2)){0}}" spirit:bitStringLength="4">0x00</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
       </spirit:port>
@@ -29467,7 +29467,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) - 1)">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) - 1)">3</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -29478,7 +29478,7 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="{(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;))){1}}" spirit:bitStringLength="2">0x3</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="{(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;))){1}}" spirit:bitStringLength="2">0xF</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
@@ -29494,7 +29494,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_RUSER_WIDTH&apos;))) - 1)">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_RUSER_WIDTH&apos;))) - 1)">3</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -29521,7 +29521,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) - 1)">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) - 1)">3</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -29548,7 +29548,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) - 1)">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MASTER_SLOTS&apos;)) - 1)">3</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -31620,7 +31620,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_NUM_MASTER_SLOTS</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_NUM_MASTER_SLOTS">2</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_NUM_MASTER_SLOTS">4</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_AXI_ID_WIDTH</spirit:name>
@@ -31644,11 +31644,11 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="std_logic_vector">
         <spirit:name>C_M_AXI_BASE_ADDR</spirit:name>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M_AXI_BASE_ADDR" spirit:bitStringLength="128">0xffffffffffffffff0000000000000000</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M_AXI_BASE_ADDR" spirit:bitStringLength="256">0x0000000040000000000000004001000000000000c00000000000000000000000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="std_logic_vector">
         <spirit:name>C_M_AXI_ADDR_WIDTH</spirit:name>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M_AXI_ADDR_WIDTH" spirit:bitStringLength="64">0x000000000000000e</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M_AXI_ADDR_WIDTH" spirit:bitStringLength="128">0x00000010000000100000000f0000000f</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_S_AXI_BASE_ID</spirit:name>
@@ -31684,11 +31684,11 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="std_logic_vector">
         <spirit:name>C_M_AXI_WRITE_CONNECTIVITY</spirit:name>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M_AXI_WRITE_CONNECTIVITY" spirit:bitStringLength="64">0x0000000300000003</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M_AXI_WRITE_CONNECTIVITY" spirit:bitStringLength="128">0x00000003000000030000000300000003</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="std_logic_vector">
         <spirit:name>C_M_AXI_READ_CONNECTIVITY</spirit:name>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M_AXI_READ_CONNECTIVITY" spirit:bitStringLength="64">0x0000000300000003</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M_AXI_READ_CONNECTIVITY" spirit:bitStringLength="128">0x00000003000000030000000300000003</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_R_REGISTER</spirit:name>
@@ -31708,11 +31708,11 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="std_logic_vector">
         <spirit:name>C_M_AXI_WRITE_ISSUING</spirit:name>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M_AXI_WRITE_ISSUING" spirit:bitStringLength="64">0x0000000200000002</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M_AXI_WRITE_ISSUING" spirit:bitStringLength="128">0x00000002000000020000000200000002</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="std_logic_vector">
         <spirit:name>C_M_AXI_READ_ISSUING</spirit:name>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M_AXI_READ_ISSUING" spirit:bitStringLength="64">0x0000000200000002</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M_AXI_READ_ISSUING" spirit:bitStringLength="128">0x00000002000000020000000200000002</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_S_AXI_ARB_PRIORITY</spirit:name>
@@ -31720,7 +31720,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_M_AXI_SECURE</spirit:name>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M_AXI_SECURE" spirit:bitStringLength="64">0x0000000000000000</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M_AXI_SECURE" spirit:bitStringLength="128">0x00000000000000000000000000000000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_CONNECTIVITY_MODE</spirit:name>
@@ -32096,7 +32096,7 @@
     <spirit:parameter>
       <spirit:name>NUM_MI</spirit:name>
       <spirit:displayName>Number of Master Interfaces</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.NUM_MI" spirit:order="4" spirit:minimum="1" spirit:maximum="16" spirit:rangeType="long">2</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.NUM_MI" spirit:order="4" spirit:minimum="1" spirit:maximum="16" spirit:rangeType="long">4</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -38996,7 +38996,7 @@
     <spirit:parameter>
       <spirit:name>M02_WRITE_ISSUING</spirit:name>
       <spirit:displayName>My M02_WRITE_ISSUING</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M02_WRITE_ISSUING" spirit:order="583" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">4</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M02_WRITE_ISSUING" spirit:order="583" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">2</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -39008,7 +39008,7 @@
     <spirit:parameter>
       <spirit:name>M03_WRITE_ISSUING</spirit:name>
       <spirit:displayName>My M03_WRITE_ISSUING</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M03_WRITE_ISSUING" spirit:order="584" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">4</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M03_WRITE_ISSUING" spirit:order="584" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">2</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -39188,7 +39188,7 @@
     <spirit:parameter>
       <spirit:name>M02_READ_ISSUING</spirit:name>
       <spirit:displayName>My M02_READ_ISSUING</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M02_READ_ISSUING" spirit:order="599" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">4</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M02_READ_ISSUING" spirit:order="599" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">2</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -39200,7 +39200,7 @@
     <spirit:parameter>
       <spirit:name>M03_READ_ISSUING</spirit:name>
       <spirit:displayName>My M03_READ_ISSUING</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M03_READ_ISSUING" spirit:order="600" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">4</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M03_READ_ISSUING" spirit:order="600" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">2</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -40508,7 +40508,7 @@
     <spirit:parameter>
       <spirit:name>M01_A00_BASE_ADDR</spirit:name>
       <spirit:displayName>My M01_A00_BASE_ADDR</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.M01_A00_BASE_ADDR" spirit:order="709" spirit:bitStringLength="64">0xffffffffffffffff</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.M01_A00_BASE_ADDR" spirit:order="709" spirit:bitStringLength="64">0x00000000C0000000</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -40700,7 +40700,7 @@
     <spirit:parameter>
       <spirit:name>M02_A00_BASE_ADDR</spirit:name>
       <spirit:displayName>My M02_A00_BASE_ADDR</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.M02_A00_BASE_ADDR" spirit:order="725" spirit:bitStringLength="64">0xffffffffffffffff</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.M02_A00_BASE_ADDR" spirit:order="725" spirit:bitStringLength="64">0x0000000040010000</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -40892,7 +40892,7 @@
     <spirit:parameter>
       <spirit:name>M03_A00_BASE_ADDR</spirit:name>
       <spirit:displayName>My M03_A00_BASE_ADDR</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.M03_A00_BASE_ADDR" spirit:order="741" spirit:bitStringLength="64">0xffffffffffffffff</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.M03_A00_BASE_ADDR" spirit:order="741" spirit:bitStringLength="64">0x0000000040000000</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -43388,7 +43388,7 @@
     <spirit:parameter>
       <spirit:name>M00_A00_ADDR_WIDTH</spirit:name>
       <spirit:displayName>My M00_A00_ADDR_WIDTH</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M00_A00_ADDR_WIDTH" spirit:order="949" spirit:minimum="0" spirit:maximum="64" spirit:rangeType="long">14</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M00_A00_ADDR_WIDTH" spirit:order="949" spirit:minimum="0" spirit:maximum="64" spirit:rangeType="long">15</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -43580,7 +43580,7 @@
     <spirit:parameter>
       <spirit:name>M01_A00_ADDR_WIDTH</spirit:name>
       <spirit:displayName>My M01_A00_ADDR_WIDTH</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M01_A00_ADDR_WIDTH" spirit:order="965" spirit:minimum="0" spirit:maximum="64" spirit:rangeType="long">0</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M01_A00_ADDR_WIDTH" spirit:order="965" spirit:minimum="0" spirit:maximum="64" spirit:rangeType="long">15</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -43772,7 +43772,7 @@
     <spirit:parameter>
       <spirit:name>M02_A00_ADDR_WIDTH</spirit:name>
       <spirit:displayName>My M02_A00_ADDR_WIDTH</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M02_A00_ADDR_WIDTH" spirit:order="981" spirit:minimum="0" spirit:maximum="64" spirit:rangeType="long">0</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M02_A00_ADDR_WIDTH" spirit:order="981" spirit:minimum="0" spirit:maximum="64" spirit:rangeType="long">16</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -43964,7 +43964,7 @@
     <spirit:parameter>
       <spirit:name>M03_A00_ADDR_WIDTH</spirit:name>
       <spirit:displayName>My M03_A00_ADDR_WIDTH</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M03_A00_ADDR_WIDTH" spirit:order="997" spirit:minimum="0" spirit:maximum="64" spirit:rangeType="long">0</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M03_A00_ADDR_WIDTH" spirit:order="997" spirit:minimum="0" spirit:maximum="64" spirit:rangeType="long">16</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -46542,12 +46542,72 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M01_AXI.SUPPORTS_NARROW_BURST" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M01_AXI.WUSER_BITS_PER_BYTE" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M01_AXI.WUSER_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M02_AXI.ADDR_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M02_AXI.ARUSER_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M02_AXI.AWUSER_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M02_AXI.BUSER_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M02_AXI.CLK_DOMAIN" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M02_AXI.DATA_WIDTH" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M02_AXI.FREQ_HZ" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M02_AXI.HAS_BRESP" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M02_AXI.HAS_BURST" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M02_AXI.HAS_CACHE" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M02_AXI.HAS_LOCK" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M02_AXI.HAS_PROT" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M02_AXI.HAS_QOS" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M02_AXI.HAS_REGION" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M02_AXI.HAS_RRESP" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M02_AXI.HAS_WSTRB" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M02_AXI.ID_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M02_AXI.MAX_BURST_LENGTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M02_AXI.NUM_READ_OUTSTANDING" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M02_AXI.NUM_READ_THREADS" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M02_AXI.NUM_WRITE_OUTSTANDING" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M02_AXI.NUM_WRITE_THREADS" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M02_AXI.PHASE" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M02_AXI.PROTOCOL" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M02_AXI.READ_WRITE_MODE" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M02_AXI.RUSER_BITS_PER_BYTE" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M02_AXI.RUSER_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M02_AXI.SUPPORTS_NARROW_BURST" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M02_AXI.WUSER_BITS_PER_BYTE" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M02_AXI.WUSER_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M03_AXI.ADDR_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M03_AXI.ARUSER_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M03_AXI.AWUSER_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M03_AXI.BUSER_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M03_AXI.CLK_DOMAIN" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M03_AXI.DATA_WIDTH" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M03_AXI.FREQ_HZ" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M03_AXI.HAS_BRESP" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M03_AXI.HAS_BURST" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M03_AXI.HAS_CACHE" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M03_AXI.HAS_LOCK" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M03_AXI.HAS_PROT" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M03_AXI.HAS_QOS" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M03_AXI.HAS_REGION" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M03_AXI.HAS_RRESP" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M03_AXI.HAS_WSTRB" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M03_AXI.ID_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M03_AXI.MAX_BURST_LENGTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M03_AXI.NUM_READ_OUTSTANDING" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M03_AXI.NUM_READ_THREADS" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M03_AXI.NUM_WRITE_OUTSTANDING" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M03_AXI.NUM_WRITE_THREADS" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M03_AXI.PHASE" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M03_AXI.PROTOCOL" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M03_AXI.READ_WRITE_MODE" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M03_AXI.RUSER_BITS_PER_BYTE" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M03_AXI.RUSER_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M03_AXI.SUPPORTS_NARROW_BURST" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M03_AXI.WUSER_BITS_PER_BYTE" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M03_AXI.WUSER_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.RSTIF.POLARITY" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.RSTIF.TYPE" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.ADDR_WIDTH" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.ARUSER_WIDTH" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.AWUSER_WIDTH" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.BUSER_WIDTH" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.ADDR_WIDTH" xilinx:valueSource="auto_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.ARUSER_WIDTH" xilinx:valueSource="auto_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.AWUSER_WIDTH" xilinx:valueSource="auto_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.BUSER_WIDTH" xilinx:valueSource="auto_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.CLK_DOMAIN" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.DATA_WIDTH" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.FREQ_HZ" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
@@ -46570,14 +46630,14 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.PROTOCOL" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.READ_WRITE_MODE" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.RUSER_BITS_PER_BYTE" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.RUSER_WIDTH" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.RUSER_WIDTH" xilinx:valueSource="auto_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.SUPPORTS_NARROW_BURST" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.WUSER_BITS_PER_BYTE" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.WUSER_WIDTH" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S01_AXI.ADDR_WIDTH" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S01_AXI.ARUSER_WIDTH" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S01_AXI.AWUSER_WIDTH" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S01_AXI.BUSER_WIDTH" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.WUSER_WIDTH" xilinx:valueSource="auto_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S01_AXI.ADDR_WIDTH" xilinx:valueSource="auto_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S01_AXI.ARUSER_WIDTH" xilinx:valueSource="auto_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S01_AXI.AWUSER_WIDTH" xilinx:valueSource="auto_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S01_AXI.BUSER_WIDTH" xilinx:valueSource="auto_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S01_AXI.CLK_DOMAIN" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S01_AXI.DATA_WIDTH" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S01_AXI.FREQ_HZ" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
@@ -46600,10 +46660,10 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S01_AXI.PROTOCOL" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S01_AXI.READ_WRITE_MODE" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S01_AXI.RUSER_BITS_PER_BYTE" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S01_AXI.RUSER_WIDTH" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S01_AXI.RUSER_WIDTH" xilinx:valueSource="auto_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S01_AXI.SUPPORTS_NARROW_BURST" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S01_AXI.WUSER_BITS_PER_BYTE" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S01_AXI.WUSER_WIDTH" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S01_AXI.WUSER_WIDTH" xilinx:valueSource="auto_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.ADDR_RANGES" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.ADDR_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.ARUSER_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
@@ -46678,8 +46738,8 @@
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M00_S15_WRITE_CONNECTIVITY" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M00_SECURE" xilinx:valueSource="propagated"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M00_WRITE_ISSUING" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M01_A00_ADDR_WIDTH" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M01_A00_BASE_ADDR" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M01_A00_ADDR_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M01_A00_BASE_ADDR" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M01_A01_ADDR_WIDTH" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M01_A01_BASE_ADDR" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M01_A02_ADDR_WIDTH" xilinx:valuePermission="bd_and_user"/>
@@ -46711,10 +46771,10 @@
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M01_A15_ADDR_WIDTH" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M01_A15_BASE_ADDR" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M01_READ_ISSUING" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M01_S00_READ_CONNECTIVITY" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M01_S00_WRITE_CONNECTIVITY" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M01_S01_READ_CONNECTIVITY" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M01_S01_WRITE_CONNECTIVITY" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M01_S00_READ_CONNECTIVITY" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M01_S00_WRITE_CONNECTIVITY" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M01_S01_READ_CONNECTIVITY" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M01_S01_WRITE_CONNECTIVITY" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M01_S02_READ_CONNECTIVITY" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M01_S02_WRITE_CONNECTIVITY" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M01_S03_READ_CONNECTIVITY" xilinx:valuePermission="bd_and_user"/>
@@ -46745,8 +46805,8 @@
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M01_S15_WRITE_CONNECTIVITY" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M01_SECURE" xilinx:valueSource="propagated"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M01_WRITE_ISSUING" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M02_A00_ADDR_WIDTH" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M02_A00_BASE_ADDR" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M02_A00_ADDR_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M02_A00_BASE_ADDR" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M02_A01_ADDR_WIDTH" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M02_A01_BASE_ADDR" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M02_A02_ADDR_WIDTH" xilinx:valuePermission="bd_and_user"/>
@@ -46777,11 +46837,11 @@
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M02_A14_BASE_ADDR" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M02_A15_ADDR_WIDTH" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M02_A15_BASE_ADDR" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M02_READ_ISSUING" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M02_S00_READ_CONNECTIVITY" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M02_S00_WRITE_CONNECTIVITY" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M02_S01_READ_CONNECTIVITY" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M02_S01_WRITE_CONNECTIVITY" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M02_READ_ISSUING" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M02_S00_READ_CONNECTIVITY" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M02_S00_WRITE_CONNECTIVITY" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M02_S01_READ_CONNECTIVITY" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M02_S01_WRITE_CONNECTIVITY" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M02_S02_READ_CONNECTIVITY" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M02_S02_WRITE_CONNECTIVITY" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M02_S03_READ_CONNECTIVITY" xilinx:valuePermission="bd_and_user"/>
@@ -46810,9 +46870,10 @@
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M02_S14_WRITE_CONNECTIVITY" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M02_S15_READ_CONNECTIVITY" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M02_S15_WRITE_CONNECTIVITY" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M02_WRITE_ISSUING" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M03_A00_ADDR_WIDTH" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M03_A00_BASE_ADDR" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M02_SECURE" xilinx:valueSource="propagated"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M02_WRITE_ISSUING" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M03_A00_ADDR_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M03_A00_BASE_ADDR" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M03_A01_ADDR_WIDTH" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M03_A01_BASE_ADDR" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M03_A02_ADDR_WIDTH" xilinx:valuePermission="bd_and_user"/>
@@ -46843,11 +46904,11 @@
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M03_A14_BASE_ADDR" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M03_A15_ADDR_WIDTH" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M03_A15_BASE_ADDR" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M03_READ_ISSUING" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M03_S00_READ_CONNECTIVITY" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M03_S00_WRITE_CONNECTIVITY" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M03_S01_READ_CONNECTIVITY" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M03_S01_WRITE_CONNECTIVITY" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M03_READ_ISSUING" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M03_S00_READ_CONNECTIVITY" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M03_S00_WRITE_CONNECTIVITY" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M03_S01_READ_CONNECTIVITY" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M03_S01_WRITE_CONNECTIVITY" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M03_S02_READ_CONNECTIVITY" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M03_S02_WRITE_CONNECTIVITY" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M03_S03_READ_CONNECTIVITY" xilinx:valuePermission="bd_and_user"/>
@@ -46876,7 +46937,8 @@
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M03_S14_WRITE_CONNECTIVITY" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M03_S15_READ_CONNECTIVITY" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M03_S15_WRITE_CONNECTIVITY" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M03_WRITE_ISSUING" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M03_SECURE" xilinx:valueSource="propagated"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M03_WRITE_ISSUING" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M04_A00_ADDR_WIDTH" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M04_A00_BASE_ADDR" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M04_A01_ADDR_WIDTH" xilinx:valuePermission="bd_and_user"/>

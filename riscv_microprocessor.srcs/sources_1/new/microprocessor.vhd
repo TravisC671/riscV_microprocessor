@@ -236,7 +236,8 @@ begin
                   is_store => is_store,
                   store_data => Store_Data,
                   load_data => Load_Data,
-                  data_len => '0' --unused rn
+                  data_len => '0', --unused rn
+                  ls_addr => LS_address
                   );
     
     
@@ -311,5 +312,4 @@ begin
             M_AXI_RUSER => D_M_AXI_RUSER,
             M_AXI_RVALID => D_M_AXI_RVALID,
             M_AXI_RREADY => D_M_AXI_RREADY);
-            
 end Behavioral;

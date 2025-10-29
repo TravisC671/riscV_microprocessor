@@ -60,19 +60,19 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="nexys-a7-100t"/>
-    <Option Name="WTXSimLaunchSim" Val="332"/>
+    <Option Name="WTXSimLaunchSim" Val="350"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="84"/>
-    <Option Name="WTModelSimExportSim" Val="84"/>
-    <Option Name="WTQuestaExportSim" Val="84"/>
+    <Option Name="WTXSimExportSim" Val="97"/>
+    <Option Name="WTModelSimExportSim" Val="97"/>
+    <Option Name="WTQuestaExportSim" Val="97"/>
     <Option Name="WTIesExportSim" Val="0"/>
-    <Option Name="WTVcsExportSim" Val="83"/>
-    <Option Name="WTRivieraExportSim" Val="83"/>
+    <Option Name="WTVcsExportSim" Val="96"/>
+    <Option Name="WTRivieraExportSim" Val="96"/>
     <Option Name="WTActivehdlExportSim" Val="0"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
@@ -237,6 +237,12 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../../../../opt/packages/op_branch_test.coe">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/system/ip/system_axi_bram_ctrl_0_bram_1/load_store_test.coe">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>

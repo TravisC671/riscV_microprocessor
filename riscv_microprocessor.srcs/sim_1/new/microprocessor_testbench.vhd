@@ -27,10 +27,14 @@ entity microprocessor_testbench is
 end microprocessor_testbench;
 
 architecture Behavioral of microprocessor_testbench is
+  signal dip_switches : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal led_16bits : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal reset, sys_clock: std_logic := '0';
 begin
     uut: entity work.system_wrapper (STRUCTURE)
-        port map (sys_clock => sys_clock, reset => reset);
+        port map (sys_clock => sys_clock, reset => reset, 
+                  dip_switches_16bits_tri_i => dip_switches, 
+                  led_16bits_tri_o => led_16bits);
 
     sys_clock <= not sys_clock after 5 ns;
     reset <= '1' after 20 ns;

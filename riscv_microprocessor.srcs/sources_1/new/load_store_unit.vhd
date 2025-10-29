@@ -143,9 +143,9 @@ begin
     M_AXI_WLAST   <= '1' when current_state = ls_store_start else '0';
     
     --maybe add WACK if not working
+    Ls_busy <= '0' when current_state = ls_idle else '1';
     
     M_AXI_AWID	     <= (others => '0');         
-    M_AXI_AWADDR    <= (others => '0');       
     M_AXI_AWLEN	 <= (others => '0');        
     M_AXI_AWSIZE    <= "010";       
     M_AXI_AWBURST   <= "01";        

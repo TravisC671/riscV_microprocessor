@@ -139,7 +139,7 @@ package body RISCV_package is
             PCle => '0',
             isBR => '0',
             isLoad => '0',
-            isStore => '0',
+            isStore => '1',
             BRcond => "000",
             ALUFunc => "0000",
             IMM => imm_value

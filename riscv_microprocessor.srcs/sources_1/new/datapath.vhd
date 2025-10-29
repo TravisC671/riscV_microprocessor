@@ -7,6 +7,7 @@ entity datapath is
     Port ( Controller : in control_word;
            clk, res : in STD_LOGIC;
            pc_addr : out STD_LOGIC_VECTOR (XLen-1 downto 0);
+           ls_addr : out STD_LOGIC_VECTOR (XLen-1 downto 0);
            fetch_done: out STD_LOGIC;
            is_load: out STD_LOGIC;
            is_store: out STD_LOGIC;
@@ -59,6 +60,9 @@ begin
      pc_addr <= PCout;
       
      Dbus <= PCout when Controller.PCDsel = '1' else Dout;
-        
+     store_data <= RegBOut;
+     is_load <= Controller.isLoad;
+     is_store <= Controller.isStore;
+     
     
 end Behavioral;
