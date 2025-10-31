@@ -58,7 +58,8 @@ begin
         port map (BRen => BRen, PCie => Controller.PCie, clk => clk, res => res, Din => Dout, PCout => PCout);
      
      pc_addr <= PCout;
-      
+     
+     ls_addr <= Dout;
      Dbus <= PCout when Controller.PCDsel = '1' else Dout;
      store_data <= RegBOut;
      is_load <= Controller.isLoad;

@@ -194,24 +194,6 @@
                 "HA": "0x00007FFF",
                 "BP": "C_S_AXI_BASEADDR",
                 "HP": "C_S_AXI_HIGHADDR",
-                "MA": "D_M_AXI",
-                "MX": "/microprocessor_0",
-                "MI": "D_M_AXI",
-                "MS": "SEG_axi_bram_ctrl_0_Mem0",
-                "MV": "xilinx.com:module_ref:microprocessor:1.0",
-                "SX": "/axi_bram_ctrl_0",
-                "SI": "S_AXI",
-                "SS": "Mem0",
-                "SV": "xilinx.com:ip:axi_bram_ctrl:4.1",
-                "TM": "both",
-                "TU": "memory"
-            },
-            "V4": {
-                "VT": "AC",
-                "BA": "0x00000000",
-                "HA": "0x00007FFF",
-                "BP": "C_S_AXI_BASEADDR",
-                "HP": "C_S_AXI_HIGHADDR",
                 "MA": "I_M_AXI",
                 "MX": "/microprocessor_0",
                 "MI": "I_M_AXI",
@@ -224,7 +206,7 @@
                 "TM": "both",
                 "TU": "memory"
             },
-            "V5": {
+            "V4": {
                 "VT": "AC",
                 "BA": "0x40000000",
                 "HA": "0x4000FFFF",
@@ -242,7 +224,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V6": {
+            "V5": {
                 "VT": "AC",
                 "BA": "0x40000000",
                 "HA": "0x4000FFFF",
@@ -254,6 +236,24 @@
                 "MS": "SEG_axi_gpio_1_Reg",
                 "MV": "xilinx.com:module_ref:microprocessor:1.0",
                 "SX": "/axi_gpio_1",
+                "SI": "S_AXI",
+                "SS": "Reg",
+                "SV": "xilinx.com:ip:axi_gpio:2.0",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V6": {
+                "VT": "AC",
+                "BA": "0x40010000",
+                "HA": "0x4001FFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "D_M_AXI",
+                "MX": "/microprocessor_0",
+                "MI": "D_M_AXI",
+                "MS": "SEG_axi_gpio_0_Reg",
+                "MV": "xilinx.com:module_ref:microprocessor:1.0",
+                "SX": "/axi_gpio_0",
                 "SI": "S_AXI",
                 "SS": "Reg",
                 "SV": "xilinx.com:ip:axi_gpio:2.0",
@@ -266,9 +266,9 @@
                 "HA": "0x4001FFFF",
                 "BP": "C_BASEADDR",
                 "HP": "C_HIGHADDR",
-                "MA": "D_M_AXI",
+                "MA": "I_M_AXI",
                 "MX": "/microprocessor_0",
-                "MI": "D_M_AXI",
+                "MI": "I_M_AXI",
                 "MS": "SEG_axi_gpio_0_Reg",
                 "MV": "xilinx.com:module_ref:microprocessor:1.0",
                 "SX": "/axi_gpio_0",
@@ -280,24 +280,6 @@
             },
             "V8": {
                 "VT": "AC",
-                "BA": "0x40010000",
-                "HA": "0x4001FFFF",
-                "BP": "C_BASEADDR",
-                "HP": "C_HIGHADDR",
-                "MA": "I_M_AXI",
-                "MX": "/microprocessor_0",
-                "MI": "I_M_AXI",
-                "MS": "SEG_axi_gpio_0_Reg",
-                "MV": "xilinx.com:module_ref:microprocessor:1.0",
-                "SX": "/axi_gpio_0",
-                "SI": "S_AXI",
-                "SS": "Reg",
-                "SV": "xilinx.com:ip:axi_gpio:2.0",
-                "TM": "both",
-                "TU": "register"
-            },
-            "V9": {
-                "VT": "AC",
                 "BA": "0xC0000000",
                 "HA": "0xC0007FFF",
                 "BP": "C_S_AXI_BASEADDR",
@@ -305,24 +287,6 @@
                 "MA": "D_M_AXI",
                 "MX": "/microprocessor_0",
                 "MI": "D_M_AXI",
-                "MS": "SEG_axi_bram_ctrl_1_Mem0",
-                "MV": "xilinx.com:module_ref:microprocessor:1.0",
-                "SX": "/axi_bram_ctrl_1",
-                "SI": "S_AXI",
-                "SS": "Mem0",
-                "SV": "xilinx.com:ip:axi_bram_ctrl:4.1",
-                "TM": "both",
-                "TU": "memory"
-            },
-            "V10": {
-                "VT": "AC",
-                "BA": "0xC0000000",
-                "HA": "0xC0007FFF",
-                "BP": "C_S_AXI_BASEADDR",
-                "HP": "C_S_AXI_HIGHADDR",
-                "MA": "I_M_AXI",
-                "MX": "/microprocessor_0",
-                "MI": "I_M_AXI",
                 "MS": "SEG_axi_bram_ctrl_1_Mem0",
                 "MV": "xilinx.com:module_ref:microprocessor:1.0",
                 "SX": "/axi_bram_ctrl_1",
@@ -369,16 +333,6 @@
             },
             {
                 "src": "V8",
-                "trg": "V2",
-                "EH": "2"
-            },
-            {
-                "src": "V9",
-                "trg": "V2",
-                "EH": "2"
-            },
-            {
-                "src": "V10",
                 "trg": "V2",
                 "EH": "2"
             }

@@ -19,7 +19,6 @@ entity load_store_unit is
 		Start_load  : in std_logic;  -- is transaction a load command
 		Start_store : in std_logic;  -- is transaction a store command
         Address     : in std_logic_vector(C_M_AXI_ADDR_WIDTH-1 downto 0); -- address where data is loaded/stored
- 		Done	    : out std_logic; -- Asserts when transaction is complete
         Store_data  : in  std_logic_vector(0 to C_M_AXI_DATA_WIDTH*C_M_AXI_BURST_LEN - 1); -- Data to be sent
         Load_data   : out std_logic_vector(0 to C_M_AXI_DATA_WIDTH*C_M_AXI_BURST_LEN - 1); -- Data that was read (modify as needed)
         Ls_busy     : out std_logic;
@@ -85,6 +84,7 @@ architecture Behavioral of load_store_unit is
         ls_idle, 
         ls_load_start, 
         ls_store_start, 
+        ls_store_data, 
         ls_load_wait, 
         ls_store_wait, 
         ls_load_accept, 
@@ -98,6 +98,7 @@ architecture Behavioral of load_store_unit is
     signal ls_load_wait_next : load_store_state_t; 
     signal ls_load_accept_next : load_store_state_t; 
     signal ls_store_start_next : load_store_state_t; 
+    signal ls_store_data_next : load_store_state_t; 
     signal ls_store_wait_next : load_store_state_t; 
     signal ls_store_accept_next : load_store_state_t; 
 begin
@@ -118,9 +119,9 @@ begin
     ls_load_accept_next <= ls_idle;
     
     --store path
-    ls_store_start_next <= ls_store_wait when M_AXI_AWREADY = '1' and M_AXI_WREADY = '1' 
-                           else ls_store_start;
-    ls_store_wait_next <= ls_store_accept when M_AXI_BVALID = '1' else ls_store_wait;
+    ls_store_start_next <= ls_store_data when M_AXI_AWREADY = '1'else ls_store_start;
+    ls_store_data_next  <= ls_store_wait when M_AXI_WREADY = '0' else ls_store_data;
+    ls_store_wait_next  <= ls_store_accept when M_AXI_BVALID = '1' else ls_store_wait;
     ls_store_accept_next <= ls_idle;
     
     with current_state select
@@ -129,6 +130,7 @@ begin
                       ls_load_wait_next when ls_load_wait, 
                       ls_load_accept_next when ls_load_accept, 
                       ls_store_start_next when ls_store_start, 
+                      ls_store_data_next when ls_store_data, 
                       ls_store_wait_next when ls_store_wait, 
                       ls_store_accept_next when ls_store_accept,
                       ls_idle when others;
@@ -139,9 +141,9 @@ begin
 
     -- store signals
     M_AXI_AWVALID <= '1' when current_state = ls_store_start else '0';
-    M_AXI_WVALID  <= '1' when current_state = ls_store_start else '0';
-    M_AXI_WLAST   <= '1' when current_state = ls_store_start else '0';
-    
+    M_AXI_WVALID  <= '1' when current_state = ls_store_data else '0';
+    M_AXI_WLAST   <= '1' when current_state = ls_store_data else '0';
+    M_AXI_BREADY  <= '1' when current_state = ls_store_accept else '0';
     --maybe add WACK if not working
     Ls_busy <= '0' when current_state = ls_idle else '1';
     
@@ -157,7 +159,6 @@ begin
     M_AXI_WDATA     <= (others => '0');         
     M_AXI_WSTRB     <= (others => '0');         
     M_AXI_WUSER     <= (others => '0');                     
-    M_AXI_WVALID    <= '0';                     
     M_AXI_ARID      <= (others => '0');
     M_AXI_ARLEN     <= (others => '0');
     M_AXI_ARSIZE    <= "010";
@@ -168,5 +169,4 @@ begin
     M_AXI_ARQOS     <= (others => '0');
     M_AXI_ARUSER    <= (others => '0');
     Error <= '0';
-    M_AXI_BREADY <= '1';
 end Behavioral;

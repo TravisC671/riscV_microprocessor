@@ -3,3 +3,5 @@ Time resolution is 1 ps
  Block Memory Generator data initialization complete.
 Block Memory Generator module microprocessor_testbench.uut.system_i.axi_bram_ctrl_0_bram.inst.native_mem_mapped_module.blk_mem_gen_v8_4_11_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
 Block Memory Generator module microprocessor_testbench.uut.system_i.blk_mem_gen_0.inst.native_mem_mapped_module.blk_mem_gen_v8_4_11_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+             1455000 : microprocessor_testbench.uut.system_i.axi_interconnect_0.s01_pchk.inst.REP : BIT(         25) :   ERROR : AXI_ERRM_WLAST_STABLE: WLAST must remain stable when WVALID is asserted and WREADY low. Spec: section A3.2.1.
+             1455000 : microprocessor_testbench.uut.system_i.axi_interconnect_0.s01_pchk.inst.REP : BIT(         27) :   ERROR : AXI_ERRM_WVALID_STABLE: Once WVALID is asserted, it must remain asserted until WREADY is high. Spec: section A3.2.2.

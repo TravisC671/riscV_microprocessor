@@ -220,8 +220,8 @@ begin
         PCie => CW_decoded.PCie and exec,
         PCle => CW_decoded.PCle,
         isBR => CW_decoded.isBR,
-        isLoad => '0',
-        isStore => '0',
+        isLoad => CW_decoded.isLoad,
+        isStore => CW_decoded.isStore,
         BRcond => CW_decoded.BRcond,
         ALUFunc => CW_decoded.ALUFunc,
         IMM => CW_decoded.IMM);

@@ -1064,7 +1064,7 @@
               "S00_AXI": {
                 "bd_attributes": {
                   "BRIDGES": {
-                    "value": "M00_AXI:M01_AXI:M02_AXI:M03_AXI",
+                    "value": "M00_AXI:M02_AXI:M03_AXI",
                     "value_src": "auto"
                   },
                   "TYPE": {
@@ -1076,7 +1076,6 @@
                 "mode": "Slave",
                 "bridges": [
                   "M00_AXI",
-                  "M01_AXI",
                   "M02_AXI",
                   "M03_AXI"
                 ]
@@ -1092,7 +1091,7 @@
               "S01_AXI": {
                 "bd_attributes": {
                   "BRIDGES": {
-                    "value": "M00_AXI:M01_AXI:M02_AXI:M03_AXI",
+                    "value": "M01_AXI:M02_AXI:M03_AXI",
                     "value_src": "auto"
                   },
                   "TYPE": {
@@ -1103,7 +1102,6 @@
                 "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
                 "mode": "Slave",
                 "bridges": [
-                  "M00_AXI",
                   "M01_AXI",
                   "M02_AXI",
                   "M03_AXI"
@@ -2249,11 +2247,6 @@
         "address_spaces": {
           "D_M_AXI": {
             "segments": {
-              "SEG_axi_bram_ctrl_0_Mem0": {
-                "address_block": "/axi_bram_ctrl_0/S_AXI/Mem0",
-                "offset": "0x00000000",
-                "range": "32K"
-              },
               "SEG_axi_bram_ctrl_1_Mem0": {
                 "address_block": "/axi_bram_ctrl_1/S_AXI/Mem0",
                 "offset": "0xC0000000",
@@ -2276,11 +2269,6 @@
               "SEG_axi_bram_ctrl_0_Mem0": {
                 "address_block": "/axi_bram_ctrl_0/S_AXI/Mem0",
                 "offset": "0x00000000",
-                "range": "32K"
-              },
-              "SEG_axi_bram_ctrl_1_Mem0": {
-                "address_block": "/axi_bram_ctrl_1/S_AXI/Mem0",
-                "offset": "0xC0000000",
                 "range": "32K"
               },
               "SEG_axi_gpio_0_Reg": {
