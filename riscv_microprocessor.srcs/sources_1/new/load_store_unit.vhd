@@ -1,9 +1,10 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use ieee.numeric_std.all;
 
 entity load_store_unit is
 	generic (
-		C_M_TARGET_SLAVE_BASE_ADDR : std_logic_vector	:= x"00000000"; -- Base address of targeted slave
+		C_M_TARGET_SLAVE_BASE_ADDR : std_logic_vector	:= x"00008000"; -- Base address of targeted slave
 		C_M_AXI_BURST_LEN	     : integer	:= 1; -- Burst Length. Supports 1, 2, 4, 8, 16, 32, 64, 128, 256 burst lengths
 		C_M_AXI_ID_WIDTH	     : integer	:= 1; -- Thread ID Width
 		C_M_AXI_ADDR_WIDTH	   : integer	:= 32; -- Width of Address Bus
@@ -88,7 +89,8 @@ architecture Behavioral of load_store_unit is
         ls_load_wait, 
         ls_store_wait, 
         ls_load_accept, 
-        ls_store_accept
+        ls_store_accept,
+        ls_exec
     );
     signal current_state : load_store_state_t;
     signal next_state : load_store_state_t;
@@ -101,9 +103,10 @@ architecture Behavioral of load_store_unit is
     signal ls_store_data_next : load_store_state_t; 
     signal ls_store_wait_next : load_store_state_t; 
     signal ls_store_accept_next : load_store_state_t; 
+    signal ls_exec_next : load_store_state_t; 
 begin
-    M_AXI_ARADDR <= Address;
-    M_AXI_AWADDR <= Address;
+    M_AXI_ARADDR <= std_logic_vector(unsigned(Address) + unsigned(C_M_TARGET_SLAVE_BASE_ADDR));
+    M_AXI_AWADDR <= std_logic_vector(unsigned(Address) + unsigned(C_M_TARGET_SLAVE_BASE_ADDR));
     
     current_state <= next_state_final when rising_edge(M_AXI_ACLK);
     
@@ -116,14 +119,15 @@ begin
     --load path
     ls_load_start_next  <= ls_load_wait   when M_AXI_ARREADY = '1' else ls_load_start;
     ls_load_wait_next   <= ls_load_accept when M_AXI_RVALID  = '1' else ls_load_wait;
-    ls_load_accept_next <= ls_idle;
+    ls_load_accept_next <= ls_exec;
     
     --store path
     ls_store_start_next <= ls_store_data when M_AXI_AWREADY = '1'else ls_store_start;
     ls_store_data_next  <= ls_store_wait when M_AXI_WREADY = '0' else ls_store_data;
     ls_store_wait_next  <= ls_store_accept when M_AXI_BVALID = '1' else ls_store_wait;
-    ls_store_accept_next <= ls_idle;
+    ls_store_accept_next <= ls_exec;
     
+    ls_exec_next <= ls_idle;
     with current_state select
         next_state <= ls_idle_next when ls_idle, 
                       ls_load_start_next when ls_load_start, 
@@ -133,6 +137,7 @@ begin
                       ls_store_data_next when ls_store_data, 
                       ls_store_wait_next when ls_store_wait, 
                       ls_store_accept_next when ls_store_accept,
+                      ls_exec_next when ls_exec,
                       ls_idle when others;
     
     -- load signals
@@ -145,6 +150,10 @@ begin
     M_AXI_WLAST   <= '1' when current_state = ls_store_data else '0';
     M_AXI_BREADY  <= '1' when current_state = ls_store_accept else '0';
     --maybe add WACK if not working
+    
+    PCle <= '1' when current_state = ls_exec else '0';
+    PCie <= '1' when current_state = ls_exec else '0';
+    
     Ls_busy <= '0' when current_state = ls_idle else '1';
     
     M_AXI_AWID	     <= (others => '0');         

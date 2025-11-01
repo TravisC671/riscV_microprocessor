@@ -2249,7 +2249,7 @@
             "segments": {
               "SEG_axi_bram_ctrl_1_Mem0": {
                 "address_block": "/axi_bram_ctrl_1/S_AXI/Mem0",
-                "offset": "0xC0000000",
+                "offset": "0x00008000",
                 "range": "32K"
               },
               "SEG_axi_gpio_0_Reg": {

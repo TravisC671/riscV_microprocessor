@@ -149,6 +149,7 @@ architecture Behavioral of microprocessor is
     signal start_store : std_logic;
     signal ls_busy : std_logic;
     signal n_ls_busy :std_logic;
+    signal clear_cw :std_logic;
 begin
     res <= not Reset;
 
@@ -161,6 +162,7 @@ begin
             Error => Error,
             PCle => fu_PCle,
             PCie => fu_PCie,
+            Clear_cw => clear_cw,
             M_AXI_ACLK => CLK,
             M_AXI_ARESETN => res,
             M_AXI_AWID => I_M_AXI_AWID,
@@ -252,7 +254,8 @@ begin
                 Is_store => is_store, 
                 Start_load => start_load, 
                 Start_store => start_store,
-                Ls_busy     => ls_busy
+                Ls_busy => ls_busy,
+                clear_cw => clear_cw
                 );
     
     n_ls_busy <= not ls_busy;
@@ -313,3 +316,4 @@ begin
             M_AXI_RVALID => D_M_AXI_RVALID,
             M_AXI_RREADY => D_M_AXI_RREADY);
 end Behavioral;
+

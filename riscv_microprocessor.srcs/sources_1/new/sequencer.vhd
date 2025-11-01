@@ -10,16 +10,18 @@ entity sequencer is
            Is_store   : in std_logic;
            Start_store: out std_logic;
            start : out std_logic;
-           exec : out std_logic
+           exec : out std_logic;
+           clear_cw: out std_logic
     );
 end sequencer;
 
 architecture Behavioral of sequencer is
-    type sequencer_state is (seq_fetch, seq_fetch2, seq_load, seq_load2, seq_store, seq_store2, seq_execute);
+    type sequencer_state is (seq_start, seq_fetch, seq_fetch2, seq_load, seq_load2, seq_store, seq_store2, seq_execute);
     signal current_state : sequencer_state;
     signal next_state : sequencer_state;
     signal next_state_final : sequencer_state;
     signal seq_fetch_next : sequencer_state;
+    signal seq_start_next : sequencer_state;
     signal seq_fetch2_next : sequencer_state;
     signal seq_load_next : sequencer_state;
     signal seq_load2_next : sequencer_state;
@@ -31,24 +33,29 @@ begin
     
     next_state_final <= seq_fetch when res = '1' else next_state;
     
-    seq_fetch_next <= seq_fetch2;
-    seq_fetch2_next <= seq_execute when done = '1' else seq_fetch2;
-    seq_execute_next <= seq_load    when Is_load = '1'  else
+    seq_start_next <= seq_load    when Is_load = '1'  else
                         seq_store   when Is_store = '1' else
                         seq_fetch;
+    
+    seq_fetch_next <= seq_fetch2;
+    seq_fetch2_next <= seq_execute when done = '1' else seq_fetch2;
+    seq_execute_next <= seq_start;
     seq_load_next   <= seq_load2;
     seq_load2_next  <= seq_execute when LS_busy = '0' else seq_load2;
     seq_store_next  <= seq_store2;
     seq_store2_next <= seq_execute when LS_busy = '0' else seq_store2;
     
     with current_state select
-        next_state <= seq_fetch2_next when seq_fetch2,
+        next_state <= seq_start_next when seq_start, 
+                      seq_fetch2_next when seq_fetch2,
                       seq_load_next when seq_load,
                       seq_load2_next when seq_load2,
                       seq_store_next when seq_store,
                       seq_store2_next when seq_store2,
                       seq_execute_next when seq_execute,
                       seq_fetch_next when others;
+    
+    clear_cw <= '1' when current_state = seq_start else '0';
     
     Start_load  <= '1' when current_state = seq_load  else '0';
     Start_store <= '1' when current_state = seq_store else '0';

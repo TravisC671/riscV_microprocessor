@@ -24,6 +24,7 @@ entity fetch_unit is
 		Error	     : out std_logic; -- Asserts when ERROR is detected
 		PCle         : out std_logic;
         PCie         : out std_logic;
+        Clear_cw : in std_logic;
 		-- User ports ends
     -- Global AXI ports
 		M_AXI_ACLK	: in std_logic;    -- Global Clock Signal.
@@ -88,6 +89,7 @@ architecture Behavioral of fetch_unit is
     signal fu_wait_next     : fetch_unit_state_t;
     signal fu_accept_next   : fetch_unit_state_t;
     signal IRLen : std_logic;
+    signal IRres : std_logic;
     signal res: std_logic;
 
 begin
@@ -119,10 +121,11 @@ begin
     PCie         <= '1' when current_state = fu_accept else '0';
 
     res <= not M_AXI_ARESETN;
+    IRres <= res or Clear_cw;
     
     IRLatch: entity work.generic_register (behavioral) 
         generic map (N => 32)
-        port map (din => M_AXI_RDATA, dout => Read_Data, clk => M_AXI_ACLK, res => res, en => IRLen);
+        port map (din => M_AXI_RDATA, dout => Read_Data, clk => M_AXI_ACLK, res => IRres, en => IRLen);
         
      M_AXI_AWID	     <= (others => '0');         
      M_AXI_AWADDR    <= (others => '0');       
