@@ -145,6 +145,7 @@ begin
     M_AXI_RREADY  <= '1' when current_state = ls_load_accept else '0';
 
     -- store signals
+    M_AXI_WDATA   <= Store_data;
     M_AXI_AWVALID <= '1' when current_state = ls_store_start else '0';
     M_AXI_WVALID  <= '1' when current_state = ls_store_data else '0';
     M_AXI_WLAST   <= '1' when current_state = ls_store_data else '0';
@@ -164,8 +165,7 @@ begin
     M_AXI_AWCACHE   <= "0000";        
     M_AXI_AWPROT    <= "000";       
     M_AXI_AWQOS     <= (others => '0');        
-    M_AXI_AWUSER    <= (others => '0');                   
-    M_AXI_WDATA     <= (others => '0');         
+    M_AXI_AWUSER    <= (others => '0');   
     M_AXI_WSTRB     <= (others => '0');         
     M_AXI_WUSER     <= (others => '0');                     
     M_AXI_ARID      <= (others => '0');

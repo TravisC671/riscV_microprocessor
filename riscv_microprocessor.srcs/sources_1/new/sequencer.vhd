@@ -16,7 +16,7 @@ entity sequencer is
 end sequencer;
 
 architecture Behavioral of sequencer is
-    type sequencer_state is (seq_start, seq_fetch, seq_fetch2, seq_load, seq_load2, seq_store, seq_store2, seq_execute);
+    type sequencer_state is (seq_start, seq_fetch, seq_fetch2, seq_load, seq_load2, seq_store, seq_store2, seq_ls_clear, seq_execute);
     signal current_state : sequencer_state;
     signal next_state : sequencer_state;
     signal next_state_final : sequencer_state;
@@ -28,6 +28,7 @@ architecture Behavioral of sequencer is
     signal seq_store_next : sequencer_state;
     signal seq_store2_next : sequencer_state;
     signal seq_execute_next : sequencer_state;
+    signal seq_ls_clear_next : sequencer_state;
 begin
     current_state <= next_state_final when rising_edge(clk);
     
@@ -39,12 +40,14 @@ begin
     
     seq_fetch_next <= seq_fetch2;
     seq_fetch2_next <= seq_execute when done = '1' else seq_fetch2;
-    seq_execute_next <= seq_start;
     seq_load_next   <= seq_load2;
-    seq_load2_next  <= seq_execute when LS_busy = '0' else seq_load2;
+    seq_load2_next  <= seq_ls_clear when LS_busy = '0' else seq_load2;
     seq_store_next  <= seq_store2;
-    seq_store2_next <= seq_execute when LS_busy = '0' else seq_store2;
+    seq_store2_next <= seq_ls_clear when LS_busy = '0' else seq_store2;
     
+    seq_ls_clear_next <= seq_execute;
+    seq_execute_next <= seq_start;
+
     with current_state select
         next_state <= seq_start_next when seq_start, 
                       seq_fetch2_next when seq_fetch2,
@@ -52,10 +55,12 @@ begin
                       seq_load2_next when seq_load2,
                       seq_store_next when seq_store,
                       seq_store2_next when seq_store2,
+                      seq_ls_clear_next when seq_ls_clear,
                       seq_execute_next when seq_execute,
                       seq_fetch_next when others;
     
-    clear_cw <= '1' when current_state = seq_start else '0';
+    clear_cw <= '1' when current_state = seq_start and Is_load = '0' and Is_store = '0' else 
+                '1' when current_state = seq_ls_clear else '0';
     
     Start_load  <= '1' when current_state = seq_load  else '0';
     Start_store <= '1' when current_state = seq_store else '0';
