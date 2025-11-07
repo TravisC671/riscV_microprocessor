@@ -4,16 +4,16 @@ use ieee.numeric_std.all;
 
 entity load_store_unit is
 	generic (
-		C_M_TARGET_SLAVE_BASE_ADDR : std_logic_vector	:= x"00008000"; -- Base address of targeted slave
+		C_M_TARGET_SLAVE_BASE_ADDR : std_logic_vector	:= x"C0000000"; -- Base address of targeted slave
 		C_M_AXI_BURST_LEN	     : integer	:= 1; -- Burst Length. Supports 1, 2, 4, 8, 16, 32, 64, 128, 256 burst lengths
 		C_M_AXI_ID_WIDTH	     : integer	:= 1; -- Thread ID Width
 		C_M_AXI_ADDR_WIDTH	   : integer	:= 32; -- Width of Address Bus
 		C_M_AXI_DATA_WIDTH	   : integer	:= 32; -- Width of Data Bus
-		C_M_AXI_AWUSER_WIDTH   : integer	:= 1; -- Width of User Write Address Bus
-		C_M_AXI_ARUSER_WIDTH   : integer	:= 1; -- Width of User Read Address Bus
-		C_M_AXI_WUSER_WIDTH	   : integer	:= 1; -- Width of User Write Data Bus
-		C_M_AXI_RUSER_WIDTH	   : integer	:= 1; -- Width of User Read Data Bus
-		C_M_AXI_BUSER_WIDTH	   : integer	:= 1  -- Width of User Response Bus
+		C_M_AXI_AWUSER_WIDTH   : integer	:= 32; -- Width of User Write Address Bus
+		C_M_AXI_ARUSER_WIDTH   : integer	:= 32; -- Width of User Read Address Bus
+		C_M_AXI_WUSER_WIDTH	   : integer	:= 32; -- Width of User Write Data Bus
+		C_M_AXI_RUSER_WIDTH	   : integer	:= 32; -- Width of User Read Data Bus
+		C_M_AXI_BUSER_WIDTH	   : integer	:= 32  -- Width of User Response Bus
     );
 	port (
 		-- Users can add ports here. These are SUGGESTED user ports.
@@ -156,9 +156,10 @@ begin
     PCie <= '1' when current_state = ls_exec else '0';
     
     Ls_busy <= '0' when current_state = ls_idle else '1';
+    Load_data <= M_AXI_RDATA;
     
-    M_AXI_AWID	     <= (others => '0');         
-    M_AXI_AWLEN	 <= (others => '0');        
+    M_AXI_AWID	    <= (others => '0');         
+    M_AXI_AWLEN	    <= (others => '0');        
     M_AXI_AWSIZE    <= "010";       
     M_AXI_AWBURST   <= "01";        
     M_AXI_AWLOCK    <= '0';                   

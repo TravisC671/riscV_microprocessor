@@ -9,11 +9,11 @@ entity fetch_unit is
 		C_M_AXI_ID_WIDTH	     : integer	:= 1; -- Thread ID Width
 		C_M_AXI_ADDR_WIDTH	   : integer	:= 32; -- Width of Address Bus
 		C_M_AXI_DATA_WIDTH	   : integer	:= 32; -- Width of Data Bus
-		C_M_AXI_AWUSER_WIDTH   : integer	:= 1; -- Width of User Write Address Bus
-		C_M_AXI_ARUSER_WIDTH   : integer	:= 1; -- Width of User Read Address Bus
-		C_M_AXI_WUSER_WIDTH	   : integer	:= 1; -- Width of User Write Data Bus
-		C_M_AXI_RUSER_WIDTH	   : integer	:= 1; -- Width of User Read Data Bus
-		C_M_AXI_BUSER_WIDTH	   : integer	:= 1  -- Width of User Response Bus
+		C_M_AXI_AWUSER_WIDTH   : integer	:= 32; -- Width of User Write Address Bus
+		C_M_AXI_ARUSER_WIDTH   : integer	:= 32; -- Width of User Read Address Bus
+		C_M_AXI_WUSER_WIDTH	   : integer	:= 32; -- Width of User Write Data Bus
+		C_M_AXI_RUSER_WIDTH	   : integer	:= 32; -- Width of User Read Data Bus
+		C_M_AXI_BUSER_WIDTH	   : integer	:= 32  -- Width of User Response Bus
     );
 	port (
 		-- Users can add ports here. These are SUGGESTED user ports.

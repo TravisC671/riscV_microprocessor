@@ -77,18 +77,18 @@ module system_axi_interconnect_0_imp_xbar_0 (
   input bit [7 : 0] s_axi_awcache,
   input bit [5 : 0] s_axi_awprot,
   input bit [7 : 0] s_axi_awqos,
-  input bit [1 : 0] s_axi_awuser,
+  input bit [63 : 0] s_axi_awuser,
   input bit [1 : 0] s_axi_awvalid,
   output bit [1 : 0] s_axi_awready,
   input bit [63 : 0] s_axi_wdata,
   input bit [7 : 0] s_axi_wstrb,
   input bit [1 : 0] s_axi_wlast,
-  input bit [1 : 0] s_axi_wuser,
+  input bit [63 : 0] s_axi_wuser,
   input bit [1 : 0] s_axi_wvalid,
   output bit [1 : 0] s_axi_wready,
   output bit [3 : 0] s_axi_bid,
   output bit [3 : 0] s_axi_bresp,
-  output bit [1 : 0] s_axi_buser,
+  output bit [63 : 0] s_axi_buser,
   output bit [1 : 0] s_axi_bvalid,
   input bit [1 : 0] s_axi_bready,
   input bit [3 : 0] s_axi_arid,
@@ -100,14 +100,14 @@ module system_axi_interconnect_0_imp_xbar_0 (
   input bit [7 : 0] s_axi_arcache,
   input bit [5 : 0] s_axi_arprot,
   input bit [7 : 0] s_axi_arqos,
-  input bit [1 : 0] s_axi_aruser,
+  input bit [63 : 0] s_axi_aruser,
   input bit [1 : 0] s_axi_arvalid,
   output bit [1 : 0] s_axi_arready,
   output bit [3 : 0] s_axi_rid,
   output bit [63 : 0] s_axi_rdata,
   output bit [3 : 0] s_axi_rresp,
   output bit [1 : 0] s_axi_rlast,
-  output bit [1 : 0] s_axi_ruser,
+  output bit [63 : 0] s_axi_ruser,
   output bit [1 : 0] s_axi_rvalid,
   input bit [1 : 0] s_axi_rready,
   output bit [7 : 0] m_axi_awid,
@@ -120,18 +120,18 @@ module system_axi_interconnect_0_imp_xbar_0 (
   output bit [11 : 0] m_axi_awprot,
   output bit [15 : 0] m_axi_awregion,
   output bit [15 : 0] m_axi_awqos,
-  output bit [3 : 0] m_axi_awuser,
+  output bit [127 : 0] m_axi_awuser,
   output bit [3 : 0] m_axi_awvalid,
   input bit [3 : 0] m_axi_awready,
   output bit [127 : 0] m_axi_wdata,
   output bit [15 : 0] m_axi_wstrb,
   output bit [3 : 0] m_axi_wlast,
-  output bit [3 : 0] m_axi_wuser,
+  output bit [127 : 0] m_axi_wuser,
   output bit [3 : 0] m_axi_wvalid,
   input bit [3 : 0] m_axi_wready,
   input bit [7 : 0] m_axi_bid,
   input bit [7 : 0] m_axi_bresp,
-  input bit [3 : 0] m_axi_buser,
+  input bit [127 : 0] m_axi_buser,
   input bit [3 : 0] m_axi_bvalid,
   output bit [3 : 0] m_axi_bready,
   output bit [7 : 0] m_axi_arid,
@@ -144,14 +144,14 @@ module system_axi_interconnect_0_imp_xbar_0 (
   output bit [11 : 0] m_axi_arprot,
   output bit [15 : 0] m_axi_arregion,
   output bit [15 : 0] m_axi_arqos,
-  output bit [3 : 0] m_axi_aruser,
+  output bit [127 : 0] m_axi_aruser,
   output bit [3 : 0] m_axi_arvalid,
   input bit [3 : 0] m_axi_arready,
   input bit [7 : 0] m_axi_rid,
   input bit [127 : 0] m_axi_rdata,
   input bit [7 : 0] m_axi_rresp,
   input bit [3 : 0] m_axi_rlast,
-  input bit [3 : 0] m_axi_ruser,
+  input bit [127 : 0] m_axi_ruser,
   input bit [3 : 0] m_axi_rvalid,
   output bit [3 : 0] m_axi_rready
 );
@@ -174,18 +174,18 @@ module system_axi_interconnect_0_imp_xbar_0 (aclk,aresetn,s_axi_awid,s_axi_awadd
   input bit [7 : 0] s_axi_awcache;
   input bit [5 : 0] s_axi_awprot;
   input bit [7 : 0] s_axi_awqos;
-  input bit [1 : 0] s_axi_awuser;
+  input bit [63 : 0] s_axi_awuser;
   input bit [1 : 0] s_axi_awvalid;
   output wire [1 : 0] s_axi_awready;
   input bit [63 : 0] s_axi_wdata;
   input bit [7 : 0] s_axi_wstrb;
   input bit [1 : 0] s_axi_wlast;
-  input bit [1 : 0] s_axi_wuser;
+  input bit [63 : 0] s_axi_wuser;
   input bit [1 : 0] s_axi_wvalid;
   output wire [1 : 0] s_axi_wready;
   output wire [3 : 0] s_axi_bid;
   output wire [3 : 0] s_axi_bresp;
-  output wire [1 : 0] s_axi_buser;
+  output wire [63 : 0] s_axi_buser;
   output wire [1 : 0] s_axi_bvalid;
   input bit [1 : 0] s_axi_bready;
   input bit [3 : 0] s_axi_arid;
@@ -197,14 +197,14 @@ module system_axi_interconnect_0_imp_xbar_0 (aclk,aresetn,s_axi_awid,s_axi_awadd
   input bit [7 : 0] s_axi_arcache;
   input bit [5 : 0] s_axi_arprot;
   input bit [7 : 0] s_axi_arqos;
-  input bit [1 : 0] s_axi_aruser;
+  input bit [63 : 0] s_axi_aruser;
   input bit [1 : 0] s_axi_arvalid;
   output wire [1 : 0] s_axi_arready;
   output wire [3 : 0] s_axi_rid;
   output wire [63 : 0] s_axi_rdata;
   output wire [3 : 0] s_axi_rresp;
   output wire [1 : 0] s_axi_rlast;
-  output wire [1 : 0] s_axi_ruser;
+  output wire [63 : 0] s_axi_ruser;
   output wire [1 : 0] s_axi_rvalid;
   input bit [1 : 0] s_axi_rready;
   output wire [7 : 0] m_axi_awid;
@@ -217,18 +217,18 @@ module system_axi_interconnect_0_imp_xbar_0 (aclk,aresetn,s_axi_awid,s_axi_awadd
   output wire [11 : 0] m_axi_awprot;
   output wire [15 : 0] m_axi_awregion;
   output wire [15 : 0] m_axi_awqos;
-  output wire [3 : 0] m_axi_awuser;
+  output wire [127 : 0] m_axi_awuser;
   output wire [3 : 0] m_axi_awvalid;
   input bit [3 : 0] m_axi_awready;
   output wire [127 : 0] m_axi_wdata;
   output wire [15 : 0] m_axi_wstrb;
   output wire [3 : 0] m_axi_wlast;
-  output wire [3 : 0] m_axi_wuser;
+  output wire [127 : 0] m_axi_wuser;
   output wire [3 : 0] m_axi_wvalid;
   input bit [3 : 0] m_axi_wready;
   input bit [7 : 0] m_axi_bid;
   input bit [7 : 0] m_axi_bresp;
-  input bit [3 : 0] m_axi_buser;
+  input bit [127 : 0] m_axi_buser;
   input bit [3 : 0] m_axi_bvalid;
   output wire [3 : 0] m_axi_bready;
   output wire [7 : 0] m_axi_arid;
@@ -241,14 +241,14 @@ module system_axi_interconnect_0_imp_xbar_0 (aclk,aresetn,s_axi_awid,s_axi_awadd
   output wire [11 : 0] m_axi_arprot;
   output wire [15 : 0] m_axi_arregion;
   output wire [15 : 0] m_axi_arqos;
-  output wire [3 : 0] m_axi_aruser;
+  output wire [127 : 0] m_axi_aruser;
   output wire [3 : 0] m_axi_arvalid;
   input bit [3 : 0] m_axi_arready;
   input bit [7 : 0] m_axi_rid;
   input bit [127 : 0] m_axi_rdata;
   input bit [7 : 0] m_axi_rresp;
   input bit [3 : 0] m_axi_rlast;
-  input bit [3 : 0] m_axi_ruser;
+  input bit [127 : 0] m_axi_ruser;
   input bit [3 : 0] m_axi_rvalid;
   output wire [3 : 0] m_axi_rready;
 endmodule

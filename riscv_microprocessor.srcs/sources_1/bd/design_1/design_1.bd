@@ -367,23 +367,23 @@
                 "value_src": "auto"
               },
               "AWUSER_WIDTH": {
-                "value": "1",
+                "value": "32",
                 "value_src": "auto"
               },
               "ARUSER_WIDTH": {
-                "value": "1",
+                "value": "32",
                 "value_src": "auto"
               },
               "WUSER_WIDTH": {
-                "value": "1",
+                "value": "32",
                 "value_src": "auto"
               },
               "RUSER_WIDTH": {
-                "value": "1",
+                "value": "32",
                 "value_src": "auto"
               },
               "BUSER_WIDTH": {
-                "value": "1",
+                "value": "32",
                 "value_src": "auto"
               },
               "READ_WRITE_MODE": {
@@ -511,7 +511,7 @@
               "AWUSER": {
                 "physical_name": "M_AXI_AWUSER",
                 "direction": "O",
-                "left": "0",
+                "left": "31",
                 "right": "0"
               },
               "AWVALID": {
@@ -541,7 +541,7 @@
               "WUSER": {
                 "physical_name": "M_AXI_WUSER",
                 "direction": "O",
-                "left": "0",
+                "left": "31",
                 "right": "0"
               },
               "WVALID": {
@@ -567,7 +567,7 @@
               "BUSER": {
                 "physical_name": "M_AXI_BUSER",
                 "direction": "I",
-                "left": "0",
+                "left": "31",
                 "right": "0"
               },
               "BVALID": {
@@ -633,7 +633,7 @@
               "ARUSER": {
                 "physical_name": "M_AXI_ARUSER",
                 "direction": "O",
-                "left": "0",
+                "left": "31",
                 "right": "0"
               },
               "ARVALID": {
@@ -669,7 +669,7 @@
               "RUSER": {
                 "physical_name": "M_AXI_RUSER",
                 "direction": "I",
-                "left": "0",
+                "left": "31",
                 "right": "0"
               },
               "RVALID": {
