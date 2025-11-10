@@ -1234,7 +1234,7 @@
               "S01_AXI": {
                 "bd_attributes": {
                   "BRIDGES": {
-                    "value": "M01_AXI:M02_AXI:M03_AXI",
+                    "value": "M00_AXI:M01_AXI:M02_AXI:M03_AXI",
                     "value_src": "auto"
                   },
                   "TYPE": {
@@ -1245,6 +1245,7 @@
                 "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
                 "mode": "Slave",
                 "bridges": [
+                  "M00_AXI",
                   "M01_AXI",
                   "M02_AXI",
                   "M03_AXI"

@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/fetch_unit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fetch_unit'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sources_1/new/microprocessor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'microprocessor'

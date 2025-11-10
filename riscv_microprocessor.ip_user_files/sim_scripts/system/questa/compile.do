@@ -109,15 +109,15 @@ vlog -work axi_crossbar_v2_1_37 -64 -incr -mfcu  "+incdir+../../../../riscv_micr
 vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a9be" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef" \
 "../../../bd/system/ip/system_axi_interconnect_0_imp_xbar_0/sim/system_axi_interconnect_0_imp_xbar_0.v" \
 
-vcom -work xil_defaultlib -64 -93  \
-"../../../bd/system/sim/system.vhd" \
-
 vlog -work axi_protocol_converter_v2_1_36 -64 -incr -mfcu  "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a9be" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef" \
 "../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/f0b6/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 
 vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a9be" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef" \
 "../../../bd/system/ip/system_axi_interconnect_0_imp_auto_pc_0/sim/system_axi_interconnect_0_imp_auto_pc_0.v" \
 "../../../bd/system/ip/system_axi_interconnect_0_imp_auto_pc_1/sim/system_axi_interconnect_0_imp_auto_pc_1.v" \
+
+vcom -work xil_defaultlib -64 -93  \
+"../../../bd/system/sim/system.vhd" \
 
 vlog -work xil_defaultlib \
 "glbl.v"
