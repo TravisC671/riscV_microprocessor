@@ -50,6 +50,7 @@ entity load_store_unit is
 		M_AXI_WUSER	: out std_logic_vector(C_M_AXI_WUSER_WIDTH-1 downto 0); -- Optional User-defined signal in the write data channel.
 		M_AXI_WVALID	: out std_logic; -- Write valid. This signal indicates that valid write data and strobes are available
 		M_AXI_WREADY	: in std_logic; -- Write ready. This signal indicates that the slave can accept the write data.
+		M_AXI_WACK	: out std_logic; -- Write ready. This signal indicates that the slave can accept the write data.
     -- AXI Write Response Channel
 		M_AXI_BID	: in std_logic_vector(C_M_AXI_ID_WIDTH-1 downto 0); -- Master Interface Write Response.
 		M_AXI_BRESP	: in std_logic_vector(1 downto 0); -- Write response. This signal indicates the status of the write transaction.
@@ -123,7 +124,7 @@ begin
     
     --store path
     ls_store_start_next <= ls_store_data when M_AXI_AWREADY = '1'else ls_store_start;
-    ls_store_data_next  <= ls_store_wait when M_AXI_WREADY = '0' else ls_store_data;
+    ls_store_data_next  <= ls_store_wait; -- when M_AXI_WREADY = '0' else ls_store_data;
     ls_store_wait_next  <= ls_store_accept when M_AXI_BVALID = '1' else ls_store_wait;
     ls_store_accept_next <= ls_exec;
     
@@ -142,15 +143,16 @@ begin
     
     -- load signals
     M_AXI_ARVALID <= '1' when current_state = ls_load_start  else '0';
-    M_AXI_RREADY  <= '1' when current_state = ls_load_accept else '0';
+    M_AXI_RREADY  <= '1' when current_state = ls_load_wait   else '0';
 
     -- store signals
     M_AXI_WDATA   <= Store_data;
     M_AXI_AWVALID <= '1' when current_state = ls_store_start else '0';
     M_AXI_WVALID  <= '1' when current_state = ls_store_data else '0';
     M_AXI_WLAST   <= '1' when current_state = ls_store_data else '0';
-    M_AXI_BREADY  <= '1' when current_state = ls_store_accept else '0';
-    --maybe add WACK if not working
+    M_AXI_WACK    <= '1' when current_state = ls_store_data else '0';
+    M_AXI_BREADY  <= '1' when current_state = ls_store_data or 
+                              current_state = ls_store_wait else '0';
     
     PCle <= '1' when current_state = ls_exec else '0';
     PCie <= '1' when current_state = ls_exec else '0';

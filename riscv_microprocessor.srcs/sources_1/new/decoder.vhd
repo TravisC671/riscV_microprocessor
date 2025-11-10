@@ -10,6 +10,7 @@ end decoder;
 architecture Behavioral of decoder is
     signal r_cw : control_word;
     signal i_cw : control_word;
+    signal load_cw : control_word;
     signal s_cw : control_word;
     signal b_cw : control_word;
     signal u_cw : control_word;
@@ -24,6 +25,7 @@ begin
     
     r_cw <= handle_r_type(instruction);
     i_cw <= handle_i_type(instruction);
+    load_cw <= handle_load_type(instruction);
     s_cw <= handle_s_type(instruction);
     b_cw <= handle_b_type(instruction);
     u_cw <= handle_u_type(instruction);
@@ -50,6 +52,7 @@ begin
     with (instr_type) select
         CW <= r_cw when r_type,
               i_cw when i_type,
+              load_cw when load_type,
               s_cw when s_type,
               b_cw when b_type,
               u_cw when u_type,

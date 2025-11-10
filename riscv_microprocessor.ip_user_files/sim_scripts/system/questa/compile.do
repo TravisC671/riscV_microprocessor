@@ -81,7 +81,6 @@ vcom -work axi_gpio_v2_0_37 -64 -93  \
 vcom -work xil_defaultlib -64 -93  \
 "../../../bd/system/ip/system_axi_gpio_0_0/sim/system_axi_gpio_0_0.vhd" \
 "../../../bd/system/ip/system_axi_gpio_1_0/sim/system_axi_gpio_1_0.vhd" \
-"../../../bd/system/sim/system.vhd" \
 
 vlog -work generic_baseblocks_v2_1_2 -64 -incr -mfcu  "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a9be" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef" \
 "../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
@@ -109,6 +108,9 @@ vlog -work axi_crossbar_v2_1_37 -64 -incr -mfcu  "+incdir+../../../../riscv_micr
 
 vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a9be" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef" \
 "../../../bd/system/ip/system_axi_interconnect_0_imp_xbar_0/sim/system_axi_interconnect_0_imp_xbar_0.v" \
+
+vcom -work xil_defaultlib -64 -93  \
+"../../../bd/system/sim/system.vhd" \
 
 vlog -work axi_protocol_converter_v2_1_36 -64 -incr -mfcu  "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a9be" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef" \
 "../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/f0b6/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \

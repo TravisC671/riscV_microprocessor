@@ -16,12 +16,12 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1,745.950 ns"></ZoomStartTime>
-      <ZoomEndTime time="1,887.751 ns"></ZoomEndTime>
-      <Cursor1Time time="1,593.900 ns"></Cursor1Time>
+      <ZoomStartTime time="1,387.600 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,672.001 ns"></ZoomEndTime>
+      <Cursor1Time time="1,448.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="192"></NameColumnWidth>
+      <NameColumnWidth column_width="188"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="26" />
@@ -100,6 +100,16 @@
    <wvobject type="protoinst" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/D_M_AXI">
       <obj_property name="ElementShortName">D_M_AXI</obj_property>
       <obj_property name="ObjectShortName">D_M_AXI</obj_property>
+      <obj_property name="children_use_element_short_name">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+      <obj_property name="EnumTransactionColorTable">0=blank 1=#D399FF 2=pink</obj_property>
+      <obj_property name="EnumTransactionValueTable">0=blank;1=Read;2=Write;3=Read/Write</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">turquoise</obj_property>
+      <obj_property name="Render_Data">/microprocessor_testbench/uut/system_i/microprocessor_0/D_M_AXI.readWriteSummary</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CellHeight">36</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject type="group" fp_name="group264">
       <obj_property name="label">fetch Unit</obj_property>
@@ -181,8 +191,8 @@
          <obj_property name="ObjectShortName">M_AXI_AWQOS[3:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/fetch_unit/M_AXI_AWUSER">
-         <obj_property name="ElementShortName">M_AXI_AWUSER[0:0]</obj_property>
-         <obj_property name="ObjectShortName">M_AXI_AWUSER[0:0]</obj_property>
+         <obj_property name="ElementShortName">M_AXI_AWUSER[31:0]</obj_property>
+         <obj_property name="ObjectShortName">M_AXI_AWUSER[31:0]</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/fetch_unit/M_AXI_AWVALID">
          <obj_property name="ElementShortName">M_AXI_AWVALID</obj_property>
@@ -205,8 +215,8 @@
          <obj_property name="ObjectShortName">M_AXI_WLAST</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/fetch_unit/M_AXI_WUSER">
-         <obj_property name="ElementShortName">M_AXI_WUSER[0:0]</obj_property>
-         <obj_property name="ObjectShortName">M_AXI_WUSER[0:0]</obj_property>
+         <obj_property name="ElementShortName">M_AXI_WUSER[31:0]</obj_property>
+         <obj_property name="ObjectShortName">M_AXI_WUSER[31:0]</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/fetch_unit/M_AXI_WVALID">
          <obj_property name="ElementShortName">M_AXI_WVALID</obj_property>
@@ -225,8 +235,8 @@
          <obj_property name="ObjectShortName">M_AXI_BRESP[1:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/fetch_unit/M_AXI_BUSER">
-         <obj_property name="ElementShortName">M_AXI_BUSER[0:0]</obj_property>
-         <obj_property name="ObjectShortName">M_AXI_BUSER[0:0]</obj_property>
+         <obj_property name="ElementShortName">M_AXI_BUSER[31:0]</obj_property>
+         <obj_property name="ObjectShortName">M_AXI_BUSER[31:0]</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/fetch_unit/M_AXI_BVALID">
          <obj_property name="ElementShortName">M_AXI_BVALID</obj_property>
@@ -273,8 +283,8 @@
          <obj_property name="ObjectShortName">M_AXI_ARQOS[3:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/fetch_unit/M_AXI_ARUSER">
-         <obj_property name="ElementShortName">M_AXI_ARUSER[0:0]</obj_property>
-         <obj_property name="ObjectShortName">M_AXI_ARUSER[0:0]</obj_property>
+         <obj_property name="ElementShortName">M_AXI_ARUSER[31:0]</obj_property>
+         <obj_property name="ObjectShortName">M_AXI_ARUSER[31:0]</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/fetch_unit/M_AXI_ARVALID">
          <obj_property name="ElementShortName">M_AXI_ARVALID</obj_property>
@@ -301,8 +311,8 @@
          <obj_property name="ObjectShortName">M_AXI_RLAST</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/fetch_unit/M_AXI_RUSER">
-         <obj_property name="ElementShortName">M_AXI_RUSER[0:0]</obj_property>
-         <obj_property name="ObjectShortName">M_AXI_RUSER[0:0]</obj_property>
+         <obj_property name="ElementShortName">M_AXI_RUSER[31:0]</obj_property>
+         <obj_property name="ObjectShortName">M_AXI_RUSER[31:0]</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/fetch_unit/M_AXI_RVALID">
          <obj_property name="ElementShortName">M_AXI_RVALID</obj_property>
@@ -980,6 +990,10 @@
             <obj_property name="ElementShortName">M_AXI_BREADY</obj_property>
             <obj_property name="ObjectShortName">M_AXI_BREADY</obj_property>
          </wvobject>
+         <wvobject type="logic" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/load_store/M_AXI_WACK">
+            <obj_property name="ElementShortName">M_AXI_WACK</obj_property>
+            <obj_property name="ObjectShortName">M_AXI_WACK</obj_property>
+         </wvobject>
       </wvobject>
       <wvobject type="group" fp_name="group2206">
          <obj_property name="label">all axi</obj_property>
@@ -1065,8 +1079,8 @@
             <obj_property name="ObjectShortName">M_AXI_AWQOS[3:0]</obj_property>
          </wvobject>
          <wvobject type="array" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/load_store/M_AXI_AWUSER">
-            <obj_property name="ElementShortName">M_AXI_AWUSER[0:0]</obj_property>
-            <obj_property name="ObjectShortName">M_AXI_AWUSER[0:0]</obj_property>
+            <obj_property name="ElementShortName">M_AXI_AWUSER[31:0]</obj_property>
+            <obj_property name="ObjectShortName">M_AXI_AWUSER[31:0]</obj_property>
          </wvobject>
          <wvobject type="logic" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/load_store/M_AXI_AWVALID">
             <obj_property name="ElementShortName">M_AXI_AWVALID</obj_property>
@@ -1089,8 +1103,8 @@
             <obj_property name="ObjectShortName">M_AXI_WLAST</obj_property>
          </wvobject>
          <wvobject type="array" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/load_store/M_AXI_WUSER">
-            <obj_property name="ElementShortName">M_AXI_WUSER[0:0]</obj_property>
-            <obj_property name="ObjectShortName">M_AXI_WUSER[0:0]</obj_property>
+            <obj_property name="ElementShortName">M_AXI_WUSER[31:0]</obj_property>
+            <obj_property name="ObjectShortName">M_AXI_WUSER[31:0]</obj_property>
          </wvobject>
          <wvobject type="logic" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/load_store/M_AXI_WVALID">
             <obj_property name="ElementShortName">M_AXI_WVALID</obj_property>
@@ -1109,8 +1123,8 @@
             <obj_property name="ObjectShortName">M_AXI_BRESP[1:0]</obj_property>
          </wvobject>
          <wvobject type="array" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/load_store/M_AXI_BUSER">
-            <obj_property name="ElementShortName">M_AXI_BUSER[0:0]</obj_property>
-            <obj_property name="ObjectShortName">M_AXI_BUSER[0:0]</obj_property>
+            <obj_property name="ElementShortName">M_AXI_BUSER[31:0]</obj_property>
+            <obj_property name="ObjectShortName">M_AXI_BUSER[31:0]</obj_property>
          </wvobject>
          <wvobject type="logic" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/load_store/M_AXI_BVALID">
             <obj_property name="ElementShortName">M_AXI_BVALID</obj_property>
@@ -1157,8 +1171,8 @@
             <obj_property name="ObjectShortName">M_AXI_ARQOS[3:0]</obj_property>
          </wvobject>
          <wvobject type="array" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/load_store/M_AXI_ARUSER">
-            <obj_property name="ElementShortName">M_AXI_ARUSER[0:0]</obj_property>
-            <obj_property name="ObjectShortName">M_AXI_ARUSER[0:0]</obj_property>
+            <obj_property name="ElementShortName">M_AXI_ARUSER[31:0]</obj_property>
+            <obj_property name="ObjectShortName">M_AXI_ARUSER[31:0]</obj_property>
          </wvobject>
          <wvobject type="logic" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/load_store/M_AXI_ARVALID">
             <obj_property name="ElementShortName">M_AXI_ARVALID</obj_property>
@@ -1185,8 +1199,8 @@
             <obj_property name="ObjectShortName">M_AXI_RLAST</obj_property>
          </wvobject>
          <wvobject type="array" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/load_store/M_AXI_RUSER">
-            <obj_property name="ElementShortName">M_AXI_RUSER[0:0]</obj_property>
-            <obj_property name="ObjectShortName">M_AXI_RUSER[0:0]</obj_property>
+            <obj_property name="ElementShortName">M_AXI_RUSER[31:0]</obj_property>
+            <obj_property name="ObjectShortName">M_AXI_RUSER[31:0]</obj_property>
          </wvobject>
          <wvobject type="logic" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/load_store/M_AXI_RVALID">
             <obj_property name="ElementShortName">M_AXI_RVALID</obj_property>

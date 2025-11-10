@@ -1234,7 +1234,7 @@
               "S01_AXI": {
                 "bd_attributes": {
                   "BRIDGES": {
-                    "value": "M00_AXI:M01_AXI:M02_AXI:M03_AXI",
+                    "value": "M01_AXI:M02_AXI:M03_AXI",
                     "value_src": "auto"
                   },
                   "TYPE": {
@@ -1245,7 +1245,6 @@
                 "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
                 "mode": "Slave",
                 "bridges": [
-                  "M00_AXI",
                   "M01_AXI",
                   "M02_AXI",
                   "M03_AXI"
@@ -1929,14 +1928,14 @@
           "axi_bram_ctrl_1/s_axi_aclk",
           "axi_gpio_0/s_axi_aclk",
           "axi_gpio_1/s_axi_aclk",
-          "microprocessor_0/CLK",
           "axi_interconnect_0/ACLK",
           "axi_interconnect_0/M00_ACLK",
           "axi_interconnect_0/M01_ACLK",
           "axi_interconnect_0/M02_ACLK",
           "axi_interconnect_0/M03_ACLK",
           "axi_interconnect_0/S00_ACLK",
-          "axi_interconnect_0/S01_ACLK"
+          "axi_interconnect_0/S01_ACLK",
+          "microprocessor_0/CLK"
         ]
       },
       "ilconstant_0_dout": {

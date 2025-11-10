@@ -84,7 +84,6 @@ vcom -work axi_gpio_v2_0_37 -93  -incr \
 vcom -work xil_defaultlib -93  -incr \
 "../../../bd/system/ip/system_axi_gpio_0_0/sim/system_axi_gpio_0_0.vhd" \
 "../../../bd/system/ip/system_axi_gpio_1_0/sim/system_axi_gpio_1_0.vhd" \
-"../../../bd/system/sim/system.vhd" \
 
 vlog -work generic_baseblocks_v2_1_2  -incr -v2k5 "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a9be" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef" -l xpm -l xil_defaultlib -l proc_sys_reset_v5_0_17 -l axi_bram_ctrl_v4_1_13 -l blk_mem_gen_v8_4_11 -l axi_lite_ipif_v3_0_4 -l interrupt_control_v3_1_5 -l axi_gpio_v2_0_37 -l generic_baseblocks_v2_1_2 -l axi_infrastructure_v1_1_0 -l axi_register_slice_v2_1_35 -l fifo_generator_v13_2_13 -l axi_data_fifo_v2_1_35 -l axi_crossbar_v2_1_37 -l axi_protocol_converter_v2_1_36 \
 "../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
@@ -112,6 +111,9 @@ vlog -work axi_crossbar_v2_1_37  -incr -v2k5 "+incdir+../../../../riscv_micropro
 
 vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a9be" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef" -l xpm -l xil_defaultlib -l proc_sys_reset_v5_0_17 -l axi_bram_ctrl_v4_1_13 -l blk_mem_gen_v8_4_11 -l axi_lite_ipif_v3_0_4 -l interrupt_control_v3_1_5 -l axi_gpio_v2_0_37 -l generic_baseblocks_v2_1_2 -l axi_infrastructure_v1_1_0 -l axi_register_slice_v2_1_35 -l fifo_generator_v13_2_13 -l axi_data_fifo_v2_1_35 -l axi_crossbar_v2_1_37 -l axi_protocol_converter_v2_1_36 \
 "../../../bd/system/ip/system_axi_interconnect_0_imp_xbar_0/sim/system_axi_interconnect_0_imp_xbar_0.v" \
+
+vcom -work xil_defaultlib -93  -incr \
+"../../../bd/system/sim/system.vhd" \
 
 vlog -work axi_protocol_converter_v2_1_36  -incr -v2k5 "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a9be" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef" -l xpm -l xil_defaultlib -l proc_sys_reset_v5_0_17 -l axi_bram_ctrl_v4_1_13 -l blk_mem_gen_v8_4_11 -l axi_lite_ipif_v3_0_4 -l interrupt_control_v3_1_5 -l axi_gpio_v2_0_37 -l generic_baseblocks_v2_1_2 -l axi_infrastructure_v1_1_0 -l axi_register_slice_v2_1_35 -l fifo_generator_v13_2_13 -l axi_data_fifo_v2_1_35 -l axi_crossbar_v2_1_37 -l axi_protocol_converter_v2_1_36 \
 "../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/f0b6/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \

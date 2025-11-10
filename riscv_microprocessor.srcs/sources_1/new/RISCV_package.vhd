@@ -21,11 +21,12 @@ package RISCV_package is
         IMM : std_logic_vector(XLen-1 downto 0);
     end record control_word;
     
-    type op_type is (r_type, i_type, s_type, b_type, u_type, j_type, illegal);
+    type op_type is (r_type, i_type, load_type, s_type, b_type, u_type, j_type, illegal);
     
     function get_op_type(opcode: in std_logic_vector (6 downto 0)) return op_type;
     function handle_r_type(instruction: in std_logic_vector (31 downto 0)) return control_word;
     function handle_i_type(instruction: in std_logic_vector (31 downto 0)) return control_word;
+    function handle_load_type(instruction: in std_logic_vector (31 downto 0)) return control_word;
     function handle_s_type(instruction: in std_logic_vector (31 downto 0)) return control_word;
     function handle_b_type(instruction: in std_logic_vector (31 downto 0)) return control_word;
     function handle_u_type(instruction: in std_logic_vector (31 downto 0)) return control_word;
@@ -37,8 +38,10 @@ package body RISCV_package is
         begin
         
         case opcode is
-            when "1100111" | "0000011" | "0010011" =>
+            when "1100111"| "0010011" =>
                 return i_type;
+            when "0000011" =>
+                return load_type;
             when "0110111" | "0010111" =>
                 return u_type;
             when "1101111" => 
@@ -81,7 +84,7 @@ package body RISCV_package is
     function handle_i_type(instruction: in std_logic_vector (31 downto 0)) return control_word is
             variable imm_value : std_logic_vector(XLen-1 downto 0);
             variable alu_var : std_logic;
-            variable is_load, is_store, pca_sel : std_logic := '0';
+            variable is_store, pca_sel : std_logic := '0';
         begin
         
         imm_value := (31 downto 11 => instruction(31)) & instruction(30 downto 25) & instruction(24 downto 21) & instruction(20);
@@ -90,11 +93,6 @@ package body RISCV_package is
             alu_var := instruction(30);
         else
             alu_var := '0';
-        end if;
-        
-        if instruction(6 downto 0) = "0000011" then
-            is_load := '1';
-            pca_sel := '1';
         end if;
         
         if instruction(6 downto 0) = "0100011" then 
@@ -112,7 +110,7 @@ package body RISCV_package is
             PCie => '1',
             PCle => '0',
             isBR => '0',
-            isLoad => is_load,
+            isLoad => '0',
             isStore => is_store,
             BRcond => "000",
             ALUFunc => alu_var & instruction(14 downto 12),
@@ -120,6 +118,33 @@ package body RISCV_package is
         );
     
     end handle_i_type;
+    
+    function handle_load_type(instruction: in std_logic_vector (31 downto 0)) return control_word is
+            variable imm_value : std_logic_vector(XLen-1 downto 0);
+        begin
+        
+        imm_value := (31 downto 11 => instruction(31)) & instruction(30 downto 25) & instruction(24 downto 21) & instruction(20);
+
+        
+        return (
+            Asel => instruction(19 downto 15),
+            Bsel => "00000",
+            Dsel => instruction(11 downto 7),
+            Dlen => '1',
+            PCAsel => '1',
+            IMMBsel => '1',
+            PCDsel => '0',
+            PCie => '1',
+            PCle => '0',
+            isBR => '0',
+            isLoad => '1',
+            isStore => '0',
+            BRcond => "000",
+            ALUFunc => "0000",
+            IMM => imm_value
+        );
+    
+    end handle_load_type;
 
     function handle_s_type(instruction: in std_logic_vector (31 downto 0)) return control_word is
             variable imm_value : std_logic_vector(XLen-1 downto 0);
