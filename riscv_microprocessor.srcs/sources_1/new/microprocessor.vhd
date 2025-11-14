@@ -219,7 +219,7 @@ begin
         PCAsel => CW_decoded.PCAsel,
         IMMBsel => CW_decoded.IMMBsel,
         PCDsel => CW_decoded.PCDsel,
-        PCie => CW_decoded.PCie and exec,
+        PCie => fu_PCie,
         PCle => CW_decoded.PCle,
         isBR => CW_decoded.isBR,
         isLoad => CW_decoded.isLoad,
@@ -238,7 +238,6 @@ begin
                   is_store => is_store,
                   store_data => Store_Data,
                   load_data => Load_Data,
-                  data_len => '0', --unused rn
                   ls_addr => LS_address
                   );
     

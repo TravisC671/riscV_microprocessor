@@ -12,8 +12,7 @@ entity datapath is
            is_load: out STD_LOGIC;
            is_store: out STD_LOGIC;
            store_data: out STD_LOGIC_VECTOR (XLen-1 downto 0);
-           load_data: in STD_LOGIC_VECTOR (XLen-1 downto 0);
-           data_len: in STD_LOGIC
+           load_data: in STD_LOGIC_VECTOR (XLen-1 downto 0)
            );
 end datapath;
 

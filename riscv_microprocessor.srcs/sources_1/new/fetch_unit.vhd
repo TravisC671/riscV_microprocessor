@@ -80,20 +80,23 @@ entity fetch_unit is
 end fetch_unit;
 
 architecture Behavioral of fetch_unit is
-    type fetch_unit_state_t is (fu_idle, fu_start, fu_wait, fu_accept);
+    signal latchedAddr : std_logic_vector(C_M_AXI_ADDR_WIDTH-1 downto 0); 
+    type fetch_unit_state_t is (fu_idle, fu_start, fu_pcie, fu_wait, fu_accept);
     signal current_state    : fetch_unit_state_t;
     signal next_state       : fetch_unit_state_t;
     signal next_state_final : fetch_unit_state_t;
     signal fu_idle_next     : fetch_unit_state_t;
     signal fu_start_next    : fetch_unit_state_t;
+    signal fu_pcie_next    : fetch_unit_state_t;
     signal fu_wait_next     : fetch_unit_state_t;
     signal fu_accept_next   : fetch_unit_state_t;
     signal IRLen : std_logic;
+    signal getIR : std_logic;    
     signal IRres : std_logic;
     signal res: std_logic;
 
 begin
-    M_AXI_ARADDR <= Read_address;
+    M_AXI_ARADDR <= latchedAddr;
     
     current_state <= next_state_final when rising_edge(M_AXI_ACLK);
     
@@ -101,13 +104,15 @@ begin
     
     
     fu_idle_next   <= fu_start  when Start_read = '1'    else fu_idle;
-    fu_start_next  <= fu_wait   when M_AXI_ARREADY = '1' else fu_start;
+    fu_start_next  <= fu_pcie   when M_AXI_ARREADY = '1' else fu_start;
+    fu_pcie_next   <= fu_wait;
     fu_wait_next   <= fu_accept when M_AXI_RVALID = '1'  else fu_wait;
     fu_accept_next <= fu_idle;
     
     with current_state select
         next_state <= fu_idle_next   when fu_idle,
                       fu_start_next  when fu_start,
+                      fu_pcie_next  when fu_pcie,
                       fu_wait_next   when fu_wait,
                       fu_accept_next when fu_accept,
                       fu_idle        when others;
@@ -115,13 +120,17 @@ begin
     M_AXI_ARVALID <= '1' when current_state = fu_start else '0';
     M_AXI_RREADY <= '1' when current_state = fu_accept else '0';
     
-    PCle         <= '1' when current_state = fu_accept else '0';
     Read_Done    <= '1' when current_state = fu_accept else '0';
+    getIR        <= '1' when current_state = fu_accept else '0';
     IRLen        <= '1' when current_state = fu_accept else '0';
-    PCie         <= '1' when current_state = fu_accept else '0';
+    PCie         <= '1' when current_state = fu_pcie else '0';
 
     res <= not M_AXI_ARESETN;
     IRres <= res or Clear_cw;
+    
+    pc_latch: entity work.generic_register (behavioral)
+            generic map (N => C_M_AXI_ADDR_WIDTH )
+            port map ( din => Read_address, dout => latchedAddr, clk => M_AXI_ACLK, res => res, en => getIR);
     
     IRLatch: entity work.generic_register (behavioral) 
         generic map (N => 32)

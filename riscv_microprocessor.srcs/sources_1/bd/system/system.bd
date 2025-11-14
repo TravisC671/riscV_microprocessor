@@ -943,7 +943,7 @@
         "has_run_ip_tcl": "true",
         "parameters": {
           "Coe_File": {
-            "value": "load_store_test.coe"
+            "value": "/opt/packages/cylon_test.coe"
           },
           "Load_Init_File": {
             "value": "true"
