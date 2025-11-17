@@ -12,7 +12,8 @@ entity datapath is
            is_load: out STD_LOGIC;
            is_store: out STD_LOGIC;
            store_data: out STD_LOGIC_VECTOR (XLen-1 downto 0);
-           load_data: in STD_LOGIC_VECTOR (XLen-1 downto 0)
+           load_data: in STD_LOGIC_VECTOR (XLen-1 downto 0);
+           load_data_ready : in STD_LOGIC
            );
 end datapath;
 
@@ -27,6 +28,7 @@ architecture Behavioral of datapath is
     signal RegBOut : STD_LOGIC_VECTOR (XLen-1 downto 0);
     signal BTout : STD_LOGIC;
     signal BRen : STD_LOGIC;
+    signal IMM : std_logic_vector(XLen-1 downto 0);
 begin
     register_file: entity work.register_file (Behavioral)
         generic map (XLen => XLen)
@@ -39,8 +41,9 @@ begin
                    Bbus => RegBOut,
                    clk => clk, res => res);
      
+     IMM <= load_data when load_data_ready = '1' and Controller.isLoad = '1' else Controller.IMM;
      Abus <= RegAOut when (Controller.PCAsel = '0') else PCout;
-     Bbus <= RegBOut when (Controller.IMMBsel = '0') else Controller.IMM;
+     Bbus <= RegBOut when (Controller.IMMBsel = '0') else IMM;
      
      ALU: entity work.ALU (Behavioral)
         generic map (XLen => XLen)

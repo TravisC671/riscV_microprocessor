@@ -22,6 +22,7 @@ entity load_store_unit is
         Address     : in std_logic_vector(C_M_AXI_ADDR_WIDTH-1 downto 0); -- address where data is loaded/stored
         Store_data  : in  std_logic_vector(0 to C_M_AXI_DATA_WIDTH*C_M_AXI_BURST_LEN - 1); -- Data to be sent
         Load_data   : out std_logic_vector(0 to C_M_AXI_DATA_WIDTH*C_M_AXI_BURST_LEN - 1); -- Data that was read (modify as needed)
+        L_data_ready : out std_logic;
         Ls_busy     : out std_logic;
 		Error	    : out std_logic; -- Asserts when ERROR is detected
 		PCle        : out std_logic;
@@ -106,8 +107,8 @@ architecture Behavioral of load_store_unit is
     signal ls_store_accept_next : load_store_state_t; 
     signal ls_exec_next : load_store_state_t; 
 begin
-    M_AXI_ARADDR <= std_logic_vector(unsigned(Address) + unsigned(C_M_TARGET_SLAVE_BASE_ADDR));
-    M_AXI_AWADDR <= std_logic_vector(unsigned(Address) + unsigned(C_M_TARGET_SLAVE_BASE_ADDR));
+    M_AXI_ARADDR <= Address;
+    M_AXI_AWADDR <= Address;
     
     current_state <= next_state_final when rising_edge(M_AXI_ACLK);
     
@@ -144,7 +145,9 @@ begin
     -- load signals
     M_AXI_ARVALID <= '1' when current_state = ls_load_start  else '0';
     M_AXI_RREADY  <= '1' when current_state = ls_load_wait   else '0';
-
+    
+    L_data_ready <= M_AXI_RVALID;
+    
     -- store signals
     M_AXI_WDATA   <= Store_data;
     M_AXI_AWVALID <= '1' when current_state = ls_store_start else '0';
