@@ -83,6 +83,9 @@ entity load_store_unit is
 end load_store_unit;
 
 architecture Behavioral of load_store_unit is
+    signal ls_latched : std_logic_vector(0 to C_M_AXI_DATA_WIDTH*C_M_AXI_BURST_LEN - 1); 
+    signal ldl_en : std_logic; 
+    signal ldl_res : std_logic; 
     type load_store_state_t is (
         ls_idle, 
         ls_load_start, 
@@ -146,8 +149,18 @@ begin
     M_AXI_ARVALID <= '1' when current_state = ls_load_start  else '0';
     M_AXI_RREADY  <= '1' when current_state = ls_load_wait   else '0';
     
-    L_data_ready <= M_AXI_RVALID;
+    L_data_ready <= M_AXI_RVALID when current_state = ls_load_wait   else 
+                             '1' when current_state = ls_load_accept else '0';
     
+    ldl_en <= '1' when current_state = ls_load_wait else '0';
+    ldl_res <= '1' when current_state = ls_exec else '0';
+    
+    L_data_latch: entity work.generic_register (behavioral) 
+        generic map (N => 32)
+        port map (din => M_AXI_RDATA, dout => ls_latched, clk => M_AXI_ACLK, res => ldl_res, en => ldl_en);
+    
+    Load_data <= ls_latched;
+
     -- store signals
     M_AXI_WDATA   <= Store_data;
     M_AXI_AWVALID <= '1' when current_state = ls_store_start else '0';
@@ -157,11 +170,12 @@ begin
     M_AXI_BREADY  <= '1' when current_state = ls_store_data or 
                               current_state = ls_store_wait else '0';
     
+    
+    
     PCle <= '1' when current_state = ls_exec else '0';
     PCie <= '1' when current_state = ls_exec else '0';
     
     Ls_busy <= '0' when current_state = ls_idle else '1';
-    Load_data <= M_AXI_RDATA;
     
     M_AXI_AWID	    <= (others => '0');         
     M_AXI_AWLEN	    <= (others => '0');        

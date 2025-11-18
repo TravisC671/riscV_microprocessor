@@ -27,23 +27,26 @@ architecture Behavioral of datapath is
     signal RegAOut : STD_LOGIC_VECTOR (XLen-1 downto 0);
     signal RegBOut : STD_LOGIC_VECTOR (XLen-1 downto 0);
     signal BTout : STD_LOGIC;
+    signal Dlen : STD_LOGIC;
     signal BRen : STD_LOGIC;
-    signal IMM : std_logic_vector(XLen-1 downto 0);
+    signal load_ready : std_logic;
 begin
+     load_ready <= '1' when load_data_ready = '1' and Controller.isLoad = '1' else '0';
+     Dlen <= load_ready or Controller.Dlen;
+
     register_file: entity work.register_file (Behavioral)
         generic map (XLen => XLen)
         port map ( Asel => Controller.Asel, 
                    Bsel => Controller.Bsel, 
                    Dsel => Controller.Dsel,
-                   Dlen => Controller.Dlen,
+                   Dlen => Dlen,
                    Dbus => Dbus,
                    Abus => RegAOut,
                    Bbus => RegBOut,
                    clk => clk, res => res);
-     
-     IMM <= load_data when load_data_ready = '1' and Controller.isLoad = '1' else Controller.IMM;
+
      Abus <= RegAOut when (Controller.PCAsel = '0') else PCout;
-     Bbus <= RegBOut when (Controller.IMMBsel = '0') else IMM;
+     Bbus <= RegBOut when (Controller.IMMBsel = '0') else Controller.IMM;
      
      ALU: entity work.ALU (Behavioral)
         generic map (XLen => XLen)
@@ -62,7 +65,9 @@ begin
      pc_addr <= PCout;
      
      ls_addr <= Dout;
-     Dbus <= PCout when Controller.PCDsel = '1' else Dout;
+     Dbus <= PCout when Controller.PCDsel = '1' else 
+             load_data when load_ready = '1' else Dout;
+             
      store_data <= RegBOut;
      is_load <= Controller.isLoad;
      is_store <= Controller.isStore;

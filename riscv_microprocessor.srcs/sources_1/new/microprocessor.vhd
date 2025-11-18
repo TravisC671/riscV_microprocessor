@@ -221,7 +221,7 @@ begin
         IMMBsel => CW_decoded.IMMBsel,
         PCDsel => CW_decoded.PCDsel,
         PCie => fu_PCie,
-        PCle => CW_decoded.PCle,
+        PCle => CW_decoded.PCle and exec,
         isBR => CW_decoded.isBR,
         isLoad => CW_decoded.isLoad,
         isStore => CW_decoded.isStore,

@@ -19,8 +19,6 @@ end register_file;
 architecture Behavioral of register_file is
     type registerOutput is array (XLen-1 downto 0) of std_logic_vector(XLen - 1 downto 0);
     signal decodeDsel: std_logic_vector(XLen - 1 downto 0);
-    signal decodeAsel: std_logic_vector(XLen - 1 downto 0);
-    signal decodeBsel: std_logic_vector(XLen - 1 downto 0);
     signal regOut: registerOutput;
 begin
     decodeDsel <= decode(Dsel, Dlen);
