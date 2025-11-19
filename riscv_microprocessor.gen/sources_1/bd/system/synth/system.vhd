@@ -2,7 +2,7 @@
 --Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
---Date        : Mon Nov 17 13:46:00 2025
+--Date        : Wed Nov 19 14:11:41 2025
 --Host        : cenglab16 running 64-bit Ubuntu 24.04.3 LTS
 --Command     : generate_target system.bd
 --Design      : system
@@ -2512,10 +2512,10 @@ entity system is
     reset : in STD_LOGIC;
     sys_clock : in STD_LOGIC
   );
-  attribute core_generation_info : string;
-  attribute core_generation_info of system : entity is "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=21,numReposBlks=14,numNonXlnxBlks=0,numHierBlks=7,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=6,da_board_cnt=11,da_bram_cntlr_cnt=3,da_clkrst_cnt=13,synth_mode=None}";
-  attribute hw_handoff : string;
-  attribute hw_handoff of system : entity is "system.hwdef";
+  attribute CORE_GENERATION_INFO : string;
+  attribute CORE_GENERATION_INFO of system : entity is "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=21,numReposBlks=14,numNonXlnxBlks=0,numHierBlks=7,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=6,da_board_cnt=11,da_bram_cntlr_cnt=3,da_clkrst_cnt=13,synth_mode=None}";
+  attribute HW_HANDOFF : string;
+  attribute HW_HANDOFF of system : entity is "system.hwdef";
 end system;
 
 architecture STRUCTURE of system is
@@ -3010,17 +3010,17 @@ architecture STRUCTURE of system is
   signal NLW_rst_clk_wiz_100M_bus_struct_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_clk_wiz_100M_interconnect_aresetn_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_clk_wiz_100M_peripheral_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
-  attribute x_interface_info : string;
-  attribute x_interface_info of reset : signal is "xilinx.com:signal:reset:1.0 RST.RESET RST";
-  attribute x_interface_parameter : string;
-  attribute x_interface_parameter of reset : signal is "XIL_INTERFACENAME RST.RESET, INSERT_VIP 0, POLARITY ACTIVE_LOW";
-  attribute x_interface_info of sys_clock : signal is "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK";
-  attribute x_interface_parameter of sys_clock : signal is "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN system_sys_clock, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute x_interface_info of dip_switches_16bits_tri_i : signal is "xilinx.com:interface:gpio:1.0 dip_switches_16bits TRI_I";
-  attribute x_interface_mode : string;
-  attribute x_interface_mode of dip_switches_16bits_tri_i : signal is "Master";
-  attribute x_interface_info of led_16bits_tri_o : signal is "xilinx.com:interface:gpio:1.0 led_16bits TRI_O";
-  attribute x_interface_mode of led_16bits_tri_o : signal is "Master";
+  attribute X_INTERFACE_INFO : string;
+  attribute X_INTERFACE_INFO of reset : signal is "xilinx.com:signal:reset:1.0 RST.RESET RST";
+  attribute X_INTERFACE_PARAMETER : string;
+  attribute X_INTERFACE_PARAMETER of reset : signal is "XIL_INTERFACENAME RST.RESET, INSERT_VIP 0, POLARITY ACTIVE_LOW";
+  attribute X_INTERFACE_INFO of sys_clock : signal is "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK";
+  attribute X_INTERFACE_PARAMETER of sys_clock : signal is "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN system_sys_clock, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute X_INTERFACE_INFO of dip_switches_16bits_tri_i : signal is "xilinx.com:interface:gpio:1.0 dip_switches_16bits TRI_I";
+  attribute X_INTERFACE_MODE : string;
+  attribute X_INTERFACE_MODE of dip_switches_16bits_tri_i : signal is "Master";
+  attribute X_INTERFACE_INFO of led_16bits_tri_o : signal is "xilinx.com:interface:gpio:1.0 led_16bits TRI_O";
+  attribute X_INTERFACE_MODE of led_16bits_tri_o : signal is "Master";
 begin
 axi_bram_ctrl_0: component system_axi_bram_ctrl_0_0
      port map (

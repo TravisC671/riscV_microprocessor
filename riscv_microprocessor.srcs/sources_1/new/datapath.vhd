@@ -7,6 +7,7 @@ entity datapath is
     Port ( Controller : in control_word;
            clk, res : in STD_LOGIC;
            pc_addr : out STD_LOGIC_VECTOR (XLen-1 downto 0);
+           pc_addr_curr : out STD_LOGIC_VECTOR (XLen-1 downto 0);
            ls_addr : out STD_LOGIC_VECTOR (XLen-1 downto 0);
            fetch_done: out STD_LOGIC;
            is_load: out STD_LOGIC;
@@ -22,6 +23,7 @@ architecture Behavioral of datapath is
     signal Dbus : STD_LOGIC_VECTOR (XLen-1 downto 0);
     signal Dout : STD_LOGIC_VECTOR (XLen-1 downto 0);
     signal PCout : STD_LOGIC_VECTOR (XLen-1 downto 0);
+    signal Curr_PC : STD_LOGIC_VECTOR (XLen-1 downto 0);
     signal Abus : STD_LOGIC_VECTOR (XLen-1 downto 0);
     signal Bbus : STD_LOGIC_VECTOR (XLen-1 downto 0);
     signal RegAOut : STD_LOGIC_VECTOR (XLen-1 downto 0);
@@ -45,7 +47,7 @@ begin
                    Bbus => RegBOut,
                    clk => clk, res => res);
 
-     Abus <= RegAOut when (Controller.PCAsel = '0') else PCout;
+     Abus <= RegAOut when (Controller.PCAsel = '0') else Curr_PC;
      Bbus <= RegBOut when (Controller.IMMBsel = '0') else Controller.IMM;
      
      ALU: entity work.ALU (Behavioral)
@@ -62,6 +64,11 @@ begin
         generic map (XLen => XLen)
         port map (BRen => BRen, PCie => Controller.PCie, clk => clk, res => res, Din => Dout, PCout => PCout);
      
+     current_pc: entity work.generic_register (Behavioral)
+        generic map(N => 32)
+        port map ( din => PCout, dout => Curr_PC, clk => clk, res => res, en => Controller.PCie);
+     
+     pc_addr_curr <= Curr_PC;
      pc_addr <= PCout;
      
      ls_addr <= Dout;

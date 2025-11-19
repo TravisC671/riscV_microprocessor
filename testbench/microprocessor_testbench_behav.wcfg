@@ -16,15 +16,23 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="6,287.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="6,573.201 ns"></ZoomEndTime>
-      <Cursor1Time time="6,025.000 ns"></Cursor1Time>
+      <ZoomStartTime time="5,191.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="5,331.801 ns"></ZoomEndTime>
+      <Cursor1Time time="5,235.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="173"></NameColumnWidth>
-      <ValueColumnWidth column_width="64"></ValueColumnWidth>
+      <NameColumnWidth column_width="178"></NameColumnWidth>
+      <ValueColumnWidth column_width="82"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="14" />
+   <WVObjectSize size="17" />
+   <wvobject type="other" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/fetch_unit/current_state">
+      <obj_property name="ElementShortName">current_state</obj_property>
+      <obj_property name="ObjectShortName">current_state</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/sequencer/current_state">
+      <obj_property name="ElementShortName">current_state</obj_property>
+      <obj_property name="ObjectShortName">current_state</obj_property>
+   </wvobject>
    <wvobject type="logic" fp_name="/microprocessor_testbench/sys_clock">
       <obj_property name="ElementShortName">sys_clock</obj_property>
       <obj_property name="ObjectShortName">sys_clock</obj_property>
@@ -53,9 +61,23 @@
       <obj_property name="CustomSignalColor">#00FFFF</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
+   <wvobject type="array" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/Current_address">
+      <obj_property name="ElementShortName">Current_address[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Current_address[31:0]</obj_property>
+   </wvobject>
    <wvobject type="protoinst" fp_name="/microprocessor_testbench/uut/system_i/axi_bram_ctrl_0/S_AXI">
       <obj_property name="ElementShortName">S_AXI</obj_property>
       <obj_property name="ObjectShortName">S_AXI</obj_property>
+      <obj_property name="children_use_element_short_name">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+      <obj_property name="EnumTransactionColorTable">0=blank 1=#D399FF 2=pink</obj_property>
+      <obj_property name="EnumTransactionValueTable">0=blank;1=Read;2=Write;3=Read/Write</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">turquoise</obj_property>
+      <obj_property name="Render_Data">/microprocessor_testbench/uut/system_i/axi_bram_ctrl_0/S_AXI.readWriteSummary</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CellHeight">36</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject type="protoinst" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/D_M_AXI">
       <obj_property name="ElementShortName">D_M_AXI</obj_property>
@@ -374,6 +396,7 @@
    <wvobject type="group" fp_name="group414">
       <obj_property name="label">sequencer</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject type="logic" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/sequencer/clk">
          <obj_property name="ElementShortName">clk</obj_property>
          <obj_property name="ObjectShortName">clk</obj_property>
@@ -584,7 +607,6 @@
    <wvobject type="group" fp_name="group2754">
       <obj_property name="label">datapath</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject type="group" fp_name="group2755">
          <obj_property name="label">register_file</obj_property>
          <obj_property name="DisplayName">label</obj_property>
@@ -632,6 +654,7 @@
          <wvobject type="array" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/datapath/register_file/regOut">
             <obj_property name="ElementShortName">regOut[31:0][31:0]</obj_property>
             <obj_property name="ObjectShortName">regOut[31:0][31:0]</obj_property>
+            <obj_property name="isExpanded"></obj_property>
          </wvobject>
          <wvobject type="other" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/datapath/register_file/XLen">
             <obj_property name="ElementShortName">XLen</obj_property>
@@ -709,6 +732,7 @@
       <wvobject type="group" fp_name="group1456">
          <obj_property name="label">btu</obj_property>
          <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
          <wvobject type="group" fp_name="group3457">
             <obj_property name="label">Bram</obj_property>
             <obj_property name="DisplayName">label</obj_property>
@@ -983,67 +1007,6 @@
             <obj_property name="ElementShortName">Controller</obj_property>
             <obj_property name="ObjectShortName">Controller</obj_property>
             <obj_property name="isExpanded"></obj_property>
-            <wvobject type="array" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/datapath/Controller.Asel">
-               <obj_property name="ElementShortName">.Asel[4:0]</obj_property>
-               <obj_property name="ObjectShortName">.Asel[4:0]</obj_property>
-            </wvobject>
-            <wvobject type="array" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/datapath/Controller.Bsel">
-               <obj_property name="ElementShortName">.Bsel[4:0]</obj_property>
-               <obj_property name="ObjectShortName">.Bsel[4:0]</obj_property>
-            </wvobject>
-            <wvobject type="array" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/datapath/Controller.Dsel">
-               <obj_property name="ElementShortName">.Dsel[4:0]</obj_property>
-               <obj_property name="ObjectShortName">.Dsel[4:0]</obj_property>
-               <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/datapath/Controller.Dlen">
-               <obj_property name="ElementShortName">.Dlen</obj_property>
-               <obj_property name="ObjectShortName">.Dlen</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/datapath/Controller.PCAsel">
-               <obj_property name="ElementShortName">.PCAsel</obj_property>
-               <obj_property name="ObjectShortName">.PCAsel</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/datapath/Controller.IMMBsel">
-               <obj_property name="ElementShortName">.IMMBsel</obj_property>
-               <obj_property name="ObjectShortName">.IMMBsel</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/datapath/Controller.PCDsel">
-               <obj_property name="ElementShortName">.PCDsel</obj_property>
-               <obj_property name="ObjectShortName">.PCDsel</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/datapath/Controller.PCie">
-               <obj_property name="ElementShortName">.PCie</obj_property>
-               <obj_property name="ObjectShortName">.PCie</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/datapath/Controller.PCle">
-               <obj_property name="ElementShortName">.PCle</obj_property>
-               <obj_property name="ObjectShortName">.PCle</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/datapath/Controller.isBR">
-               <obj_property name="ElementShortName">.isBR</obj_property>
-               <obj_property name="ObjectShortName">.isBR</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/datapath/Controller.isLoad">
-               <obj_property name="ElementShortName">.isLoad</obj_property>
-               <obj_property name="ObjectShortName">.isLoad</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/datapath/Controller.isStore">
-               <obj_property name="ElementShortName">.isStore</obj_property>
-               <obj_property name="ObjectShortName">.isStore</obj_property>
-            </wvobject>
-            <wvobject type="array" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/datapath/Controller.BRcond">
-               <obj_property name="ElementShortName">.BRcond[2:0]</obj_property>
-               <obj_property name="ObjectShortName">.BRcond[2:0]</obj_property>
-            </wvobject>
-            <wvobject type="array" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/datapath/Controller.ALUFunc">
-               <obj_property name="ElementShortName">.ALUFunc[3:0]</obj_property>
-               <obj_property name="ObjectShortName">.ALUFunc[3:0]</obj_property>
-            </wvobject>
-            <wvobject type="array" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/datapath/Controller.IMM">
-               <obj_property name="ElementShortName">.IMM[31:0]</obj_property>
-               <obj_property name="ObjectShortName">.IMM[31:0]</obj_property>
-            </wvobject>
          </wvobject>
          <wvobject type="logic" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/datapath/clk">
             <obj_property name="ElementShortName">clk</obj_property>
@@ -1052,6 +1015,10 @@
          <wvobject type="logic" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/datapath/res">
             <obj_property name="ElementShortName">res</obj_property>
             <obj_property name="ObjectShortName">res</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/datapath/Curr_PC">
+            <obj_property name="ElementShortName">Curr_PC[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Curr_PC[31:0]</obj_property>
          </wvobject>
          <wvobject type="array" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/datapath/pc_addr">
             <obj_property name="ElementShortName">pc_addr[31:0]</obj_property>

@@ -121,7 +121,7 @@ begin
     M_AXI_RREADY <= '1' when current_state = fu_accept else '0';
     
     Read_Done    <= '1' when current_state = fu_accept else '0';
-    getIR        <= '1' when current_state = fu_accept else '0';
+    getIR        <= '1' when current_state = fu_idle else '0';
     IRLen        <= '1' when current_state = fu_accept else '0';
     PCie         <= '1' when current_state = fu_pcie else '0';
 

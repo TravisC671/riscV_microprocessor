@@ -131,6 +131,7 @@ architecture Behavioral of microprocessor is
     
     signal Start_read : std_logic;
     signal Read_address: std_logic_vector(C_M_AXI_ADDR_WIDTH-1 downto 0);
+    signal Current_address: std_logic_vector(C_M_AXI_ADDR_WIDTH-1 downto 0);
     signal LS_address: std_logic_vector(C_M_AXI_ADDR_WIDTH-1 downto 0);
     signal Read_Done: std_logic;
     signal Read_Data: std_logic_vector(0 to C_M_AXI_DATA_WIDTH*C_M_AXI_BURST_LEN - 1);
@@ -234,6 +235,7 @@ begin
                   clk => CLK, 
                   res => Reset, 
                   pc_addr => Read_address,
+                  pc_addr_curr => Current_address,
                   fetch_done => n_ls_busy,
                   is_load => is_load,
                   is_store => is_store,
