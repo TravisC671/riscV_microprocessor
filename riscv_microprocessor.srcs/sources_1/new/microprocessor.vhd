@@ -219,6 +219,7 @@ begin
         Dsel => CW_decoded.Dsel,
         DLen => CW_decoded.DLen and exec,
         PCAsel => CW_decoded.PCAsel,
+        PCAUsel => CW_decoded.PCAUsel,
         IMMBsel => CW_decoded.IMMBsel,
         PCDsel => CW_decoded.PCDsel,
         PCie => fu_PCie,

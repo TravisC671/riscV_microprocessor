@@ -36,6 +36,7 @@ begin
                   dip_switches_16bits_tri_i => dip_switches, 
                   led_16bits_tri_o => led_16bits);
 
+    dip_switches <= (others => '0');
     sys_clock <= not sys_clock after 5 ns;
     reset <= '1' after 20 ns;
 end Behavioral;

@@ -37,6 +37,7 @@ begin
         Dsel    => (others => '0'),
         Dlen    => '0',
         PCAsel  => '0',
+        PCAUsel => '0',
         IMMBsel => '0',
         PCDsel  => '0',
         PCie    => '0',

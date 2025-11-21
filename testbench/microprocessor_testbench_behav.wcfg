@@ -16,13 +16,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="5,191.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="5,331.801 ns"></ZoomEndTime>
-      <Cursor1Time time="5,235.000 ns"></Cursor1Time>
+      <ZoomStartTime time="1,122.800 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,405.201 ns"></ZoomEndTime>
+      <Cursor1Time time="1,235.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="178"></NameColumnWidth>
-      <ValueColumnWidth column_width="82"></ValueColumnWidth>
+      <ValueColumnWidth column_width="78"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="17" />
    <wvobject type="other" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/fetch_unit/current_state">
@@ -472,7 +472,6 @@
       <wvobject type="array" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/datapath/Controller">
          <obj_property name="ElementShortName">Controller</obj_property>
          <obj_property name="ObjectShortName">Controller</obj_property>
-         <obj_property name="isExpanded"></obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/datapath/clk">
          <obj_property name="ElementShortName">clk</obj_property>
@@ -607,10 +606,10 @@
    <wvobject type="group" fp_name="group2754">
       <obj_property name="label">datapath</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject type="group" fp_name="group2755">
          <obj_property name="label">register_file</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="isExpanded"></obj_property>
          <wvobject type="array" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/datapath/register_file/Asel">
             <obj_property name="ElementShortName">Asel[4:0]</obj_property>
             <obj_property name="ObjectShortName">Asel[4:0]</obj_property>
@@ -664,6 +663,7 @@
       <wvobject type="group" fp_name="group2756">
          <obj_property name="label">alu</obj_property>
          <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
          <wvobject type="array" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/datapath/ALU/Abus">
             <obj_property name="ElementShortName">Abus[31:0]</obj_property>
             <obj_property name="ObjectShortName">Abus[31:0]</obj_property>

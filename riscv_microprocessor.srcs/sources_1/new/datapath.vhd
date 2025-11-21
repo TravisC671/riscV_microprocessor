@@ -47,8 +47,9 @@ begin
                    Bbus => RegBOut,
                    clk => clk, res => res);
 
-     Abus <= RegAOut when (Controller.PCAsel = '0') else Curr_PC;
-     Bbus <= RegBOut when (Controller.IMMBsel = '0') else Controller.IMM;
+     Abus <= PCout when Controller.PCAsel = '1' else  
+             Curr_PC when Controller.PCAUsel = '1' else RegAOut;
+     Bbus <= RegBOut when Controller.IMMBsel = '0' else Controller.IMM;
      
      ALU: entity work.ALU (Behavioral)
         generic map (XLen => XLen)
