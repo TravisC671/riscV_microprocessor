@@ -16,20 +16,24 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1,122.800 ns"></ZoomStartTime>
-      <ZoomEndTime time="1,405.201 ns"></ZoomEndTime>
-      <Cursor1Time time="1,235.000 ns"></Cursor1Time>
+      <ZoomStartTime time="8,300.200 ns"></ZoomStartTime>
+      <ZoomEndTime time="8,583.401 ns"></ZoomEndTime>
+      <Cursor1Time time="8,495.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="178"></NameColumnWidth>
-      <ValueColumnWidth column_width="78"></ValueColumnWidth>
+      <ValueColumnWidth column_width="74"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="17" />
+   <WVObjectSize size="18" />
    <wvobject type="other" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/fetch_unit/current_state">
       <obj_property name="ElementShortName">current_state</obj_property>
       <obj_property name="ObjectShortName">current_state</obj_property>
    </wvobject>
    <wvobject type="other" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/sequencer/current_state">
+      <obj_property name="ElementShortName">current_state</obj_property>
+      <obj_property name="ObjectShortName">current_state</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/load_store/current_state">
       <obj_property name="ElementShortName">current_state</obj_property>
       <obj_property name="ObjectShortName">current_state</obj_property>
    </wvobject>
@@ -552,6 +556,7 @@
       <wvobject type="array" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/datapath/register_file/regOut">
          <obj_property name="ElementShortName">regOut[31:0][31:0]</obj_property>
          <obj_property name="ObjectShortName">regOut[31:0][31:0]</obj_property>
+         <obj_property name="isExpanded"></obj_property>
       </wvobject>
       <wvobject type="group" fp_name="group1350">
          <obj_property name="label">load_store</obj_property>

@@ -188,8 +188,8 @@ package body RISCV_package is
             Bsel => instruction(24 downto 20),
             Dsel => "00000",
             Dlen => '0',
-            PCAsel => '1',
-            PCAUsel => '0',
+            PCAsel => '0',
+            PCAUsel => '1',
             IMMBsel => '1',
             PCDsel => '0',
             PCie => '0', --Should you increment on branch? I don't think so
@@ -206,15 +206,13 @@ package body RISCV_package is
     
      function handle_u_type(instruction: in std_logic_vector (31 downto 0)) return control_word is
             variable imm_value : std_logic_vector(XLen-1 downto 0);
-            variable PCAUsel, isLoad : std_logic := '0';
+            variable PCAUsel : std_logic := '0';
         begin
         
         imm_value := instruction(31) & instruction(30 downto 20) & instruction(19 downto 12) & (11 downto 0 => '0');
         
         if instruction(6 downto 0) = "0010111" then 
             PCAUsel := '1';
-        else
-            isLoad := '1';
         end if;
         
         return (
@@ -229,7 +227,7 @@ package body RISCV_package is
             PCie => '1',
             PCle => '0',
             isBR => '0',
-            isLoad => isLoad,
+            isLoad => '0',
             isStore => '0',
             BRcond => "000",
             ALUFunc => "0000",
@@ -249,8 +247,8 @@ package body RISCV_package is
             Bsel => "00000",
             Dsel => instruction(11 downto 7),
             Dlen => '1',
-            PCAsel => '1',
-            PCAUsel => '0',
+            PCAsel => '0',
+            PCAUsel => '1',
             IMMBsel => '1',
             PCDsel => '1',
             PCie => '1',

@@ -128,7 +128,7 @@ begin
     
     --store path
     ls_store_start_next <= ls_store_data when M_AXI_AWREADY = '1'else ls_store_start;
-    ls_store_data_next  <= ls_store_wait; -- when M_AXI_WREADY = '0' else ls_store_data;
+    ls_store_data_next  <= ls_store_wait when M_AXI_WREADY = '1' else ls_store_data;
     ls_store_wait_next  <= ls_store_accept when M_AXI_BVALID = '1' else ls_store_wait;
     ls_store_accept_next <= ls_exec;
     
