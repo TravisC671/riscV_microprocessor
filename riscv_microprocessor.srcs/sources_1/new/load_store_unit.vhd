@@ -186,7 +186,7 @@ begin
     M_AXI_AWPROT    <= "000";       
     M_AXI_AWQOS     <= (others => '0');        
     M_AXI_AWUSER    <= (others => '0');   
-    M_AXI_WSTRB     <= (others => '0');         
+    M_AXI_WSTRB     <= (others => '1');         
     M_AXI_WUSER     <= (others => '0');                     
     M_AXI_ARID      <= (others => '0');
     M_AXI_ARLEN     <= (others => '0');

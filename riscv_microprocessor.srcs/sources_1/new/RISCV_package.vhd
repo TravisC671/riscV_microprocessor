@@ -86,7 +86,7 @@ package body RISCV_package is
     function handle_i_type(instruction: in std_logic_vector (31 downto 0)) return control_word is
             variable imm_value : std_logic_vector(XLen-1 downto 0);
             variable alu_var : std_logic;
-            variable is_store, pca_sel : std_logic := '0';
+            variable is_store, pca_sel, pcle : std_logic := '0';
         begin
         
         imm_value := (31 downto 11 => instruction(31)) & instruction(30 downto 25) & instruction(24 downto 21) & instruction(20);
@@ -99,6 +99,8 @@ package body RISCV_package is
         
         if instruction(6 downto 0) = "0100011" then 
             is_store := '1';
+        elsif instruction(6 downto 0) = "1100111" then
+            pcle := '1';
         end if;
         
         return (
@@ -111,7 +113,7 @@ package body RISCV_package is
             IMMBsel => '1',
             PCDsel => '0',
             PCie => '1',
-            PCle => '0',
+            PCle => pcle,
             isBR => '0',
             isLoad => '0',
             isStore => is_store,
@@ -251,7 +253,7 @@ package body RISCV_package is
             PCAUsel => '1',
             IMMBsel => '1',
             PCDsel => '1',
-            PCie => '1',
+            PCie => '0',
             PCle => '1',
             isBR => '0',
             isLoad => '0',
