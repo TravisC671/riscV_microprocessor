@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"microprocessor_testbench_func_impl.vhd" \
+"../../../../../riscv_microprocessor.srcs/sim_1/new/microprocessor_testbench.vhd" \
+
+# Do not sort compile order
+nosort

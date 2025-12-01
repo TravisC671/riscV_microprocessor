@@ -3,6 +3,7 @@ verilog xil_defaultlib -i "../../../../../../../../opt/Xilinx/2025.1/data/rsb/bu
 "../../../bd/system/ip/system_clk_wiz_0/system_clk_wiz_0.v" \
 "../../../bd/system/ip/system_axi_bram_ctrl_0_bram_1/sim/system_axi_bram_ctrl_0_bram_1.v" \
 "../../../bd/system/ip/system_blk_mem_gen_0_0/sim/system_blk_mem_gen_0_0.v" \
+"../../../bd/system/ip/system_smartconnect_0_0/bd_0/sim/bd_919a.v" \
 "../../../bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_0/sim/bd_919a_one_0.v" \
 
 sv xil_defaultlib -i "../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef" --include "/opt/Xilinx/2025.1/Vivado/data/xilinx_vip/include" --include "../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a9be" --include "../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" --include "../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a8e4/hdl/verilog" --include "../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/ec67/hdl" \
@@ -57,11 +58,6 @@ sv xil_defaultlib -i "../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef"
 "../../../bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_50/sim/bd_919a_m03wn_0.sv" \
 "../../../bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_51/sim/bd_919a_m03bn_0.sv" \
 "../../../bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_52/sim/bd_919a_m03e_0.sv" \
-
-verilog xil_defaultlib -i "../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef" --include "/opt/Xilinx/2025.1/Vivado/data/xilinx_vip/include" --include "../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a9be" --include "../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" --include "../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a8e4/hdl/verilog" --include "../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/ec67/hdl" \
-"../../../bd/system/ip/system_smartconnect_0_0/bd_0/sim/bd_919a.v" \
-
-sv xil_defaultlib -i "../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef" --include "/opt/Xilinx/2025.1/Vivado/data/xilinx_vip/include" --include "../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a9be" --include "../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" --include "../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a8e4/hdl/verilog" --include "../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/ec67/hdl" \
 "../../../bd/system/ip/system_smartconnect_0_0/sim/system_smartconnect_0_0.sv" \
 
 verilog xil_defaultlib "glbl.v"

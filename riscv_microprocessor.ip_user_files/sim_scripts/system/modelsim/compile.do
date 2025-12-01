@@ -91,7 +91,9 @@ vcom -work axi_gpio_v2_0_37 -64 -93  \
 vcom -work xil_defaultlib -64 -93  \
 "../../../bd/system/ip/system_axi_gpio_0_0/sim/system_axi_gpio_0_0.vhd" \
 "../../../bd/system/ip/system_axi_gpio_1_0/sim/system_axi_gpio_1_0.vhd" \
-"../../../bd/system/sim/system.vhd" \
+
+vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a9be" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a8e4/hdl/verilog" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
+"../../../bd/system/ip/system_smartconnect_0_0/bd_0/sim/bd_919a.v" \
 
 vlog -work xlconstant_v1_1_10 -64 -incr -mfcu  "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a9be" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a8e4/hdl/verilog" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
 "../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v" \
@@ -194,9 +196,6 @@ vlog -work xil_defaultlib -64 -incr -mfcu  -sv -L axi_vip_v1_1_21 -L smartconnec
 "../../../bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_51/sim/bd_919a_m03bn_0.sv" \
 "../../../bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_52/sim/bd_919a_m03e_0.sv" \
 
-vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a9be" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a8e4/hdl/verilog" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
-"../../../bd/system/ip/system_smartconnect_0_0/bd_0/sim/bd_919a.v" \
-
 vlog -work axi_infrastructure_v1_1_0 -64 -incr -mfcu  "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a9be" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a8e4/hdl/verilog" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
 "../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v" \
 
@@ -208,6 +207,9 @@ vlog -work axi_vip_v1_1_21 -64 -incr -mfcu  -sv -L axi_vip_v1_1_21 -L smartconne
 
 vlog -work xil_defaultlib -64 -incr -mfcu  -sv -L axi_vip_v1_1_21 -L smartconnect_v1_0 -L xilinx_vip "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a9be" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/a8e4/hdl/verilog" "+incdir+../../../../riscv_microprocessor.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../../../../../opt/Xilinx/2025.1/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
 "../../../bd/system/ip/system_smartconnect_0_0/sim/system_smartconnect_0_0.sv" \
+
+vcom -work xil_defaultlib -64 -93  \
+"../../../bd/system/sim/system.vhd" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

@@ -7,8 +7,7 @@
       "name": "system",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "None",
-      "tool_version": "2025.1",
-      "validated": "true"
+      "tool_version": "2025.1"
     },
     "design_tree": {
       "microprocessor_0": "",
@@ -57,20 +56,8 @@
         "type": "clk",
         "direction": "I",
         "parameters": {
-          "CLK_DOMAIN": {
-            "value": "system_sys_clock",
-            "value_src": "default"
-          },
           "FREQ_HZ": {
             "value": "100000000"
-          },
-          "FREQ_TOLERANCE_HZ": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
           },
           "PHASE": {
             "value": "0.0"
@@ -81,10 +68,6 @@
         "type": "rst",
         "direction": "I",
         "parameters": {
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
           "POLARITY": {
             "value": "ACTIVE_LOW"
           }
@@ -119,7 +102,7 @@
                 "value_src": "constant"
               },
               "FREQ_HZ": {
-                "value": "100000000",
+                "value": "90000000",
                 "value_src": "ip_prop"
               },
               "ID_WIDTH": {
@@ -468,7 +451,7 @@
                 "value_src": "constant"
               },
               "FREQ_HZ": {
-                "value": "100000000",
+                "value": "90000000",
                 "value_src": "ip_prop"
               },
               "ID_WIDTH": {
@@ -818,7 +801,7 @@
                 "value_src": "constant"
               },
               "FREQ_HZ": {
-                "value": "100000000",
+                "value": "90000000",
                 "value_src": "ip_prop"
               },
               "PHASE": {
@@ -863,11 +846,26 @@
         "inst_hier_path": "clk_wiz",
         "has_run_ip_tcl": "true",
         "parameters": {
+          "CLKOUT1_JITTER": {
+            "value": "226.435"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "236.795"
+          },
           "CLKOUT1_REQUESTED_OUT_FREQ": {
-            "value": "100"
+            "value": "75"
           },
           "CLK_IN1_BOARD_INTERFACE": {
             "value": "sys_clock"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "40.125"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "13.375"
+          },
+          "MMCM_DIVCLK_DIVIDE": {
+            "value": "4"
           },
           "RESET_BOARD_INTERFACE": {
             "value": "reset"

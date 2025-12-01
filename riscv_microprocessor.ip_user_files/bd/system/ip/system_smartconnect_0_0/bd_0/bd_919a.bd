@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x1B047FCE0754DB2A",
+      "boundary_crc": "0x1B047FCE5CA62387",
       "design_src": "SBD",
       "device": "xc7a100tcsg324-1",
       "name": "bd_919a",
@@ -125,7 +125,7 @@
             "value_src": "auto_prop"
           },
           "FREQ_HZ": {
-            "value": "100000000",
+            "value": "90000000",
             "value_src": "ip_prop"
           },
           "HAS_BRESP": {
@@ -266,7 +266,7 @@
             "value_src": "auto_prop"
           },
           "FREQ_HZ": {
-            "value": "100000000",
+            "value": "90000000",
             "value_src": "ip_prop"
           },
           "HAS_BRESP": {
@@ -407,7 +407,7 @@
             "value_src": "default"
           },
           "FREQ_HZ": {
-            "value": "100000000",
+            "value": "90000000",
             "value_src": "ip_prop"
           },
           "HAS_BRESP": {
@@ -531,7 +531,7 @@
             "value_src": "default"
           },
           "FREQ_HZ": {
-            "value": "100000000",
+            "value": "90000000",
             "value_src": "ip_prop"
           },
           "HAS_BRESP": {
@@ -655,7 +655,7 @@
             "value_src": "default"
           },
           "FREQ_HZ": {
-            "value": "100000000",
+            "value": "90000000",
             "value_src": "ip_prop"
           },
           "HAS_BRESP": {
@@ -779,7 +779,7 @@
             "value_src": "default"
           },
           "FREQ_HZ": {
-            "value": "100000000",
+            "value": "90000000",
             "value_src": "ip_prop"
           },
           "HAS_BRESP": {
@@ -891,7 +891,7 @@
             "value_src": "ip_prop"
           },
           "FREQ_HZ": {
-            "value": "100000000",
+            "value": "90000000",
             "value_src": "ip_prop"
           },
           "FREQ_TOLERANCE_HZ": {
