@@ -11,14 +11,11 @@ end generic_register;
 
 architecture Behavioral of generic_register is
     signal q_i, next_q_i : std_logic_vector(N-1 downto 0);
-    signal ctrl: std_logic_vector(1 downto 0);
 begin
     --reset and enable 
     --vector of length 2
 
     q_i <= next_q_i when rising_edge(clk);
-    
-    --ctrl <= res & en;
     
     next_q_i <= (others => '0') when res = '1' else din when en = '1' else q_i;
     
