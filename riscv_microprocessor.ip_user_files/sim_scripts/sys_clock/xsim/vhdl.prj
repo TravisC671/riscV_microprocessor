@@ -1,0 +1,8 @@
+vhdl xil_defaultlib  \
+"../../../bd/sys_clock/ip/sys_clock_sys_counter_0_0/sim/sys_clock_sys_counter_0_0.vhd" \
+"../../../bd/sys_clock/ip/sys_clock_rst_clk_wiz_0_100M_0/sim/sys_clock_rst_clk_wiz_0_100M_0.vhd" \
+"../../../bd/sys_clock/ip/sys_clock_axi_smc_1/bd_0/ip/ip_1/sim/bd_f78a_psr_aclk_0.vhd" \
+"../../../bd/sys_clock/sim/sys_clock.vhd" \
+
+# Do not sort compile order
+nosort

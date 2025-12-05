@@ -39,9 +39,8 @@ architecture Behavioral of sys_counter_testbench is
   signal reset, clk: std_logic := '0';
   signal interrupt : std_logic;
 begin
-    uut : entity work.sys_counter ( Behavioral )
-        generic map (Counters => 32)
-        port map (clk => clk, res => reset, en => '1', interrupt => interrupt);
+    uut : entity work.sys_clock_wrapper ( STRUCTURE )
+        port map (clk_in1 => clk, reset => reset);
         
     clk <= not clk after 5 ns;
     reset <= '1' after 20 ns;

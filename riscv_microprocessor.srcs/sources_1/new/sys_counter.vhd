@@ -70,17 +70,67 @@ entity sys_counter is
 end sys_counter;
 
 architecture Behavioral of sys_counter is
+    type counter_state_t is (
+        idle,
+        read_addr, 
+        read_data, 
+        read_done, 
+        write_addr, 
+        write_data, 
+        write_done
+    );
+    signal current_state : counter_state_t;
+    signal next_state : counter_state_t;
+    signal next_state_final : counter_state_t;
+    signal idle_next : counter_state_t;
+    signal read_addr_next : counter_state_t;
+    signal read_data_next : counter_state_t;
+    signal read_done_next : counter_state_t;
+    signal write_addr_next : counter_state_t;
+    signal write_data_next : counter_state_t;
+    signal write_done_next : counter_state_t;
     signal counter_enable : std_logic;
     signal data_in_high : std_logic_vector(31 downto 0);
     signal data_in_low : std_logic_vector(31 downto 0);
     signal data_out_high : std_logic_vector(31 downto 0);
     signal data_out_low : std_logic_vector(31 downto 0);
+    signal output_read_data : std_logic_vector(31 downto 0);
     signal counter_ouputs : std_logic_vector(63 downto 0);
     signal max_outputs : std_logic_vector(Counters-1 downto 0) := (others => '0');
     signal reset : std_logic;
 begin
-
+    current_state <= next_state_final when rising_edge(clk);
+    
+    next_state_final <= idle when res = '0' else next_state;
+    
     reset <= not res;
+    
+    idle_next <= read_addr when S_AXI_ARVALID = '1' else
+                 write_addr when S_AXI_AWVALID = '1' else idle;
+    
+    --master is reading data
+    read_addr_next <= read_data;
+    S_AXI_ARREADY <= '1' when current_state = read_addr else '0';
+    
+    read_data_next <= read_done;
+    output_read_data <= counter_ouputs(31 downto 0) when  S_AXI_ARADDR = x"00000000" else
+                        counter_ouputs(63 downto 32) when S_AXI_ARADDR = x"00000001" else
+                        data_out_low when S_AXI_ARADDR = x"00000002" else
+                        data_out_high when S_AXI_ARADDR = x"00000003" else (others => '0');
+    S_AXI_RDATA <= output_read_data when current_state = read_data else (others => '0');
+    S_AXI_RVALID <= '1' when current_state = read_data else '0';
+    S_AXI_RRESP <= (others => '0');
+    
+    with current_state select
+        next_state <= idle_next when idle,
+                      read_addr_next when read_addr,
+                      read_data_next when read_data,
+                      read_done_next when read_done,
+                      write_addr_next when write_addr,
+                      write_data_next when write_data,
+                      write_done_next when write_done,
+                      idle when others;
+                      
     
     -- 63 - 32
     interrupt_high : entity work.generic_register(Behavioral)
@@ -90,7 +140,7 @@ begin
     -- 31 - 0
     interrupt_low : entity work.generic_register(Behavioral)
         generic map (N => 32)
-        port map (din => data_in_low, dout => data_out_high, clk => clk, res => reset, en => en);
+        port map (din => data_in_low, dout => data_out_low, clk => clk, res => reset, en => en);
 
     counter_enable <= '1' when clk = '1' and en = '1' else '0';
     

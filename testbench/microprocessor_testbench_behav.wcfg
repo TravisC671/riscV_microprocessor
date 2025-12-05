@@ -16,15 +16,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
-      <ZoomEndTime time="714.000001 us"></ZoomEndTime>
-      <Cursor1Time time="41.705000 us"></Cursor1Time>
+      <ZoomStartTime time="167,371.666 ns"></ZoomStartTime>
+      <ZoomEndTime time="170,235.667 ns"></ZoomEndTime>
+      <Cursor1Time time="169,061.666 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="178"></NameColumnWidth>
-      <ValueColumnWidth column_width="62"></ValueColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="21" />
+   <WVObjectSize size="22" />
    <wvobject type="other" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/fetch_unit/current_state">
       <obj_property name="ElementShortName">current_state</obj_property>
       <obj_property name="ObjectShortName">current_state</obj_property>
@@ -74,6 +74,10 @@
    <wvobject type="array" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/Current_address">
       <obj_property name="ElementShortName">Current_address[31:0]</obj_property>
       <obj_property name="ObjectShortName">Current_address[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/microprocessor_testbench/uut/system_i/microprocessor_0/U0/datapath/BTU/BTout">
+      <obj_property name="ElementShortName">BTout</obj_property>
+      <obj_property name="ObjectShortName">BTout</obj_property>
    </wvobject>
    <wvobject type="protoinst" fp_name="/microprocessor_testbench/uut/system_i/axi_bram_ctrl_0/S_AXI">
       <obj_property name="ElementShortName">S_AXI</obj_property>
