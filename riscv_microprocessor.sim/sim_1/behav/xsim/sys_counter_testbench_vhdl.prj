@@ -1,0 +1,14 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../riscv_microprocessor.srcs/sources_1/imports/new/generic_register.vhd" \
+"../../../../riscv_microprocessor.srcs/sources_1/new/generic_counter.vhd" \
+"../../../../riscv_microprocessor.srcs/sources_1/new/sys_counter.vhd" \
+"../../../../riscv_microprocessor.ip_user_files/bd/sys_clock/ip/sys_clock_sys_counter_0_0/sim/sys_clock_sys_counter_0_0.vhd" \
+"../../../../riscv_microprocessor.ip_user_files/bd/sys_clock/ip/sys_clock_rst_clk_wiz_0_100M_0/sim/sys_clock_rst_clk_wiz_0_100M_0.vhd" \
+"../../../../riscv_microprocessor.ip_user_files/bd/sys_clock/ip/sys_clock_axi_smc_1/bd_0/ip/ip_1/sim/bd_f78a_psr_aclk_0.vhd" \
+"../../../../riscv_microprocessor.ip_user_files/bd/sys_clock/sim/sys_clock.vhd" \
+"../../../../riscv_microprocessor.gen/sources_1/bd/sys_clock/hdl/sys_clock_wrapper.vhd" \
+"../../../../riscv_microprocessor.srcs/sim_1/new/sys_counter_testbench.vhd" \
+
+# Do not sort compile order
+nosort

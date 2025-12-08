@@ -1,0 +1,8 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.ip_user_files/bd/sys_clock/ip/sys_clock_axi_smc_1/bd_0/ip/ip_1/sim/bd_f78a_psr_aclk_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_f78a_psr_aclk_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.ip_user_files/bd/sys_clock/sim/sys_clock.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'sys_clock'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.gen/sources_1/bd/sys_clock/hdl/sys_clock_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'sys_clock_wrapper'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.srcs/sim_1/new/sys_counter_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'sys_counter_testbench'

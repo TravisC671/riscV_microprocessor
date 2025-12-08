@@ -1,0 +1,38 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.ip_user_files/bd/sys_clock/ip/sys_clock_clk_wiz_0_0/sys_clock_clk_wiz_0_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sys_clock_clk_wiz_0_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.ip_user_files/bd/sys_clock/ip/sys_clock_clk_wiz_0_0/sys_clock_clk_wiz_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sys_clock_clk_wiz_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.ip_user_files/bd/sys_clock/ip/sys_clock_axi_traffic_gen_0_0/sim/sys_clock_axi_traffic_gen_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sys_clock_axi_traffic_gen_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.ip_user_files/bd/sys_clock/ip/sys_clock_axi_smc_1/bd_0/sim/bd_f78a.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_f78a
+INFO: [VRFC 10-311] analyzing module clk_map_imp_G2QVET
+INFO: [VRFC 10-311] analyzing module m00_exit_pipeline_imp_1HNJTR2
+INFO: [VRFC 10-311] analyzing module s00_entry_pipeline_imp_IFVIVX
+INFO: [VRFC 10-311] analyzing module s00_nodes_imp_OD3N7R
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.ip_user_files/bd/sys_clock/ip/sys_clock_axi_smc_1/bd_0/ip/ip_0/sim/bd_f78a_one_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_f78a_one_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.ip_user_files/bd/sys_clock/ip/sys_clock_axi_smc_1/bd_0/ip/ip_2/sim/bd_f78a_s00mmu_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_f78a_s00mmu_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.ip_user_files/bd/sys_clock/ip/sys_clock_axi_smc_1/bd_0/ip/ip_3/sim/bd_f78a_s00tr_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_f78a_s00tr_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.ip_user_files/bd/sys_clock/ip/sys_clock_axi_smc_1/bd_0/ip/ip_4/sim/bd_f78a_s00sic_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_f78a_s00sic_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.ip_user_files/bd/sys_clock/ip/sys_clock_axi_smc_1/bd_0/ip/ip_5/sim/bd_f78a_s00a2s_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_f78a_s00a2s_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.ip_user_files/bd/sys_clock/ip/sys_clock_axi_smc_1/bd_0/ip/ip_6/sim/bd_f78a_sarn_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_f78a_sarn_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.ip_user_files/bd/sys_clock/ip/sys_clock_axi_smc_1/bd_0/ip/ip_7/sim/bd_f78a_srn_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_f78a_srn_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.ip_user_files/bd/sys_clock/ip/sys_clock_axi_smc_1/bd_0/ip/ip_8/sim/bd_f78a_sawn_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_f78a_sawn_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.ip_user_files/bd/sys_clock/ip/sys_clock_axi_smc_1/bd_0/ip/ip_9/sim/bd_f78a_swn_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_f78a_swn_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.ip_user_files/bd/sys_clock/ip/sys_clock_axi_smc_1/bd_0/ip/ip_10/sim/bd_f78a_sbn_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_f78a_sbn_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.ip_user_files/bd/sys_clock/ip/sys_clock_axi_smc_1/bd_0/ip/ip_11/sim/bd_f78a_m00s2a_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_f78a_m00s2a_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.ip_user_files/bd/sys_clock/ip/sys_clock_axi_smc_1/bd_0/ip/ip_12/sim/bd_f78a_m00e_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_f78a_m00e_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/s101153258/riscv_microprocessor/riscv_microprocessor.ip_user_files/bd/sys_clock/ip/sys_clock_axi_smc_1/sim/sys_clock_axi_smc_1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sys_clock_axi_smc_1

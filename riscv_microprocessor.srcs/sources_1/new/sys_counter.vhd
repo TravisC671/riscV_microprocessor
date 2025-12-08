@@ -101,7 +101,7 @@ architecture Behavioral of sys_counter is
 begin
     current_state <= next_state_final when rising_edge(clk);
     
-    next_state_final <= idle when res = '0' else next_state;
+    next_state_final <= idle when res = '1' else next_state;
     
     reset <= not res;
     
@@ -117,9 +117,13 @@ begin
                         counter_ouputs(63 downto 32) when S_AXI_ARADDR = x"00000001" else
                         data_out_low when S_AXI_ARADDR = x"00000002" else
                         data_out_high when S_AXI_ARADDR = x"00000003" else (others => '0');
+    
     S_AXI_RDATA <= output_read_data when current_state = read_data else (others => '0');
     S_AXI_RVALID <= '1' when current_state = read_data else '0';
     S_AXI_RRESP <= (others => '0');
+    
+    write_addr_next <= write_data;
+    
     
     with current_state select
         next_state <= idle_next when idle,
@@ -147,13 +151,13 @@ begin
     --dout 7 downto 0
     counter0: entity work.generic_counter (Behavioral)
         generic map (N => 64 / Counters)
-        port map (max => max_outputs(0), incr => en, dout => counter_ouputs(64 / Counters - 1 downto 0), clk => clk, res => reset);
+        port map (max => max_outputs(0), incr => en, dout => counter_ouputs(64 / Counters - 1 downto 0), clk => clk, res => res);
     
         
     counterGen : For I in 1 to Counters - 1 generate
         counterI: entity work.generic_counter (Behavioral)
             generic map (N => 64 / Counters)
-            port map (max => max_outputs(I), incr => max_outputs(I-1), dout => counter_ouputs((64*(I+1))/Counters - 1 downto (64*(I))/Counters), clk => clk, res => reset);
+            port map (max => max_outputs(I), incr => max_outputs(I-1), dout => counter_ouputs((64*(I+1))/Counters - 1 downto (64*(I))/Counters), clk => clk, res => res);
     end generate;
     
     dout <= counter_ouputs;

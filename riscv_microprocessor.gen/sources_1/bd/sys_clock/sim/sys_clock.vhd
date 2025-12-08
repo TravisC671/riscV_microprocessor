@@ -2,7 +2,7 @@
 --Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
---Date        : Fri Dec  5 13:59:51 2025
+--Date        : Mon Dec  8 13:46:58 2025
 --Host        : cenglab16 running 64-bit Ubuntu 24.04.3 LTS
 --Command     : generate_target sys_clock.bd
 --Design      : sys_clock
@@ -15,10 +15,10 @@ use UNISIM.VCOMPONENTS.ALL;
 entity sys_clock is
   port (
     clk_in1 : in STD_LOGIC;
-    reset : in STD_LOGIC
+    resetn : in STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of sys_clock : entity is "sys_clock,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=sys_clock,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=6,numReposBlks=6,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=4,synth_mode=None}";
+  attribute CORE_GENERATION_INFO of sys_clock : entity is "sys_clock,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=sys_clock,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=6,numReposBlks=6,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=4,da_board_cnt=2,da_clkrst_cnt=3,synth_mode=None}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of sys_clock : entity is "sys_clock.hwdef";
 end sys_clock;
@@ -54,7 +54,7 @@ architecture STRUCTURE of sys_clock is
   end component sys_clock_sys_counter_0_0;
   component sys_clock_clk_wiz_0_0 is
   port (
-    reset : in STD_LOGIC;
+    resetn : in STD_LOGIC;
     clk_in1 : in STD_LOGIC;
     clk_out1 : out STD_LOGIC;
     locked : out STD_LOGIC
@@ -184,10 +184,10 @@ architecture STRUCTURE of sys_clock is
   signal clk_wiz_0_clk_out1 : STD_LOGIC;
   signal clk_wiz_0_locked : STD_LOGIC;
   signal ilconstant_0_dout : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal rst_clk_wiz_0_100M_mb_reset : STD_LOGIC;
   signal rst_clk_wiz_0_100M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_axi_traffic_gen_0_done_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_traffic_gen_0_status_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal NLW_rst_clk_wiz_0_100M_mb_reset_UNCONNECTED : STD_LOGIC;
   signal NLW_rst_clk_wiz_0_100M_bus_struct_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_clk_wiz_0_100M_interconnect_aresetn_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_clk_wiz_0_100M_peripheral_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -197,8 +197,8 @@ architecture STRUCTURE of sys_clock is
   attribute X_INTERFACE_INFO of clk_in1 : signal is "xilinx.com:signal:clock:1.0 CLK.CLK_IN1 CLK";
   attribute X_INTERFACE_PARAMETER : string;
   attribute X_INTERFACE_PARAMETER of clk_in1 : signal is "XIL_INTERFACENAME CLK.CLK_IN1, CLK_DOMAIN sys_clock_clk_in1, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute X_INTERFACE_INFO of reset : signal is "xilinx.com:signal:reset:1.0 RST.RESET RST";
-  attribute X_INTERFACE_PARAMETER of reset : signal is "XIL_INTERFACENAME RST.RESET, INSERT_VIP 0, POLARITY ACTIVE_HIGH";
+  attribute X_INTERFACE_INFO of resetn : signal is "xilinx.com:signal:reset:1.0 RST.RESETN RST";
+  attribute X_INTERFACE_PARAMETER of resetn : signal is "XIL_INTERFACENAME RST.RESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW";
 begin
 axi_smc: component sys_clock_axi_smc_1
      port map (
@@ -273,7 +273,7 @@ clk_wiz_0: component sys_clock_clk_wiz_0_0
       clk_in1 => clk_in1,
       clk_out1 => clk_wiz_0_clk_out1,
       locked => clk_wiz_0_locked,
-      reset => reset
+      resetn => resetn
     );
   ilconstant_0_dout <= B"1";
 rst_clk_wiz_0_100M: component sys_clock_rst_clk_wiz_0_100M_0
@@ -281,10 +281,10 @@ rst_clk_wiz_0_100M: component sys_clock_rst_clk_wiz_0_100M_0
       aux_reset_in => '1',
       bus_struct_reset(0) => NLW_rst_clk_wiz_0_100M_bus_struct_reset_UNCONNECTED(0),
       dcm_locked => clk_wiz_0_locked,
-      ext_reset_in => reset,
+      ext_reset_in => resetn,
       interconnect_aresetn(0) => NLW_rst_clk_wiz_0_100M_interconnect_aresetn_UNCONNECTED(0),
       mb_debug_sys_rst => '0',
-      mb_reset => NLW_rst_clk_wiz_0_100M_mb_reset_UNCONNECTED,
+      mb_reset => rst_clk_wiz_0_100M_mb_reset,
       peripheral_aresetn(0) => rst_clk_wiz_0_100M_peripheral_aresetn(0),
       peripheral_reset(0) => NLW_rst_clk_wiz_0_100M_peripheral_reset_UNCONNECTED(0),
       slowest_sync_clk => clk_wiz_0_clk_out1
@@ -314,6 +314,6 @@ sys_counter_0: component sys_clock_sys_counter_0_0
       dout(63 downto 0) => NLW_sys_counter_0_dout_UNCONNECTED(63 downto 0),
       en => ilconstant_0_dout(0),
       interrupt => NLW_sys_counter_0_interrupt_UNCONNECTED,
-      res => reset
+      res => rst_clk_wiz_0_100M_mb_reset
     );
 end STRUCTURE;
