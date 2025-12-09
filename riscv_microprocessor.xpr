@@ -67,7 +67,7 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="190"/>
+    <Option Name="WTXSimExportSim" Val="192"/>
     <Option Name="WTModelSimExportSim" Val="190"/>
     <Option Name="WTQuestaExportSim" Val="190"/>
     <Option Name="WTIesExportSim" Val="0"/>
@@ -183,6 +183,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/bd/system/system.bd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -190,6 +191,7 @@
       </File>
       <File Path="$PGENDIR/sources_1/bd/system/hdl/system_wrapper.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -309,7 +311,10 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="system_wrapper"/>
+        <Option Name="TopModule" Val="microprocessor"/>
+        <Option Name="TopLib" Val="xil_defaultlib"/>
+        <Option Name="TopArchitecture" Val="Behavioral"/>
+        <Option Name="TopRTLFile" Val="$PSRCDIR/sources_1/new/microprocessor.vhd"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
