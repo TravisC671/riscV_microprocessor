@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x1B7F3431E541CFED",
+      "boundary_crc": "0x1B7F34311BFF44C2",
       "design_src": "SBD",
       "device": "xc7a100tcsg324-1",
       "name": "bd_f78a",
@@ -65,7 +65,7 @@
             "value_src": "auto_prop"
           },
           "FREQ_HZ": {
-            "value": "100000000",
+            "value": "464000000",
             "value_src": "ip_prop"
           },
           "HAS_BRESP": {
@@ -206,7 +206,7 @@
             "value_src": "default"
           },
           "FREQ_HZ": {
-            "value": "100000000",
+            "value": "464000000",
             "value_src": "ip_prop"
           },
           "HAS_BRESP": {
@@ -318,7 +318,7 @@
             "value_src": "ip_prop"
           },
           "FREQ_HZ": {
-            "value": "100000000",
+            "value": "464000000",
             "value_src": "ip_prop"
           },
           "FREQ_TOLERANCE_HZ": {

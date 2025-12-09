@@ -87,7 +87,7 @@
                 "value_src": "constant"
               },
               "FREQ_HZ": {
-                "value": "100000000",
+                "value": "464000000",
                 "value_src": "ip_prop"
               },
               "ID_WIDTH": {
@@ -308,7 +308,7 @@
                 "value_src": "constant"
               },
               "FREQ_HZ": {
-                "value": "100000000",
+                "value": "464000000",
                 "value_src": "ip_prop"
               },
               "PHASE": {
@@ -342,11 +342,6 @@
                 "value_src": "constant"
               }
             }
-          },
-          "dout": {
-            "direction": "O",
-            "left": "63",
-            "right": "0"
           }
         }
       },
@@ -358,6 +353,24 @@
         "inst_hier_path": "clk_wiz_0",
         "has_run_ip_tcl": "true",
         "parameters": {
+          "CLKOUT1_JITTER": {
+            "value": "168.856"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "306.323"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "464.000"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "58.000"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "2.500"
+          },
+          "MMCM_DIVCLK_DIVIDE": {
+            "value": "5"
+          },
           "RESET_PORT": {
             "value": "resetn"
           },

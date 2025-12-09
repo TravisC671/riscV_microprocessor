@@ -21,6 +21,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use ieee.numeric_std.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -38,7 +39,6 @@ entity sys_counter is
     Port ( 
 		clk, res, en : in STD_LOGIC;
         interrupt : out STD_LOGIC;
-        dout: out std_logic_vector(63 downto 0);
         -- Write Address Channel (AW) - Master to Slave --------------------------
         S_AXI_AWADDR          : in  std_logic_vector(C_S_AXI_ADDR_WIDTH-1 downto 0);              -- Write Address
         S_AXI_AWPROT          : in  std_logic_vector(2 downto 0);                                 -- Protection Type (not typically used in Lite, but required)
@@ -90,8 +90,9 @@ architecture Behavioral of sys_counter is
     signal write_data_next : counter_state_t;
     signal write_done_next : counter_state_t;
     signal counter_enable : std_logic;
-    signal data_in_high : std_logic_vector(31 downto 0);
-    signal data_in_low : std_logic_vector(31 downto 0);
+    signal int_high_en : std_logic;
+    signal int_low_en : std_logic;
+    signal int_data : std_logic_vector(31 downto 0);
     signal data_out_high : std_logic_vector(31 downto 0);
     signal data_out_low : std_logic_vector(31 downto 0);
     signal output_read_data : std_logic_vector(31 downto 0);
@@ -123,7 +124,19 @@ begin
     S_AXI_RRESP <= (others => '0');
     
     write_addr_next <= write_data;
+    S_AXI_AWREADY <= '1' when current_state = write_addr else '0';
     
+    S_AXI_WREADY <= '1' when current_state = write_data else '0';
+    
+    int_data <= S_AXI_WDATA;
+    
+    int_low_en <= '1' when current_state = write_data and S_AXI_AWADDR = x"00000002" else '0';
+    int_high_en <= '1' when current_state = write_data and S_AXI_AWADDR = x"00000003" else '0';
+    write_data_next <= write_done;
+    
+    S_AXI_BVALID <= '1' when current_state = write_done else '0';
+    
+    write_done_next <= idle;
     
     with current_state select
         next_state <= idle_next when idle,
@@ -139,15 +152,13 @@ begin
     -- 63 - 32
     interrupt_high : entity work.generic_register(Behavioral)
         generic map (N => 32)
-        port map (din => data_in_high, dout => data_out_high, clk => clk, res => reset, en => en);
+        port map (din => int_data, dout => data_out_high, clk => clk, res => res, en => int_high_en);
 
     -- 31 - 0
     interrupt_low : entity work.generic_register(Behavioral)
         generic map (N => 32)
-        port map (din => data_in_low, dout => data_out_low, clk => clk, res => reset, en => en);
+        port map (din => int_data, dout => data_out_low, clk => clk, res => res, en => int_low_en);
 
-    counter_enable <= '1' when clk = '1' and en = '1' else '0';
-    
     --dout 7 downto 0
     counter0: entity work.generic_counter (Behavioral)
         generic map (N => 64 / Counters)
@@ -160,11 +171,6 @@ begin
             port map (max => max_outputs(I), incr => max_outputs(I-1), dout => counter_ouputs((64*(I+1))/Counters - 1 downto (64*(I))/Counters), clk => clk, res => res);
     end generate;
     
-    dout <= counter_ouputs;
-    --1
-    --15 downto 8
-    --2
-    --23 downto 16
-    --3
-    
+    interrupt <= '1' when unsigned(counter_ouputs) > unsigned(data_out_high & data_out_low) else '0';
+    S_AXI_BRESP <= (others => '0');
 end Behavioral;

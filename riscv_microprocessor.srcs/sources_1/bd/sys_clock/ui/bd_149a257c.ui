@@ -1,29 +1,29 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"-277,-224",
+   "Default View_TopLeft":"-282,-225",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
-preplace port port-id_clk_in1 -pg 1 -lvl 0 -x 0 -y 350 -defaultsOSRD
-preplace port port-id_resetn -pg 1 -lvl 0 -x 0 -y 270 -defaultsOSRD
-preplace inst sys_counter_0 -pg 1 -lvl 5 -x 1290 -y 100 -defaultsOSRD
+preplace port port-id_clk_in1 -pg 1 -lvl 0 -x -10 -y 350 -defaultsOSRD
+preplace port port-id_resetn -pg 1 -lvl 0 -x -10 -y 270 -defaultsOSRD
+preplace inst sys_counter_0 -pg 1 -lvl 5 -x 1300 -y 100 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 110 -y 340 -defaultsOSRD
-preplace inst axi_traffic_gen_0 -pg 1 -lvl 3 -x 710 -y 70 -defaultsOSRD
-preplace inst rst_clk_wiz_0_100M -pg 1 -lvl 2 -x 380 -y 310 -defaultsOSRD
-preplace inst axi_smc -pg 1 -lvl 4 -x 1010 -y 70 -defaultsOSRD
-preplace inst ilconstant_0 -pg 1 -lvl 4 -x 1010 -y 210 -defaultsOSRD
+preplace inst axi_traffic_gen_0 -pg 1 -lvl 3 -x 720 -y 70 -defaultsOSRD
+preplace inst rst_clk_wiz_0_100M -pg 1 -lvl 2 -x 390 -y 310 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 4 -x 1020 -y 70 -defaultsOSRD
+preplace inst ilconstant_0 -pg 1 -lvl 4 -x 1020 -y 210 -defaultsOSRD
 preplace netloc clk_in1_1 1 0 1 NJ 350
+preplace netloc clk_wiz_0_clk_out1 1 1 4 220 150 560 150 870 150 1160J
 preplace netloc clk_wiz_0_locked 1 1 1 N 350
-preplace netloc ilconstant_0_dout 1 4 1 1170J 130n
+preplace netloc ilconstant_0_dout 1 4 1 1180J 130n
 preplace netloc resetn_1 1 0 2 20 270 200
-preplace netloc clk_wiz_0_clk_out1 1 1 4 210 150 550 150 860 150 1150J
-preplace netloc rst_clk_wiz_0_100M_mb_reset 1 2 3 NJ 270 NJ 270 1160
-preplace netloc rst_clk_wiz_0_100M_peripheral_aresetn 1 2 2 560 160 870J
+preplace netloc rst_clk_wiz_0_100M_mb_reset 1 2 3 NJ 270 NJ 270 1170
+preplace netloc rst_clk_wiz_0_100M_peripheral_aresetn 1 2 2 570 160 880J
 preplace netloc axi_smc_M00_AXI 1 4 1 N 70
 preplace netloc axi_traffic_gen_0_M_AXI_LITE_CH1 1 3 1 N 50
-levelinfo -pg 1 0 110 380 710 1010 1290 1410
-pagesize -pg 1 -db -bbox -sgen -100 0 1410 400
+levelinfo -pg 1 -10 110 390 720 1020 1300 1420
+pagesize -pg 1 -db -bbox -sgen -110 0 1420 400
 "
 }
 {

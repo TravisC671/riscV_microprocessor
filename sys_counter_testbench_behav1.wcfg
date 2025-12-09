@@ -12,13 +12,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="1,402.001 ns"></ZoomEndTime>
-      <Cursor1Time time="56.000 ns"></Cursor1Time>
+      <ZoomStartTime time="250.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="7,320.001 ns"></ZoomEndTime>
+      <Cursor1Time time="6,000.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="168"></NameColumnWidth>
-      <ValueColumnWidth column_width="98"></ValueColumnWidth>
+      <ValueColumnWidth column_width="86"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="7" />
    <wvobject type="protoinst" fp_name="/sys_counter_testbench/uut/sys_clock_i/sys_counter_0/S_AXI">
@@ -94,6 +94,26 @@
       <wvobject type="other" fp_name="/sys_counter_testbench/uut/sys_clock_i/sys_counter_0/U0/counter0/N">
          <obj_property name="ElementShortName">N</obj_property>
          <obj_property name="ObjectShortName">N</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/sys_counter_testbench/uut/sys_clock_i/sys_counter_0/U0/data_out_high">
+         <obj_property name="ElementShortName">data_out_high[31:0]</obj_property>
+         <obj_property name="ObjectShortName">data_out_high[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/sys_counter_testbench/uut/sys_clock_i/sys_counter_0/U0/data_out_low">
+         <obj_property name="ElementShortName">data_out_low[31:0]</obj_property>
+         <obj_property name="ObjectShortName">data_out_low[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/sys_counter_testbench/uut/sys_clock_i/sys_counter_0/U0/int_high_en">
+         <obj_property name="ElementShortName">int_high_en</obj_property>
+         <obj_property name="ObjectShortName">int_high_en</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/sys_counter_testbench/uut/sys_clock_i/sys_counter_0/U0/int_low_en">
+         <obj_property name="ElementShortName">int_low_en</obj_property>
+         <obj_property name="ObjectShortName">int_low_en</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/sys_counter_testbench/uut/sys_clock_i/sys_counter_0/interrupt">
+         <obj_property name="ElementShortName">interrupt</obj_property>
+         <obj_property name="ObjectShortName">interrupt</obj_property>
       </wvobject>
    </wvobject>
 </wave_config>
