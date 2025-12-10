@@ -2,15 +2,20 @@
 
 # Overview
 
+Project for Fall 2025 Ceng 442 Microprocessors
+
 This is a riscV microprocessor running most of the base instruction set. It runs on a nexys a7 100T fpga at 75Mhz and the program that is loaded on creates an led that bounces back in forth from end to end.
 
 ![picture of the microprocessor loaded on an fpga](https://raw.githubusercontent.com/TravisC671/riscV_microprocessor/main/assets/fpga_running.gif)
+
 The program running on the fpga
 
 ![picture of a zoomed in testbench waveform](https://raw.githubusercontent.com/TravisC671/riscV_microprocessor/main/assets/waveform_zoomed_in.png)
+
 zoomed in waveform
 
 ![cylon eye waveform zoomed out](https://raw.githubusercontent.com/TravisC671/riscV_microprocessor/main/assets/cylon_eye.png)
+
 Cylon eye program inside simulation
 
 # Schematic
@@ -67,8 +72,14 @@ For my stretch assignment I decided to make a 64 bit clock that could run at at 
 
 The AXI signals were generated with the AXI traffic generator IP.
 
-![decoder](https://raw.githubusercontent.com/TravisC671/riscV_microprocessor/main/assets/counter_waveform.png)
+![clock simulation](https://raw.githubusercontent.com/TravisC671/riscV_microprocessor/main/assets/counter_waveform.png)
 
 ## Schematic
 
-![decoder](https://raw.githubusercontent.com/TravisC671/riscV_microprocessor/main/assets/clock.svg)
+[code](https://github.com/TravisC671/riscV_microprocessor/blob/main/riscv_microprocessor.srcs/sources_1/new/sys_counter.vhd)
+
+![clock schematic](https://raw.githubusercontent.com/TravisC671/riscV_microprocessor/main/assets/counter.svg)
+
+# Conclusion
+
+I'm super happy with how all of this turned out. I learned a lot about how microprocessors work and feel very confident with the structural style of vivado. I learned a ton about how to debug vhdl files and protocols like AXI4. I'm interested in pushing this design further or even starting over and designing a staged design but we'll see. I also learned a lot about state machines and with that I think I could push my microprocessor past 75 Mhz. I think some of the areas that are lacking are my organization of the github repo, the decoder code (which should be per instruction instead of per opcode), and general code formatting. Next time I would like to create or follow a style guide and change the names to be stricter, as well as adding more comments for next time.
