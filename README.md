@@ -24,6 +24,10 @@ Cylon eye program inside simulation
 
 These are all svg's so you can click on the image and zoom in to see the details
 
+**Block Design**
+
+![overview of the processor](https://raw.githubusercontent.com/TravisC671/riscV_microprocessor/main/assets/block_design.svg)
+
 ![overview of the processor](https://raw.githubusercontent.com/TravisC671/riscV_microprocessor/main/assets/overview.svg)
 
 ## Datapath
