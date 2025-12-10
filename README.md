@@ -46,3 +46,29 @@ The sequencer was quite tricky and is what runs the state of the micro processor
 This component gave me no issues for the most part. Dealing with AMBA Axi4 was always challenging but eventually I got it
 
 ## Load / Store Unit
+
+[code](https://github.com/TravisC671/riscV_microprocessor/blob/main/riscv_microprocessor.srcs/sources_1/new/load_store_unit.vhd)
+
+![load store](https://raw.githubusercontent.com/TravisC671/riscV_microprocessor/main/assets/load_store.svg)
+
+This component gave me the most trouble over all. Reading and writing to the ram gave no errors but when I went to read from addresses I wrote, it would return empty. It turns out I had WStrb set to zero, which made it so no data was written. Changing this fixed all the issues I had been battling for a few weeks.
+
+## Decoder
+
+[code](https://github.com/TravisC671/riscV_microprocessor/blob/main/riscv_microprocessor.srcs/sources_1/new/decoder.vhd)
+
+![decoder](https://raw.githubusercontent.com/TravisC671/riscV_microprocessor/main/assets/decoder.svg)
+
+# 64 Bit Clock
+
+For my stretch assignment I decided to make a 64 bit clock that could run at at least 100 Mhz and also contained a 64 bit register that could store data and output an interupt signal if the clock was greater than the stored value. This was a bit of a challenge since I had to make each register generic so that I could experiment with their size to see what works best, and I had never used AXI 4 Lite or writen an AXI Slave device. However, once I got it working, I found that even at 100 Mhz I had much more time to spare in the implementation timing report. I was actually able to push the clock to run at 464 Mhz, any further and the pulse would be too short for the fpga to register. Overall I'm proud of the final result and Happy it turned out so well
+
+## Simulation
+
+The AXI signals were generated with the AXI traffic generator IP.
+
+![decoder](https://raw.githubusercontent.com/TravisC671/riscV_microprocessor/main/assets/counter_waveform.png)
+
+## Schematic
+
+![decoder](https://raw.githubusercontent.com/TravisC671/riscV_microprocessor/main/assets/clock.svg)
